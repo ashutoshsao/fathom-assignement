@@ -42,29 +42,21 @@ import re
 import subprocess
 import sys
 import time
-import urllib.error
-import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gemini  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 SRC = REPO / "content" / "source-audio"
 AUDIO = REPO / "apps" / "web" / "public" / "audio"
 OUT = REPO / "content" / "seed"
 CACHE = REPO / "content" / ".diarize-cache"
-MODEL = "gemini-3.5-flash"
-API = "https://generativelanguage.googleapis.com"
-
 WINDOW_SEC = 20 * 60   # smaller windows finish faster, and parallelism covers the extra count
 OVERLAP_SEC = 90       # replayed tail, so a turn spanning a seam is not lost
 CONCURRENCY = 4        # windows are independent once the roster is fixed
 
-
-def api_key():
-    for line in (REPO / "apps" / "web" / ".env").read_text().splitlines():
-        if line.startswith("GEMINI_API_KEY="):
-            return line.split("=", 1)[1].strip()
-    sys.exit("GEMINI_API_KEY not found in apps/web/.env")
 
 
 # ---------------------------------------------------------------- transcript
@@ -100,32 +92,6 @@ def load_segments(ep):
 
 
 # ---------------------------------------------------------------- files api
-
-def upload(key, path, label):
-    data = path.read_bytes()
-    req = urllib.request.Request(
-        f"{API}/upload/v1beta/files?key={key}",
-        data=json.dumps({"file": {"display_name": label}}).encode(),
-        headers={"X-Goog-Upload-Protocol": "resumable", "X-Goog-Upload-Command": "start",
-                 "X-Goog-Upload-Header-Content-Length": str(len(data)),
-                 "X-Goog-Upload-Header-Content-Type": "audio/mp3",
-                 "Content-Type": "application/json"})
-    with urllib.request.urlopen(req) as r:
-        url = r.headers["X-Goog-Upload-URL"]
-    req = urllib.request.Request(url, data=data,
-                                 headers={"Content-Length": str(len(data)),
-                                          "X-Goog-Upload-Offset": "0",
-                                          "X-Goog-Upload-Command": "upload, finalize"})
-    with urllib.request.urlopen(req) as r:
-        info = json.load(r)["file"]
-    while info.get("state") == "PROCESSING":
-        time.sleep(2)
-        with urllib.request.urlopen(f"{API}/v1beta/{info['name']}?key={key}") as r:
-            info = json.load(r)
-    if info.get("state") != "ACTIVE":
-        sys.exit(f"upload failed: {info.get('state')}")
-    return info["uri"]
-
 
 def slice_audio(ep, start, end):
     dst = CACHE / f"{ep}_w{int(start)}_{int(end)}.mp3"
@@ -207,64 +173,29 @@ recording. Use these exact labels:
 Only add a new label if you genuinely hear someone who is not in that list."""
 
 
-def generate(key, model, uri, mins, roster, segments, clip_start, tries=4):
+def attribute(key, uri, mins, roster, segments, clip_start):
     if roster:
-        listing = "\n".join(f'  {s["label"]} = {s["name"] or "unnamed"} ({s["voice"]})' for s in roster)
+        listing = "\n".join(
+            f'  {x["label"]} = {x["name"] or "unnamed"} ({x["voice"]})' for x in roster)
         roster_text = ROSTER_KNOWN.format(listing=listing)
     else:
         roster_text = ROSTER_NONE
     listing = "\n".join(
-        f'{s["id"]}  [{s["start"] - clip_start:6.1f}s]  {s["text"]}' for s in segments)
-    body = {
-        "contents": [{"parts": [
-            {"text": PROMPT.format(mins=mins, roster=roster_text, segments=listing,
-                                   first_id=segments[0]["id"], last_id=segments[-1]["id"])},
-            {"file_data": {"mime_type": "audio/mp3", "file_uri": uri}},
-        ]}],
-        "generationConfig": {"responseMimeType": "application/json", "responseSchema": SCHEMA,
-                             "temperature": 0, "thinkingConfig": {"thinkingBudget": 4096}},
-    }
-    data = json.dumps(body).encode()
-    url = f"{API}/v1beta/models/{model}:generateContent?key={key}"
-    for attempt in range(tries):
-        try:
-            req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=1800) as r:
-                d = json.load(r)
-            return json.loads(d["candidates"][0]["content"]["parts"][0]["text"]), d.get("usageMetadata", {})
-        except urllib.error.HTTPError as e:
-            body_txt = e.read().decode()[:300]
-            if e.code in (429, 500, 503) and attempt < tries - 1:
-                wait = 30 * (attempt + 1)
-                print(f"      {e.code}, retrying in {wait}s", flush=True)
-                time.sleep(wait)
-                continue
-            sys.exit(f"HTTP {e.code}: {body_txt}")
-    sys.exit("unreachable")
+        f'{x["id"]}  [{x["start"] - clip_start:6.1f}s]  {x["text"]}' for x in segments)
+    prompt = PROMPT.format(mins=mins, roster=roster_text, segments=listing,
+                           first_id=segments[0]["id"], last_id=segments[-1]["id"])
+    return gemini.generate(
+        key, [{"text": prompt}, {"file_data": {"mime_type": "audio/mp3", "file_uri": uri}}],
+        SCHEMA, thinking=4096)
 
 
-def cast_call(key, model, uri):
+def cast_call(key, uri):
     """One pass over the whole file to learn who is present. Attribution comes later."""
-    body = {"contents": [{"parts": [{"text": CAST_PROMPT},
-                                    {"file_data": {"mime_type": "audio/mp3", "file_uri": uri}}]}],
-            "generationConfig": {"responseMimeType": "application/json",
-                                 "responseSchema": CAST_SCHEMA, "temperature": 0,
-                                 "thinkingConfig": {"thinkingBudget": 4096}}}
-    url = f"{API}/v1beta/models/{model}:generateContent?key={key}"
-    for attempt in range(4):
-        try:
-            req = urllib.request.Request(url, data=json.dumps(body).encode(),
-                                         headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=1800) as r:
-                d = json.load(r)
-            return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])["speakers"]
-        except urllib.error.HTTPError as e:
-            detail = e.read().decode()[:250]
-            if e.code in (429, 500, 503) and attempt < 3:
-                time.sleep(30 * (attempt + 1))
-                continue
-            sys.exit(f"HTTP {e.code}: {detail}")
-    sys.exit("unreachable")
+    res, _usage, model = gemini.generate(
+        key,
+        [{"text": CAST_PROMPT}, {"file_data": {"mime_type": "audio/mp3", "file_uri": uri}}],
+        CAST_SCHEMA, thinking=4096)
+    return res["speakers"], model
 
 
 def merge_roster(roster, found):
@@ -289,13 +220,12 @@ def merge_roster(roster, found):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episode")
-    ap.add_argument("--model", default=MODEL)
     args = ap.parse_args()
     ep = args.episode
 
     CACHE.mkdir(parents=True, exist_ok=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    key = api_key()
+    key = gemini.api_key()
 
     segments = load_segments(ep)
     total = segments[-1]["end"]
@@ -311,17 +241,16 @@ def main():
     print(f"  {len(windows)} windows of <= {WINDOW_SEC/60:.0f} min")
 
     # ---- phase 1: casting. One pass over the whole file to learn who is on the call.
-    cast_cache = CACHE / f"{ep}_cast_{args.model}.json"
     if cast_cache.exists():
         roster = json.loads(cast_cache.read_text())
         print(f"  cast: cached, {len(roster)} speakers")
     else:
         print("  cast: uploading whole call ...", end=" ", flush=True)
-        whole_uri = upload(key, AUDIO / f"{ep}.mp3", ep)
+        whole_uri = gemini.upload(key, AUDIO / f"{ep}.mp3", ep)
         t0 = time.time()
-        roster = cast_call(key, args.model, whole_uri)
+        roster, used_model = cast_call(key, whole_uri)
         cast_cache.write_text(json.dumps(roster))
-        print(f"{len(roster)} speakers, {time.time()-t0:.0f}s")
+        print(f"{len(roster)} speakers via {used_model}, {time.time()-t0:.0f}s")
     for sp in roster:
         print(f"      {sp['label']:4} {sp['name'] or '(unnamed)':16} {sp['voice'][:50]}")
 
@@ -330,16 +259,16 @@ def main():
 
     def run_window(item):
         i, (ws, we) = item
-        cache = CACHE / f"{ep}_win{i}_{args.model}.json"
+        cache = CACHE / f"{ep}_win{i}.json"
         inside = [x for x in segments if ws <= x["start"] < we]
         if not inside:
             return i, {"speakers": [], "turns": []}, inside
         if cache.exists():
             print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): cached", flush=True)
             return i, json.loads(cache.read_text()), inside
-        uri = upload(key, slice_audio(ep, ws, we), f"{ep}_w{i}")
+        uri = gemini.upload(key, slice_audio(ep, ws, we), f"{ep}_w{i}")
         t0 = time.time()
-        res, usage = generate(key, args.model, uri, (we - ws) / 60, roster, inside, ws)
+        res, usage, used = attribute(key, uri, (we - ws) / 60, roster, inside, ws)
         usage_total["in"] += usage.get("promptTokenCount", 0)
         usage_total["out"] += usage.get("candidatesTokenCount", 0)
         valid = {x["id"] for x in inside}
@@ -350,7 +279,7 @@ def main():
         cache.write_text(json.dumps(res))
         print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): {len(res['turns'])} turns, "
               f"reached {pct:.0f}%" + (f", dropped {len(bad)} bad ids" if bad else "")
-              + f", {time.time()-t0:.0f}s", flush=True)
+              + f", {used}, {time.time()-t0:.0f}s", flush=True)
         return i, res, inside
 
     with ThreadPoolExecutor(max_workers=CONCURRENCY) as pool:
@@ -401,6 +330,7 @@ def main():
     print(f"  unattributed: {unattributed}   turns: {len(turns)}   "
           f"last turn at segment {last_seg}/{segments[-1]['id']}")
     print(f"  tokens: {used_in} in / {used_out} out")
+    print(f"  models used: {gemini.usage_report()}")
     print(f"  -> {dst.relative_to(REPO)}")
 
 

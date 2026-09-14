@@ -14,22 +14,13 @@ Usage:  python3 scripts/summarize.py <episode-id> [...]
 import json
 import sys
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gemini  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[1]
 SEED = REPO / "content" / "seed"
-MODEL = "gemini-3.5-flash"
-API = "https://generativelanguage.googleapis.com"
-
-
-def api_key():
-    for line in (REPO / "apps" / "web" / ".env").read_text().splitlines():
-        if line.startswith("GEMINI_API_KEY="):
-            return line.split("=", 1)[1].strip()
-    sys.exit("GEMINI_API_KEY not found in apps/web/.env")
-
 
 SCHEMA = {
     "type": "OBJECT",
@@ -88,34 +79,11 @@ Transcript:
 """
 
 
-def generate(key, prompt, tries=4):
-    body = {"contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"responseMimeType": "application/json", "responseSchema": SCHEMA,
-                                 "temperature": 0.3, "thinkingConfig": {"thinkingBudget": 8192}}}
-    data = json.dumps(body).encode()
-    url = f"{API}/v1beta/models/{MODEL}:generateContent?key={key}"
-    for attempt in range(tries):
-        try:
-            req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=900) as r:
-                d = json.load(r)
-            return json.loads(d["candidates"][0]["content"]["parts"][0]["text"]), d.get("usageMetadata", {})
-        except urllib.error.HTTPError as e:
-            detail = e.read().decode()[:250]
-            if e.code in (429, 500, 503) and attempt < tries - 1:
-                wait = 30 * (attempt + 1)
-                print(f"    {e.code}, retrying in {wait}s", flush=True)
-                time.sleep(wait)
-                continue
-            sys.exit(f"HTTP {e.code}: {detail}")
-    sys.exit("unreachable")
-
-
 def main():
     eps = sys.argv[1:] or sorted(p.name.split(".")[0] for p in SEED.glob("*.transcript.json"))
     if not eps:
         sys.exit("no diarized transcripts yet — run scripts/diarize.py first")
-    key = api_key()
+    key = gemini.api_key()
 
     for ep in eps:
         src = SEED / f"{ep}.transcript.json"
@@ -135,7 +103,8 @@ def main():
 
         print(f"  {ep}: {len(t['segments'])} segments ...", end=" ", flush=True)
         t0 = time.time()
-        res, usage = generate(key, prompt)
+        res, usage, used = gemini.generate(
+            key, [{"text": prompt}], SCHEMA, thinking=8192, temperature=0.3)
 
         # resolve every segmentId to the timestamp it actually sits at
         at = {s["id"]: s["startSec"] for s in t["segments"]}
@@ -161,8 +130,8 @@ def main():
         }
         out_path.write_text(json.dumps(notes, indent=1))
         print(f'"{res["title"]}"  {len(notes["actionItems"])} actions, '
-              f'{len(notes["highlights"])} highlights, {time.time()-t0:.0f}s, '
-              f'{usage.get("promptTokenCount")} tokens')
+              f'{len(notes["highlights"])} highlights, {used}, '
+              f'{time.time()-t0:.0f}s, {usage.get("promptTokenCount")} tokens')
 
 
 if __name__ == "__main__":
