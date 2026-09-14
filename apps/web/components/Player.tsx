@@ -15,7 +15,7 @@ export function Player({ peaks }: { peaks: number[] }) {
 
   return (
     <div className="border-b border-line px-4 py-3">
-      <Waveform peaks={peaks} className="!h-11" />
+      <Waveform peaks={peaks} className="!h-11" maxBars={110} />
 
       <div className="mt-2.5 flex items-center gap-2.5">
         <button

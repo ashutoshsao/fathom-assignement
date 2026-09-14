@@ -44,11 +44,32 @@ Almost the entire application is one size. There is no ramp, so nothing leads an
 
 ## Progress
 
-- [ ] Type ramp + spacing tokens in `globals.css`
-- [ ] Call header: hierarchy, metadata row, platform, actions grouped
-- [ ] Summary pane: section labels, lead paragraph, body measure, timestamp chip component
-- [ ] Compact player, wider Ask rail
-- [ ] Library cards: palette-carrying art, participants, platform, action count
-- [ ] Transcript: reading measure and line-height for long sessions
-- [ ] Motion on tab change, streaming answer, citation arrival
-- [ ] Full suite green, verified at the 110-minute call
+- [x] **Type ramp + motion tokens** in `globals.css`, plus a shared `.label` for the uppercase
+      section headings that appear in the summary, the rail and the library.
+- [x] **Call header**: title leads at 23px, metadata recedes to 12.5px with dot separators and the
+      platform named, participants and Share grouped away from the title.
+- [x] **Summary pane**: labels, a lead paragraph that reads first, body at 14px/1.62, and one
+      consistent pressable timestamp chip everywhere it appears.
+- [x] **Compact player, wider Ask rail** (400px) so Ask owns the space rather than competing.
+- [x] **Library cards** with per-call tinted art, participant names, platform and time; page
+      header with a real title and a total.
+- [x] **Transcript** at a 640px measure and 1.72 line-height for long sessions.
+- [x] **Motion** on tab change, answer arrival and citation arrival — 140ms, state changes only.
+- [x] **Full suite green**: 35 unit, 25 integration, verified at the 110-minute call.
+
+## Two bugs the design pass surfaced
+
+Both had been shipped and invisible:
+
+- **The player's scrubber never rendered.** 420 bars drawn with a 1px gap need 420px of gap alone,
+  but the call rail is 368px wide — every bar was squeezed to sub-pixel width and the scrubber
+  painted as empty space. It now downsamples to what the width can show, taking the loudest peak
+  per bucket so the shape survives rather than flattening to the mean.
+- **Card art did not distinguish anything.** Tinting by the first speaker was reasonable until the
+  data arrived: every call's first speaker is id 0, so all five cards came out identically blue.
+  The tint is now derived from the call id.
+
+And one correction that needed checking rather than assuming: the pipeline heard "Dave Norris";
+an intermediate fix wrote "Dave Morris", which disagreed with the two calls the pipeline had got
+right. HPR's own show notes settle it as **Dave Morriss**. Logged in
+`content/seed/CORRECTIONS.md`.

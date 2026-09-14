@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useCurrentTime, useDuration, usePlayback } from "./playback";
 
 /**
@@ -13,7 +13,20 @@ import { useCurrentTime, useDuration, usePlayback } from "./playback";
  * middle" is a twenty-minute margin of error, and scrubbing blind is how you lose the thing you
  * were looking for.
  */
-export function Waveform({ peaks, className = "" }: { peaks: number[]; className?: string }) {
+export function Waveform({
+  peaks,
+  className = "",
+  maxBars = 420,
+}: {
+  peaks: number[];
+  className?: string;
+  /**
+   * Bars are drawn with a 1px gap, so N bars need N px of gap alone. The seed waveform is 420
+   * peaks; in the 368px-wide call rail that left every bar squeezed to sub-pixel width and the
+   * scrubber rendered as empty space. Downsample to what the width can actually show.
+   */
+  maxBars?: number;
+}) {
   const store = usePlayback();
   const time = useCurrentTime();
   const duration = useDuration();
@@ -22,6 +35,16 @@ export function Waveform({ peaks, className = "" }: { peaks: number[]; className
   const [dragging, setDragging] = useState(false);
 
   const progress = duration > 0 ? time / duration : 0;
+
+  const bars = useMemo(() => {
+    if (peaks.length <= maxBars) return peaks;
+    const step = peaks.length / maxBars;
+    // Take the loudest peak in each bucket, so a downsampled waveform keeps its shape instead of
+    // flattening towards the mean.
+    return Array.from({ length: maxBars }, (_, i) =>
+      Math.max(...peaks.slice(Math.floor(i * step), Math.max(Math.floor((i + 1) * step), Math.floor(i * step) + 1))),
+    );
+  }, [peaks, maxBars]);
 
   const timeAt = useCallback((clientX: number) => {
     const el = ref.current;
@@ -71,8 +94,8 @@ export function Waveform({ peaks, className = "" }: { peaks: number[]; className
       }}
     >
       <div className="flex h-full items-center gap-px">
-        {peaks.map((p, i) => {
-          const played = i / peaks.length <= progress;
+        {bars.map((p, i) => {
+          const played = i / bars.length <= progress;
           return (
             <div
               key={i}
