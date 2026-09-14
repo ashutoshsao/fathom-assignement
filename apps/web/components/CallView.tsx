@@ -6,11 +6,13 @@ import { clockTime, dayLabel, resolveDate } from "@/lib/dates";
 import { formatDuration } from "@/lib/time";
 import type { Call } from "@/lib/types";
 import { ActionItems } from "./ActionItems";
+import { AskPanel } from "./AskPanel";
 import { PlaybackProvider } from "./playback";
 import { Player } from "./Player";
 import { SpeakerChip } from "./SpeakerChip";
 import { SummaryPane } from "./SummaryPane";
 import { Transcript } from "./Transcript";
+import { SUGGESTED_SINGLE } from "@/lib/ask-suggestions";
 
 type Tab = "summary" | "actions" | "transcript";
 
@@ -91,16 +93,8 @@ export function CallView({ call }: { call: Call }) {
 
           <aside className="flex shrink-0 flex-col lg:w-[380px]">
             <Player peaks={call.waveform} />
-            <div className="flex min-h-0 flex-1 flex-col justify-between p-5">
-              <div>
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-text-faint">
-                  Ask Fathom
-                </div>
-                <p className="mt-3 text-[13px] leading-relaxed text-text-faint">
-                  Not built yet — this is where you ask questions about the call and get answers
-                  with citations that jump the player to the moment they came from.
-                </p>
-              </div>
+            <AskPanel callId={call.id} suggestions={SUGGESTED_SINGLE} scopeLabel="This call" />
+            <div className="shrink-0 border-t border-line px-5 py-3">
               <p className="text-[11px] leading-relaxed text-text-faint">
                 Audio: {call.source.name} —{" "}
                 <a
