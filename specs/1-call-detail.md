@@ -27,9 +27,27 @@ to get you here.
 
 ## Progress
 
-- [ ] Player: waveform, scrub, play/pause, skip, speed, current/total time
-- [ ] Transcript tab: speaker grouping, timestamps, click-to-seek
-- [ ] Playback → transcript sync, with manual-scroll escape hatch
-- [ ] Summary tab rendering the real structured summary
-- [ ] Action items tab, each seeking to its source moment
-- [ ] Verified against the 8-speaker hour-long call, not just a short one
+- [x] **Player**: waveform scrubber from precomputed peaks, hover-time readout, play/pause,
+      ±10s, speed, current/total. Keyboard: space, arrows.
+- [x] **Transcript**: Whisper fragments grouped into speaker turns (one row per fragment read as
+      noise, not conversation), per-speaker colour, click any line to seek.
+- [x] **Playback → transcript sync, with the escape hatch.** Following pauses the moment you
+      scroll; a "Jump to current" affordance opts back in.
+- [x] **Summary tab** rendering the real structured summary, every takeaway and topic carrying
+      the timestamp it was drawn from.
+- [x] **Action items tab**, each seeking to its source moment, with an honest empty state for
+      calls where nobody committed to anything.
+- [x] **Verified against the 8-speaker hour-long call.** An integration test asserts all 2,326
+      segments render, and that a cited timestamp puts the player within 2s of where it claims.
+
+## What this milestone actually taught
+
+- **Context state would have broken this.** Putting `currentTime` in React context re-renders
+  every consumer ~4x/sec; with 2,326 rows that is a page that stutters while audio plays. Time
+  lives in a ref published through a subscription, and the transcript subscribes to *which line
+  is active* — a few changes a minute — rather than to the clock.
+- **Two layout bugs were invisible to typecheck and unit tests**, and obvious in a screenshot: an
+  empty flex pane stayed mounted behind the transcript tab and stole half the height, and the
+  page scrolled instead of the transcript pane. This is the argument for `apps/tests` existing.
+- **Integration tests must run against a production build.** `next dev` injects an HMR websocket
+  that fails under the harness and reads as a console error.

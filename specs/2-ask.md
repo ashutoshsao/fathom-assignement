@@ -39,8 +39,28 @@ badly — a canned answer is obvious within one question.
 
 ## Progress
 
-- [ ] `/api/ask` route handler, streaming, structured `{ answer, citations }`
-- [ ] Ask panel UI: streaming answer, suggested prompts, scope selector
-- [ ] Citation chips that seek the player
-- [ ] Cross-call scope with retrieval
-- [ ] Grounding spot-checked against the long call — citations land where they claim
+- [x] **`/api/ask` route handler**, streaming NDJSON (`delta` / `done` / `error`), structured
+      `{ answer, citations }`. Server-side model rotation mirrors the pipeline's, so a demo does
+      not stop answering when one model hits its daily 20.
+- [x] **Ask panel UI**: progressive answer, suggested prompts on the empty state, scope badge.
+- [x] **Citation chips that seek the player**, asserted numerically in an integration test — a
+      chip claiming 25:00 must put the player within 2s of 25:00.
+- [x] **Grounding spot-checked against the long call.** Asked about the Internet Archive; all
+      four citations landed on moments that genuinely say it. The raw transcript at those points
+      reads "peer to be script" and "Robin random thing" — the model read past the crosstalk and
+      still pointed at the right seconds. A second question answered what it could and said
+      plainly "He did not specify a deadline", rather than inventing one.
+- [ ] **Cross-call scope.** The route already accepts no `callId` and answers over all five
+      transcripts; the UI has no scope selector yet, and cross-call citations navigate rather
+      than seek. Moved into M3, where the library shell it belongs to is built.
+
+## What this milestone actually taught
+
+- **Citations must be segment ids, not model-written timestamps** — the same grounding rule
+  diarization arrived at the hard way. The server resolves ids against the real transcript and
+  drops any that do not exist, so a chip can never seek to a fabricated moment.
+- **Streaming + structured output means parsing a half-written JSON document.** Worth it: the
+  answer appears as it is written while citations still arrive as data.
+- **Model labels drift from the schema.** Citation labels came back as verbatim transcript
+  quotes, one four lines long, breaking the chip layout. Fixed in the prompt *and* clamped in the
+  component — a model instruction is not a guarantee.
