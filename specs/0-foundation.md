@@ -75,14 +75,35 @@ the highlights and every Ask citation all address the same timeline in seconds.
       requests — comfortably inside the free tier, whose binding constraint is TPM per minute, not
       volume. No billing needed for this assignment.
 
-- [ ] Tailwind v4 + shadcn, **dark theme tokens, fonts** — Tailwind came with the scaffold; the
-      design system itself is not started.
-- [ ] Data model landed as TypeScript types + a seed loader
-- [ ] **Diarization pipeline**: chunked audio + existing segments → Gemini → speaker-labelled
-      transcript JSON, with speaker identities reconciled across chunks
-- [ ] Summary + action items pipeline (structured output)
-- [ ] Seed set complete and committed to `content/seed/`
-- [ ] Deploys to Vercel from a clean build — **blocked**: needs the repo pushed and Vercel connected
+- [x] **Dark theme tokens** in `globals.css` — dark-only, matching the real product; surfaces,
+      hairlines, one accent, and an 8-colour speaker palette. shadcn not pulled in yet; the token
+      layer is what the components actually need first.
+
+- [x] **Data model + seed loader.** `lib/types.ts` (everything resolves to a position in seconds),
+      `lib/seed.ts` (server-only, file-backed, index split from call records so drawing the
+      library does not load a 2,326-segment transcript), `lib/dates.ts` (relative dates, so the
+      seeded library never reads as abandoned), `lib/time.ts` (timeline maths).
+
+- [x] **Tests.** Unit tests co-located (`lib/*.test.ts`, `bun test`, 27 passing) — including a
+      check that the binary-search segment lookup agrees with a linear scan across a
+      2,326-segment transcript. Integration workspace in `apps/tests` (Playwright).
+
+- [x] **Diarization pipeline built and proven on the hardest call.** `hpr4314`: 9 speakers
+      (8 named humans + the announcer), 1043 turns, **0 unattributed segments**, coverage to
+      segment 2317/2325. Six approaches were needed; five failed *silently*, which is recorded in
+      the script header because the failures are the useful part.
+
+- [x] **Model rotation** (`scripts/gemini.py`) after hitting the real quota: 20 requests/day
+      **per model**, not the 250-1500 published third-party figures suggested. Scoped per model,
+      so requests rotate across a pool of ten flash-class models with failover on 429.
+
+- [x] **Waveform peaks** precomputed at build time.
+
+- [ ] Diarization run across the remaining four calls
+- [ ] Summary + action items pipeline run (script written, `scripts/summarize.py`)
+- [ ] Seed assembled into `apps/web/content/` (script written, `scripts/build_seed.py`)
+- [ ] Deploys to Vercel — **deferred by choice**: we deploy once the output is worth showing,
+      which overrides the "deploy early" decision in `6-deploy-walkthrough.md`.
 
 ## Also decided during M0 (recorded here, detail in the specs they belong to)
 

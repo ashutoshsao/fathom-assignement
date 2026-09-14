@@ -15,8 +15,12 @@ and a five-minute video.
 
 ## Decisions
 
-- **Deploy early, not at the end.** A first deploy happens in M0 so that deployment failures surface
-  while there is still time to fix them, rather than in the last hour.
+- ~~**Deploy early, not at the end.**~~ **Overridden.** The call was made to deploy once the output
+  is worth showing rather than on a schedule. The risk this accepts is that a deployment problem
+  surfaces late; it is mitigated by the stack being deliberately boring (Next.js on Vercel, no
+  database, no auth, static seed data), so there is very little that can fail at deploy time that
+  would not also fail locally. The one genuinely deploy-only risk is `GEMINI_API_KEY` in Vercel's
+  environment, which is a single setting to check.
 
 ## Progress
 
