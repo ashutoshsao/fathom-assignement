@@ -14,9 +14,14 @@ How this shape was arrived at, because it is not obvious:
   3. One request for the whole 110-min call -- best quality by far (it recovered real names) but
      it silently stopped at 51 minutes. Long audio truncates without erroring, which would have
      shipped as "the back half of every long call has no speakers."
+  4. Windows, with turns keyed by TIMESTAMP -- the model invented times past the end of the audio
+     (a 35-minute slice came back with turns at 57 minutes). Model-generated timestamps are not
+     trustworthy at this length, and this product resolves everything to timestamps.
 
-So: windows big enough to keep the quality, small enough to actually finish, processed in order
-with the roster carried forward so a speaker keeps one identity across the whole call.
+So: windows big enough to keep the quality and small enough to finish, turns keyed by SEGMENT ID
+rather than by time (the model picks from a list it was given, so it cannot invent a position, and
+anything out of range is dropped), and the roster carried forward so a speaker keeps one identity
+across the whole call.
 
 Usage:  python3 scripts/diarize.py <episode-id> [--model NAME]
 """
@@ -130,27 +135,34 @@ SCHEMA = {
             "voice": {"type": "STRING"}},
             "required": ["label", "name", "voice"]}},
         "turns": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {
-            "startSec": {"type": "NUMBER"},
+            "fromSegmentId": {"type": "INTEGER"},
             "label": {"type": "STRING"}},
-            "required": ["startSec", "label"]}},
+            "required": ["fromSegmentId", "label"]}},
     },
     "required": ["speakers", "turns"],
 }
 
-PROMPT = """This is {mins:.0f} minutes of audio from one group call.
+PROMPT = """This is {mins:.0f} minutes of audio from one group call, plus the exact transcript
+segments for it. The text and timings are already correct — do not re-transcribe or re-time.
 
-Identify who is speaking, then output speaker TURNS: one entry each time the speaker changes,
-with the time in seconds FROM THE START OF THIS AUDIO.
+Your only job is deciding WHO is speaking.
+
+Output speaker TURNS: one entry each time the speaker changes, identified by the segment id where
+that speaker starts. The speaker holds from that segment until the next entry.
 
 {roster}
 
 Rules:
-- Cover the ENTIRE audio from start to finish. The last turn should be near {mins:.0f} minutes.
-  Do not stop early.
+- The first turn must be segment {first_id}.
+- Only use segment ids from the list below. Never invent one.
+- Cover the whole list: the last turn should be near segment {last_id}. Do not stop early.
 - Same person = same label throughout.
-- name: the person's name if it is actually spoken in the call, otherwise "".
+- name: the person's name if it is actually spoken aloud, otherwise "".
 - voice: short concrete description (accent, pitch, pace).
 - An automated intro/outro announcer counts as a speaker.
+
+Segments (time in seconds from the start of this audio):
+{segments}
 """
 
 ROSTER_NONE = "This is the beginning of the call. Use labels S1, S2, S3... in order of first appearance."
@@ -163,15 +175,18 @@ exact labels when you hear them again — it is the same conversation continuing
 If you hear someone genuinely not in that list, add a new label continuing the sequence."""
 
 
-def generate(key, model, uri, mins, roster, tries=4):
+def generate(key, model, uri, mins, roster, segments, clip_start, tries=4):
     if roster:
         listing = "\n".join(f'  {s["label"]} = {s["name"] or "unnamed"} ({s["voice"]})' for s in roster)
         roster_text = ROSTER_KNOWN.format(listing=listing)
     else:
         roster_text = ROSTER_NONE
+    listing = "\n".join(
+        f'{s["id"]}  [{s["start"] - clip_start:6.1f}s]  {s["text"]}' for s in segments)
     body = {
         "contents": [{"parts": [
-            {"text": PROMPT.format(mins=mins, roster=roster_text)},
+            {"text": PROMPT.format(mins=mins, roster=roster_text, segments=listing,
+                                   first_id=segments[0]["id"], last_id=segments[-1]["id"])},
             {"file_data": {"mime_type": "audio/mp3", "file_uri": uri}},
         ]}],
         "generationConfig": {"responseMimeType": "application/json", "responseSchema": SCHEMA,
@@ -247,25 +262,30 @@ def main():
             print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): cached")
         else:
             print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): uploading ...", end=" ", flush=True)
+            inside = [s for s in segments if ws <= s["start"] < we]
             uri = upload(key, slice_audio(ep, ws, we), f"{ep}_w{i}")
             t0 = time.time()
-            res, usage = generate(key, args.model, uri, (we - ws) / 60, roster)
+            res, usage = generate(key, args.model, uri, (we - ws) / 60, roster, inside, ws)
             used_in += usage.get("promptTokenCount", 0)
             used_out += usage.get("candidatesTokenCount", 0)
             cache.write_text(json.dumps(res))
-            cov = max((t["startSec"] for t in res["turns"]), default=0)
-            print(f"{len(res['turns'])} turns, covered {cov/60:.0f}/{(we-ws)/60:.0f} min, "
-                  f"{time.time()-t0:.0f}s")
+            valid = {s["id"] for s in inside}
+            bad = [t for t in res["turns"] if t["fromSegmentId"] not in valid]
+            res["turns"] = [t for t in res["turns"] if t["fromSegmentId"] in valid]
+            reach = max((t["fromSegmentId"] for t in res["turns"]), default=inside[0]["id"])
+            pct = (reach - inside[0]["id"]) / max(1, inside[-1]["id"] - inside[0]["id"]) * 100
+            cache.write_text(json.dumps(res))
+            print(f"{len(res['turns'])} turns, reached {pct:.0f}% of window"
+                  + (f", dropped {len(bad)} invalid ids" if bad else "")
+                  + f", {time.time()-t0:.0f}s")
         roster, by_label = merge_roster(roster, res["speakers"])
+        seen = {t["seg"] for t in turns}
         for t in res["turns"]:
-            abs_sec = ws + t["startSec"]
-            if i > 0 and abs_sec < ws + OVERLAP_SEC - 1:
-                continue                     # replayed tail: keep the earlier window's reading
             entry = by_label.get(t["label"])
-            if entry:
-                turns.append({"at": abs_sec, "who": entry["label"]})
+            if entry and t["fromSegmentId"] not in seen:
+                turns.append({"seg": t["fromSegmentId"], "who": entry["label"]})
 
-    turns.sort(key=lambda t: t["at"])
+    turns.sort(key=lambda t: t["seg"])
 
     # canonical speaker ids, in order of first appearance
     order, ids = [], {}
@@ -276,7 +296,7 @@ def main():
 
     labelled, cur, ti = [], None, 0
     for s in segments:
-        while ti < len(turns) and turns[ti]["at"] <= s["start"] + 0.5:
+        while ti < len(turns) and turns[ti]["seg"] <= s["id"]:
             cur = ids[turns[ti]["who"]]
             ti += 1
         labelled.append({"id": s["id"], "startSec": s["start"], "endSec": s["end"],
@@ -296,8 +316,9 @@ def main():
         share = n / len(labelled) * 100
         print(f"    {s['name']:16} {n:5} segments ({share:4.1f}%)  {s['voice'][:46]}")
     unattributed = sum(1 for x in labelled if x["speaker"] is None)
-    last_turn = turns[-1]["at"] if turns else 0
-    print(f"  unattributed: {unattributed}   last turn at {last_turn/60:.1f}/{total/60:.1f} min")
+    last_seg = turns[-1]["seg"] if turns else 0
+    print(f"  unattributed: {unattributed}   turns: {len(turns)}   "
+          f"last turn at segment {last_seg}/{segments[-1]['id']}")
     print(f"  tokens: {used_in} in / {used_out} out")
     print(f"  -> {dst.relative_to(REPO)}")
 
