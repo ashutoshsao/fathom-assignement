@@ -8,9 +8,13 @@ import { useEffect, useMemo, useState } from "react";
  * Stepped from JS rather than a CSS keyframe, deliberately. Our reduced-motion rule caps
  * `animation-iteration-count`, which correctly stops decorative loops — but it would also freeze
  * this, and a silent thirty-second wait reading as a hang is its own accessibility problem.
- * Driving frames in JS lets the preference *reduce* the motion rather than delete it: the spiral
- * is replaced by a slow collective breathe, so nothing travels across the screen and nothing
- * flashes, but the indicator is still visibly alive.
+ *
+ * Under reduced motion the spiral keeps running, at roughly half speed. An earlier version
+ * replaced it with a collective fade, which was an over-correction: the setting exists for
+ * vestibular triggers — large movement, parallax, zoom, flashing — and a 15px trail is none of
+ * those. The genuine offence was the strobe this file replaced (an infinite CSS animation forced
+ * to a 0.01ms duration), not the travelling head. Small, slow, essential-feedback indicators are
+ * the standard exception, and a dimming grid reads as a broken light rather than as progress.
  */
 
 const N = 5;
@@ -59,8 +63,9 @@ export function DotLoader({ className = "" }: { className?: string }) {
   }, []);
 
   useEffect(() => {
-    // ~14fps normally; ~3fps when motion is reduced. Neither is fast enough to read as a flash.
-    const id = setInterval(() => setFrame((f) => f + 1), calm ? 320 : 70);
+    // ~14fps normally, ~7fps when motion is reduced. Both are far below anything that reads as a
+    // flash (the accessibility threshold is 3 flashes per second of large or bright areas).
+    const id = setInterval(() => setFrame((f) => f + 1), calm ? 140 : 70);
     return () => clearInterval(id);
   }, [calm]);
 
@@ -74,15 +79,11 @@ export function DotLoader({ className = "" }: { className?: string }) {
       aria-hidden
     >
       {Array.from({ length: total }, (_, i) => {
-        let opacity: number;
-        if (calm) {
-          // Reduced: the whole matrix breathes together — no travelling head to follow.
-          opacity = 0.24 + 0.34 * (0.5 + 0.5 * Math.sin(frame / 3));
-        } else {
-          // Distance behind the head along the spiral, so the trail fades out smoothly.
-          const behind = (head - rank[i]! + total) % total;
-          opacity = behind < 7 ? 1 - behind * 0.13 : 0.14;
-        }
+        // Distance behind the head along the spiral, so the trail fades out smoothly. Reduced
+        // motion softens the contrast between head and trail as well as slowing it.
+        const behind = (head - rank[i]! + total) % total;
+        const peak = calm ? 0.8 : 1;
+        const opacity = behind < 7 ? peak - behind * (calm ? 0.09 : 0.13) : 0.14;
         return (
           <span
             key={i}
