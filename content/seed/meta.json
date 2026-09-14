@@ -1,0 +1,22 @@
+{
+  "_comment": "Per-call presentation metadata. daysAgo/timeOfDay are resolved to real dates at render time rather than baked in, so the library always reads as a live account ('Today', 'Yesterday') whenever someone opens the deployed link, instead of decaying into a wall of stale dates.",
+  "calls": [
+    {
+      "episode": "hpr4314",
+      "platform": "google-meet",
+      "daysAgo": 0,
+      "timeOfDay": "15:30",
+      "titleOverride": "",
+      "note": "The stress case: large group call, heavy crosstalk, 1h49m. Today, so it is the first thing a reviewer sees."
+    },
+    { "episode": "hpr4176", "platform": "google-meet", "daysAgo": 1, "timeOfDay": "10:00", "titleOverride": "" },
+    { "episode": "hpr4111", "platform": "zoom", "daysAgo": 6, "timeOfDay": "16:00", "titleOverride": "" },
+    { "episode": "hpr4086", "platform": "google-meet", "daysAgo": 13, "timeOfDay": "09:30", "titleOverride": "" },
+    { "episode": "hpr4066", "platform": "teams", "daysAgo": 27, "timeOfDay": "14:00", "titleOverride": "" }
+  ],
+  "source": {
+    "name": "Hacker Public Radio",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  }
+}

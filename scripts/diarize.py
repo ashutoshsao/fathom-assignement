@@ -18,10 +18,21 @@ How this shape was arrived at, because it is not obvious:
      (a 35-minute slice came back with turns at 57 minutes). Model-generated timestamps are not
      trustworthy at this length, and this product resolves everything to timestamps.
 
-So: windows big enough to keep the quality and small enough to finish, turns keyed by SEGMENT ID
-rather than by time (the model picks from a list it was given, so it cannot invent a position, and
-anything out of range is dropped), and the roster carried forward so a speaker keeps one identity
-across the whole call.
+  5. Windows processed in order, each handed the previous window's roster -- correct, but each
+     window waits for the one before it, and a single window was taking 5+ minutes. Four windows
+     x five calls is over an hour of pure waiting.
+
+Final shape, in two phases:
+
+  CASTING  one pass over the whole file to learn WHO is on the call. This is the thing the
+           whole-file request was always good at -- it recovered real names (Ken, Honkeymagoo,
+           Joe...) in under a minute. It does not matter that it stops paying attention halfway,
+           because we only want the cast list, not the attribution.
+
+  PASSES   every window then runs IN PARALLEL against that fixed roster, returning turns keyed by
+           SEGMENT ID (the model picks from a list it was given, so it cannot invent a position,
+           and out-of-range ids are dropped). A fixed roster is what removes the sequential
+           dependency: no window needs to know what an earlier one decided.
 
 Usage:  python3 scripts/diarize.py <episode-id> [--model NAME]
 """
@@ -33,6 +44,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -43,8 +55,9 @@ CACHE = REPO / "content" / ".diarize-cache"
 MODEL = "gemini-3.5-flash"
 API = "https://generativelanguage.googleapis.com"
 
-WINDOW_SEC = 35 * 60   # comfortably inside what one request completes
-OVERLAP_SEC = 120      # replayed tail, so a turn spanning a seam is not lost
+WINDOW_SEC = 20 * 60   # smaller windows finish faster, and parallelism covers the extra count
+OVERLAP_SEC = 90       # replayed tail, so a turn spanning a seam is not lost
+CONCURRENCY = 4        # windows are independent once the roster is fixed
 
 
 def api_key():
@@ -165,14 +178,33 @@ Segments (time in seconds from the start of this audio):
 {segments}
 """
 
+CAST_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {"speakers": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {
+        "label": {"type": "STRING"}, "name": {"type": "STRING"}, "voice": {"type": "STRING"}},
+        "required": ["label", "name", "voice"]}}},
+    "required": ["speakers"],
+}
+
+CAST_PROMPT = """This is a full recording of one group call.
+
+List every distinct person you can hear taking part. Do not transcribe anything.
+
+- label: S1, S2, S3... in order of first appearance.
+- name: the person's name if it is spoken aloud anywhere in the call, otherwise "".
+- voice: a short, concrete description (accent, pitch, pace) precise enough to recognise this
+  person again in a short excerpt of the same call.
+- Include an automated intro/outro announcer if there is one.
+"""
+
 ROSTER_NONE = "This is the beginning of the call. Use labels S1, S2, S3... in order of first appearance."
 
-ROSTER_KNOWN = """These speakers were already identified earlier in this same call. Re-use their
-exact labels when you hear them again — it is the same conversation continuing:
+ROSTER_KNOWN = """This is the cast of the call — everyone who takes part, identified from the full
+recording. Use these exact labels:
 
 {listing}
 
-If you hear someone genuinely not in that list, add a new label continuing the sequence."""
+Only add a new label if you genuinely hear someone who is not in that list."""
 
 
 def generate(key, model, uri, mins, roster, segments, clip_start, tries=4):
@@ -208,6 +240,30 @@ def generate(key, model, uri, mins, roster, segments, clip_start, tries=4):
                 time.sleep(wait)
                 continue
             sys.exit(f"HTTP {e.code}: {body_txt}")
+    sys.exit("unreachable")
+
+
+def cast_call(key, model, uri):
+    """One pass over the whole file to learn who is present. Attribution comes later."""
+    body = {"contents": [{"parts": [{"text": CAST_PROMPT},
+                                    {"file_data": {"mime_type": "audio/mp3", "file_uri": uri}}]}],
+            "generationConfig": {"responseMimeType": "application/json",
+                                 "responseSchema": CAST_SCHEMA, "temperature": 0,
+                                 "thinkingConfig": {"thinkingBudget": 4096}}}
+    url = f"{API}/v1beta/models/{model}:generateContent?key={key}"
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(url, data=json.dumps(body).encode(),
+                                         headers={"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=1800) as r:
+                d = json.load(r)
+            return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])["speakers"]
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode()[:250]
+            if e.code in (429, 500, 503) and attempt < 3:
+                time.sleep(30 * (attempt + 1))
+                continue
+            sys.exit(f"HTTP {e.code}: {detail}")
     sys.exit("unreachable")
 
 
@@ -254,36 +310,61 @@ def main():
         start = end
     print(f"  {len(windows)} windows of <= {WINDOW_SEC/60:.0f} min")
 
-    roster, turns, used_in, used_out = [], [], 0, 0
-    for i, (ws, we) in enumerate(windows):
+    # ---- phase 1: casting. One pass over the whole file to learn who is on the call.
+    cast_cache = CACHE / f"{ep}_cast_{args.model}.json"
+    if cast_cache.exists():
+        roster = json.loads(cast_cache.read_text())
+        print(f"  cast: cached, {len(roster)} speakers")
+    else:
+        print("  cast: uploading whole call ...", end=" ", flush=True)
+        whole_uri = upload(key, AUDIO / f"{ep}.mp3", ep)
+        t0 = time.time()
+        roster = cast_call(key, args.model, whole_uri)
+        cast_cache.write_text(json.dumps(roster))
+        print(f"{len(roster)} speakers, {time.time()-t0:.0f}s")
+    for sp in roster:
+        print(f"      {sp['label']:4} {sp['name'] or '(unnamed)':16} {sp['voice'][:50]}")
+
+    # ---- phase 2: attribution. Windows are independent now the roster is fixed, so run them all.
+    usage_total = {"in": 0, "out": 0}
+
+    def run_window(item):
+        i, (ws, we) = item
         cache = CACHE / f"{ep}_win{i}_{args.model}.json"
+        inside = [x for x in segments if ws <= x["start"] < we]
+        if not inside:
+            return i, {"speakers": [], "turns": []}, inside
         if cache.exists():
-            res = json.loads(cache.read_text())
-            print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): cached")
-        else:
-            print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): uploading ...", end=" ", flush=True)
-            inside = [s for s in segments if ws <= s["start"] < we]
-            uri = upload(key, slice_audio(ep, ws, we), f"{ep}_w{i}")
-            t0 = time.time()
-            res, usage = generate(key, args.model, uri, (we - ws) / 60, roster, inside, ws)
-            used_in += usage.get("promptTokenCount", 0)
-            used_out += usage.get("candidatesTokenCount", 0)
-            cache.write_text(json.dumps(res))
-            valid = {s["id"] for s in inside}
-            bad = [t for t in res["turns"] if t["fromSegmentId"] not in valid]
-            res["turns"] = [t for t in res["turns"] if t["fromSegmentId"] in valid]
-            reach = max((t["fromSegmentId"] for t in res["turns"]), default=inside[0]["id"])
-            pct = (reach - inside[0]["id"]) / max(1, inside[-1]["id"] - inside[0]["id"]) * 100
-            cache.write_text(json.dumps(res))
-            print(f"{len(res['turns'])} turns, reached {pct:.0f}% of window"
-                  + (f", dropped {len(bad)} invalid ids" if bad else "")
-                  + f", {time.time()-t0:.0f}s")
-        roster, by_label = merge_roster(roster, res["speakers"])
+            print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): cached", flush=True)
+            return i, json.loads(cache.read_text()), inside
+        uri = upload(key, slice_audio(ep, ws, we), f"{ep}_w{i}")
+        t0 = time.time()
+        res, usage = generate(key, args.model, uri, (we - ws) / 60, roster, inside, ws)
+        usage_total["in"] += usage.get("promptTokenCount", 0)
+        usage_total["out"] += usage.get("candidatesTokenCount", 0)
+        valid = {x["id"] for x in inside}
+        bad = [t for t in res["turns"] if t["fromSegmentId"] not in valid]
+        res["turns"] = [t for t in res["turns"] if t["fromSegmentId"] in valid]
+        reach = max((t["fromSegmentId"] for t in res["turns"]), default=inside[0]["id"])
+        pct = (reach - inside[0]["id"]) / max(1, inside[-1]["id"] - inside[0]["id"]) * 100
+        cache.write_text(json.dumps(res))
+        print(f"  window {i} ({ws/60:.0f}-{we/60:.0f} min): {len(res['turns'])} turns, "
+              f"reached {pct:.0f}%" + (f", dropped {len(bad)} bad ids" if bad else "")
+              + f", {time.time()-t0:.0f}s", flush=True)
+        return i, res, inside
+
+    with ThreadPoolExecutor(max_workers=CONCURRENCY) as pool:
+        outcomes = sorted(pool.map(run_window, list(enumerate(windows))), key=lambda x: x[0])
+
+    turns = []
+    for _, res, _inside in outcomes:
+        roster, by_label = merge_roster(roster, res.get("speakers", []))
         seen = {t["seg"] for t in turns}
         for t in res["turns"]:
             entry = by_label.get(t["label"])
             if entry and t["fromSegmentId"] not in seen:
                 turns.append({"seg": t["fromSegmentId"], "who": entry["label"]})
+    used_in, used_out = usage_total["in"], usage_total["out"]
 
     turns.sort(key=lambda t: t["seg"])
 

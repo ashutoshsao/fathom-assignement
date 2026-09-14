@@ -1,0 +1,6107 @@
+{
+ "episode": "hpr4314",
+ "durationSec": 6592.48,
+ "speakers": [
+  {
+   "id": 0,
+   "name": "Speaker 1",
+   "voice": "Deep, clear, standard American accent"
+  },
+  {
+   "id": 1,
+   "name": "Speaker 2",
+   "voice": "Deep, slightly raspy, standard American accent"
+  },
+  {
+   "id": 2,
+   "name": "Speaker 3",
+   "voice": "Irish accent, medium pitch, clear"
+  },
+  {
+   "id": 3,
+   "name": "Speaker 4",
+   "voice": "American accent, mid pitch, clear"
+  },
+  {
+   "id": 4,
+   "name": "Speaker 5",
+   "voice": "American accent, low pitch, slightly raspy"
+  },
+  {
+   "id": 5,
+   "name": "Speaker 6",
+   "voice": "Scottish accent, low pitch, slightly muffled"
+  }
+ ],
+ "segments": [
+  {
+   "id": 0,
+   "start": 0.0,
+   "end": 13.2,
+   "text": "This is Hacker Public Radio Episode 4314, for 2025-02-13",
+   "speaker": 0
+  },
+  {
+   "id": 1,
+   "start": 13.2,
+   "end": 16.4,
+   "text": "Today's show is entitled, \"24-25 New Years Eve show\"",
+   "speaker": 0
+  },
+  {
+   "id": 2,
+   "start": 16.4,
+   "end": 20.04,
+   "text": "The host is Honkeymagoo and the duration is 01:48:36",
+   "speaker": 0
+  },
+  {
+   "id": 3,
+   "start": 20.04,
+   "end": 22.08,
+   "text": "The flag is Explicit, and the license is CC-BY-SA",
+   "speaker": 0
+  },
+  {
+   "id": 4,
+   "start": 22.08,
+   "end": 27.32,
+   "text": "The summary is \"The HPR community comes toghether to say happy new year and chat\"",
+   "speaker": 0
+  },
+  {
+   "id": 5,
+   "start": 40.0,
+   "end": 48.0,
+   "text": "How are you sir? I'm alive. I'm about the same. How do you normally post to the internet",
+   "speaker": 1
+  },
+  {
+   "id": 6,
+   "start": 48.0,
+   "end": 58.0,
+   "text": "archive? I use the script for a long time. What script? They have a command line",
+   "speaker": 2
+  },
+  {
+   "id": 7,
+   "start": 58.0,
+   "end": 64.0,
+   "text": "script that you can use to post. When you're awake and have some time to do a show",
+   "speaker": 2
+  },
+  {
+   "id": 8,
+   "start": 64.0,
+   "end": 69.0,
+   "text": "not because I'm looking at the redoing. Well, I have to take over from Dave Dave's",
+   "speaker": 2
+  },
+  {
+   "id": 9,
+   "start": 69.0,
+   "end": 77.0,
+   "text": "written script. So I'm going to have to see, yeah, it calls him a lot of problems and I",
+   "speaker": 2
+  },
+  {
+   "id": 10,
+   "start": 77.0,
+   "end": 83.0,
+   "text": "want to see what all the people are doing. Is archive that already accepting?",
+   "speaker": 1
+  },
+  {
+   "id": 11,
+   "start": 83.0,
+   "end": 89.0,
+   "text": "Yeah, yeah, yeah. Oh, are they? Oh, well, I haven't stopped this script, but",
+   "speaker": 1
+  },
+  {
+   "id": 12,
+   "start": 89.0,
+   "end": 98.0,
+   "text": "realized that there's still accepting, you know, to me. So I have, I do my editing through a",
+   "speaker": 1
+  },
+  {
+   "id": 13,
+   "start": 98.0,
+   "end": 107.0,
+   "text": "a sock script that Jason Van Gumpster, Fleab, and I put together and it basically",
+   "speaker": 1
+  },
+  {
+   "id": 14,
+   "start": 107.0,
+   "end": 115.0,
+   "text": "does all the editing that I wanted to do and then automatically uploads it to use the",
+   "speaker": 1
+  },
+  {
+   "id": 15,
+   "start": 115.0,
+   "end": 119.0,
+   "text": "command line script for archive. That organ automatically pushes it to",
+   "speaker": 1
+  },
+  {
+   "id": 16,
+   "start": 119.0,
+   "end": 125.0,
+   "text": "our account. Yeah, that's exactly what I'm looking for. So how other people",
+   "speaker": 2
+  },
+  {
+   "id": 17,
+   "start": 125.0,
+   "end": 130.0,
+   "text": "have approached it? I mean, I haven't taken any of my recent ones",
+   "speaker": 2
+  },
+  {
+   "id": 18,
+   "start": 130.0,
+   "end": 133.0,
+   "text": "enough and published because even with archive that already",
+   "speaker": 2
+  },
+  {
+   "id": 19,
+   "start": 133.0,
+   "end": 139.0,
+   "text": "down, I haven't changed what I was doing and last time",
+   "speaker": 2
+  },
+  {
+   "id": 20,
+   "start": 139.0,
+   "end": 148.0,
+   "text": "I had was still 250 and 250, right now.",
+   "speaker": 2
+  },
+  {
+   "id": 21,
+   "start": 148.0,
+   "end": 155.0,
+   "text": "Yeah, last one I have is episode 250 from August 16th this year.",
+   "speaker": 1
+  },
+  {
+   "id": 22,
+   "start": 155.0,
+   "end": 160.0,
+   "text": "Okay. Often that auction next time, the strip runs if there's an error or",
+   "speaker": 1
+  },
+  {
+   "id": 23,
+   "start": 160.0,
+   "end": 164.0,
+   "text": "something, is then I tacked on the end. Like we were talking yesterday,",
+   "speaker": 1
+  },
+  {
+   "id": 24,
+   "start": 164.0,
+   "end": 169.0,
+   "text": "I have a orange pie now that does the, that hosts my audio files.",
+   "speaker": 1
+  },
+  {
+   "id": 25,
+   "start": 169.0,
+   "end": 175.0,
+   "text": "Which, I mean, I just got it. It's a 4 gig orange pie and if it's not going to",
+   "speaker": 1
+  },
+  {
+   "id": 26,
+   "start": 175.0,
+   "end": 180.0,
+   "text": "make a difference, whether it's the 4 gig orange pie or rum, the old",
+   "speaker": 1
+  },
+  {
+   "id": 27,
+   "start": 180.0,
+   "end": 184.0,
+   "text": "pine 64 that I have, I might just put it back on the pine 64 and find a better",
+   "speaker": 1
+  },
+  {
+   "id": 28,
+   "start": 184.0,
+   "end": 189.0,
+   "text": "use for a 4 gig orange pie, which is still very confusing as to why",
+   "speaker": 1
+  },
+  {
+   "id": 29,
+   "start": 189.0,
+   "end": 197.0,
+   "text": "that seems to, word press seems to have a hard time with the MP3 file",
+   "speaker": 1
+  },
+  {
+   "id": 30,
+   "start": 197.0,
+   "end": 202.0,
+   "text": "that timing out. When it tries to check whether, you know,",
+   "speaker": 1
+  },
+  {
+   "id": 31,
+   "start": 202.0,
+   "end": 206.0,
+   "text": "check the validity of the file. The times out when it's on the MP3,",
+   "speaker": 1
+  },
+  {
+   "id": 32,
+   "start": 206.0,
+   "end": 209.0,
+   "text": "but that doesn't seem to have any problem with the ag.",
+   "speaker": 1
+  },
+  {
+   "id": 33,
+   "start": 209.0,
+   "end": 212.0,
+   "text": "The good thing is that times out, but then, I mean, I just",
+   "speaker": 1
+  },
+  {
+   "id": 34,
+   "start": 212.0,
+   "end": 216.0,
+   "text": "publish it and then just let it sit for a while and it takes a while for it",
+   "speaker": 1
+  },
+  {
+   "id": 35,
+   "start": 216.0,
+   "end": 220.0,
+   "text": "to kick in, but once it does, it's there. It just seems to want to",
+   "speaker": 1
+  },
+  {
+   "id": 36,
+   "start": 220.0,
+   "end": 224.0,
+   "text": "take its time. It's confusing as hell. I'm not",
+   "speaker": 1
+  },
+  {
+   "id": 37,
+   "start": 224.0,
+   "end": 228.0,
+   "text": "probably post two places. Hey, we're going to be starting soon.",
+   "speaker": 2
+  },
+  {
+   "id": 38,
+   "start": 228.0,
+   "end": 232.0,
+   "text": "Yeah, okay. I'll be some of those of them.",
+   "speaker": 1
+  },
+  {
+   "id": 39,
+   "start": 232.0,
+   "end": 234.0,
+   "text": "What hashtag were we using?",
+   "speaker": 2
+  },
+  {
+   "id": 40,
+   "start": 234.0,
+   "end": 236.0,
+   "text": "Um,",
+   "speaker": 1
+  },
+  {
+   "id": 41,
+   "start": 236.0,
+   "end": 237.0,
+   "text": "oh,",
+   "speaker": 1
+  },
+  {
+   "id": 42,
+   "start": 237.0,
+   "end": 238.0,
+   "text": "H,",
+   "speaker": 1
+  },
+  {
+   "id": 43,
+   "start": 238.0,
+   "end": 239.0,
+   "text": "your show.",
+   "speaker": 1
+  },
+  {
+   "id": 44,
+   "start": 239.0,
+   "end": 240.0,
+   "text": "Sure.",
+   "speaker": 1
+  },
+  {
+   "id": 45,
+   "start": 240.0,
+   "end": 242.0,
+   "text": "Some of what I used in the past, or for you,",
+   "speaker": 2
+  },
+  {
+   "id": 46,
+   "start": 242.0,
+   "end": 246.0,
+   "text": "yeah, I've been using HPR and New Year's show all more.",
+   "speaker": 2
+  },
+  {
+   "id": 47,
+   "start": 246.0,
+   "end": 247.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 48,
+   "start": 247.0,
+   "end": 250.0,
+   "text": "Not very good at social media.",
+   "speaker": 1
+  },
+  {
+   "id": 49,
+   "start": 250.0,
+   "end": 254.0,
+   "text": "Uh, I just kind of check occasionally. That's about it.",
+   "speaker": 1
+  },
+  {
+   "id": 50,
+   "start": 254.0,
+   "end": 256.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 51,
+   "start": 256.0,
+   "end": 258.0,
+   "text": "There are 13, 10,",
+   "speaker": 2
+  },
+  {
+   "id": 52,
+   "start": 258.0,
+   "end": 259.0,
+   "text": "uh,",
+   "speaker": 2
+  },
+  {
+   "id": 53,
+   "start": 259.0,
+   "end": 260.0,
+   "text": "26,",
+   "speaker": 2
+  },
+  {
+   "id": 54,
+   "start": 260.0,
+   "end": 262.0,
+   "text": "New Year's show is about to start.",
+   "speaker": 2
+  },
+  {
+   "id": 55,
+   "start": 262.0,
+   "end": 264.0,
+   "text": "It's just a by Toki, blah, blah, blah,",
+   "speaker": 2
+  },
+  {
+   "id": 56,
+   "start": 264.0,
+   "end": 265.0,
+   "text": "podcasting,",
+   "speaker": 2
+  },
+  {
+   "id": 57,
+   "start": 265.0,
+   "end": 266.0,
+   "text": "all the hashtags.",
+   "speaker": 2
+  },
+  {
+   "id": 58,
+   "start": 266.0,
+   "end": 267.0,
+   "text": "Listen to the live stream.",
+   "speaker": 2
+  },
+  {
+   "id": 59,
+   "start": 267.0,
+   "end": 269.0,
+   "text": "I'm putting in the hack of public review of the role of live,",
+   "speaker": 2
+  },
+  {
+   "id": 60,
+   "start": 269.0,
+   "end": 271.0,
+   "text": "because it's readable.",
+   "speaker": 2
+  },
+  {
+   "id": 61,
+   "start": 271.0,
+   "end": 272.0,
+   "text": "Um,",
+   "speaker": 2
+  },
+  {
+   "id": 62,
+   "start": 272.0,
+   "end": 274.0,
+   "text": "More information on how to public review the role.",
+   "speaker": 2
+  },
+  {
+   "id": 63,
+   "start": 274.0,
+   "end": 275.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 64,
+   "start": 275.0,
+   "end": 276.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 65,
+   "start": 276.0,
+   "end": 282.0,
+   "text": "And then leisure can reply with the join a mobile and PC client.",
+   "speaker": 2
+  },
+  {
+   "id": 66,
+   "start": 282.0,
+   "end": 283.0,
+   "text": "Uh,",
+   "speaker": 2
+  },
+  {
+   "id": 67,
+   "start": 283.0,
+   "end": 285.0,
+   "text": "to all the people who just joined the Amazon on.",
+   "speaker": 2
+  },
+  {
+   "id": 68,
+   "start": 285.0,
+   "end": 286.0,
+   "text": "Good morning.",
+   "speaker": 2
+  },
+  {
+   "id": 69,
+   "start": 286.0,
+   "end": 287.0,
+   "text": "Cracky.",
+   "speaker": 2
+  },
+  {
+   "id": 70,
+   "start": 287.0,
+   "end": 288.0,
+   "text": "Quite a lot of year.",
+   "speaker": 2
+  },
+  {
+   "id": 71,
+   "start": 288.0,
+   "end": 289.0,
+   "text": "Who don't?",
+   "speaker": 2
+  },
+  {
+   "id": 72,
+   "start": 289.0,
+   "end": 292.0,
+   "text": "I'm looking at the lugs of the HPR server as well.",
+   "speaker": 2
+  },
+  {
+   "id": 73,
+   "start": 292.0,
+   "end": 294.0,
+   "text": "What the hell is this happened?",
+   "speaker": 2
+  },
+  {
+   "id": 74,
+   "start": 294.0,
+   "end": 297.0,
+   "text": "I just looked at the listeners.",
+   "speaker": 2
+  },
+  {
+   "id": 75,
+   "start": 297.0,
+   "end": 299.0,
+   "text": "Um, but then we went from,",
+   "speaker": 2
+  },
+  {
+   "id": 76,
+   "start": 299.0,
+   "end": 302.0,
+   "text": "let's see, jump from 31 or back down to 27.",
+   "speaker": 2
+  },
+  {
+   "id": 77,
+   "start": 302.0,
+   "end": 304.0,
+   "text": "Yeah, there's the role bots.",
+   "speaker": 2
+  },
+  {
+   "id": 78,
+   "start": 304.0,
+   "end": 306.0,
+   "text": "There are master dumb bots.",
+   "speaker": 2
+  },
+  {
+   "id": 79,
+   "start": 306.0,
+   "end": 308.0,
+   "text": "Looking at the live,",
+   "speaker": 2
+  },
+  {
+   "id": 80,
+   "start": 308.0,
+   "end": 309.0,
+   "text": "I'd say,",
+   "speaker": 2
+  },
+  {
+   "id": 81,
+   "start": 309.0,
+   "end": 310.0,
+   "text": "get live,",
+   "speaker": 2
+  },
+  {
+   "id": 82,
+   "start": 310.0,
+   "end": 311.0,
+   "text": "social media dot us.",
+   "speaker": 2
+  },
+  {
+   "id": 83,
+   "start": 311.0,
+   "end": 312.0,
+   "text": "Yeah,",
+   "speaker": 2
+  },
+  {
+   "id": 84,
+   "start": 312.0,
+   "end": 314.0,
+   "text": "they're all checking just checking the links.",
+   "speaker": 2
+  },
+  {
+   "id": 85,
+   "start": 314.0,
+   "end": 315.0,
+   "text": "That's fine.",
+   "speaker": 2
+  },
+  {
+   "id": 86,
+   "start": 315.0,
+   "end": 316.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 87,
+   "start": 316.0,
+   "end": 318.0,
+   "text": "That's where we work.",
+   "speaker": 2
+  },
+  {
+   "id": 88,
+   "start": 318.0,
+   "end": 320.0,
+   "text": "Boosting and replying,",
+   "speaker": 2
+  },
+  {
+   "id": 89,
+   "start": 320.0,
+   "end": 322.0,
+   "text": "and all sorts of stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 90,
+   "start": 322.0,
+   "end": 325.0,
+   "text": "I'm just sending out to the titers.",
+   "speaker": 2
+  },
+  {
+   "id": 91,
+   "start": 325.0,
+   "end": 328.0,
+   "text": "But I hate posting Twitter really.",
+   "speaker": 2
+  },
+  {
+   "id": 92,
+   "start": 328.0,
+   "end": 333.0,
+   "text": "I have had a total of two engagements from two people.",
+   "speaker": 2
+  },
+  {
+   "id": 93,
+   "start": 333.0,
+   "end": 335.0,
+   "text": "I had the whole year.",
+   "speaker": 2
+  },
+  {
+   "id": 94,
+   "start": 335.0,
+   "end": 338.0,
+   "text": "And those are people I directly addressed,",
+   "speaker": 2
+  },
+  {
+   "id": 95,
+   "start": 338.0,
+   "end": 339.0,
+   "text": "you know,",
+   "speaker": 2
+  },
+  {
+   "id": 96,
+   "start": 339.0,
+   "end": 341.0,
+   "text": "holes who I know have Twitter accounts.",
+   "speaker": 2
+  },
+  {
+   "id": 97,
+   "start": 341.0,
+   "end": 343.0,
+   "text": "And only in response to their own show.",
+   "speaker": 2
+  },
+  {
+   "id": 98,
+   "start": 343.0,
+   "end": 346.0,
+   "text": "Zero feedback from Twitter at all.",
+   "speaker": 2
+  },
+  {
+   "id": 99,
+   "start": 346.0,
+   "end": 347.0,
+   "text": "On the other hand,",
+   "speaker": 2
+  },
+  {
+   "id": 100,
+   "start": 347.0,
+   "end": 350.0,
+   "text": "we joined in 2008 so high stuff now.",
+   "speaker": 2
+  },
+  {
+   "id": 101,
+   "start": 350.0,
+   "end": 353.0,
+   "text": "But that's really annoying.",
+   "speaker": 2
+  },
+  {
+   "id": 102,
+   "start": 353.0,
+   "end": 354.0,
+   "text": "Like,",
+   "speaker": 2
+  },
+  {
+   "id": 103,
+   "start": 354.0,
+   "end": 355.0,
+   "text": "I'll create a thing.",
+   "speaker": 2
+  },
+  {
+   "id": 104,
+   "start": 355.0,
+   "end": 356.0,
+   "text": "You look at your,",
+   "speaker": 2
+  },
+  {
+   "id": 105,
+   "start": 356.0,
+   "end": 358.0,
+   "text": "you go to the master dumb from page,",
+   "speaker": 2
+  },
+  {
+   "id": 106,
+   "start": 358.0,
+   "end": 360.0,
+   "text": "and it's all Linux text stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 107,
+   "start": 360.0,
+   "end": 363.0,
+   "text": "And you go there and it's like fashion ads.",
+   "speaker": 2
+  },
+  {
+   "id": 108,
+   "start": 363.0,
+   "end": 366.0,
+   "text": "I have no idea what sort of profile they have.",
+   "speaker": 2
+  },
+  {
+   "id": 109,
+   "start": 366.0,
+   "end": 368.0,
+   "text": "I'll page here.",
+   "speaker": 2
+  },
+  {
+   "id": 110,
+   "start": 368.0,
+   "end": 369.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 111,
+   "start": 369.0,
+   "end": 370.0,
+   "text": "There's script in,",
+   "speaker": 2
+  },
+  {
+   "id": 112,
+   "start": 370.0,
+   "end": 371.0,
+   "text": "work very well.",
+   "speaker": 2
+  },
+  {
+   "id": 113,
+   "start": 371.0,
+   "end": 373.0,
+   "text": "Some reason good stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 114,
+   "start": 373.0,
+   "end": 375.0,
+   "text": "And then each of something in Chinese,",
+   "speaker": 2
+  },
+  {
+   "id": 115,
+   "start": 375.0,
+   "end": 376.0,
+   "text": "platforms,",
+   "speaker": 2
+  },
+  {
+   "id": 116,
+   "start": 376.0,
+   "end": 378.0,
+   "text": "creators for you,",
+   "speaker": 2
+  },
+  {
+   "id": 117,
+   "start": 378.0,
+   "end": 380.0,
+   "text": "lots and lots of ads.",
+   "speaker": 2
+  },
+  {
+   "id": 118,
+   "start": 380.0,
+   "end": 381.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 119,
+   "start": 381.0,
+   "end": 382.0,
+   "text": "That's about it.",
+   "speaker": 2
+  },
+  {
+   "id": 120,
+   "start": 382.0,
+   "end": 383.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 121,
+   "start": 383.0,
+   "end": 385.0,
+   "text": "I've been on Twitter in years.",
+   "speaker": 1
+  },
+  {
+   "id": 122,
+   "start": 385.0,
+   "end": 387.0,
+   "text": "I'm having a month for a hitch beer.",
+   "speaker": 2
+  },
+  {
+   "id": 123,
+   "start": 387.0,
+   "end": 388.0,
+   "text": "Right.",
+   "speaker": 2
+  },
+  {
+   "id": 124,
+   "start": 388.0,
+   "end": 394.0,
+   "text": "And only because the length of the text that you can send us so short,",
+   "speaker": 2
+  },
+  {
+   "id": 125,
+   "start": 394.0,
+   "end": 395.0,
+   "text": "and master dumb,",
+   "speaker": 2
+  },
+  {
+   "id": 126,
+   "start": 395.0,
+   "end": 397.0,
+   "text": "I can send like the whole summary of.",
+   "speaker": 2
+  },
+  {
+   "id": 127,
+   "start": 397.0,
+   "end": 398.0,
+   "text": "Here's the,",
+   "speaker": 2
+  },
+  {
+   "id": 128,
+   "start": 398.0,
+   "end": 399.0,
+   "text": "here's the episode.",
+   "speaker": 2
+  },
+  {
+   "id": 129,
+   "start": 399.0,
+   "end": 401.0,
+   "text": "Here's the synopsis.",
+   "speaker": 2
+  },
+  {
+   "id": 130,
+   "start": 401.0,
+   "end": 402.0,
+   "text": "Here's the hashtags.",
+   "speaker": 2
+  },
+  {
+   "id": 131,
+   "start": 402.0,
+   "end": 403.0,
+   "text": "You know,",
+   "speaker": 2
+  },
+  {
+   "id": 132,
+   "start": 403.0,
+   "end": 405.0,
+   "text": "and then tagline sick.",
+   "speaker": 2
+  },
+  {
+   "id": 133,
+   "start": 405.0,
+   "end": 406.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 134,
+   "start": 406.0,
+   "end": 408.0,
+   "text": "I think we are a lot of creative topics, etc.",
+   "speaker": 2
+  },
+  {
+   "id": 135,
+   "start": 408.0,
+   "end": 409.0,
+   "text": "All of one posts.",
+   "speaker": 2
+  },
+  {
+   "id": 136,
+   "start": 409.0,
+   "end": 411.0,
+   "text": "And then I tend to reply to that as a human.",
+   "speaker": 2
+  },
+  {
+   "id": 137,
+   "start": 411.0,
+   "end": 412.0,
+   "text": "Go on.",
+   "speaker": 2
+  },
+  {
+   "id": 138,
+   "start": 412.0,
+   "end": 414.0,
+   "text": "What my thoughts on the show.",
+   "speaker": 2
+  },
+  {
+   "id": 139,
+   "start": 414.0,
+   "end": 417.0,
+   "text": "So that I can use it on the means you use actually.",
+   "speaker": 2
+  },
+  {
+   "id": 140,
+   "start": 417.0,
+   "end": 420.0,
+   "text": "But on Twitter, you get like one line and then a link.",
+   "speaker": 2
+  },
+  {
+   "id": 141,
+   "start": 420.0,
+   "end": 423.0,
+   "text": "And a half the time I'm already above the limits.",
+   "speaker": 2
+  },
+  {
+   "id": 142,
+   "start": 423.0,
+   "end": 425.0,
+   "text": "So I'm going to post a hitch beer.",
+   "speaker": 2
+  },
+  {
+   "id": 143,
+   "start": 425.0,
+   "end": 428.0,
+   "text": "I need what the other half of the post in as myself respond to.",
+   "speaker": 2
+  },
+  {
+   "id": 144,
+   "start": 428.0,
+   "end": 430.0,
+   "text": "Not that anybody,",
+   "speaker": 2
+  },
+  {
+   "id": 145,
+   "start": 430.0,
+   "end": 433.0,
+   "text": "that we get any engagement from Twitter anyway.",
+   "speaker": 2
+  },
+  {
+   "id": 146,
+   "start": 433.0,
+   "end": 434.0,
+   "text": "So.",
+   "speaker": 2
+  },
+  {
+   "id": 147,
+   "start": 434.0,
+   "end": 435.0,
+   "text": "Right.",
+   "speaker": 1
+  },
+  {
+   "id": 148,
+   "start": 435.0,
+   "end": 438.0,
+   "text": "I posted two places I'm going to post to.",
+   "speaker": 1
+  },
+  {
+   "id": 149,
+   "start": 439.0,
+   "end": 441.0,
+   "text": "I can do.",
+   "speaker": 1
+  },
+  {
+   "id": 150,
+   "start": 441.0,
+   "end": 445.0,
+   "text": "That is the same post from master them and try and post it on Twitter.",
+   "speaker": 1
+  },
+  {
+   "id": 151,
+   "start": 445.0,
+   "end": 446.0,
+   "text": "And bet you.",
+   "speaker": 1
+  },
+  {
+   "id": 152,
+   "start": 446.0,
+   "end": 447.0,
+   "text": "It won't work.",
+   "speaker": 1
+  },
+  {
+   "id": 153,
+   "start": 447.0,
+   "end": 448.0,
+   "text": "Do they?",
+   "speaker": 2
+  },
+  {
+   "id": 154,
+   "start": 448.0,
+   "end": 449.0,
+   "text": "Do.",
+   "speaker": 2
+  },
+  {
+   "id": 155,
+   "start": 449.0,
+   "end": 450.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 156,
+   "start": 450.0,
+   "end": 451.0,
+   "text": "Halfway through.",
+   "speaker": 2
+  },
+  {
+   "id": 157,
+   "start": 451.0,
+   "end": 452.0,
+   "text": "So if I get rid of the 13.",
+   "speaker": 2
+  },
+  {
+   "id": 158,
+   "start": 452.0,
+   "end": 453.0,
+   "text": "And you know,",
+   "speaker": 2
+  },
+  {
+   "id": 159,
+   "start": 453.0,
+   "end": 455.0,
+   "text": "she was about to start and all will be able.",
+   "speaker": 2
+  },
+  {
+   "id": 160,
+   "start": 455.0,
+   "end": 457.0,
+   "text": "No paragraph about why it is.",
+   "speaker": 2
+  },
+  {
+   "id": 161,
+   "start": 457.0,
+   "end": 460.0,
+   "text": "So all I've had is this on the live stream.",
+   "speaker": 2
+  },
+  {
+   "id": 162,
+   "start": 460.0,
+   "end": 461.0,
+   "text": "I'm more information.",
+   "speaker": 2
+  },
+  {
+   "id": 163,
+   "start": 461.0,
+   "end": 463.0,
+   "text": "I'm about to be able to keep some of the hashtags.",
+   "speaker": 2
+  },
+  {
+   "id": 164,
+   "start": 463.0,
+   "end": 464.0,
+   "text": "If I'm okay.",
+   "speaker": 2
+  },
+  {
+   "id": 165,
+   "start": 464.0,
+   "end": 465.0,
+   "text": "I'm going to see.",
+   "speaker": 2
+  },
+  {
+   "id": 166,
+   "start": 465.0,
+   "end": 468.0,
+   "text": "Will there be a flood of stuff coming in as a result of that?",
+   "speaker": 2
+  },
+  {
+   "id": 167,
+   "start": 468.0,
+   "end": 470.0,
+   "text": "Let's do a light for light comparison.",
+   "speaker": 2
+  },
+  {
+   "id": 168,
+   "start": 470.0,
+   "end": 473.0,
+   "text": "I'm taking to every sense of upgraded day.",
+   "speaker": 2
+  },
+  {
+   "id": 169,
+   "start": 473.0,
+   "end": 475.0,
+   "text": "And the internet archive thing.",
+   "speaker": 2
+  },
+  {
+   "id": 170,
+   "start": 475.0,
+   "end": 477.0,
+   "text": "I've been monitoring the logs here.",
+   "speaker": 2
+  },
+  {
+   "id": 171,
+   "start": 477.0,
+   "end": 480.0,
+   "text": "Like just tailing them on the HQ or something.",
+   "speaker": 2
+  },
+  {
+   "id": 172,
+   "start": 480.0,
+   "end": 481.0,
+   "text": "It's quite interesting.",
+   "speaker": 2
+  },
+  {
+   "id": 173,
+   "start": 481.0,
+   "end": 485.0,
+   "text": "It's also good because it's going to look like a lot of scrapers.",
+   "speaker": 2
+  },
+  {
+   "id": 174,
+   "start": 485.0,
+   "end": 492.0,
+   "text": "Taken thousands of thousands of sessions of the sort of AI crap.",
+   "speaker": 2
+  },
+  {
+   "id": 175,
+   "start": 493.0,
+   "end": 494.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 176,
+   "start": 494.0,
+   "end": 496.0,
+   "text": "So all I got is 13 manual show.",
+   "speaker": 2
+  },
+  {
+   "id": 177,
+   "start": 496.0,
+   "end": 498.0,
+   "text": "Realized stream more information.",
+   "speaker": 2
+  },
+  {
+   "id": 178,
+   "start": 498.0,
+   "end": 500.0,
+   "text": "And let's see what happened.",
+   "speaker": 2
+  },
+  {
+   "id": 179,
+   "start": 500.0,
+   "end": 503.0,
+   "text": "And that's my alarm for the new year.",
+   "speaker": 2
+  },
+  {
+   "id": 180,
+   "start": 503.0,
+   "end": 507.0,
+   "text": "Which will be starting in five minutes.",
+   "speaker": 2
+  },
+  {
+   "id": 181,
+   "start": 507.0,
+   "end": 510.0,
+   "text": "And still loads of mustard on stuff coming in.",
+   "speaker": 2
+  },
+  {
+   "id": 182,
+   "start": 510.0,
+   "end": 511.0,
+   "text": "Another thing for Twitter.",
+   "speaker": 2
+  },
+  {
+   "id": 183,
+   "start": 511.0,
+   "end": 513.0,
+   "text": "I'm going to surprise.",
+   "speaker": 2
+  },
+  {
+   "id": 184,
+   "start": 513.0,
+   "end": 515.0,
+   "text": "Twitter is about me.",
+   "speaker": 2
+  },
+  {
+   "id": 185,
+   "start": 515.0,
+   "end": 516.0,
+   "text": "Master Don's about us.",
+   "speaker": 2
+  },
+  {
+   "id": 186,
+   "start": 516.0,
+   "end": 517.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 187,
+   "start": 517.0,
+   "end": 520.0,
+   "text": "And now I'm seeing actual mustard on hits coming in.",
+   "speaker": 2
+  },
+  {
+   "id": 188,
+   "start": 520.0,
+   "end": 524.0,
+   "text": "You know, links and people going to web pages and stuff like that.",
+   "speaker": 2
+  },
+  {
+   "id": 189,
+   "start": 524.0,
+   "end": 525.0,
+   "text": "Which is kind of cool.",
+   "speaker": 2
+  },
+  {
+   "id": 190,
+   "start": 525.0,
+   "end": 526.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 191,
+   "start": 526.0,
+   "end": 527.0,
+   "text": "Absolutely.",
+   "speaker": 2
+  },
+  {
+   "id": 192,
+   "start": 529.0,
+   "end": 530.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 193,
+   "start": 530.0,
+   "end": 534.0,
+   "text": "The internet archive and Nordic excellence elegance.",
+   "speaker": 2
+  },
+  {
+   "id": 194,
+   "start": 534.0,
+   "end": 536.0,
+   "text": "That's what we have on Twitter.",
+   "speaker": 2
+  },
+  {
+   "id": 195,
+   "start": 536.0,
+   "end": 541.0,
+   "text": "At least there was a post that I might be interested in.",
+   "speaker": 2
+  },
+  {
+   "id": 196,
+   "start": 541.0,
+   "end": 542.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 197,
+   "start": 542.0,
+   "end": 543.0,
+   "text": "What are we doing?",
+   "speaker": 2
+  },
+  {
+   "id": 198,
+   "start": 543.0,
+   "end": 544.0,
+   "text": "What are we doing?",
+   "speaker": 2
+  },
+  {
+   "id": 199,
+   "start": 544.0,
+   "end": 545.0,
+   "text": "We be me.",
+   "speaker": 2
+  },
+  {
+   "id": 200,
+   "start": 545.0,
+   "end": 547.0,
+   "text": "We have stream up on recording.",
+   "speaker": 2
+  },
+  {
+   "id": 201,
+   "start": 547.0,
+   "end": 548.0,
+   "text": "Deep.",
+   "speaker": 1
+  },
+  {
+   "id": 202,
+   "start": 549.0,
+   "end": 550.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 203,
+   "start": 550.0,
+   "end": 551.0,
+   "text": "That should be enough.",
+   "speaker": 2
+  },
+  {
+   "id": 204,
+   "start": 551.0,
+   "end": 552.0,
+   "text": "I need my.",
+   "speaker": 2
+  },
+  {
+   "id": 205,
+   "start": 552.0,
+   "end": 554.0,
+   "text": "I was going to record here locally on this laptop.",
+   "speaker": 2
+  },
+  {
+   "id": 206,
+   "start": 554.0,
+   "end": 555.0,
+   "text": "But I need it today.",
+   "speaker": 2
+  },
+  {
+   "id": 207,
+   "start": 555.0,
+   "end": 557.0,
+   "text": "Because I have a backlog of shows.",
+   "speaker": 2
+  },
+  {
+   "id": 208,
+   "start": 557.0,
+   "end": 559.0,
+   "text": "You're joined.",
+   "speaker": 2
+  },
+  {
+   "id": 209,
+   "start": 559.0,
+   "end": 560.0,
+   "text": "Artor 72.",
+   "speaker": 1
+  },
+  {
+   "id": 210,
+   "start": 560.0,
+   "end": 563.0,
+   "text": "How do we know this is actually artor 72.",
+   "speaker": 1
+  },
+  {
+   "id": 211,
+   "start": 563.0,
+   "end": 565.0,
+   "text": "And what somebody pretending could be artor 72.",
+   "speaker": 1
+  },
+  {
+   "id": 212,
+   "start": 565.0,
+   "end": 566.0,
+   "text": "What's he doing up?",
+   "speaker": 2
+  },
+  {
+   "id": 213,
+   "start": 566.0,
+   "end": 568.0,
+   "text": "It's over the morning.",
+   "speaker": 2
+  },
+  {
+   "id": 214,
+   "start": 568.0,
+   "end": 569.0,
+   "text": "I've been just logging in.",
+   "speaker": 2
+  },
+  {
+   "id": 215,
+   "start": 569.0,
+   "end": 571.0,
+   "text": "But it looks because he's already muted.",
+   "speaker": 2
+  },
+  {
+   "id": 216,
+   "start": 571.0,
+   "end": 572.0,
+   "text": "20 seconds, guys.",
+   "speaker": 2
+  },
+  {
+   "id": 217,
+   "start": 572.0,
+   "end": 574.0,
+   "text": "You do the intro.",
+   "speaker": 2
+  },
+  {
+   "id": 218,
+   "start": 574.0,
+   "end": 575.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 219,
+   "start": 576.0,
+   "end": 578.0,
+   "text": "10.",
+   "speaker": 2
+  },
+  {
+   "id": 220,
+   "start": 578.0,
+   "end": 579.0,
+   "text": "9.",
+   "speaker": 2
+  },
+  {
+   "id": 221,
+   "start": 579.0,
+   "end": 580.0,
+   "text": "8.",
+   "speaker": 2
+  },
+  {
+   "id": 222,
+   "start": 580.0,
+   "end": 581.0,
+   "text": "7.",
+   "speaker": 2
+  },
+  {
+   "id": 223,
+   "start": 581.0,
+   "end": 582.0,
+   "text": "6.",
+   "speaker": 2
+  },
+  {
+   "id": 224,
+   "start": 582.0,
+   "end": 583.0,
+   "text": "5.",
+   "speaker": 2
+  },
+  {
+   "id": 225,
+   "start": 583.0,
+   "end": 584.0,
+   "text": "4.",
+   "speaker": 2
+  },
+  {
+   "id": 226,
+   "start": 584.0,
+   "end": 585.0,
+   "text": "3.",
+   "speaker": 2
+  },
+  {
+   "id": 227,
+   "start": 585.0,
+   "end": 586.0,
+   "text": "2.",
+   "speaker": 2
+  },
+  {
+   "id": 228,
+   "start": 586.0,
+   "end": 587.0,
+   "text": "1.",
+   "speaker": 2
+  },
+  {
+   "id": 229,
+   "start": 587.0,
+   "end": 588.0,
+   "text": "Happy New Year.",
+   "speaker": 1
+  },
+  {
+   "id": 230,
+   "start": 588.0,
+   "end": 590.0,
+   "text": "We even remember who the first people are.",
+   "speaker": 2
+  },
+  {
+   "id": 231,
+   "start": 590.0,
+   "end": 591.0,
+   "text": "Who's New Year.",
+   "speaker": 2
+  },
+  {
+   "id": 232,
+   "start": 591.0,
+   "end": 592.0,
+   "text": "It is.",
+   "speaker": 2
+  },
+  {
+   "id": 233,
+   "start": 592.0,
+   "end": 595.0,
+   "text": "Chris decided way to go without professional interest.",
+   "speaker": 2
+  },
+  {
+   "id": 234,
+   "start": 595.0,
+   "end": 596.0,
+   "text": "You're welcome.",
+   "speaker": 1
+  },
+  {
+   "id": 235,
+   "start": 596.0,
+   "end": 599.0,
+   "text": "If you want to continue.",
+   "speaker": 2
+  },
+  {
+   "id": 236,
+   "start": 599.0,
+   "end": 604.0,
+   "text": "Well, technically I've been recording since I first got on.",
+   "speaker": 1
+  },
+  {
+   "id": 237,
+   "start": 604.0,
+   "end": 607.0,
+   "text": "So our intro is actually going to be.",
+   "speaker": 1
+  },
+  {
+   "id": 238,
+   "start": 607.0,
+   "end": 611.0,
+   "text": "I was talking about posting the places and whatever.",
+   "speaker": 1
+  },
+  {
+   "id": 239,
+   "start": 611.0,
+   "end": 613.0,
+   "text": "Let's see the official intro.",
+   "speaker": 2
+  },
+  {
+   "id": 240,
+   "start": 613.0,
+   "end": 617.0,
+   "text": "Welcome to the 13th annual 26 hour New Year's Eve show.",
+   "speaker": 2
+  },
+  {
+   "id": 241,
+   "start": 617.0,
+   "end": 619.0,
+   "text": "Those who don't know.",
+   "speaker": 2
+  },
+  {
+   "id": 242,
+   "start": 619.0,
+   "end": 621.0,
+   "text": "New Year's Eve.",
+   "speaker": 2
+  },
+  {
+   "id": 243,
+   "start": 621.0,
+   "end": 623.0,
+   "text": "The five o'clock in the morning.",
+   "speaker": 2
+  },
+  {
+   "id": 244,
+   "start": 623.0,
+   "end": 624.0,
+   "text": "Oh my god.",
+   "speaker": 2
+  },
+  {
+   "id": 245,
+   "start": 624.0,
+   "end": 625.0,
+   "text": "Exactly.",
+   "speaker": 2
+  },
+  {
+   "id": 246,
+   "start": 625.0,
+   "end": 626.0,
+   "text": "Again.",
+   "speaker": 2
+  },
+  {
+   "id": 247,
+   "start": 626.0,
+   "end": 631.0,
+   "text": "If anyone has listened to the Linux podcast where I do this, I say something.",
+   "speaker": 2
+  },
+  {
+   "id": 248,
+   "start": 632.0,
+   "end": 635.0,
+   "text": "Twice a month for the past 10 years.",
+   "speaker": 2
+  },
+  {
+   "id": 249,
+   "start": 635.0,
+   "end": 637.0,
+   "text": "I still fumble it up.",
+   "speaker": 2
+  },
+  {
+   "id": 250,
+   "start": 637.0,
+   "end": 638.0,
+   "text": "10 a.m.",
+   "speaker": 2
+  },
+  {
+   "id": 251,
+   "start": 638.0,
+   "end": 639.0,
+   "text": "You see 5 a.m.",
+   "speaker": 2
+  },
+  {
+   "id": 252,
+   "start": 639.0,
+   "end": 640.0,
+   "text": "Eastern Standard Time.",
+   "speaker": 2
+  },
+  {
+   "id": 253,
+   "start": 640.0,
+   "end": 644.0,
+   "text": "We have a recording going in the HBR Mumble Room.",
+   "speaker": 2
+  },
+  {
+   "id": 254,
+   "start": 644.0,
+   "end": 645.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 255,
+   "start": 645.0,
+   "end": 648.0,
+   "text": "And it's going to run for 26 hours, which is going to be 12.",
+   "speaker": 2
+  },
+  {
+   "id": 256,
+   "start": 648.0,
+   "end": 652.0,
+   "text": "12 UTC and 7 a.m. Eastern Standard Time.",
+   "speaker": 2
+  },
+  {
+   "id": 257,
+   "start": 652.0,
+   "end": 655.0,
+   "text": "I'm not going to anybody to join because if you're.",
+   "speaker": 2
+  },
+  {
+   "id": 258,
+   "start": 655.0,
+   "end": 656.0,
+   "text": "I'd have listening to this.",
+   "speaker": 2
+  },
+  {
+   "id": 259,
+   "start": 656.0,
+   "end": 658.0,
+   "text": "It's already happened.",
+   "speaker": 2
+  },
+  {
+   "id": 260,
+   "start": 658.0,
+   "end": 660.0,
+   "text": "And if you're already here.",
+   "speaker": 2
+  },
+  {
+   "id": 261,
+   "start": 660.0,
+   "end": 662.0,
+   "text": "It's probably July.",
+   "speaker": 2
+  },
+  {
+   "id": 262,
+   "start": 662.0,
+   "end": 667.0,
+   "text": "Oh, yes, yes.",
+   "speaker": 2
+  },
+  {
+   "id": 263,
+   "start": 667.0,
+   "end": 668.0,
+   "text": "Excellent.",
+   "speaker": 2
+  },
+  {
+   "id": 264,
+   "start": 668.0,
+   "end": 670.0,
+   "text": "Excellent.",
+   "speaker": 2
+  },
+  {
+   "id": 265,
+   "start": 670.0,
+   "end": 673.0,
+   "text": "Well, we have some ground rules this year.",
+   "speaker": 2
+  },
+  {
+   "id": 266,
+   "start": 673.0,
+   "end": 675.0,
+   "text": "Oh, I like the ground rules.",
+   "speaker": 1
+  },
+  {
+   "id": 267,
+   "start": 675.0,
+   "end": 676.0,
+   "text": "I put the ground.",
+   "speaker": 2
+  },
+  {
+   "id": 268,
+   "start": 676.0,
+   "end": 677.0,
+   "text": "Oh, I'm the.",
+   "speaker": 2
+  },
+  {
+   "id": 269,
+   "start": 677.0,
+   "end": 678.0,
+   "text": "On the end page.",
+   "speaker": 2
+  },
+  {
+   "id": 270,
+   "start": 678.0,
+   "end": 679.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 271,
+   "start": 679.0,
+   "end": 680.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 272,
+   "start": 680.0,
+   "end": 681.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 273,
+   "start": 681.0,
+   "end": 682.0,
+   "text": "For those that don't know,",
+   "speaker": 2
+  },
+  {
+   "id": 274,
+   "start": 682.0,
+   "end": 685.0,
+   "text": "Pok\u00e9 suggested this back in 2011.",
+   "speaker": 2
+  },
+  {
+   "id": 275,
+   "start": 685.0,
+   "end": 688.0,
+   "text": "And I'll read out the blog.",
+   "speaker": 2
+  },
+  {
+   "id": 276,
+   "start": 688.0,
+   "end": 691.0,
+   "text": "As Pok\u00e9 tends to be a winery conversation.",
+   "speaker": 2
+  },
+  {
+   "id": 277,
+   "start": 691.0,
+   "end": 693.0,
+   "text": "He thought it would be nice to get all floss.",
+   "speaker": 2
+  },
+  {
+   "id": 278,
+   "start": 693.0,
+   "end": 695.0,
+   "text": "The next three culture Pok\u00e9asters in this.",
+   "speaker": 2
+  },
+  {
+   "id": 279,
+   "start": 695.0,
+   "end": 700.0,
+   "text": "There's a one place to get together to chat in person initially was planned for just a few hours.",
+   "speaker": 2
+  },
+  {
+   "id": 280,
+   "start": 700.0,
+   "end": 703.0,
+   "text": "But we kept missing members from all the part of the world.",
+   "speaker": 2
+  },
+  {
+   "id": 281,
+   "start": 703.0,
+   "end": 707.0,
+   "text": "And then the show was extended to welcome every time zone into the new year.",
+   "speaker": 2
+  },
+  {
+   "id": 282,
+   "start": 707.0,
+   "end": 711.0,
+   "text": "And of course, that actually turns out to be 26 times old.",
+   "speaker": 2
+  },
+  {
+   "id": 283,
+   "start": 711.0,
+   "end": 712.0,
+   "text": "And for the first.",
+   "speaker": 2
+  },
+  {
+   "id": 284,
+   "start": 712.0,
+   "end": 714.0,
+   "text": "For the people listening to this for the first time.",
+   "speaker": 2
+  },
+  {
+   "id": 285,
+   "start": 714.0,
+   "end": 715.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 286,
+   "start": 715.0,
+   "end": 719.0,
+   "text": "You think there's 24 hours in the day, but what actually happens is that they international data line.",
+   "speaker": 2
+  },
+  {
+   "id": 287,
+   "start": 719.0,
+   "end": 721.0,
+   "text": "If you happen to be a country.",
+   "speaker": 2
+  },
+  {
+   "id": 288,
+   "start": 721.0,
+   "end": 726.0,
+   "text": "An island or something close to any economic region on one side.",
+   "speaker": 1
+  },
+  {
+   "id": 289,
+   "start": 726.0,
+   "end": 728.0,
+   "text": "That's ahead an hour.",
+   "speaker": 1
+  },
+  {
+   "id": 290,
+   "start": 728.0,
+   "end": 731.0,
+   "text": "And you want to be in the same economic region with them equally.",
+   "speaker": 1
+  },
+  {
+   "id": 291,
+   "start": 731.0,
+   "end": 734.0,
+   "text": "If you're in an island that's close to somebody on the other side.",
+   "speaker": 1
+  },
+  {
+   "id": 292,
+   "start": 734.0,
+   "end": 736.0,
+   "text": "And you want to be in the same region.",
+   "speaker": 1
+  },
+  {
+   "id": 293,
+   "start": 736.0,
+   "end": 739.0,
+   "text": "So that's why it's extended basically a few hours.",
+   "speaker": 1
+  },
+  {
+   "id": 294,
+   "start": 739.0,
+   "end": 743.0,
+   "text": "And so we will be recording this for at least 26 hours.",
+   "speaker": 1
+  },
+  {
+   "id": 295,
+   "start": 743.0,
+   "end": 745.0,
+   "text": "We'll continue recording the after show.",
+   "speaker": 1
+  },
+  {
+   "id": 296,
+   "start": 745.0,
+   "end": 747.0,
+   "text": "I'm actually off all week.",
+   "speaker": 1
+  },
+  {
+   "id": 297,
+   "start": 747.0,
+   "end": 750.0,
+   "text": "So I'll just leave my recordings running.",
+   "speaker": 1
+  },
+  {
+   "id": 298,
+   "start": 750.0,
+   "end": 751.0,
+   "text": "You can take down the stream.",
+   "speaker": 1
+  },
+  {
+   "id": 299,
+   "start": 751.0,
+   "end": 753.0,
+   "text": "Obviously tomorrow.",
+   "speaker": 1
+  },
+  {
+   "id": 300,
+   "start": 753.0,
+   "end": 755.0,
+   "text": "We'll keep running.",
+   "speaker": 1
+  },
+  {
+   "id": 301,
+   "start": 755.0,
+   "end": 757.0,
+   "text": "And while this is a HBR site.",
+   "speaker": 1
+  },
+  {
+   "id": 302,
+   "start": 757.0,
+   "end": 762.0,
+   "text": "It's a community initiative with heavy support from the fine folks at the Linux loadcast.",
+   "speaker": 1
+  },
+  {
+   "id": 303,
+   "start": 762.0,
+   "end": 766.0,
+   "text": "To be honest, it wasn't for you guys this would be running.",
+   "speaker": 1
+  },
+  {
+   "id": 304,
+   "start": 766.0,
+   "end": 769.0,
+   "text": "Time to mobile server is provided by Delwin.",
+   "speaker": 1
+  },
+  {
+   "id": 305,
+   "start": 769.0,
+   "end": 772.0,
+   "text": "Traditionally we have had.",
+   "speaker": 1
+  },
+  {
+   "id": 306,
+   "start": 773.0,
+   "end": 778.0,
+   "text": "The show notes done by big eye on the internet and.",
+   "speaker": 1
+  },
+  {
+   "id": 307,
+   "start": 778.0,
+   "end": 780.0,
+   "text": "Oh yeah, they did.",
+   "speaker": 2
+  },
+  {
+   "id": 308,
+   "start": 780.0,
+   "end": 781.0,
+   "text": "Lovecraft.",
+   "speaker": 2
+  },
+  {
+   "id": 309,
+   "start": 781.0,
+   "end": 782.0,
+   "text": "Lovecraft.",
+   "speaker": 2
+  },
+  {
+   "id": 310,
+   "start": 782.0,
+   "end": 783.0,
+   "text": "Sorry, I stepped in there.",
+   "speaker": 1
+  },
+  {
+   "id": 311,
+   "start": 783.0,
+   "end": 786.0,
+   "text": "Not good because they don't get enough credit for this.",
+   "speaker": 1
+  },
+  {
+   "id": 312,
+   "start": 786.0,
+   "end": 787.0,
+   "text": "So.",
+   "speaker": 1
+  },
+  {
+   "id": 313,
+   "start": 787.0,
+   "end": 788.0,
+   "text": "To those guys.",
+   "speaker": 1
+  },
+  {
+   "id": 314,
+   "start": 788.0,
+   "end": 790.0,
+   "text": "Yeah, they do awesome awesome job.",
+   "speaker": 2
+  },
+  {
+   "id": 315,
+   "start": 790.0,
+   "end": 791.0,
+   "text": "If they like doing it.",
+   "speaker": 2
+  },
+  {
+   "id": 316,
+   "start": 791.0,
+   "end": 792.0,
+   "text": "And that's.",
+   "speaker": 2
+  },
+  {
+   "id": 317,
+   "start": 792.0,
+   "end": 794.0,
+   "text": "I don't know why.",
+   "speaker": 2
+  },
+  {
+   "id": 318,
+   "start": 794.0,
+   "end": 795.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 319,
+   "start": 795.0,
+   "end": 798.0,
+   "text": "Taking advantage of the poor people.",
+   "speaker": 1
+  },
+  {
+   "id": 320,
+   "start": 798.0,
+   "end": 799.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 321,
+   "start": 800.0,
+   "end": 803.0,
+   "text": "So we're recording this.",
+   "speaker": 2
+  },
+  {
+   "id": 322,
+   "start": 803.0,
+   "end": 804.0,
+   "text": "I'm mumbled for next year.",
+   "speaker": 2
+  },
+  {
+   "id": 323,
+   "start": 804.0,
+   "end": 809.0,
+   "text": "If you're wondering tune in to the 13th 14th annual show.",
+   "speaker": 2
+  },
+  {
+   "id": 324,
+   "start": 809.0,
+   "end": 811.0,
+   "text": "This one is the 13th.",
+   "speaker": 2
+  },
+  {
+   "id": 325,
+   "start": 811.0,
+   "end": 814.0,
+   "text": "What if somebody's listening to this and July.",
+   "speaker": 2
+  },
+  {
+   "id": 326,
+   "start": 814.0,
+   "end": 816.0,
+   "text": "And therefore.",
+   "speaker": 2
+  },
+  {
+   "id": 327,
+   "start": 816.0,
+   "end": 820.0,
+   "text": "Therefore, I want to plan for following six months.",
+   "speaker": 2
+  },
+  {
+   "id": 328,
+   "start": 820.0,
+   "end": 827.0,
+   "text": "Yeah, we recorded a mumbled and live stream out to your servers.",
+   "speaker": 2
+  },
+  {
+   "id": 329,
+   "start": 828.0,
+   "end": 832.0,
+   "text": "And then yeah, that is, and you also live stream off to.",
+   "speaker": 2
+  },
+  {
+   "id": 330,
+   "start": 832.0,
+   "end": 834.0,
+   "text": "Jiti as well.",
+   "speaker": 2
+  },
+  {
+   "id": 331,
+   "start": 834.0,
+   "end": 836.0,
+   "text": "Does it please enter Jiti?",
+   "speaker": 1
+  },
+  {
+   "id": 332,
+   "start": 836.0,
+   "end": 837.0,
+   "text": "Well, no.",
+   "speaker": 1
+  },
+  {
+   "id": 333,
+   "start": 837.0,
+   "end": 840.0,
+   "text": "So Jiti is just a servant add on if you feel like.",
+   "speaker": 1
+  },
+  {
+   "id": 334,
+   "start": 840.0,
+   "end": 845.0,
+   "text": "So it's going to be something that's open and available to.",
+   "speaker": 1
+  },
+  {
+   "id": 335,
+   "start": 845.0,
+   "end": 850.0,
+   "text": "The community during this that if they want to.",
+   "speaker": 2
+  },
+  {
+   "id": 336,
+   "start": 850.0,
+   "end": 854.0,
+   "text": "See some of the people who are participating.",
+   "speaker": 2
+  },
+  {
+   "id": 337,
+   "start": 855.0,
+   "end": 857.0,
+   "text": "Jiti will be open.",
+   "speaker": 2
+  },
+  {
+   "id": 338,
+   "start": 857.0,
+   "end": 858.0,
+   "text": "Minutes.",
+   "speaker": 2
+  },
+  {
+   "id": 339,
+   "start": 858.0,
+   "end": 859.0,
+   "text": "Audio from that.",
+   "speaker": 1
+  },
+  {
+   "id": 340,
+   "start": 859.0,
+   "end": 863.0,
+   "text": "So you put your video camera on and you get yourself in the Jiti.",
+   "speaker": 1
+  },
+  {
+   "id": 341,
+   "start": 863.0,
+   "end": 864.0,
+   "text": "It's.",
+   "speaker": 1
+  },
+  {
+   "id": 342,
+   "start": 864.0,
+   "end": 868.0,
+   "text": "Jiti is usually automatically muted, but usually just make sure that it's good.",
+   "speaker": 1
+  },
+  {
+   "id": 343,
+   "start": 868.0,
+   "end": 869.0,
+   "text": "And then.",
+   "speaker": 1
+  },
+  {
+   "id": 344,
+   "start": 869.0,
+   "end": 871.0,
+   "text": "So the audio will stay the same again.",
+   "speaker": 2
+  },
+  {
+   "id": 345,
+   "start": 871.0,
+   "end": 873.0,
+   "text": "It's just sort of an add on.",
+   "speaker": 2
+  },
+  {
+   "id": 346,
+   "start": 873.0,
+   "end": 875.0,
+   "text": "The podcast on the podcast.",
+   "speaker": 2
+  },
+  {
+   "id": 347,
+   "start": 875.0,
+   "end": 877.0,
+   "text": "We have both going.",
+   "speaker": 1
+  },
+  {
+   "id": 348,
+   "start": 877.0,
+   "end": 882.0,
+   "text": "And what Danny does is takes the he records on mumbled as well.",
+   "speaker": 1
+  },
+  {
+   "id": 349,
+   "start": 882.0,
+   "end": 885.0,
+   "text": "So he does a separate recording them when I you I record.",
+   "speaker": 1
+  },
+  {
+   "id": 350,
+   "start": 885.0,
+   "end": 887.0,
+   "text": "I do a recording he doesn't recording his recording.",
+   "speaker": 1
+  },
+  {
+   "id": 351,
+   "start": 887.0,
+   "end": 893.0,
+   "text": "He's synced up with the video from Jiti and then he publishes it to YouTube.",
+   "speaker": 1
+  },
+  {
+   "id": 352,
+   "start": 893.0,
+   "end": 901.0,
+   "text": "And he sometimes just chops off little bits of it and does like shorts because our podcast runs an average about three hours.",
+   "speaker": 1
+  },
+  {
+   "id": 353,
+   "start": 901.0,
+   "end": 903.0,
+   "text": "So.",
+   "speaker": 1
+  },
+  {
+   "id": 354,
+   "start": 903.0,
+   "end": 906.0,
+   "text": "He'll take like little bits like if we talk about.",
+   "speaker": 1
+  },
+  {
+   "id": 355,
+   "start": 906.0,
+   "end": 908.0,
+   "text": "And it's a firefox for a while.",
+   "speaker": 1
+  },
+  {
+   "id": 356,
+   "start": 908.0,
+   "end": 912.0,
+   "text": "It'll just take the whole conversation about firefox publish that to YouTube.",
+   "speaker": 1
+  },
+  {
+   "id": 357,
+   "start": 912.0,
+   "end": 918.0,
+   "text": "And then put a couple hashtags about five saying firefox and, you know, or.",
+   "speaker": 1
+  },
+  {
+   "id": 358,
+   "start": 918.0,
+   "end": 920.0,
+   "text": "Steam attacker, something like that.",
+   "speaker": 1
+  },
+  {
+   "id": 359,
+   "start": 920.0,
+   "end": 924.0,
+   "text": "And sometimes we get more views just from conversations about other things.",
+   "speaker": 1
+  },
+  {
+   "id": 360,
+   "start": 924.0,
+   "end": 928.0,
+   "text": "Actually, we can tons of views that when we talk about the other things.",
+   "speaker": 1
+  },
+  {
+   "id": 361,
+   "start": 928.0,
+   "end": 931.0,
+   "text": "Then just the whole podcast itself.",
+   "speaker": 1
+  },
+  {
+   "id": 362,
+   "start": 931.0,
+   "end": 935.0,
+   "text": "But it's we like to we we chat with each other.",
+   "speaker": 1
+  },
+  {
+   "id": 363,
+   "start": 935.0,
+   "end": 938.0,
+   "text": "I know Joe does a lot of 3D printing.",
+   "speaker": 1
+  },
+  {
+   "id": 364,
+   "start": 938.0,
+   "end": 942.0,
+   "text": "So he likes to show off his 3D printing stuff, which doesn't work very well for the.",
+   "speaker": 1
+  },
+  {
+   "id": 365,
+   "start": 942.0,
+   "end": 949.0,
+   "text": "Listening crowd, but if the YouTube crowd can see what he's been working on.",
+   "speaker": 1
+  },
+  {
+   "id": 366,
+   "start": 949.0,
+   "end": 952.0,
+   "text": "He tries to describe it as best he can.",
+   "speaker": 1
+  },
+  {
+   "id": 367,
+   "start": 952.0,
+   "end": 954.0,
+   "text": "I'm going to add that link.",
+   "speaker": 1
+  },
+  {
+   "id": 368,
+   "start": 954.0,
+   "end": 956.0,
+   "text": "So that link will be.",
+   "speaker": 1
+  },
+  {
+   "id": 369,
+   "start": 956.0,
+   "end": 960.0,
+   "text": "And the show notes the show notes page will be on.",
+   "speaker": 1
+  },
+  {
+   "id": 370,
+   "start": 960.0,
+   "end": 961.0,
+   "text": "The chat here.",
+   "speaker": 1
+  },
+  {
+   "id": 371,
+   "start": 961.0,
+   "end": 962.0,
+   "text": "Oh, yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 372,
+   "start": 962.0,
+   "end": 963.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 373,
+   "start": 963.0,
+   "end": 965.0,
+   "text": "I'll put it on the main page now.",
+   "speaker": 1
+  },
+  {
+   "id": 374,
+   "start": 965.0,
+   "end": 966.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 375,
+   "start": 966.0,
+   "end": 968.0,
+   "text": "I'm going to switch over to.",
+   "speaker": 1
+  },
+  {
+   "id": 376,
+   "start": 968.0,
+   "end": 969.0,
+   "text": "Is he posted that to.",
+   "speaker": 1
+  },
+  {
+   "id": 377,
+   "start": 969.0,
+   "end": 970.0,
+   "text": "I love that.",
+   "speaker": 1
+  },
+  {
+   "id": 378,
+   "start": 970.0,
+   "end": 971.0,
+   "text": "So it's in.",
+   "speaker": 1
+  },
+  {
+   "id": 379,
+   "start": 971.0,
+   "end": 972.0,
+   "text": "Oh, yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 380,
+   "start": 972.0,
+   "end": 973.0,
+   "text": "I got it from there.",
+   "speaker": 1
+  },
+  {
+   "id": 381,
+   "start": 973.0,
+   "end": 974.0,
+   "text": "Actually.",
+   "speaker": 1
+  },
+  {
+   "id": 382,
+   "start": 974.0,
+   "end": 975.0,
+   "text": "I can get it myself.",
+   "speaker": 1
+  },
+  {
+   "id": 383,
+   "start": 975.0,
+   "end": 977.0,
+   "text": "Although add it to the show notes.",
+   "speaker": 1
+  },
+  {
+   "id": 384,
+   "start": 977.0,
+   "end": 978.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 385,
+   "start": 978.0,
+   "end": 979.0,
+   "text": "The ground rules.",
+   "speaker": 1
+  },
+  {
+   "id": 386,
+   "start": 979.0,
+   "end": 981.0,
+   "text": "Why you're doing not that.",
+   "speaker": 1
+  },
+  {
+   "id": 387,
+   "start": 981.0,
+   "end": 983.0,
+   "text": "Not that anyone's going to hear them.",
+   "speaker": 1
+  },
+  {
+   "id": 388,
+   "start": 983.0,
+   "end": 987.0,
+   "text": "Well, it'll be interesting to the people listening to see how these work out.",
+   "speaker": 1
+  },
+  {
+   "id": 389,
+   "start": 987.0,
+   "end": 989.0,
+   "text": "So the ground rules are push to talk.",
+   "speaker": 1
+  },
+  {
+   "id": 390,
+   "start": 989.0,
+   "end": 990.0,
+   "text": "But so many people on the chat.",
+   "speaker": 1
+  },
+  {
+   "id": 391,
+   "start": 990.0,
+   "end": 991.0,
+   "text": "You must use push to talk.",
+   "speaker": 1
+  },
+  {
+   "id": 392,
+   "start": 991.0,
+   "end": 995.0,
+   "text": "If there's a problem, which you set up, please drop and listen to the stream.",
+   "speaker": 1
+  },
+  {
+   "id": 393,
+   "start": 995.0,
+   "end": 999.0,
+   "text": "Trying to correct poor audio and post is a lot of work for me.",
+   "speaker": 1
+  },
+  {
+   "id": 394,
+   "start": 999.0,
+   "end": 1001.0,
+   "text": "I'm actually for you.",
+   "speaker": 1
+  },
+  {
+   "id": 395,
+   "start": 1001.0,
+   "end": 1002.0,
+   "text": "You do the editing of this show.",
+   "speaker": 1
+  },
+  {
+   "id": 396,
+   "start": 1002.0,
+   "end": 1004.0,
+   "text": "So somebody else will have to do it.",
+   "speaker": 1
+  },
+  {
+   "id": 397,
+   "start": 1004.0,
+   "end": 1006.0,
+   "text": "So please don't just drop.",
+   "speaker": 1
+  },
+  {
+   "id": 398,
+   "start": 1006.0,
+   "end": 1008.0,
+   "text": "If you have good crappy audio drop.",
+   "speaker": 1
+  },
+  {
+   "id": 399,
+   "start": 1008.0,
+   "end": 1009.0,
+   "text": "Uh, be polite.",
+   "speaker": 1
+  },
+  {
+   "id": 400,
+   "start": 1009.0,
+   "end": 1012.0,
+   "text": "When you enter the room, please do not interrupt.",
+   "speaker": 1
+  },
+  {
+   "id": 401,
+   "start": 1012.0,
+   "end": 1015.0,
+   "text": "I'm going conversations with for a pause in the conversation.",
+   "speaker": 1
+  },
+  {
+   "id": 402,
+   "start": 1015.0,
+   "end": 1016.0,
+   "text": "And say hi.",
+   "speaker": 1
+  },
+  {
+   "id": 403,
+   "start": 1016.0,
+   "end": 1020.0,
+   "text": "It's quite common for people you might not know to join.",
+   "speaker": 1
+  },
+  {
+   "id": 404,
+   "start": 1020.0,
+   "end": 1023.0,
+   "text": "And which just be to other people in the room.",
+   "speaker": 1
+  },
+  {
+   "id": 405,
+   "start": 1023.0,
+   "end": 1024.0,
+   "text": "You also might not know.",
+   "speaker": 1
+  },
+  {
+   "id": 406,
+   "start": 1024.0,
+   "end": 1027.0,
+   "text": "They may have been waiting all year for this chance to meet.",
+   "speaker": 1
+  },
+  {
+   "id": 407,
+   "start": 1027.0,
+   "end": 1030.0,
+   "text": "So please give people the space to have these conversations.",
+   "speaker": 1
+  },
+  {
+   "id": 408,
+   "start": 1030.0,
+   "end": 1031.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 409,
+   "start": 1031.0,
+   "end": 1032.0,
+   "text": "And the next one.",
+   "speaker": 1
+  },
+  {
+   "id": 410,
+   "start": 1032.0,
+   "end": 1034.0,
+   "text": "Do not announce the time zones.",
+   "speaker": 1
+  },
+  {
+   "id": 411,
+   "start": 1034.0,
+   "end": 1036.0,
+   "text": "It would be the exception of the first and the last one.",
+   "speaker": 1
+  },
+  {
+   "id": 412,
+   "start": 1036.0,
+   "end": 1039.0,
+   "text": "Because there are so many time zones.",
+   "speaker": 1
+  },
+  {
+   "id": 413,
+   "start": 1039.0,
+   "end": 1043.0,
+   "text": "There is no need to interrupt the conversation to announce each and every one.",
+   "speaker": 1
+  },
+  {
+   "id": 414,
+   "start": 1043.0,
+   "end": 1044.0,
+   "text": "I think there's 36.",
+   "speaker": 1
+  },
+  {
+   "id": 415,
+   "start": 1044.0,
+   "end": 1047.0,
+   "text": "36 from the last.",
+   "speaker": 1
+  },
+  {
+   "id": 416,
+   "start": 1047.0,
+   "end": 1048.0,
+   "text": "Check out that.",
+   "speaker": 1
+  },
+  {
+   "id": 417,
+   "start": 1048.0,
+   "end": 1049.0,
+   "text": "That said, it looked very well.",
+   "speaker": 1
+  },
+  {
+   "id": 418,
+   "start": 1049.0,
+   "end": 1050.0,
+   "text": "This is a link in the show.",
+   "speaker": 1
+  },
+  {
+   "id": 419,
+   "start": 1050.0,
+   "end": 1054.0,
+   "text": "If you're joining from a time zone at a switching to the new year.",
+   "speaker": 1
+  },
+  {
+   "id": 420,
+   "start": 1054.0,
+   "end": 1055.0,
+   "text": "Then please wait for polls.",
+   "speaker": 1
+  },
+  {
+   "id": 421,
+   "start": 1055.0,
+   "end": 1056.0,
+   "text": "The conversation.",
+   "speaker": 1
+  },
+  {
+   "id": 422,
+   "start": 1056.0,
+   "end": 1058.0,
+   "text": "Uh, but wish happy people.",
+   "speaker": 1
+  },
+  {
+   "id": 423,
+   "start": 1058.0,
+   "end": 1060.0,
+   "text": "Which people are happy new year.",
+   "speaker": 1
+  },
+  {
+   "id": 424,
+   "start": 1060.0,
+   "end": 1061.0,
+   "text": "New kiduki.",
+   "speaker": 1
+  },
+  {
+   "id": 425,
+   "start": 1061.0,
+   "end": 1062.0,
+   "text": "Next one.",
+   "speaker": 1
+  },
+  {
+   "id": 426,
+   "start": 1062.0,
+   "end": 1065.0,
+   "text": "Don't fill with dead air.",
+   "speaker": 1
+  },
+  {
+   "id": 427,
+   "start": 1065.0,
+   "end": 1067.0,
+   "text": "This is a relaxed meetup.",
+   "speaker": 1
+  },
+  {
+   "id": 428,
+   "start": 1067.0,
+   "end": 1069.0,
+   "text": "Not a traditional radio broadcast.",
+   "speaker": 1
+  },
+  {
+   "id": 429,
+   "start": 1069.0,
+   "end": 1072.0,
+   "text": "If there is no conversation going on at a given time.",
+   "speaker": 1
+  },
+  {
+   "id": 430,
+   "start": 1072.0,
+   "end": 1075.0,
+   "text": "Don't fill the need to fill the dead air.",
+   "speaker": 1
+  },
+  {
+   "id": 431,
+   "start": 1075.0,
+   "end": 1077.0,
+   "text": "Before the recording is posted.",
+   "speaker": 1
+  },
+  {
+   "id": 432,
+   "start": 1077.0,
+   "end": 1080.0,
+   "text": "Uh, as a podcast, the silence will be truncated.",
+   "speaker": 1
+  },
+  {
+   "id": 433,
+   "start": 1080.0,
+   "end": 1083.0,
+   "text": "It's like silence will be truncated.",
+   "speaker": 1
+  },
+  {
+   "id": 434,
+   "start": 1083.0,
+   "end": 1085.0,
+   "text": "There's a t-shirt there.",
+   "speaker": 1
+  },
+  {
+   "id": 435,
+   "start": 1085.0,
+   "end": 1086.0,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 436,
+   "start": 1086.0,
+   "end": 1088.0,
+   "text": "Do not monopolize the conversation.",
+   "speaker": 1
+  },
+  {
+   "id": 437,
+   "start": 1088.0,
+   "end": 1092.0,
+   "text": "Please be mindful that you are the beverage of your choice.",
+   "speaker": 1
+  },
+  {
+   "id": 438,
+   "start": 1092.0,
+   "end": 1094.0,
+   "text": "Maybe speaking too much.",
+   "speaker": 1
+  },
+  {
+   "id": 439,
+   "start": 1094.0,
+   "end": 1096.0,
+   "text": "And then you are a guest.",
+   "speaker": 1
+  },
+  {
+   "id": 440,
+   "start": 1096.0,
+   "end": 1101.0,
+   "text": "Be respectful and remember that your attendance to the new year show.",
+   "speaker": 1
+  },
+  {
+   "id": 441,
+   "start": 1101.0,
+   "end": 1105.0,
+   "text": "Do not constitute a HBR episode.",
+   "speaker": 1
+  },
+  {
+   "id": 442,
+   "start": 1105.0,
+   "end": 1109.0,
+   "text": "And everything is being recorded and released a CC by a say.",
+   "speaker": 1
+  },
+  {
+   "id": 443,
+   "start": 1109.0,
+   "end": 1111.0,
+   "text": "If you're not happy with that, drop.",
+   "speaker": 1
+  },
+  {
+   "id": 444,
+   "start": 1111.0,
+   "end": 1115.0,
+   "text": "Recording will be released as a podcast under the creative comments.",
+   "speaker": 1
+  },
+  {
+   "id": 445,
+   "start": 1115.0,
+   "end": 1117.0,
+   "text": "Activation share life for not all.",
+   "speaker": 1
+  },
+  {
+   "id": 446,
+   "start": 1117.0,
+   "end": 1118.0,
+   "text": "International license.",
+   "speaker": 1
+  },
+  {
+   "id": 447,
+   "start": 1118.0,
+   "end": 1124.0,
+   "text": "The recording will be released mid year when there is a low in submission.",
+   "speaker": 1
+  },
+  {
+   "id": 448,
+   "start": 1124.0,
+   "end": 1125.0,
+   "text": "Super.",
+   "speaker": 1
+  },
+  {
+   "id": 449,
+   "start": 1125.0,
+   "end": 1127.0,
+   "text": "That's that's the ground rules.",
+   "speaker": 1
+  },
+  {
+   "id": 450,
+   "start": 1127.0,
+   "end": 1129.0,
+   "text": "Let's see how that works.",
+   "speaker": 1
+  },
+  {
+   "id": 451,
+   "start": 1129.0,
+   "end": 1130.0,
+   "text": "Trust me.",
+   "speaker": 1
+  },
+  {
+   "id": 452,
+   "start": 1130.0,
+   "end": 1135.0,
+   "text": "I don't think people will have an issue with it.",
+   "speaker": 1
+  },
+  {
+   "id": 453,
+   "start": 1135.0,
+   "end": 1138.0,
+   "text": "It's just things observations.",
+   "speaker": 1
+  },
+  {
+   "id": 454,
+   "start": 1138.0,
+   "end": 1143.0,
+   "text": "The only other thing is that you hear, how is your year man?",
+   "speaker": 1
+  },
+  {
+   "id": 455,
+   "start": 1143.0,
+   "end": 1144.0,
+   "text": "I tell by story.",
+   "speaker": 1
+  },
+  {
+   "id": 456,
+   "start": 1144.0,
+   "end": 1147.0,
+   "text": "And then three hours later, somebody asked me the same question.",
+   "speaker": 1
+  },
+  {
+   "id": 457,
+   "start": 1147.0,
+   "end": 1148.0,
+   "text": "And I tell my story again.",
+   "speaker": 1
+  },
+  {
+   "id": 458,
+   "start": 1148.0,
+   "end": 1152.0,
+   "text": "So you end up hearing the same person's story 15 times.",
+   "speaker": 1
+  },
+  {
+   "id": 459,
+   "start": 1152.0,
+   "end": 1155.0,
+   "text": "That's not something that we can stop or prevent.",
+   "speaker": 1
+  },
+  {
+   "id": 460,
+   "start": 1155.0,
+   "end": 1158.0,
+   "text": "Actually, I don't think we want to stop or prevent it.",
+   "speaker": 1
+  },
+  {
+   "id": 461,
+   "start": 1158.0,
+   "end": 1162.0,
+   "text": "Because it's interesting to get other people's perspectives on other people's years.",
+   "speaker": 1
+  },
+  {
+   "id": 462,
+   "start": 1162.0,
+   "end": 1163.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 463,
+   "start": 1163.0,
+   "end": 1167.0,
+   "text": "Go to sleep, go to sleep.",
+   "speaker": 1
+  },
+  {
+   "id": 464,
+   "start": 1167.0,
+   "end": 1168.0,
+   "text": "I'm here all day.",
+   "speaker": 1
+  },
+  {
+   "id": 465,
+   "start": 1168.0,
+   "end": 1170.0,
+   "text": "So I'm here all day, folks.",
+   "speaker": 1
+  },
+  {
+   "id": 466,
+   "start": 1170.0,
+   "end": 1172.0,
+   "text": "If you want to drop off, feel free.",
+   "speaker": 1
+  },
+  {
+   "id": 467,
+   "start": 1172.0,
+   "end": 1174.0,
+   "text": "There's no need to everything is up and running.",
+   "speaker": 1
+  },
+  {
+   "id": 468,
+   "start": 1174.0,
+   "end": 1175.0,
+   "text": "We're all done.",
+   "speaker": 1
+  },
+  {
+   "id": 469,
+   "start": 1175.0,
+   "end": 1177.0,
+   "text": "If you have other things to do, do other things.",
+   "speaker": 1
+  },
+  {
+   "id": 470,
+   "start": 1177.0,
+   "end": 1180.0,
+   "text": "I made a take up on that in a few minutes.",
+   "speaker": 1
+  },
+  {
+   "id": 471,
+   "start": 1180.0,
+   "end": 1182.0,
+   "text": "But I think what's going on.",
+   "speaker": 1
+  },
+  {
+   "id": 472,
+   "start": 1182.0,
+   "end": 1185.0,
+   "text": "If you want to get that link in.",
+   "speaker": 1
+  },
+  {
+   "id": 473,
+   "start": 1185.0,
+   "end": 1186.0,
+   "text": "Which one?",
+   "speaker": 1
+  },
+  {
+   "id": 474,
+   "start": 1187.0,
+   "end": 1188.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 475,
+   "start": 1188.0,
+   "end": 1190.0,
+   "text": "What's the jitzie one in the show notes?",
+   "speaker": 1
+  },
+  {
+   "id": 476,
+   "start": 1190.0,
+   "end": 1191.0,
+   "text": "I don't know.",
+   "speaker": 1
+  },
+  {
+   "id": 477,
+   "start": 1191.0,
+   "end": 1192.0,
+   "text": "Jitzie's a pan.",
+   "speaker": 1
+  },
+  {
+   "id": 478,
+   "start": 1192.0,
+   "end": 1193.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 479,
+   "start": 1193.0,
+   "end": 1195.0,
+   "text": "I mean, you could have had to pan the answer times.",
+   "speaker": 1
+  },
+  {
+   "id": 480,
+   "start": 1195.0,
+   "end": 1198.0,
+   "text": "Let's make sure that it's actually there.",
+   "speaker": 1
+  },
+  {
+   "id": 481,
+   "start": 1198.0,
+   "end": 1199.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 482,
+   "start": 1199.0,
+   "end": 1200.0,
+   "text": "There.",
+   "speaker": 1
+  },
+  {
+   "id": 483,
+   "start": 1200.0,
+   "end": 1201.0,
+   "text": "Refresh your page.",
+   "speaker": 1
+  },
+  {
+   "id": 484,
+   "start": 1201.0,
+   "end": 1202.0,
+   "text": "You're either bad page.",
+   "speaker": 1
+  },
+  {
+   "id": 485,
+   "start": 1202.0,
+   "end": 1203.0,
+   "text": "Should I help you be there?",
+   "speaker": 1
+  },
+  {
+   "id": 486,
+   "start": 1203.0,
+   "end": 1204.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 487,
+   "start": 1204.0,
+   "end": 1205.0,
+   "text": "Feel.",
+   "speaker": 1
+  },
+  {
+   "id": 488,
+   "start": 1205.0,
+   "end": 1207.0,
+   "text": "You'd have had it as a great tool.",
+   "speaker": 1
+  },
+  {
+   "id": 489,
+   "start": 1207.0,
+   "end": 1210.0,
+   "text": "But it's kind of pan the answer times.",
+   "speaker": 1
+  },
+  {
+   "id": 490,
+   "start": 1210.0,
+   "end": 1213.0,
+   "text": "Especially trying to use it on mobile.",
+   "speaker": 1
+  },
+  {
+   "id": 491,
+   "start": 1213.0,
+   "end": 1217.0,
+   "text": "But times when using it on mobile, where it'll.",
+   "speaker": 1
+  },
+  {
+   "id": 492,
+   "start": 1217.0,
+   "end": 1222.0,
+   "text": "But it won't be bring up a keyboard to be able to type it all.",
+   "speaker": 1
+  },
+  {
+   "id": 493,
+   "start": 1222.0,
+   "end": 1223.0,
+   "text": "It doesn't.",
+   "speaker": 1
+  },
+  {
+   "id": 494,
+   "start": 1223.0,
+   "end": 1227.0,
+   "text": "It'll show the page and I'll start typing and I won't do anything.",
+   "speaker": 1
+  },
+  {
+   "id": 495,
+   "start": 1227.0,
+   "end": 1229.0,
+   "text": "But I don't think I've had.",
+   "speaker": 1
+  },
+  {
+   "id": 496,
+   "start": 1229.0,
+   "end": 1232.0,
+   "text": "I've had minimal problem on.",
+   "speaker": 1
+  },
+  {
+   "id": 497,
+   "start": 1232.0,
+   "end": 1235.0,
+   "text": "Just a straight-up web browser on a computer.",
+   "speaker": 1
+  },
+  {
+   "id": 498,
+   "start": 1235.0,
+   "end": 1237.0,
+   "text": "Then I have in mobile.",
+   "speaker": 1
+  },
+  {
+   "id": 499,
+   "start": 1237.0,
+   "end": 1240.0,
+   "text": "It's happened before we'll start typing.",
+   "speaker": 1
+  },
+  {
+   "id": 500,
+   "start": 1240.0,
+   "end": 1243.0,
+   "text": "I've somehow disconnected from the server temporarily.",
+   "speaker": 1
+  },
+  {
+   "id": 501,
+   "start": 1243.0,
+   "end": 1246.0,
+   "text": "And everything I typed wasn't there anymore.",
+   "speaker": 1
+  },
+  {
+   "id": 502,
+   "start": 1246.0,
+   "end": 1247.0,
+   "text": "That's good.",
+   "speaker": 1
+  },
+  {
+   "id": 503,
+   "start": 1247.0,
+   "end": 1248.0,
+   "text": "No.",
+   "speaker": 1
+  },
+  {
+   "id": 504,
+   "start": 1248.0,
+   "end": 1252.0,
+   "text": "So right now you will with with with archive that org when it was down.",
+   "speaker": 1
+  },
+  {
+   "id": 505,
+   "start": 1252.0,
+   "end": 1257.0,
+   "text": "You were hosting your audio on multiple places.",
+   "speaker": 1
+  },
+  {
+   "id": 506,
+   "start": 1257.0,
+   "end": 1258.0,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 507,
+   "start": 1258.0,
+   "end": 1261.0,
+   "text": "So I'll send you a link in the show else.",
+   "speaker": 1
+  },
+  {
+   "id": 508,
+   "start": 1261.0,
+   "end": 1263.0,
+   "text": "So I'll send you a link.",
+   "speaker": 2
+  },
+  {
+   "id": 509,
+   "start": 1263.0,
+   "end": 1265.0,
+   "text": "I'll put the message on.",
+   "speaker": 2
+  },
+  {
+   "id": 510,
+   "start": 1265.0,
+   "end": 1270.0,
+   "text": "I'm trying to update the main website just to put that link in just as a letter.",
+   "speaker": 2
+  },
+  {
+   "id": 511,
+   "start": 1270.0,
+   "end": 1274.0,
+   "text": "And have an approach of that when you push the top button as well.",
+   "speaker": 2
+  },
+  {
+   "id": 512,
+   "start": 1274.0,
+   "end": 1276.0,
+   "text": "Just complicate things.",
+   "speaker": 2
+  },
+  {
+   "id": 513,
+   "start": 1276.0,
+   "end": 1277.0,
+   "text": "Anyway, we see.",
+   "speaker": 2
+  },
+  {
+   "id": 514,
+   "start": 1277.0,
+   "end": 1280.0,
+   "text": "I'll put it into world.",
+   "speaker": 2
+  },
+  {
+   "id": 515,
+   "start": 1280.0,
+   "end": 1281.0,
+   "text": "Eat that.",
+   "speaker": 2
+  },
+  {
+   "id": 516,
+   "start": 1281.0,
+   "end": 1282.0,
+   "text": "Yeah, it's in there.",
+   "speaker": 2
+  },
+  {
+   "id": 517,
+   "start": 1282.0,
+   "end": 1288.0,
+   "text": "So what we did was we built a there's a peer to be script.",
+   "speaker": 2
+  },
+  {
+   "id": 518,
+   "start": 1288.0,
+   "end": 1289.0,
+   "text": "We put our audio.",
+   "speaker": 2
+  },
+  {
+   "id": 519,
+   "start": 1289.0,
+   "end": 1293.0,
+   "text": "So when you have your audio ready, it goes to your central.",
+   "speaker": 2
+  },
+  {
+   "id": 520,
+   "start": 1294.0,
+   "end": 1299.0,
+   "text": "Central place where we can where the other sites can or sink is to and only the other.",
+   "speaker": 2
+  },
+  {
+   "id": 521,
+   "start": 1299.0,
+   "end": 1301.0,
+   "text": "So the mirrors right.",
+   "speaker": 2
+  },
+  {
+   "id": 522,
+   "start": 1301.0,
+   "end": 1303.0,
+   "text": "So I ended the show.",
+   "speaker": 1
+  },
+  {
+   "id": 523,
+   "start": 1303.0,
+   "end": 1306.0,
+   "text": "I uploaded to the.",
+   "speaker": 1
+  },
+  {
+   "id": 524,
+   "start": 1306.0,
+   "end": 1307.0,
+   "text": "The.",
+   "speaker": 1
+  },
+  {
+   "id": 525,
+   "start": 1307.0,
+   "end": 1309.0,
+   "text": "Let's call it the origin server.",
+   "speaker": 1
+  },
+  {
+   "id": 526,
+   "start": 1309.0,
+   "end": 1310.0,
+   "text": "And the are.",
+   "speaker": 1
+  },
+  {
+   "id": 527,
+   "start": 1310.0,
+   "end": 1311.0,
+   "text": "SEP or our sink.",
+   "speaker": 1
+  },
+  {
+   "id": 528,
+   "start": 1311.0,
+   "end": 1312.0,
+   "text": "So it's up there.",
+   "speaker": 1
+  },
+  {
+   "id": 529,
+   "start": 1312.0,
+   "end": 1316.0,
+   "text": "Only the mirrors can access that's our agenda server.",
+   "speaker": 1
+  },
+  {
+   "id": 530,
+   "start": 1316.0,
+   "end": 1317.0,
+   "text": "Every half an hour.",
+   "speaker": 1
+  },
+  {
+   "id": 531,
+   "start": 1317.0,
+   "end": 1321.0,
+   "text": "They do a nursing from their from the origins server down to them.",
+   "speaker": 1
+  },
+  {
+   "id": 532,
+   "start": 1321.0,
+   "end": 1323.0,
+   "text": "And they're running Apache or engineer.",
+   "speaker": 2
+  },
+  {
+   "id": 533,
+   "start": 1323.0,
+   "end": 1326.0,
+   "text": "So something very basic pitch email only.",
+   "speaker": 1
+  },
+  {
+   "id": 534,
+   "start": 1326.0,
+   "end": 1328.0,
+   "text": "Serving the web pages out.",
+   "speaker": 1
+  },
+  {
+   "id": 535,
+   "start": 1328.0,
+   "end": 1331.0,
+   "text": "Then on the hit your website.",
+   "speaker": 1
+  },
+  {
+   "id": 536,
+   "start": 1331.0,
+   "end": 1333.0,
+   "text": "I have the image.",
+   "speaker": 1
+  },
+  {
+   "id": 537,
+   "start": 1333.0,
+   "end": 1335.0,
+   "text": "All the files replaced with.",
+   "speaker": 2
+  },
+  {
+   "id": 538,
+   "start": 1335.0,
+   "end": 1336.0,
+   "text": "CD.",
+   "speaker": 2
+  },
+  {
+   "id": 539,
+   "start": 1336.0,
+   "end": 1338.0,
+   "text": "But see if you go to the edge.",
+   "speaker": 2
+  },
+  {
+   "id": 540,
+   "start": 1338.0,
+   "end": 1341.0,
+   "text": "And then hover over one of the links.",
+   "speaker": 1
+  },
+  {
+   "id": 541,
+   "start": 1341.0,
+   "end": 1345.0,
+   "text": "And it goes to all the links replaced with.",
+   "speaker": 1
+  },
+  {
+   "id": 542,
+   "start": 1345.0,
+   "end": 1346.0,
+   "text": "So instead of.",
+   "speaker": 1
+  },
+  {
+   "id": 543,
+   "start": 1347.0,
+   "end": 1349.0,
+   "text": "Hack of all the great other old for such apps.",
+   "speaker": 1
+  },
+  {
+   "id": 544,
+   "start": 1349.0,
+   "end": 1352.0,
+   "text": "Or such HPR for two way to for such HPR.",
+   "speaker": 1
+  },
+  {
+   "id": 545,
+   "start": 1352.0,
+   "end": 1354.0,
+   "text": "That's for two way to dog.",
+   "speaker": 1
+  },
+  {
+   "id": 546,
+   "start": 1354.0,
+   "end": 1355.0,
+   "text": "It's.",
+   "speaker": 2
+  },
+  {
+   "id": 547,
+   "start": 1355.0,
+   "end": 1356.0,
+   "text": "It puts us.",
+   "speaker": 2
+  },
+  {
+   "id": 548,
+   "start": 1356.0,
+   "end": 1357.0,
+   "text": "Hope that.",
+   "speaker": 2
+  },
+  {
+   "id": 549,
+   "start": 1357.0,
+   "end": 1358.0,
+   "text": "Hack of all the great.",
+   "speaker": 2
+  },
+  {
+   "id": 550,
+   "start": 1358.0,
+   "end": 1359.0,
+   "text": "Or such CD and that.",
+   "speaker": 2
+  },
+  {
+   "id": 551,
+   "start": 1359.0,
+   "end": 1360.0,
+   "text": "It be.",
+   "speaker": 2
+  },
+  {
+   "id": 552,
+   "start": 1360.0,
+   "end": 1361.0,
+   "text": "Question mark.",
+   "speaker": 2
+  },
+  {
+   "id": 553,
+   "start": 1361.0,
+   "end": 1362.0,
+   "text": "Finally equals.",
+   "speaker": 2
+  },
+  {
+   "id": 554,
+   "start": 1362.0,
+   "end": 1363.0,
+   "text": "And then the path to the file.",
+   "speaker": 2
+  },
+  {
+   "id": 555,
+   "start": 1363.0,
+   "end": 1365.0,
+   "text": "And then zoom articles.",
+   "speaker": 2
+  },
+  {
+   "id": 556,
+   "start": 1365.0,
+   "end": 1367.0,
+   "text": "And equals to.",
+   "speaker": 2
+  },
+  {
+   "id": 557,
+   "start": 1367.0,
+   "end": 1369.0,
+   "text": "There on on that script.",
+   "speaker": 1
+  },
+  {
+   "id": 558,
+   "start": 1369.0,
+   "end": 1370.0,
+   "text": "It's just a round.",
+   "speaker": 2
+  },
+  {
+   "id": 559,
+   "start": 1370.0,
+   "end": 1371.0,
+   "text": "Robin random thing.",
+   "speaker": 2
+  },
+  {
+   "id": 560,
+   "start": 1371.0,
+   "end": 1372.0,
+   "text": "Where to random.",
+   "speaker": 1
+  },
+  {
+   "id": 561,
+   "start": 1372.0,
+   "end": 1374.0,
+   "text": "We go to one of the three locations.",
+   "speaker": 1
+  },
+  {
+   "id": 562,
+   "start": 1374.0,
+   "end": 1377.0,
+   "text": "So we have currently a location in.",
+   "speaker": 2
+  },
+  {
+   "id": 563,
+   "start": 1377.0,
+   "end": 1379.0,
+   "text": "We still have the internet archive now.",
+   "speaker": 2
+  },
+  {
+   "id": 564,
+   "start": 1379.0,
+   "end": 1382.0,
+   "text": "Dave is managed to get the uploads working on that.",
+   "speaker": 2
+  },
+  {
+   "id": 565,
+   "start": 1382.0,
+   "end": 1385.0,
+   "text": "We also have a location here in my house.",
+   "speaker": 2
+  },
+  {
+   "id": 566,
+   "start": 1385.0,
+   "end": 1389.0,
+   "text": "I've got a gigabyte gigabits fiber network connection.",
+   "speaker": 2
+  },
+  {
+   "id": 567,
+   "start": 1389.0,
+   "end": 1390.0,
+   "text": "And this guy.",
+   "speaker": 2
+  },
+  {
+   "id": 568,
+   "start": 1390.0,
+   "end": 1392.0,
+   "text": "I have a server just sitting here.",
+   "speaker": 1
+  },
+  {
+   "id": 569,
+   "start": 1392.0,
+   "end": 1394.0,
+   "text": "And with a.",
+   "speaker": 1
+  },
+  {
+   "id": 570,
+   "start": 1394.0,
+   "end": 1396.0,
+   "text": "One third by drive in this.",
+   "speaker": 1
+  },
+  {
+   "id": 571,
+   "start": 1396.0,
+   "end": 1398.0,
+   "text": "I need to update that to the four turbines.",
+   "speaker": 1
+  },
+  {
+   "id": 572,
+   "start": 1398.0,
+   "end": 1400.0,
+   "text": "Which I'm working on.",
+   "speaker": 1
+  },
+  {
+   "id": 573,
+   "start": 1400.0,
+   "end": 1401.0,
+   "text": "And then.",
+   "speaker": 1
+  },
+  {
+   "id": 574,
+   "start": 1401.0,
+   "end": 1403.0,
+   "text": "Ron has got.",
+   "speaker": 2
+  },
+  {
+   "id": 575,
+   "start": 1403.0,
+   "end": 1405.0,
+   "text": "A.",
+   "speaker": 2
+  },
+  {
+   "id": 576,
+   "start": 1405.0,
+   "end": 1408.0,
+   "text": "Drop us in New York.",
+   "speaker": 2
+  },
+  {
+   "id": 577,
+   "start": 1408.0,
+   "end": 1410.0,
+   "text": "And he's forced in servers there.",
+   "speaker": 2
+  },
+  {
+   "id": 578,
+   "start": 1410.0,
+   "end": 1414.0,
+   "text": "In the meantime, we've had two other people volunteer to host.",
+   "speaker": 2
+  },
+  {
+   "id": 579,
+   "start": 1414.0,
+   "end": 1415.0,
+   "text": "So.",
+   "speaker": 2
+  },
+  {
+   "id": 580,
+   "start": 1415.0,
+   "end": 1418.0,
+   "text": "One at an actual ISP.",
+   "speaker": 2
+  },
+  {
+   "id": 581,
+   "start": 1418.0,
+   "end": 1420.0,
+   "text": "And data center.",
+   "speaker": 2
+  },
+  {
+   "id": 582,
+   "start": 1420.0,
+   "end": 1423.0,
+   "text": "We won't be able to do work enough until the new year.",
+   "speaker": 2
+  },
+  {
+   "id": 583,
+   "start": 1423.0,
+   "end": 1424.0,
+   "text": "Just a time pressure.",
+   "speaker": 2
+  },
+  {
+   "id": 584,
+   "start": 1424.0,
+   "end": 1425.0,
+   "text": "But equally.",
+   "speaker": 2
+  },
+  {
+   "id": 585,
+   "start": 1425.0,
+   "end": 1426.0,
+   "text": "I can't work on it.",
+   "speaker": 2
+  },
+  {
+   "id": 586,
+   "start": 1426.0,
+   "end": 1429.0,
+   "text": "And then I have another location in the Netherlands.",
+   "speaker": 2
+  },
+  {
+   "id": 587,
+   "start": 1429.0,
+   "end": 1432.0,
+   "text": "I have two big about fiber connection with UPS.",
+   "speaker": 2
+  },
+  {
+   "id": 588,
+   "start": 1432.0,
+   "end": 1433.0,
+   "text": "The full monte.",
+   "speaker": 2
+  },
+  {
+   "id": 589,
+   "start": 1433.0,
+   "end": 1437.0,
+   "text": "And I can go whatever I want in there.",
+   "speaker": 2
+  },
+  {
+   "id": 590,
+   "start": 1437.0,
+   "end": 1438.0,
+   "text": "And.",
+   "speaker": 2
+  },
+  {
+   "id": 591,
+   "start": 1438.0,
+   "end": 1440.0,
+   "text": "That should also be.",
+   "speaker": 2
+  },
+  {
+   "id": 592,
+   "start": 1440.0,
+   "end": 1441.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 593,
+   "start": 1441.0,
+   "end": 1443.0,
+   "text": "So that will give us four locations.",
+   "speaker": 2
+  },
+  {
+   "id": 594,
+   "start": 1443.0,
+   "end": 1444.0,
+   "text": "And basically.",
+   "speaker": 2
+  },
+  {
+   "id": 595,
+   "start": 1444.0,
+   "end": 1445.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 596,
+   "start": 1445.0,
+   "end": 1446.0,
+   "text": "That's.",
+   "speaker": 2
+  },
+  {
+   "id": 597,
+   "start": 1446.0,
+   "end": 1447.0,
+   "text": "That's the place.",
+   "speaker": 2
+  },
+  {
+   "id": 598,
+   "start": 1447.0,
+   "end": 1449.0,
+   "text": "So you're using.",
+   "speaker": 3
+  },
+  {
+   "id": 599,
+   "start": 1449.0,
+   "end": 1451.0,
+   "text": "The most of them being published through why they're like a patchy",
+   "speaker": 3
+  },
+  {
+   "id": 600,
+   "start": 1451.0,
+   "end": 1454.0,
+   "text": "orange next is regular.",
+   "speaker": 3
+  },
+  {
+   "id": 601,
+   "start": 1454.0,
+   "end": 1455.0,
+   "text": "Sharing at the file.",
+   "speaker": 3
+  },
+  {
+   "id": 602,
+   "start": 1455.0,
+   "end": 1456.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 603,
+   "start": 1456.0,
+   "end": 1460.0,
+   "text": "So it's mostly this whole thing came from when.",
+   "speaker": 2
+  },
+  {
+   "id": 604,
+   "start": 1460.0,
+   "end": 1461.0,
+   "text": "When.",
+   "speaker": 2
+  },
+  {
+   "id": 605,
+   "start": 1461.0,
+   "end": 1464.0,
+   "text": "We used to have all the files on the main.",
+   "speaker": 2
+  },
+  {
+   "id": 606,
+   "start": 1464.0,
+   "end": 1465.0,
+   "text": "HPR server.",
+   "speaker": 2
+  },
+  {
+   "id": 607,
+   "start": 1465.0,
+   "end": 1466.0,
+   "text": "And.",
+   "speaker": 2
+  },
+  {
+   "id": 608,
+   "start": 1466.0,
+   "end": 1469.0,
+   "text": "We had P HP Apache.",
+   "speaker": 2
+  },
+  {
+   "id": 609,
+   "start": 1469.0,
+   "end": 1471.0,
+   "text": "Everything.",
+   "speaker": 2
+  },
+  {
+   "id": 610,
+   "start": 1471.0,
+   "end": 1474.0,
+   "text": "So every time you hit the main page of runner.",
+   "speaker": 2
+  },
+  {
+   "id": 611,
+   "start": 1474.0,
+   "end": 1476.0,
+   "text": "You know, a lab stack.",
+   "speaker": 2
+  },
+  {
+   "id": 612,
+   "start": 1476.0,
+   "end": 1477.0,
+   "text": "It went.",
+   "speaker": 2
+  },
+  {
+   "id": 613,
+   "start": 1477.0,
+   "end": 1478.0,
+   "text": "Got it from the database.",
+   "speaker": 2
+  },
+  {
+   "id": 614,
+   "start": 1478.0,
+   "end": 1479.0,
+   "text": "I'm generated the page.",
+   "speaker": 2
+  },
+  {
+   "id": 615,
+   "start": 1479.0,
+   "end": 1481.0,
+   "text": "And I'm very expensive to do.",
+   "speaker": 2
+  },
+  {
+   "id": 616,
+   "start": 1481.0,
+   "end": 1483.0,
+   "text": "So we switch from that to.",
+   "speaker": 2
+  },
+  {
+   "id": 617,
+   "start": 1484.0,
+   "end": 1488.0,
+   "text": "Doing a static site and redirecting to the internet archive for all our media.",
+   "speaker": 2
+  },
+  {
+   "id": 618,
+   "start": 1488.0,
+   "end": 1489.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 619,
+   "start": 1489.0,
+   "end": 1490.0,
+   "text": "So we have a static.",
+   "speaker": 2
+  },
+  {
+   "id": 620,
+   "start": 1490.0,
+   "end": 1493.0,
+   "text": "H HTML page up on the HPR website.",
+   "speaker": 2
+  },
+  {
+   "id": 621,
+   "start": 1493.0,
+   "end": 1495.0,
+   "text": "And it goes to.",
+   "speaker": 2
+  },
+  {
+   "id": 622,
+   "start": 1495.0,
+   "end": 1497.0,
+   "text": "If there's a media link.",
+   "speaker": 2
+  },
+  {
+   "id": 623,
+   "start": 1497.0,
+   "end": 1500.0,
+   "text": "It redirects to the internet archive or did.",
+   "speaker": 2
+  },
+  {
+   "id": 624,
+   "start": 1500.0,
+   "end": 1502.0,
+   "text": "And the internet archive went down for.",
+   "speaker": 2
+  },
+  {
+   "id": 625,
+   "start": 1502.0,
+   "end": 1504.0,
+   "text": "That's part of three or four weeks.",
+   "speaker": 2
+  },
+  {
+   "id": 626,
+   "start": 1504.0,
+   "end": 1507.0,
+   "text": "And then we put in this.",
+   "speaker": 2
+  },
+  {
+   "id": 627,
+   "start": 1507.0,
+   "end": 1512.0,
+   "text": "Content delivery network, which I had planned on anyway doing in the past.",
+   "speaker": 2
+  },
+  {
+   "id": 628,
+   "start": 1512.0,
+   "end": 1514.0,
+   "text": "And I've done some testing out.",
+   "speaker": 2
+  },
+  {
+   "id": 629,
+   "start": 1514.0,
+   "end": 1517.0,
+   "text": "Well, this makes it so that we can.",
+   "speaker": 2
+  },
+  {
+   "id": 630,
+   "start": 1517.0,
+   "end": 1520.0,
+   "text": "We generate our site all our sites.",
+   "speaker": 2
+  },
+  {
+   "id": 631,
+   "start": 1520.0,
+   "end": 1521.0,
+   "text": "That's the offline.",
+   "speaker": 2
+  },
+  {
+   "id": 632,
+   "start": 1521.0,
+   "end": 1524.0,
+   "text": "And pushes up to the.",
+   "speaker": 2
+  },
+  {
+   "id": 633,
+   "start": 1524.0,
+   "end": 1526.0,
+   "text": "Up to the anonymous toast.",
+   "speaker": 2
+  },
+  {
+   "id": 634,
+   "start": 1526.0,
+   "end": 1527.0,
+   "text": "Come who.",
+   "speaker": 2
+  },
+  {
+   "id": 635,
+   "start": 1527.0,
+   "end": 1530.0,
+   "text": "Josh map does your page for all our hosting.",
+   "speaker": 2
+  },
+  {
+   "id": 636,
+   "start": 1530.0,
+   "end": 1532.0,
+   "text": "And that makes it a lot less.",
+   "speaker": 2
+  },
+  {
+   "id": 637,
+   "start": 1532.0,
+   "end": 1536.0,
+   "text": "And, you know, expensive and computer terms because you're just serving text files.",
+   "speaker": 2
+  },
+  {
+   "id": 638,
+   "start": 1536.0,
+   "end": 1538.0,
+   "text": "So there's no database queries.",
+   "speaker": 2
+  },
+  {
+   "id": 639,
+   "start": 1538.0,
+   "end": 1541.0,
+   "text": "And we're trying to hide all the database queries behind.",
+   "speaker": 2
+  },
+  {
+   "id": 640,
+   "start": 1541.0,
+   "end": 1545.0,
+   "text": "On the same server, but on.",
+   "speaker": 2
+  },
+  {
+   "id": 641,
+   "start": 1545.0,
+   "end": 1546.0,
+   "text": "On.",
+   "speaker": 2
+  },
+  {
+   "id": 642,
+   "start": 1546.0,
+   "end": 1548.0,
+   "text": "Hobbit dot hacker public radio dot org.",
+   "speaker": 2
+  },
+  {
+   "id": 643,
+   "start": 1548.0,
+   "end": 1550.0,
+   "text": "So that way, we can separate later.",
+   "speaker": 2
+  },
+  {
+   "id": 644,
+   "start": 1550.0,
+   "end": 1553.0,
+   "text": "They hack a public radio dot org onto multiple sites.",
+   "speaker": 2
+  },
+  {
+   "id": 645,
+   "start": 1553.0,
+   "end": 1556.0,
+   "text": "So we also have hack a public radio dot.",
+   "speaker": 2
+  },
+  {
+   "id": 646,
+   "start": 1556.0,
+   "end": 1558.0,
+   "text": "Come hack a public radio dot net.",
+   "speaker": 2
+  },
+  {
+   "id": 647,
+   "start": 1558.0,
+   "end": 1560.0,
+   "text": "And we have.",
+   "speaker": 2
+  },
+  {
+   "id": 648,
+   "start": 1560.0,
+   "end": 1562.0,
+   "text": "Hobbit public radio dot org.",
+   "speaker": 2
+  },
+  {
+   "id": 649,
+   "start": 1562.0,
+   "end": 1563.0,
+   "text": "Come net as well.",
+   "speaker": 2
+  },
+  {
+   "id": 650,
+   "start": 1563.0,
+   "end": 1565.0,
+   "text": "All of which could be on.",
+   "speaker": 2
+  },
+  {
+   "id": 651,
+   "start": 1565.0,
+   "end": 1568.0,
+   "text": "And different servers at different people's houses essentially.",
+   "speaker": 2
+  },
+  {
+   "id": 652,
+   "start": 1568.0,
+   "end": 1574.0,
+   "text": "And then, you know, if hack a public radio dot org is being deduced at a given time.",
+   "speaker": 2
+  },
+  {
+   "id": 653,
+   "start": 1574.0,
+   "end": 1576.0,
+   "text": "Well, okay, no problem.",
+   "speaker": 2
+  },
+  {
+   "id": 654,
+   "start": 1576.0,
+   "end": 1580.0,
+   "text": "You can just go over a pack or a hack a public radio dot net, which ideally",
+   "speaker": 2
+  },
+  {
+   "id": 655,
+   "start": 1580.0,
+   "end": 1582.0,
+   "text": "would be hosted somewhere else.",
+   "speaker": 2
+  },
+  {
+   "id": 656,
+   "start": 1582.0,
+   "end": 1583.0,
+   "text": "And then.",
+   "speaker": 2
+  },
+  {
+   "id": 657,
+   "start": 1583.0,
+   "end": 1586.0,
+   "text": "So each of the mirrors should get their own.",
+   "speaker": 2
+  },
+  {
+   "id": 658,
+   "start": 1586.0,
+   "end": 1588.0,
+   "text": "I have top level domain.",
+   "speaker": 2
+  },
+  {
+   "id": 659,
+   "start": 1588.0,
+   "end": 1589.0,
+   "text": "One of the top level domain.",
+   "speaker": 2
+  },
+  {
+   "id": 660,
+   "start": 1589.0,
+   "end": 1590.0,
+   "text": "So yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 661,
+   "start": 1590.0,
+   "end": 1591.0,
+   "text": "Does that make sense?",
+   "speaker": 2
+  },
+  {
+   "id": 662,
+   "start": 1591.0,
+   "end": 1592.0,
+   "text": "Yes.",
+   "speaker": 2
+  },
+  {
+   "id": 663,
+   "start": 1592.0,
+   "end": 1595.0,
+   "text": "So where is the server that does the load balancing?",
+   "speaker": 2
+  },
+  {
+   "id": 664,
+   "start": 1595.0,
+   "end": 1597.0,
+   "text": "That's Josh's one.",
+   "speaker": 2
+  },
+  {
+   "id": 665,
+   "start": 1598.0,
+   "end": 1599.0,
+   "text": "It's anonymous.",
+   "speaker": 2
+  },
+  {
+   "id": 666,
+   "start": 1599.0,
+   "end": 1600.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 667,
+   "start": 1600.0,
+   "end": 1601.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 668,
+   "start": 1601.0,
+   "end": 1603.0,
+   "text": "And I think it's a Amazon drop list.",
+   "speaker": 2
+  },
+  {
+   "id": 669,
+   "start": 1603.0,
+   "end": 1604.0,
+   "text": "Okay.",
+   "speaker": 2
+  },
+  {
+   "id": 670,
+   "start": 1604.0,
+   "end": 1606.0,
+   "text": "So I was thinking about that.",
+   "speaker": 2
+  },
+  {
+   "id": 671,
+   "start": 1606.0,
+   "end": 1607.0,
+   "text": "We could.",
+   "speaker": 2
+  },
+  {
+   "id": 672,
+   "start": 1607.0,
+   "end": 1609.0,
+   "text": "Based on DNS.",
+   "speaker": 2
+  },
+  {
+   "id": 673,
+   "start": 1609.0,
+   "end": 1614.0,
+   "text": "Do a redirect to like hack a public radio dot org.",
+   "speaker": 2
+  },
+  {
+   "id": 674,
+   "start": 1614.0,
+   "end": 1616.0,
+   "text": "Other random liaison.",
+   "speaker": 2
+  },
+  {
+   "id": 675,
+   "start": 1616.0,
+   "end": 1617.0,
+   "text": "But.",
+   "speaker": 2
+  },
+  {
+   "id": 676,
+   "start": 1617.0,
+   "end": 1618.0,
+   "text": "I'm not that far.",
+   "speaker": 2
+  },
+  {
+   "id": 677,
+   "start": 1618.0,
+   "end": 1619.0,
+   "text": "Right now.",
+   "speaker": 2
+  },
+  {
+   "id": 678,
+   "start": 1619.0,
+   "end": 1623.0,
+   "text": "You also heard that Davis is retiring as a janitor.",
+   "speaker": 2
+  },
+  {
+   "id": 679,
+   "start": 1623.0,
+   "end": 1626.0,
+   "text": "Not leaving the project but retiring as a janitor.",
+   "speaker": 2
+  },
+  {
+   "id": 680,
+   "start": 1626.0,
+   "end": 1629.0,
+   "text": "So a lot of the work he was doing.",
+   "speaker": 2
+  },
+  {
+   "id": 681,
+   "start": 1629.0,
+   "end": 1631.0,
+   "text": "Basically it hours a day.",
+   "speaker": 2
+  },
+  {
+   "id": 682,
+   "start": 1631.0,
+   "end": 1633.0,
+   "text": "We're having to take over.",
+   "speaker": 2
+  },
+  {
+   "id": 683,
+   "start": 1633.0,
+   "end": 1635.0,
+   "text": "We being me at the moment.",
+   "speaker": 2
+  },
+  {
+   "id": 684,
+   "start": 1635.0,
+   "end": 1638.0,
+   "text": "So I've moved a lot of the.",
+   "speaker": 2
+  },
+  {
+   "id": 685,
+   "start": 1638.0,
+   "end": 1639.0,
+   "text": "They.",
+   "speaker": 2
+  },
+  {
+   "id": 686,
+   "start": 1639.0,
+   "end": 1641.0,
+   "text": "So when you record you show a lot of the work.",
+   "speaker": 2
+  },
+  {
+   "id": 687,
+   "start": 1641.0,
+   "end": 1644.0,
+   "text": "Dave was doing was fix in the show notes and get them.",
+   "speaker": 2
+  },
+  {
+   "id": 688,
+   "start": 1644.0,
+   "end": 1645.0,
+   "text": "You know, correct.",
+   "speaker": 2
+  },
+  {
+   "id": 689,
+   "start": 1645.0,
+   "end": 1648.0,
+   "text": "Looking at the images, tagging them and all that sort of stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 690,
+   "start": 1648.0,
+   "end": 1649.0,
+   "text": "That's something.",
+   "speaker": 2
+  },
+  {
+   "id": 691,
+   "start": 1649.0,
+   "end": 1651.0,
+   "text": "I want to.",
+   "speaker": 2
+  },
+  {
+   "id": 692,
+   "start": 1652.0,
+   "end": 1654.0,
+   "text": "The different formats that we supported.",
+   "speaker": 2
+  },
+  {
+   "id": 693,
+   "start": 1654.0,
+   "end": 1655.0,
+   "text": "So now you just have.",
+   "speaker": 2
+  },
+  {
+   "id": 694,
+   "start": 1655.0,
+   "end": 1657.0,
+   "text": "If you use JavaScript.",
+   "speaker": 2
+  },
+  {
+   "id": 695,
+   "start": 1657.0,
+   "end": 1660.0,
+   "text": "If you don't use JavaScript, you get the same form.",
+   "speaker": 2
+  },
+  {
+   "id": 696,
+   "start": 1660.0,
+   "end": 1661.0,
+   "text": "So everything is exactly the same.",
+   "speaker": 2
+  },
+  {
+   "id": 697,
+   "start": 1661.0,
+   "end": 1665.0,
+   "text": "If you do have JavaScript, then there's what to see is what to get.",
+   "speaker": 2
+  },
+  {
+   "id": 698,
+   "start": 1665.0,
+   "end": 1666.0,
+   "text": "Editor always a week and a share.",
+   "speaker": 2
+  },
+  {
+   "id": 699,
+   "start": 1666.0,
+   "end": 1667.0,
+   "text": "And you can add.",
+   "speaker": 2
+  },
+  {
+   "id": 700,
+   "start": 1667.0,
+   "end": 1671.0,
+   "text": "Formatting like hit well and tags, line items.",
+   "speaker": 2
+  },
+  {
+   "id": 701,
+   "start": 1671.0,
+   "end": 1672.0,
+   "text": "Links.",
+   "speaker": 2
+  },
+  {
+   "id": 702,
+   "start": 1672.0,
+   "end": 1673.0,
+   "text": "Images.",
+   "speaker": 2
+  },
+  {
+   "id": 703,
+   "start": 1673.0,
+   "end": 1674.0,
+   "text": "Performance.",
+   "speaker": 2
+  },
+  {
+   "id": 704,
+   "start": 1674.0,
+   "end": 1675.0,
+   "text": "On to that.",
+   "speaker": 2
+  },
+  {
+   "id": 705,
+   "start": 1675.0,
+   "end": 1677.0,
+   "text": "And then you can have your show.",
+   "speaker": 2
+  },
+  {
+   "id": 706,
+   "start": 1677.0,
+   "end": 1679.0,
+   "text": "Look in how you want your show to look like.",
+   "speaker": 2
+  },
+  {
+   "id": 707,
+   "start": 1679.0,
+   "end": 1682.0,
+   "text": "And then that makes a lot of less work for us.",
+   "speaker": 2
+  },
+  {
+   "id": 708,
+   "start": 1682.0,
+   "end": 1685.0,
+   "text": "However, once I did that, that broke all the.",
+   "speaker": 2
+  },
+  {
+   "id": 709,
+   "start": 1685.0,
+   "end": 1690.0,
+   "text": "It broke the sequence with which we process the show notes because first Dave did the show notes.",
+   "speaker": 2
+  },
+  {
+   "id": 710,
+   "start": 1690.0,
+   "end": 1693.0,
+   "text": "But now we'll be doing it as the last part.",
+   "speaker": 2
+  },
+  {
+   "id": 711,
+   "start": 1693.0,
+   "end": 1698.0,
+   "text": "So that required a lot of rewriting, which is done and seems to be working.",
+   "speaker": 3
+  },
+  {
+   "id": 712,
+   "start": 1698.0,
+   "end": 1704.0,
+   "text": "However, the images are embedded as a day's stream in the upload.",
+   "speaker": 3
+  },
+  {
+   "id": 713,
+   "start": 1704.0,
+   "end": 1706.0,
+   "text": "It comes to the server.",
+   "speaker": 3
+  },
+  {
+   "id": 714,
+   "start": 1706.0,
+   "end": 1709.0,
+   "text": "So there is no good tool to strip those out.",
+   "speaker": 3
+  },
+  {
+   "id": 715,
+   "start": 1709.0,
+   "end": 1713.0,
+   "text": "And all the other tools, except of rep can't deal with a.",
+   "speaker": 2
+  },
+  {
+   "id": 716,
+   "start": 1713.0,
+   "end": 1716.0,
+   "text": "Replacing an image just by brute force.",
+   "speaker": 2
+  },
+  {
+   "id": 717,
+   "start": 1716.0,
+   "end": 1721.0,
+   "text": "So Dave has gone a rhythmic tool to do that for us, which is cool.",
+   "speaker": 2
+  },
+  {
+   "id": 718,
+   "start": 1721.0,
+   "end": 1724.0,
+   "text": "But that part of the check.",
+   "speaker": 2
+  },
+  {
+   "id": 719,
+   "start": 1724.0,
+   "end": 1726.0,
+   "text": "I still need to.",
+   "speaker": 2
+  },
+  {
+   "id": 720,
+   "start": 1726.0,
+   "end": 1730.0,
+   "text": "I'm still needs to be manual intervention at that part because.",
+   "speaker": 2
+  },
+  {
+   "id": 721,
+   "start": 1731.0,
+   "end": 1734.0,
+   "text": "Somebody can be just panless, you know, sending the show.",
+   "speaker": 3
+  },
+  {
+   "id": 722,
+   "start": 1734.0,
+   "end": 1738.0,
+   "text": "And it could be like the HTML could have all sorts of crap in it.",
+   "speaker": 3
+  },
+  {
+   "id": 723,
+   "start": 1738.0,
+   "end": 1741.0,
+   "text": "So that always needs to be manually checked.",
+   "speaker": 3
+  },
+  {
+   "id": 724,
+   "start": 1741.0,
+   "end": 1742.0,
+   "text": "The part is done.",
+   "speaker": 3
+  },
+  {
+   "id": 725,
+   "start": 1742.0,
+   "end": 1748.0,
+   "text": "And then yesterday I was in the day before I was working on as we were doing that.",
+   "speaker": 3
+  },
+  {
+   "id": 726,
+   "start": 1748.0,
+   "end": 1752.0,
+   "text": "For some reason, Murphy and his relations decided to come over for Christmas.",
+   "speaker": 3
+  },
+  {
+   "id": 727,
+   "start": 1752.0,
+   "end": 1757.0,
+   "text": "And everything broke with my transcoding script.",
+   "speaker": 3
+  },
+  {
+   "id": 728,
+   "start": 1757.0,
+   "end": 1759.0,
+   "text": "So I thought it was only gonna be working on one half.",
+   "speaker": 3
+  },
+  {
+   "id": 729,
+   "start": 1759.0,
+   "end": 1762.0,
+   "text": "What I've ended up having to rewrite the transcoding script as well.",
+   "speaker": 3
+  },
+  {
+   "id": 730,
+   "start": 1762.0,
+   "end": 1765.0,
+   "text": "Because socks broke, effect and pay broke.",
+   "speaker": 3
+  },
+  {
+   "id": 731,
+   "start": 1765.0,
+   "end": 1768.0,
+   "text": "The whisper text is each thing broke.",
+   "speaker": 3
+  },
+  {
+   "id": 732,
+   "start": 1768.0,
+   "end": 1770.0,
+   "text": "And I still can't get a working book.",
+   "speaker": 3
+  },
+  {
+   "id": 733,
+   "start": 1770.0,
+   "end": 1771.0,
+   "text": "That's why I know we've got.",
+   "speaker": 3
+  },
+  {
+   "id": 734,
+   "start": 1771.0,
+   "end": 1773.0,
+   "text": "I have two work.",
+   "speaker": 3
+  },
+  {
+   "id": 735,
+   "start": 1773.0,
+   "end": 1774.0,
+   "text": "Three work around.",
+   "speaker": 3
+  },
+  {
+   "id": 736,
+   "start": 1774.0,
+   "end": 1775.0,
+   "text": "So we're okay.",
+   "speaker": 3
+  },
+  {
+   "id": 737,
+   "start": 1775.0,
+   "end": 1778.0,
+   "text": "Something to do with my laptop perhaps.",
+   "speaker": 3
+  },
+  {
+   "id": 738,
+   "start": 1778.0,
+   "end": 1780.0,
+   "text": "What else is broken?",
+   "speaker": 3
+  },
+  {
+   "id": 739,
+   "start": 1780.0,
+   "end": 1781.0,
+   "text": "The.",
+   "speaker": 2
+  },
+  {
+   "id": 740,
+   "start": 1781.0,
+   "end": 1782.0,
+   "text": "Oh yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 741,
+   "start": 1782.0,
+   "end": 1785.0,
+   "text": "How did socks and FFM pay break on you?",
+   "speaker": 2
+  },
+  {
+   "id": 742,
+   "start": 1785.0,
+   "end": 1787.0,
+   "text": "Just libraries.",
+   "speaker": 2
+  },
+  {
+   "id": 743,
+   "start": 1787.0,
+   "end": 1789.0,
+   "text": "Fedora 41 libraries.",
+   "speaker": 2
+  },
+  {
+   "id": 744,
+   "start": 1789.0,
+   "end": 1790.0,
+   "text": "Yes.",
+   "speaker": 2
+  },
+  {
+   "id": 745,
+   "start": 1790.0,
+   "end": 1791.0,
+   "text": "Arts.",
+   "speaker": 2
+  },
+  {
+   "id": 746,
+   "start": 1791.0,
+   "end": 1792.0,
+   "text": "Just complete.",
+   "speaker": 2
+  },
+  {
+   "id": 747,
+   "start": 1792.0,
+   "end": 1795.0,
+   "text": "So something updated and something is incompatible and everything.",
+   "speaker": 4
+  },
+  {
+   "id": 748,
+   "start": 1795.0,
+   "end": 1797.0,
+   "text": "Oh, I got you.",
+   "speaker": 4
+  },
+  {
+   "id": 749,
+   "start": 1797.0,
+   "end": 1798.0,
+   "text": "Yeah.",
+   "speaker": 4
+  },
+  {
+   "id": 750,
+   "start": 1798.0,
+   "end": 1800.0,
+   "text": "Another one I had was like.",
+   "speaker": 4
+  },
+  {
+   "id": 751,
+   "start": 1800.0,
+   "end": 1802.0,
+   "text": "Suddenly one of the files turned us to you.",
+   "speaker": 2
+  },
+  {
+   "id": 752,
+   "start": 1802.0,
+   "end": 1805.0,
+   "text": "And when those line terminations are.",
+   "speaker": 2
+  },
+  {
+   "id": 753,
+   "start": 1805.0,
+   "end": 1808.0,
+   "text": "Files had spaces or all sorts of.",
+   "speaker": 2
+  },
+  {
+   "id": 754,
+   "start": 1808.0,
+   "end": 1810.0,
+   "text": "You're working on one change.",
+   "speaker": 2
+  },
+  {
+   "id": 755,
+   "start": 1810.0,
+   "end": 1813.0,
+   "text": "And like we just met a change in this broken.",
+   "speaker": 2
+  },
+  {
+   "id": 756,
+   "start": 1813.0,
+   "end": 1816.0,
+   "text": "And then it turns out that actually the change was.",
+   "speaker": 2
+  },
+  {
+   "id": 757,
+   "start": 1816.0,
+   "end": 1819.0,
+   "text": "You know, in the background, you've done an update.",
+   "speaker": 4
+  },
+  {
+   "id": 758,
+   "start": 1819.0,
+   "end": 1823.0,
+   "text": "And it's broken something or a location on the server.",
+   "speaker": 4
+  },
+  {
+   "id": 759,
+   "start": 1823.0,
+   "end": 1825.0,
+   "text": "Or the SS.",
+   "speaker": 4
+  },
+  {
+   "id": 760,
+   "start": 1825.0,
+   "end": 1828.0,
+   "text": "SS HFS connection that you were built on once as gone.",
+   "speaker": 4
+  },
+  {
+   "id": 761,
+   "start": 1828.0,
+   "end": 1831.0,
+   "text": "Ah, it's just been a slug.",
+   "speaker": 2
+  },
+  {
+   "id": 762,
+   "start": 1831.0,
+   "end": 1833.0,
+   "text": "But on the good side.",
+   "speaker": 2
+  },
+  {
+   "id": 763,
+   "start": 1833.0,
+   "end": 1836.0,
+   "text": "I've been doing a north lot of documentation of the code.",
+   "speaker": 4
+  },
+  {
+   "id": 764,
+   "start": 1836.0,
+   "end": 1839.0,
+   "text": "The principles behind why what we do.",
+   "speaker": 4
+  },
+  {
+   "id": 765,
+   "start": 1839.0,
+   "end": 1841.0,
+   "text": "Why we do that.",
+   "speaker": 4
+  },
+  {
+   "id": 766,
+   "start": 1842.0,
+   "end": 1845.0,
+   "text": "And which will be coming out on the third of January.",
+   "speaker": 4
+  },
+  {
+   "id": 767,
+   "start": 1845.0,
+   "end": 1846.0,
+   "text": "Way before you do this.",
+   "speaker": 4
+  },
+  {
+   "id": 768,
+   "start": 1846.0,
+   "end": 1849.0,
+   "text": "So go back and listen to it.",
+   "speaker": 4
+  },
+  {
+   "id": 769,
+   "start": 1849.0,
+   "end": 1851.0,
+   "text": "And because it's a very different.",
+   "speaker": 2
+  },
+  {
+   "id": 770,
+   "start": 1851.0,
+   "end": 1856.0,
+   "text": "A lot of those optical approach that we take here in history or without code.",
+   "speaker": 2
+  },
+  {
+   "id": 771,
+   "start": 1856.0,
+   "end": 1858.0,
+   "text": "So, so does that.",
+   "speaker": 2
+  },
+  {
+   "id": 772,
+   "start": 1858.0,
+   "end": 1860.0,
+   "text": "And you know, this is just me.",
+   "speaker": 2
+  },
+  {
+   "id": 773,
+   "start": 1860.0,
+   "end": 1865.0,
+   "text": "Be bitching about how I've spent literally the last ten days doing nothing but",
+   "speaker": 2
+  },
+  {
+   "id": 774,
+   "start": 1865.0,
+   "end": 1867.0,
+   "text": "HDR stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 775,
+   "start": 1867.0,
+   "end": 1868.0,
+   "text": "No, I do.",
+   "speaker": 2
+  },
+  {
+   "id": 776,
+   "start": 1869.0,
+   "end": 1871.0,
+   "text": "3 hour 13 hours a day.",
+   "speaker": 2
+  },
+  {
+   "id": 777,
+   "start": 1871.0,
+   "end": 1872.0,
+   "text": "Oh, yeah, we're outside.",
+   "speaker": 2
+  },
+  {
+   "id": 778,
+   "start": 1872.0,
+   "end": 1873.0,
+   "text": "13 hours a day.",
+   "speaker": 2
+  },
+  {
+   "id": 779,
+   "start": 1873.0,
+   "end": 1874.0,
+   "text": "Oh, that's had.",
+   "speaker": 2
+  },
+  {
+   "id": 780,
+   "start": 1874.0,
+   "end": 1875.0,
+   "text": "Thank you.",
+   "speaker": 2
+  },
+  {
+   "id": 781,
+   "start": 1875.0,
+   "end": 1876.0,
+   "text": "Thank you.",
+   "speaker": 2
+  },
+  {
+   "id": 782,
+   "start": 1877.0,
+   "end": 1878.0,
+   "text": "Greetings from Kentucky.",
+   "speaker": 2
+  },
+  {
+   "id": 783,
+   "start": 1878.0,
+   "end": 1879.0,
+   "text": "Hi.",
+   "speaker": 4
+  },
+  {
+   "id": 784,
+   "start": 1879.0,
+   "end": 1882.0,
+   "text": "Uh, can you please put on headphones?",
+   "speaker": 2
+  },
+  {
+   "id": 785,
+   "start": 1882.0,
+   "end": 1888.0,
+   "text": "I'm adding that to the list of stuff we need to.",
+   "speaker": 4
+  },
+  {
+   "id": 786,
+   "start": 1888.0,
+   "end": 1890.0,
+   "text": "The morning source better in that minor.",
+   "speaker": 2
+  },
+  {
+   "id": 787,
+   "start": 1890.0,
+   "end": 1891.0,
+   "text": "Good morning.",
+   "speaker": 4
+  },
+  {
+   "id": 788,
+   "start": 1891.0,
+   "end": 1892.0,
+   "text": "Chaps.",
+   "speaker": 2
+  },
+  {
+   "id": 789,
+   "start": 1892.0,
+   "end": 1896.0,
+   "text": "I'm on the mobile app using a course room.",
+   "speaker": 4
+  },
+  {
+   "id": 790,
+   "start": 1896.0,
+   "end": 1897.0,
+   "text": "No, but you were around.",
+   "speaker": 2
+  },
+  {
+   "id": 791,
+   "start": 1897.0,
+   "end": 1898.0,
+   "text": "Is it getting feedback?",
+   "speaker": 4
+  },
+  {
+   "id": 792,
+   "start": 1898.0,
+   "end": 1900.0,
+   "text": "Yeah, you get feedback when I talk.",
+   "speaker": 2
+  },
+  {
+   "id": 793,
+   "start": 1900.0,
+   "end": 1902.0,
+   "text": "It's coming back via your.",
+   "speaker": 4
+  },
+  {
+   "id": 794,
+   "start": 1902.0,
+   "end": 1904.0,
+   "text": "Uh, your hands.",
+   "speaker": 2
+  },
+  {
+   "id": 795,
+   "start": 1904.0,
+   "end": 1905.0,
+   "text": "Okay.",
+   "speaker": 4
+  },
+  {
+   "id": 796,
+   "start": 1905.0,
+   "end": 1906.0,
+   "text": "No, no bother.",
+   "speaker": 2
+  },
+  {
+   "id": 797,
+   "start": 1906.0,
+   "end": 1907.0,
+   "text": "It's fine.",
+   "speaker": 4
+  },
+  {
+   "id": 798,
+   "start": 1907.0,
+   "end": 1909.0,
+   "text": "No, but you need to be very careful.",
+   "speaker": 2
+  },
+  {
+   "id": 799,
+   "start": 1909.0,
+   "end": 1911.0,
+   "text": "Uh, turn it off and you're up.",
+   "speaker": 4
+  },
+  {
+   "id": 800,
+   "start": 1911.0,
+   "end": 1912.0,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 801,
+   "start": 1912.0,
+   "end": 1915.0,
+   "text": "I feel you had some of the the chain when our cave that we're going down.",
+   "speaker": 4
+  },
+  {
+   "id": 802,
+   "start": 1915.0,
+   "end": 1916.0,
+   "text": "That screwed up a lot of stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 803,
+   "start": 1916.0,
+   "end": 1919.0,
+   "text": "And, uh, I mean, I've.",
+   "speaker": 4
+  },
+  {
+   "id": 804,
+   "start": 1919.0,
+   "end": 1923.0,
+   "text": "I've had we've basically had the same set up since we first started up.",
+   "speaker": 2
+  },
+  {
+   "id": 805,
+   "start": 1923.0,
+   "end": 1932.0,
+   "text": "Uh, Tony, um, Tony from the Sunday morning clinics review got us set up with the way that he was posting stuff back in the day.",
+   "speaker": 4
+  },
+  {
+   "id": 806,
+   "start": 1932.0,
+   "end": 1936.0,
+   "text": "He actually got us set up with some hosting too for it when we first started.",
+   "speaker": 2
+  },
+  {
+   "id": 807,
+   "start": 1936.0,
+   "end": 1944.0,
+   "text": "So, uh, basically he was, uh, WordPress and then a plugin for WordPress called, uh, very press or power press.",
+   "speaker": 4
+  },
+  {
+   "id": 808,
+   "start": 1944.0,
+   "end": 1948.0,
+   "text": "And, um, basically the back end has changed.",
+   "speaker": 2
+  },
+  {
+   "id": 809,
+   "start": 1949.0,
+   "end": 1952.0,
+   "text": "It hadn't changed because he suggested using the archive.org.",
+   "speaker": 4
+  },
+  {
+   "id": 810,
+   "start": 1952.0,
+   "end": 1954.0,
+   "text": "And so we've been posting everything since the beginning.",
+   "speaker": 2
+  },
+  {
+   "id": 811,
+   "start": 1954.0,
+   "end": 1961.0,
+   "text": "If you go to archive.org, uh, like it's a 250 of our episodes plus whatever extra stuff is all on there.",
+   "speaker": 4
+  },
+  {
+   "id": 812,
+   "start": 1961.0,
+   "end": 1966.0,
+   "text": "Um, and then, but I've had to change the website several times.",
+   "speaker": 2
+  },
+  {
+   "id": 813,
+   "start": 1966.0,
+   "end": 1973.0,
+   "text": "Um, there's, uh, a lost contact with Tony and, uh, went to hosting juror, which was free for a while.",
+   "speaker": 4
+  },
+  {
+   "id": 814,
+   "start": 1973.0,
+   "end": 1978.0,
+   "text": "But, uh, with a free version had a weird thing where it was, uh, down for one hour.",
+   "speaker": 2
+  },
+  {
+   "id": 815,
+   "start": 1978.0,
+   "end": 1979.0,
+   "text": "That was it.",
+   "speaker": 4
+  },
+  {
+   "id": 816,
+   "start": 1979.0,
+   "end": 1980.0,
+   "text": "But it was free.",
+   "speaker": 2
+  },
+  {
+   "id": 817,
+   "start": 1980.0,
+   "end": 1986.0,
+   "text": "And the web page is just basically, I mean, it's just a static place to host the RSS feed.",
+   "speaker": 4
+  },
+  {
+   "id": 818,
+   "start": 1986.0,
+   "end": 1988.0,
+   "text": "So I didn't think it was going to be too much.",
+   "speaker": 2
+  },
+  {
+   "id": 819,
+   "start": 1988.0,
+   "end": 1993.0,
+   "text": "But for whatever reason, the free version kind of cracked out on me or ran into some issues.",
+   "speaker": 4
+  },
+  {
+   "id": 820,
+   "start": 1993.0,
+   "end": 2000.0,
+   "text": "So I want to have it to pay for that for the, uh, pay for hosting your, but it's still relatively cheap.",
+   "speaker": 2
+  },
+  {
+   "id": 821,
+   "start": 2000.0,
+   "end": 2009.0,
+   "text": "I mean, about once a year, I didn't pay for the, um, for the DNS and for the, um, do you have a domain and then a hostinger.",
+   "speaker": 4
+  },
+  {
+   "id": 822,
+   "start": 2009.0,
+   "end": 2010.0,
+   "text": "And that's really about it.",
+   "speaker": 2
+  },
+  {
+   "id": 823,
+   "start": 2010.0,
+   "end": 2014.0,
+   "text": "With the whole backend with archive that org going down is really screwed things up.",
+   "speaker": 4
+  },
+  {
+   "id": 824,
+   "start": 2014.0,
+   "end": 2016.0,
+   "text": "And then, like I said, I'm hosting it.",
+   "speaker": 2
+  },
+  {
+   "id": 825,
+   "start": 2016.0,
+   "end": 2017.0,
+   "text": "I'm using.",
+   "speaker": 4
+  },
+  {
+   "id": 826,
+   "start": 2017.0,
+   "end": 2026.0,
+   "text": "So I'm wondering whether, um, does that told you my issues with that the, uh, the power press plugin doesn't seem to have a problem with the org.",
+   "speaker": 2
+  },
+  {
+   "id": 827,
+   "start": 2026.0,
+   "end": 2028.0,
+   "text": "That it usually finds that pretty easily.",
+   "speaker": 4
+  },
+  {
+   "id": 828,
+   "start": 2028.0,
+   "end": 2032.0,
+   "text": "But the MP3 seems to lag out and time out.",
+   "speaker": 2
+  },
+  {
+   "id": 829,
+   "start": 2032.0,
+   "end": 2034.0,
+   "text": "And it gives it a little air.",
+   "speaker": 4
+  },
+  {
+   "id": 830,
+   "start": 2034.0,
+   "end": 2041.0,
+   "text": "I'm wondering whether if I put it on, like a instead of using the, um, Python script, which by the way, it's like a three line script.",
+   "speaker": 2
+  },
+  {
+   "id": 831,
+   "start": 2041.0,
+   "end": 2045.0,
+   "text": "I don't want to post it somewhere, because you can see how simple this thing is.",
+   "speaker": 4
+  },
+  {
+   "id": 832,
+   "start": 2045.0,
+   "end": 2050.0,
+   "text": "It's a little three line script that, uh, and it works.",
+   "speaker": 2
+  },
+  {
+   "id": 833,
+   "start": 2050.0,
+   "end": 2052.0,
+   "text": "Really, what really well.",
+   "speaker": 4
+  },
+  {
+   "id": 834,
+   "start": 2053.0,
+   "end": 2059.0,
+   "text": "And, uh, whether if I use something like an engineer and then the, whether it will still have the same problem or not.",
+   "speaker": 2
+  },
+  {
+   "id": 835,
+   "start": 2059.0,
+   "end": 2062.0,
+   "text": "But the timing out, you know, find that script.",
+   "speaker": 4
+  },
+  {
+   "id": 836,
+   "start": 2062.0,
+   "end": 2069.0,
+   "text": "But we were also talking, um, Danny was talking about hosting some of the, uh, files at his house.",
+   "speaker": 2
+  },
+  {
+   "id": 837,
+   "start": 2069.0,
+   "end": 2075.0,
+   "text": "And then, um, using, uh, one of the methods of, uh, load balancing.",
+   "speaker": 4
+  },
+  {
+   "id": 838,
+   "start": 2075.0,
+   "end": 2085.0,
+   "text": "Whether either around Robin or, uh, something where it, uh, chooses which, which one has the best connection to hit.",
+   "speaker": 2
+  },
+  {
+   "id": 839,
+   "start": 2085.0,
+   "end": 2086.0,
+   "text": "Yeah.",
+   "speaker": 4
+  },
+  {
+   "id": 840,
+   "start": 2086.0,
+   "end": 2088.0,
+   "text": "I was, uh, looking into that as well.",
+   "speaker": 2
+  },
+  {
+   "id": 841,
+   "start": 2088.0,
+   "end": 2092.0,
+   "text": "So I have also, um, uh, e to the locations.",
+   "speaker": 4
+  },
+  {
+   "id": 842,
+   "start": 2092.0,
+   "end": 2096.0,
+   "text": "A, uh, speed test, rumming every 15 minutes.",
+   "speaker": 2
+  },
+  {
+   "id": 843,
+   "start": 2096.0,
+   "end": 2102.0,
+   "text": "And we also have, uh, and that gives you a GOIP number on location.",
+   "speaker": 4
+  },
+  {
+   "id": 844,
+   "start": 2102.0,
+   "end": 2109.0,
+   "text": "So we would be able, my plan is eventually to do, uh, load, uh, load sharing across that.",
+   "speaker": 2
+  },
+  {
+   "id": 845,
+   "start": 2109.0,
+   "end": 2112.0,
+   "text": "As Robin and Bruce said, I try to try again.",
+   "speaker": 4
+  },
+  {
+   "id": 846,
+   "start": 2112.0,
+   "end": 2113.0,
+   "text": "Exactly.",
+   "speaker": 2
+  },
+  {
+   "id": 847,
+   "start": 2113.0,
+   "end": 2114.0,
+   "text": "So I had a search.",
+   "speaker": 4
+  },
+  {
+   "id": 848,
+   "start": 2114.0,
+   "end": 2115.0,
+   "text": "I had a search.",
+   "speaker": 2
+  },
+  {
+   "id": 849,
+   "start": 2115.0,
+   "end": 2119.0,
+   "text": "My room to find the USB-C to headphone jack adapter.",
+   "speaker": 4
+  },
+  {
+   "id": 850,
+   "start": 2119.0,
+   "end": 2120.0,
+   "text": "Ah, you got it.",
+   "speaker": 2
+  },
+  {
+   "id": 851,
+   "start": 2120.0,
+   "end": 2123.0,
+   "text": "So now you're, you're sort of, cool.",
+   "speaker": 4
+  },
+  {
+   "id": 852,
+   "start": 2123.0,
+   "end": 2124.0,
+   "text": "Good stuff.",
+   "speaker": 2
+  },
+  {
+   "id": 853,
+   "start": 2124.0,
+   "end": 2127.0,
+   "text": "Nice to, uh, nice to finally meet you in person.",
+   "speaker": 4
+  },
+  {
+   "id": 854,
+   "start": 2127.0,
+   "end": 2128.0,
+   "text": "Likewise.",
+   "speaker": 2
+  },
+  {
+   "id": 855,
+   "start": 2128.0,
+   "end": 2129.0,
+   "text": "And so, okay.",
+   "speaker": 4
+  },
+  {
+   "id": 856,
+   "start": 2129.0,
+   "end": 2133.0,
+   "text": "Does that answer all your questions about the content delivery network?",
+   "speaker": 2
+  },
+  {
+   "id": 857,
+   "start": 2133.0,
+   "end": 2134.0,
+   "text": "Yes.",
+   "speaker": 4
+  },
+  {
+   "id": 858,
+   "start": 2134.0,
+   "end": 2135.0,
+   "text": "I think so.",
+   "speaker": 2
+  },
+  {
+   "id": 859,
+   "start": 2135.0,
+   "end": 2136.0,
+   "text": "It actually makes sense.",
+   "speaker": 4
+  },
+  {
+   "id": 860,
+   "start": 2136.0,
+   "end": 2139.0,
+   "text": "Now that you've mentioned it, maybe we should have a chat about it.",
+   "speaker": 2
+  },
+  {
+   "id": 861,
+   "start": 2139.0,
+   "end": 2141.0,
+   "text": "It doesn't actually make sense.",
+   "speaker": 4
+  },
+  {
+   "id": 862,
+   "start": 2141.0,
+   "end": 2145.0,
+   "text": "Also creating our own content to the community content delivery network.",
+   "speaker": 2
+  },
+  {
+   "id": 863,
+   "start": 2145.0,
+   "end": 2153.0,
+   "text": "If we could share case, then you, I have no problem with you using my, uh, uh, my resources.",
+   "speaker": 4
+  },
+  {
+   "id": 864,
+   "start": 2153.0,
+   "end": 2154.0,
+   "text": "Uh, yes.",
+   "speaker": 2
+  },
+  {
+   "id": 865,
+   "start": 2154.0,
+   "end": 2156.0,
+   "text": "That might be an idea.",
+   "speaker": 4
+  },
+  {
+   "id": 866,
+   "start": 2156.0,
+   "end": 2161.0,
+   "text": "I could just a generic thing that, uh, links freely grow open source pre-culture podcasts.",
+   "speaker": 2
+  }
+ ]
+}
