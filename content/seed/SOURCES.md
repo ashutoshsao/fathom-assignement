@@ -23,9 +23,17 @@ useful ("what did we say about this last month?") instead of a party trick.
 | `hpr4086.mp3` | hpr4086 :: HPR Community News for March 2024 | 2024-03 | ~61 min |
 | `hpr4111.mp3` | hpr4111 :: HPR Community News for April 2024 | 2024-04 | ~72 min |
 | `hpr4176.mp3` | hpr4176 :: HPR Community News for July 2024 | 2024-07 | ~50 min |
+| `hpr4314.mp3` | hpr4314 :: 24-25 New Years Eve show | 2024-12 | ~109 min |
 
-Hosted by HPR Volunteers — the recurring voices across these episodes include Ken Fallon,
-Dave Morris, Kevie, and Some Guy On The Internet (SGOTI).
+Hosted by HPR Volunteers — the recurring voices across the Community News episodes include
+Ken Fallon, Dave Morris, Kevie, and Some Guy On The Internet (SGOTI).
+
+**`hpr4314` is the stress case.** The brief singles out "an eight-person call that runs an hour" as
+the case that actually matters, and the Community News episodes are only two or three voices. The
+NYE show is the opposite: a large, unstructured group call running an hour and three quarters, with
+no tidy introductions, heavy crosstalk, and people drifting in and out. It is deliberately the
+hardest thing in the seed set — for diarization, for transcript performance, and for producing a
+summary that stays useful at that length.
 
 Originals: `https://archive.org/details/<episode-id>` · Show notes:
 `https://hackerpublicradio.org/eps/<episode-id>/index.html`
@@ -51,7 +59,8 @@ Required disclosure under CC BY-SA:
 
 ## Transcripts
 
-Timestamped transcripts come from the Whisper JSON that HPR publishes alongside each episode
-(`{text, segments, language}`), so speech-to-text cost us nothing and is as accurate as the
-original publisher's own pass. Raw originals live in `content/source-audio/` and are gitignored —
+Timestamped transcripts come from the Whisper output that HPR publishes alongside each episode, so
+speech-to-text cost us nothing and is as accurate as the original publisher's own pass. Most
+episodes ship a Whisper JSON (`{text, segments, language}`); `hpr4314` ships only SRT, which we
+parse to the same segment shape. Raw originals live in `content/source-audio/` and are gitignored —
 they are re-downloadable from the URLs above.
