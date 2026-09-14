@@ -23,8 +23,19 @@ badly — a canned answer is obvious within one question.
 - **Citations come from structured output, not regex over prose.** Ask the model for
   `{ answer, citations: [{ atSec, label }] }` against a `responseSchema`. Parsing timestamps back
   out of free text is the fragile version of this and it will drift.
-- **Cross-call Ask retrieves before it answers.** Sending every transcript in full does not survive
-  a real library; select candidate calls first, then answer over those.
+- **No vector RAG. Full transcripts in context.** Measured: the largest call is 23,672 tokens and
+  the entire five-call library is **71,424 tokens — 6.8% of one 1M context window**. Retrieval here
+  would be infrastructure for a problem we do not have, and it would actively degrade answers:
+  the questions that matter are global ("what might fall through the cracks?", "what was mentioned
+  as urgent"), which top-k chunk similarity answers badly and *silently* — a plausible answer with
+  a citation that does not support it, which is the worst possible failure for a product whose
+  credibility rests on "click the chip and hear it yourself". Full context also gives the model
+  exact segment IDs to cite, which is what makes citation-seek precise.
+- **The seam is kept, the implementation is not.** Cross-call Ask still has a "select candidate
+  calls" step, so retrieval can slot in later without reshaping the feature. At demo scale that step
+  is cheap metadata-and-summary filtering, not embeddings. The threshold where this genuinely flips
+  is ~85 hours of meetings (~12k tokens per hour of speech), which a real account would cross and
+  this one does not.
 
 ## Progress
 
