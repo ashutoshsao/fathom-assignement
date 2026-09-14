@@ -70,6 +70,16 @@ export async function loadRecording(id: string): Promise<Call | null> {
   }
 }
 
+/** The raw audio, so an interrupted transcription can be restarted from what we already have. */
+export async function loadAudio(id: string): Promise<Blob | null> {
+  try {
+    const rec = await tx<StoredRecording | undefined>("readonly", (s) => s.get(id));
+    return rec?.audio ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export async function deleteRecording(id: string): Promise<void> {
   await tx("readwrite", (s) => s.delete(id));
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { buildRecordedCall } from "./build-recording";
-import { loadRecording, saveRecording } from "./recordings-store";
+import { loadAudio, loadRecording, saveRecording } from "./recordings-store";
 import type { Call } from "./types";
 
 /**
@@ -32,6 +32,31 @@ function announce(id: string) {
 
 export function isProcessing(id: string): boolean {
   return inFlight.has(id);
+}
+
+/**
+ * Restart a transcription that was interrupted.
+ *
+ * Module state survives navigating around the app, but not a reload or a closed tab — which left
+ * a recording stuck showing "Transcribing…" with nothing actually running. The audio is already
+ * in IndexedDB, so the honest fix is to recover rather than to prevent: pick the work back up
+ * when the user returns. This is what a server-side job queue would buy, without the broker, the
+ * worker, or the second deploy target.
+ */
+export async function resumeIfInterrupted(id: string): Promise<boolean> {
+  if (inFlight.has(id)) return false;
+  const call = await loadRecording(id);
+  if (!call || call.status !== "processing") return false;
+  if (call.audioUrl) URL.revokeObjectURL(call.audioUrl);
+
+  const audio = await loadAudio(id);
+  if (!audio) return false;
+
+  startProcessing(id, audio, {
+    durationSec: call.durationSec,
+    marks: call.highlights.map((h) => h.atSec),
+  });
+  return true;
 }
 
 export function startProcessing(

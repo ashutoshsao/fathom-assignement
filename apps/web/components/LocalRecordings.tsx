@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { onProcessingChange } from "@/lib/processing";
+import { onProcessingChange, resumeIfInterrupted } from "@/lib/processing";
 import { deleteRecording, listRecordings } from "@/lib/recordings-store";
 import { formatDuration } from "@/lib/time";
 import type { Call } from "@/lib/types";
@@ -19,7 +19,11 @@ export function LocalRecordings() {
   const [calls, setCalls] = useState<Omit<Call, "audioUrl">[]>([]);
 
   useEffect(() => {
-    const load = () => void listRecordings().then(setCalls);
+    const load = () =>
+      void listRecordings().then((all) => {
+        setCalls(all);
+        for (const c of all) if (c.status === "processing") void resumeIfInterrupted(c.id);
+      });
     load();
     return onProcessingChange(load);
   }, []);

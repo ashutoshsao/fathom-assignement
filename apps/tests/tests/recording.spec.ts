@@ -94,6 +94,82 @@ test("a spent demo quota explains itself rather than looking broken", async ({ p
   await expect(page.getByText(/resets at midnight Pacific/)).toBeVisible();
 });
 
+test("an interrupted transcription is picked back up on reload, not left hanging", async ({ page }) => {
+  let transcribeCalls = 0;
+  await page.route("**/api/transcribe", async (route) => {
+    transcribeCalls++;
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        transcript: {
+          speakers: [{ id: 0, name: "Ashutosh" }],
+          segments: [{ startSec: 0, endSec: 3, speaker: 0, text: "Resumed fine." }],
+        },
+        notes: {
+          title: "Recovered recording",
+          blurb: "Picked up after a reload.",
+          purpose: "Prove resume works.",
+          keyTakeaways: [{ point: "It resumed", segmentIndex: 0 }],
+          topics: [],
+          actionItems: [],
+          nextSteps: [],
+        },
+      }),
+    });
+  });
+
+  await page.goto("/");
+  // A recording left mid-transcription, exactly as a closed tab would leave it.
+  await page.evaluate(async () => {
+    const call = {
+      id: "rec-interrupted",
+      title: "New recording",
+      daysAgo: 0,
+      timeOfDay: "10:00",
+      durationSec: 20,
+      platform: "google-meet",
+      blurb: "Transcribing\u2026",
+      speakers: [],
+      waveform: [0.4, 0.6],
+      summary: { purpose: "", keyTakeaways: [], topics: [], nextSteps: [] },
+      actionItems: [],
+      transcript: [],
+      highlights: [],
+      source: { name: "Recorded in your browser", url: "", license: "local", licenseUrl: "" },
+      status: "processing",
+    };
+    await new Promise<void>((resolve, reject) => {
+      const req = indexedDB.open("fathom-recordings", 1);
+      req.onupgradeneeded = () => {
+        if (!req.result.objectStoreNames.contains("calls")) {
+          req.result.createObjectStore("calls", { keyPath: "id" });
+        }
+      };
+      req.onsuccess = () => {
+        const tx = req.result.transaction("calls", "readwrite");
+        tx.objectStore("calls").put({
+          id: call.id,
+          call,
+          audio: new Blob([new Uint8Array(4096)], { type: "audio/webm" }),
+          createdAt: Date.now(),
+        });
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      };
+      req.onerror = () => reject(req.error);
+    });
+  });
+
+  // Landing on it fresh is the reload case: no in-memory job exists.
+  await page.goto("/recordings/rec-interrupted");
+
+  await expect(page.getByRole("heading", { name: "Recovered recording" })).toBeVisible({
+    timeout: 15_000,
+  });
+  expect(transcribeCalls).toBe(1);
+});
+
 test("a stored recording renders through the same call UI as a seeded call", async ({ page }) => {
   await page.goto("/");
 

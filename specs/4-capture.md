@@ -90,8 +90,23 @@ Two flaws found once the thing was usable:
       transcription keeps the recording and says the audio is safe, rather than discarding it.
 - [x] **Quota exhaustion explains itself.** A typed `QuotaExhaustedError` carries a message naming
       the free tier and the midnight-Pacific reset, styled as a limit rather than an error.
-- [x] **Tests** for both: a processing recording is playable and says so; a spent quota shows the
-      explanation. 19 integration tests passing.
+- [x] **Interrupted transcriptions resume.** Module state survives navigating around the app but
+      not a reload or a closed tab, which left a recording stuck showing "Transcribing…" with
+      nothing running — a real bug in the first version of this. The audio is already stored, so
+      the fix is to recover rather than prevent: on load, any recording still marked processing
+      with no job in flight is picked back up.
+- [x] **Tests**: a processing recording is playable and says so; a spent quota shows the
+      explanation; an interrupted transcription is resumed exactly once on reload.
+      20 integration tests passing.
+
+### Why not a job queue
+
+Redis streams or a server-side worker were considered for this. They would solve durability the
+other way round — keep the job alive rather than restart it — but a worker needs somewhere to
+write results, and results live in the user's own IndexedDB. Server-side jobs therefore imply
+server-side storage and a persistent host, which is the whole stack rework. A broker would also
+be managing a queue of exactly one job per user. Recovering on return gets the same outcome for
+an afternoon's less infrastructure.
 
 ## Verified end to end
 

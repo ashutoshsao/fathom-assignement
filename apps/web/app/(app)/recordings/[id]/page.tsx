@@ -4,7 +4,7 @@ import { use, useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { CallView } from "@/components/CallView";
 import { ProcessingCall } from "@/components/ProcessingCall";
-import { onProcessingChange } from "@/lib/processing";
+import { onProcessingChange, resumeIfInterrupted } from "@/lib/processing";
 import { loadRecording } from "@/lib/recordings-store";
 import type { Call } from "@/lib/types";
 
@@ -32,7 +32,10 @@ export default function RecordingPage({ params }: { params: Promise<{ id: string
   }, [id]);
 
   useEffect(() => {
-    void refresh();
+    void refresh().then(() => {
+      // A reload or closed tab kills the in-memory job but not the audio, so pick it back up.
+      void resumeIfInterrupted(id);
+    });
     // Re-read when the background job finishes, rather than polling on a timer.
     return onProcessingChange((changed) => {
       if (changed === id) void refresh();
