@@ -99,9 +99,9 @@ the highlights and every Ask citation all address the same timeline in seconds.
 
 - [x] **Waveform peaks** precomputed at build time.
 
-- [ ] Diarization run across the remaining four calls
-- [ ] Summary + action items pipeline run (script written, `scripts/summarize.py`)
-- [ ] Seed assembled into `apps/web/content/` (script written, `scripts/build_seed.py`)
+- [x] **Diarization run across all five calls** — every one with 0 unattributed segments.
+- [x] **Summary + action items generated for all five calls** (`scripts/summarize.py`).
+- [x] **Seed assembled** into `apps/web/content/` — five call records plus a light index.
 - [ ] Deploys to Vercel — **deferred by choice**: we deploy once the output is worth showing,
       which overrides the "deploy early" decision in `6-deploy-walkthrough.md`.
 

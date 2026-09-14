@@ -50,9 +50,10 @@ badly — a canned answer is obvious within one question.
       reads "peer to be script" and "Robin random thing" — the model read past the crosstalk and
       still pointed at the right seconds. A second question answered what it could and said
       plainly "He did not specify a deadline", rather than inventing one.
-- [ ] **Cross-call scope.** The route already accepts no `callId` and answers over all five
-      transcripts; the UI has no scope selector yet, and cross-call citations navigate rather
-      than seek. Moved into M3, where the library shell it belongs to is built.
+- [x] **Cross-call scope** — delivered in M3. The route answers over all five transcripts when
+      given no `callId`, the library has an "Ask across all calls" panel, and a cross-call
+      citation navigates to `/calls/<id>?t=<sec>` and lands on the second it claims (asserted in
+      `apps/tests/tests/library.spec.ts`).
 
 ## What this milestone actually taught
 
