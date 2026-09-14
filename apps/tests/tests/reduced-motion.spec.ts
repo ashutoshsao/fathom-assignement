@@ -13,7 +13,7 @@ import { expect, test } from "@playwright/test";
 
 test.use({ reducedMotion: "reduce" });
 
-test("infinite animations stop instead of strobing", async ({ page }) => {
+test("the loader stays alive under reduced motion, without travelling or flashing", async ({ page }) => {
   await page.route("**/api/ask", () => {
     /* held open so the waiting state stays on screen */
   });
@@ -21,19 +21,29 @@ test("infinite animations stop instead of strobing", async ({ page }) => {
   await page.goto("/calls/hpr4314");
   await page.getByPlaceholder("Ask anything...").fill("anything");
   await page.keyboard.press("Enter");
+  await expect(page.getByRole("status")).toBeVisible();
 
-  const dot = page.locator(".thinking-dot").first();
-  await expect(dot).toBeVisible();
+  const read = () =>
+    page.evaluate(() => {
+      const grid = document.querySelector('[role="status"] .inline-grid')!;
+      return [...grid.children].map((el) => Number(getComputedStyle(el).opacity));
+    });
 
-  const style = await dot.evaluate((el) => {
-    const cs = getComputedStyle(el);
-    return { iterations: cs.animationIterationCount, opacity: Number(cs.opacity) };
-  });
+  const a = await read();
+  await page.waitForTimeout(700);
+  const b = await read();
 
-  // The iteration cap is the part that actually stops a strobe.
-  expect(style.iterations).toBe("1");
-  // And it must still be legible once stopped, not faded to nothing.
-  expect(style.opacity).toBeGreaterThan(0.5);
+  // Still changing — a frozen indicator during a 30s wait reads as a hang.
+  expect(a.join()).not.toBe(b.join());
+
+  // But every dot moves together: no bright head travelling the grid, which is the motion the
+  // preference is actually asking us to drop.
+  const spread = Math.max(...b) - Math.min(...b);
+  expect(spread).toBeLessThan(0.1);
+
+  // And the swing between frames is gentle rather than a flash.
+  const swing = Math.abs((b[0] ?? 0) - (a[0] ?? 0));
+  expect(swing).toBeLessThan(0.4);
 });
 
 test("the wait still shows progress when motion is switched off", async ({ page }) => {

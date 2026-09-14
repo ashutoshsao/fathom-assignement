@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { formatTime } from "@/lib/time";
+import { DotLoader } from "./DotLoader";
 import { usePlaybackOptional } from "./playback";
 
 export interface Citation {
@@ -247,15 +248,7 @@ function Thinking() {
 
   return (
     <div className="flex items-center gap-2 text-[13px] text-text-faint" role="status" aria-live="polite">
-      <span className="flex gap-1" aria-hidden>
-        {[0, 1, 2].map((i) => (
-          <span
-            key={i}
-            className="thinking-dot h-1 w-1 rounded-full bg-accent"
-            style={{ animationDelay: `${i * 140}ms` }}
-          />
-        ))}
-      </span>
+      <DotLoader />
       <span>
         {seconds < 12 ? "Reading the transcript" : "Working through a long call"}
         {seconds > 0 && (
