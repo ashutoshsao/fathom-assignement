@@ -241,6 +241,7 @@ def main():
     print(f"  {len(windows)} windows of <= {WINDOW_SEC/60:.0f} min")
 
     # ---- phase 1: casting. One pass over the whole file to learn who is on the call.
+    cast_cache = CACHE / f"{ep}_cast.json"
     if cast_cache.exists():
         roster = json.loads(cast_cache.read_text())
         print(f"  cast: cached, {len(roster)} speakers")
