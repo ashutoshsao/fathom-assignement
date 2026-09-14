@@ -1,0 +1,93 @@
+{
+ "title": "HPR Community News February 2024",
+ "blurb": "Ken Fallon and Dave review February 2024 episodes and listener feedback, and discuss queue policies, site infrastructure, and YouTube publishing.",
+ "summary": {
+  "purpose": "Review Hacker Public Radio community shows, listener comments, and administrative updates for February 2024.",
+  "keyTakeaways": [
+   {
+    "point": "New hosts must select slots in the main queue rather than the reserve queue to ensure proper introduction and prevent queue script breakage.",
+    "atSec": 3671.24
+   },
+   {
+    "point": "Large source code blocks will be attached as separate linked files on the server to prevent hidden null characters from breaking XML feeds.",
+    "atSec": 1959.56
+   },
+   {
+    "point": "HPR strictly prohibits verbatim LLM and ChatGPT content submissions due to legal ambiguities surrounding international copyright and licensing.",
+    "atSec": 2944.84
+   },
+   {
+    "point": "HPR statistics have been migrated to a JSON endpoint that regenerates every 15 minutes to reduce database overhead.",
+    "atSec": 3903.0
+   }
+  ],
+  "topics": [
+   {
+    "heading": "Monthly Episode Reviews and Listener Feedback",
+    "points": [
+     "Reviewed community episodes covering Advent of Code, PC hardware, nautical timekeeping, Raspberry Pi astrophotography, Pi-hole setups, and folk music.",
+     "Addressed community comments and technical inquiries across recent and archive episodes.",
+     "Highlighted a feed parsing error caused by null characters in CircuitPython show notes."
+    ],
+    "atSec": 245.32
+   },
+   {
+    "heading": "Queue Management and Technical Infrastructure",
+    "points": [
+     "Clarified policy requiring first-time contributors to submit shows to the main queue rather than the reserve queue.",
+     "Reviewed recent bug fixes and proposed a dedicated joint bug review and triage session.",
+     "Discussed the new JSON statistics file and invited community contributions to Gitea repository workflows."
+    ],
+    "atSec": 3580.6
+   },
+   {
+    "heading": "Future Initiatives and Community Outreach",
+    "points": [
+     "Proposed an 'Episode 0' introductory show format to be periodically updated for new listeners.",
+     "Discussed plans to distribute HPR episodes to YouTube and sought assistance with media generation tools."
+    ],
+    "atSec": 4106.68
+   }
+  ],
+  "nextSteps": [
+   "Collect listener feedback on content for the proposed Episode 0 show.",
+   "Schedule a joint triage session between Ken Fallon and Dave to review and close pending bug tickets.",
+   "Explore community tooling options for generating YouTube video assets from audio shows."
+  ]
+ },
+ "actionItems": [
+  {
+   "id": "hpr4066-a0",
+   "text": "Investigate and fix the profile display bug on generated pages",
+   "assignee": "Dave",
+   "atSec": 3726.6
+  }
+ ],
+ "highlights": [
+  {
+   "id": "hpr4066-h0",
+   "label": "Proposal for recurring Episode 0 introduction show",
+   "atSec": 152.8
+  },
+  {
+   "id": "hpr4066-h1",
+   "label": "Null character XML feed bug resolution",
+   "atSec": 1959.56
+  },
+  {
+   "id": "hpr4066-h2",
+   "label": "Policy clarification on ChatGPT and copyright",
+   "atSec": 2944.84
+  },
+  {
+   "id": "hpr4066-h3",
+   "label": "Clarification on first-time host queue submissions",
+   "atSec": 3671.24
+  },
+  {
+   "id": "hpr4066-h4",
+   "label": "Plans for official YouTube episode distribution",
+   "atSec": 4111.56
+  }
+ ]
+}
