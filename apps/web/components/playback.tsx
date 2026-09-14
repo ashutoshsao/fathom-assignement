@@ -41,7 +41,16 @@ interface PlaybackStore {
 
 const Ctx = createContext<PlaybackStore | null>(null);
 
-export function PlaybackProvider({ src, children }: { src: string; children: ReactNode }) {
+export function PlaybackProvider({
+  src,
+  startAt,
+  children,
+}: {
+  src: string;
+  /** Seconds to open at — used by deep links, so a cross-call citation lands on the moment. */
+  startAt?: number;
+  children: ReactNode;
+}) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const listeners = useRef(new Set<() => void>());
   const state = useRef({ time: 0, duration: 0, playing: false, rate: 1 });
@@ -91,6 +100,20 @@ export function PlaybackProvider({ src, children }: { src: string; children: Rea
       emit();
     },
   }), [emit]);
+
+  // A deep link can only seek once the browser knows how long the audio is, so wait for metadata.
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!el || !startAt) return;
+    const apply = () => {
+      el.currentTime = startAt;
+      state.current.time = startAt;
+      emit();
+    };
+    if (el.readyState >= 1) apply();
+    else el.addEventListener("loadedmetadata", apply, { once: true });
+    return () => el.removeEventListener("loadedmetadata", apply);
+  }, [startAt, emit]);
 
   useEffect(() => {
     const el = audioRef.current;
@@ -153,6 +176,11 @@ export function usePlayback(): PlaybackStore {
   const ctx = useContext(Ctx);
   if (!ctx) throw new Error("usePlayback must be used inside PlaybackProvider");
   return ctx;
+}
+
+/** For components that render both inside and outside a player — the Ask panel, for instance. */
+export function usePlaybackOptional(): PlaybackStore | null {
+  return useContext(Ctx);
 }
 
 /** The ticking clock. Only use where the number is actually displayed. */

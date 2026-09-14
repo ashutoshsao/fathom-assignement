@@ -1,4 +1,5 @@
 import { CallCard } from "@/components/CallCard";
+import { LibraryAside } from "@/components/LibraryAside";
 import { dayLabel, resolveDate } from "@/lib/dates";
 import { getCallIndex } from "@/lib/seed";
 import type { CallSummaryCard } from "@/lib/types";
@@ -27,7 +28,8 @@ export default async function LibraryPage() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto px-6 py-6">
+    <div className="flex min-h-0 flex-1">
+      <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto px-6 py-6">
       {[...groups.entries()].map(([label, items]) => (
         <section key={label} className="mb-8">
           <h2 className="mb-3 text-[13px] font-semibold text-text-muted">{label}</h2>
@@ -38,6 +40,8 @@ export default async function LibraryPage() {
           </div>
         </section>
       ))}
+      </div>
+      <LibraryAside />
     </div>
   );
 }

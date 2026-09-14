@@ -15,7 +15,15 @@ export async function generateMetadata(props: PageProps<"/calls/[id]">) {
 
 export default async function CallPage(props: PageProps<"/calls/[id]">) {
   const { id } = await props.params;
+  const { t } = await props.searchParams;
   const call = await getCall(id);
   if (!call) notFound();
-  return <CallView call={call} />;
+
+  // ?t=<seconds> — how a cross-call citation lands on the moment it cited.
+  const raw = Array.isArray(t) ? t[0] : t;
+  const parsed = raw ? Number(raw) : NaN;
+  const startAt =
+    Number.isFinite(parsed) && parsed > 0 ? Math.min(parsed, call.durationSec) : undefined;
+
+  return <CallView call={call} startAt={startAt} />;
 }

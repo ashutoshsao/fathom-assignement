@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Search } from "@/components/Search";
 
 const NAV = [
   { label: "My Calls", href: "/", ready: true },
@@ -38,6 +39,7 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
               ),
             )}
           </nav>
+          <Search />
         </div>
       </header>
       <div className="flex min-h-0 flex-1 flex-col">{children}</div>

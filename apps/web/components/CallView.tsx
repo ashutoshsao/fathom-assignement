@@ -16,7 +16,7 @@ import { SUGGESTED_SINGLE } from "@/lib/ask-suggestions";
 
 type Tab = "summary" | "actions" | "transcript";
 
-export function CallView({ call }: { call: Call }) {
+export function CallView({ call, startAt }: { call: Call; startAt?: number }) {
   const [tab, setTab] = useState<Tab>("summary");
   const date = resolveDate(call.daysAgo, call.timeOfDay);
 
@@ -27,7 +27,7 @@ export function CallView({ call }: { call: Call }) {
   ];
 
   return (
-    <PlaybackProvider src={call.audioUrl}>
+    <PlaybackProvider src={call.audioUrl} startAt={startAt}>
       <div className="flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 border-b border-line px-5 py-3">
           <Link

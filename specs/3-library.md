@@ -33,11 +33,30 @@ When this is done, all of the following are true:
 
 ## Progress
 
-- [ ] `?t=` deep link: the call page opens at a given second
-- [ ] Cross-call citation chips navigate to that deep link
-- [ ] Ask on the library page, scoped to all calls
-- [ ] Search API over transcripts, returning call + moment + surrounding text
-- [ ] Search UI: input in the top bar, results that seek on click
-- [ ] Unbuilt nav sections honestly marked
-- [ ] Tests: deep link, cross-call ask, search result → correct call and second
-- [ ] Full suite green (unit + integration)
+- [x] **`?t=` deep link.** The call page opens at a given second, waiting for audio metadata
+      before seeking (seeking an unloaded element is a silent no-op). Out-of-range values are
+      clamped to the call duration rather than trusted.
+- [x] **Cross-call citation chips navigate to that deep link.** Required decoupling `AskPanel`
+      from the player: on the library page there is no player at all, so `usePlaybackOptional`
+      lets the same component work in both places instead of duplicating it.
+- [x] **Ask on the library page, scoped to all calls.** Collapsed behind a button by default —
+      the library's job is to get you into a call, and a permanently open chat panel competes
+      with that.
+- [x] **Search API over transcripts**, returning call, moment, speaker and surrounding text.
+      Neighbouring segments are included because Whisper lines are often three words long and a
+      bare match reads as a fragment.
+- [x] **Search UI** in the top bar, debounced, results linking straight to the moment.
+- [x] **Unbuilt nav sections honestly marked** (Team Calls, Playlists, Alerts) — shown, not
+      clickable, titled with why.
+- [x] **Tests**: deep link, out-of-range deep link, search → correct call and second, honest
+      empty state, and the full cross-call path (chip → navigate → land on the right second).
+- [x] **Full suite green**: 27 unit, 14 integration.
+
+## What this milestone actually taught
+
+- **Title search would have been useless here by construction.** The five calls are the same
+  recurring meeting with near-identical titles, so "which call was that in" can only be answered
+  by searching what was *said*. Seeding a realistic library exposed that; four unrelated calls
+  would have hidden it.
+- **A deep link is not just a query param.** Seeking before `loadedmetadata` silently does
+  nothing, which would have shipped as "cross-call citations sometimes don't work".

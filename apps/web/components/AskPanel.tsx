@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { formatTime } from "@/lib/time";
-import { usePlayback } from "./playback";
+import { usePlaybackOptional } from "./playback";
 
 export interface Citation {
   callId: string;
@@ -189,11 +189,12 @@ function Caret() {
 }
 
 function CitationChip({ citation, canSeek }: { citation: Citation; canSeek: boolean }) {
-  const store = usePlayback();
+  // On the library page there is no player at all, so this must tolerate its absence.
+  const store = usePlaybackOptional();
   const router = useRouter();
 
   const go = () => {
-    if (canSeek) {
+    if (canSeek && store) {
       store.seek(citation.atSec);
       store.play();
     } else {
