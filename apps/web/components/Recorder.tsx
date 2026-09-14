@@ -145,23 +145,24 @@ export function Recorder() {
   }
 
   return (
-    <div className="fixed bottom-5 left-5 z-40 max-w-[320px]">
-      {error && (
-        <p className="mb-2 rounded-card border border-[#f2836b]/40 bg-surface-2 px-3 py-2 text-[12px] leading-relaxed text-[#f2836b]">
-          {error}
-        </p>
-      )}
+    <div className="flex flex-col items-end gap-1.5">
       <button
         onClick={start}
         disabled={phase === "arming"}
-        className="rounded-full border border-line-strong bg-surface-2 px-4 py-2.5 text-[13px] text-text shadow-xl transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
+        title="Records the shared tab's audio plus your mic, then transcribes it for real"
+        className="flex items-center gap-2 rounded-md border border-line-strong bg-surface-2 px-3 py-1.5 text-ui text-text transition-colors hover:border-accent hover:text-accent disabled:opacity-50"
       >
+        <span className="h-2 w-2 rounded-full bg-[#f2836b]" aria-hidden />
         {phase === "arming" ? "Waiting for you to share a tab…" : "Record a meeting"}
       </button>
-      <p className="mt-2 text-[11px] leading-relaxed text-text-faint">
-        Records the shared tab’s audio plus your mic, then transcribes it for real. Chrome or Edge
-        only; the recording stays in this browser.
+      <p className="max-w-[260px] text-right text-[11px] leading-relaxed text-text-faint">
+        Chrome or Edge only; the recording stays in this browser.
       </p>
+      {error && (
+        <p className="max-w-[280px] rounded-card border border-[#f2836b]/40 bg-surface-2 px-3 py-2 text-right text-[11.5px] leading-relaxed text-[#f2836b]">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

@@ -31,11 +31,23 @@ export default async function LibraryPage() {
 
   return (
     <div className="flex min-h-0 flex-1">
-      <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto px-6 py-6 pb-28">
+      <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto px-6 py-6 pb-24">
+      <div className="mb-6 flex items-start justify-between gap-6">
+        <div>
+          <h1 className="text-display font-semibold tracking-[-0.022em] text-text">My Calls</h1>
+          <p className="mt-1 text-meta text-text-muted">
+            {calls.length} recordings · {Math.round(calls.reduce((n, c) => n + c.durationSec, 0) / 3600)}h of conversation
+          </p>
+        </div>
+        <Recorder />
+      </div>
       <LocalRecordings />
       {[...groups.entries()].map(([label, items]) => (
-        <section key={label} className="mb-8">
-          <h2 className="mb-3 text-[13px] font-semibold text-text-muted">{label}</h2>
+        <section key={label} className="mb-7">
+          <div className="mb-2.5 flex items-center gap-3">
+            <h2 className="label">{label}</h2>
+            <div className="h-px flex-1 bg-surface-2" />
+          </div>
           <div className="space-y-2">
             {items.map((call) => (
               <CallCard key={call.id} call={call} />
@@ -45,7 +57,6 @@ export default async function LibraryPage() {
       ))}
       </div>
       <LibraryAside />
-      <Recorder />
     </div>
   );
 }

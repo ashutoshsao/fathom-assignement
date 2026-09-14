@@ -15,16 +15,17 @@ import { usePlayback } from "./playback";
 export function SummaryPane({ call }: { call: Call }) {
   const { summary } = call;
   return (
-    <div className="mx-auto max-w-3xl px-6 py-6">
+    <div className="max-w-[640px] px-7 py-6">
       <Section title="Meeting purpose">
-        <p className="text-[14px] leading-relaxed text-text-muted">{summary.purpose}</p>
+        {/* The one paragraph that should be read first, so it leads the body text. */}
+        <p className="text-lead leading-[1.6] text-text">{summary.purpose}</p>
       </Section>
 
       <Section title="Key takeaways">
         <ul className="space-y-2.5">
           {summary.keyTakeaways.map((k, i) => (
-            <li key={i} className="flex gap-2.5 text-[14px] leading-relaxed text-text-muted">
-              <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
+            <li key={i} className="flex gap-3 text-body leading-[var(--lh-body)] text-[#c9c9d1]">
+              <span className="mt-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-accent" />
               <span>
                 {k.point} <Stamp at={k.atSec} />
               </span>
@@ -37,8 +38,8 @@ export function SummaryPane({ call }: { call: Call }) {
         <Section key={i} title={topic.heading} at={topic.atSec}>
           <ul className="space-y-2">
             {topic.points.map((p, j) => (
-              <li key={j} className="flex gap-2.5 text-[14px] leading-relaxed text-text-muted">
-                <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-text-faint" />
+              <li key={j} className="flex gap-3 text-body leading-[var(--lh-body)] text-text-muted">
+                <span className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-line-strong" />
                 <span>{p}</span>
               </li>
             ))}
@@ -50,8 +51,8 @@ export function SummaryPane({ call }: { call: Call }) {
         <Section title="Next steps">
           <ul className="space-y-2">
             {summary.nextSteps.map((s, i) => (
-              <li key={i} className="flex gap-2.5 text-[14px] leading-relaxed text-text-muted">
-                <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-text-faint" />
+              <li key={i} className="flex gap-3 text-body leading-[var(--lh-body)] text-text-muted">
+                <span className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-line-strong" />
                 <span>{s}</span>
               </li>
             ))}
@@ -65,7 +66,7 @@ export function SummaryPane({ call }: { call: Call }) {
 function Section({ title, at, children }: { title: string; at?: number; children: React.ReactNode }) {
   return (
     <section className="mb-7">
-      <h3 className="mb-2.5 flex items-baseline gap-2 text-[13px] font-semibold uppercase tracking-wide text-text-faint">
+      <h3 className="label mb-2.5 flex items-center gap-2.5">
         {title}
         {at !== undefined && <Stamp at={at} />}
       </h3>
@@ -82,7 +83,7 @@ export function Stamp({ at }: { at: number }) {
         store.seek(at);
         store.play();
       }}
-      className="rounded bg-surface-2 px-1.5 py-px font-mono text-[11px] text-text-faint transition-colors hover:bg-accent-quiet hover:text-accent"
+      className="inline-block rounded-[5px] border border-line bg-surface-2 px-1.5 py-px align-[1px] font-mono text-[11px] text-text-muted transition-colors hover:border-accent/50 hover:bg-accent-quiet hover:text-accent"
       title={`Play from ${formatTime(at)}`}
     >
       {formatTime(at)}

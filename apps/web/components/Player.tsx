@@ -14,10 +14,10 @@ export function Player({ peaks }: { peaks: number[] }) {
   const rate = useRate();
 
   return (
-    <div className="border-t border-line bg-surface px-4 py-3">
-      <Waveform peaks={peaks} />
+    <div className="border-b border-line px-4 py-3">
+      <Waveform peaks={peaks} className="!h-11" />
 
-      <div className="mt-2 flex items-center gap-3">
+      <div className="mt-2.5 flex items-center gap-2.5">
         <button
           onClick={() => store.skip(-10)}
           className="rounded p-1.5 text-text-muted transition-colors hover:bg-surface-2 hover:text-text"
@@ -29,7 +29,7 @@ export function Player({ peaks }: { peaks: number[] }) {
 
         <button
           onClick={store.toggle}
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-black transition-colors hover:bg-accent-hover"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-black transition-colors hover:bg-accent-hover"
           aria-label={playing ? "Pause" : "Play"}
           title={playing ? "Pause (space)" : "Play (space)"}
         >
@@ -54,9 +54,9 @@ export function Player({ peaks }: { peaks: number[] }) {
           <Icon d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8Z" />
         </button>
 
-        <div className="font-mono text-xs tabular-nums text-text-muted">
+        <div className="font-mono text-[11.5px] tabular-nums text-text-faint">
           <span className="text-text">{formatTime(time)}</span>
-          <span className="mx-1 text-text-faint">/</span>
+          <span className="mx-1">/</span>
           {formatTime(duration)}
         </div>
 

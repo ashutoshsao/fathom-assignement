@@ -78,8 +78,10 @@ export function Waveform({ peaks, className = "" }: { peaks: number[]; className
               key={i}
               className="flex-1 rounded-[1px] transition-colors"
               style={{
-                height: `${Math.max(8, p * 100)}%`,
-                background: played ? "var(--accent)" : "var(--surface-3)",
+                // A floor of 8% disappears at small heights; unplayed bars also need to sit
+                // clearly above the rail's own background or the scrubber reads as empty space.
+                height: `${Math.max(16, p * 100)}%`,
+                background: played ? "var(--accent)" : "#2f2f38",
               }}
             />
           );

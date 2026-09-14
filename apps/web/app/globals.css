@@ -40,9 +40,37 @@
   --sp-8: #a9c44f;
 
   --radius: 10px;
+
+  /*
+   * Type ramp.
+   *
+   * The app previously used 13px for 36 of its text elements and 19px for two, so nothing led
+   * and nothing receded — every screen read as a settings page. These are tokens rather than
+   * per-component values so the ramp is enforceable instead of a convention that decays on the
+   * next component someone writes.
+   */
+  --t-display: 23px;   /* page title, once per screen */
+  --t-lead: 15px;      /* the one paragraph that should be read first */
+  --t-body: 14px;      /* summary bullets, transcript, answers */
+  --t-ui: 13px;        /* controls, tabs, nav */
+  --t-meta: 12.5px;    /* timestamps, counts, secondary facts */
+  --t-label: 10.5px;   /* uppercase section labels */
+
+  --lh-body: 1.62;
+  --lh-read: 1.72;     /* transcript: long sessions need more air */
+
+  /* Motion: short, and only on state changes. Animation as decoration makes a tool feel slow. */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur: 140ms;
 }
 
 @theme inline {
+  --text-display: var(--t-display);
+  --text-lead: var(--t-lead);
+  --text-body: var(--t-body);
+  --text-ui: var(--t-ui);
+  --text-meta: var(--t-meta);
+  --text-label: var(--t-label);
   --color-bg: var(--bg);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
@@ -70,6 +98,25 @@ body {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/*
+ * The uppercase section label, used wherever a group of content needs naming without competing
+ * with it. Defined once because it appears in the summary, the rail and the library.
+ */
+.label {
+  font-size: var(--t-label);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* Entering content settles rather than snapping — tab panes, answers, citations. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise var(--dur) var(--ease) both; }
 
 /* Transcripts are long. A quiet scrollbar keeps the reading surface calm. */
 * {

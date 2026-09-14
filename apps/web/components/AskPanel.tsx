@@ -106,11 +106,9 @@ export function AskPanel({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="flex shrink-0 items-center gap-2 px-5 pt-4">
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-text-faint">
-          Ask Fathom
-        </span>
-        <span className="rounded bg-surface-2 px-1.5 py-px text-[11px] text-text-faint">
+      <div className="flex shrink-0 items-center gap-2 px-5 pb-1 pt-3.5">
+        <span className="label">Ask Fathom</span>
+        <span className="rounded bg-surface-2 px-2 py-px text-[10.5px] text-text-muted">
           {scopeLabel}
         </span>
       </div>
@@ -131,7 +129,7 @@ export function AskPanel({
         )}
 
         {turns.map((turn, i) => (
-          <div key={i} className="mb-6">
+          <div key={i} className="rise mb-6">
             <p className="mb-3 ml-auto w-fit max-w-[85%] rounded-lg rounded-br-sm bg-surface-3 px-3 py-2 text-[13px] leading-relaxed text-text">
               {turn.question}
             </p>
@@ -153,7 +151,7 @@ export function AskPanel({
                   {turn.streaming && <Caret />}
                 </p>
                 {turn.citations.length > 0 && (
-                  <div className="mt-3 space-y-1.5">
+                  <div className="rise mt-3 space-y-1.5">
                     {turn.citations.map((c, j) => (
                       <CitationChip key={j} citation={c} canSeek={canSeek && c.callId === callId} />
                     ))}

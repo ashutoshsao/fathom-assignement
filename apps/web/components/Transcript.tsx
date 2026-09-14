@@ -53,7 +53,7 @@ export function Transcript({ call }: { call: Call }) {
         onScroll={() => {
           if (!programmatic.current && following) setFollowing(false);
         }}
-        className="min-h-0 flex-1 overflow-y-auto px-5 py-4"
+        className="min-h-0 flex-1 overflow-y-auto px-7 py-5"
       >
         {blocks.map((block, bi) => {
           const speaker = block.speaker === null ? null : speakers.get(block.speaker);
@@ -64,7 +64,7 @@ export function Transcript({ call }: { call: Call }) {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="mb-1 flex items-baseline gap-2">
-                  <span className="text-[13px] font-medium text-text">
+                  <span className="text-ui font-medium text-text">
                     {speaker?.name ?? "Unattributed"}
                   </span>
                   <button
@@ -74,7 +74,7 @@ export function Transcript({ call }: { call: Call }) {
                     {formatTime(block.startSec)}
                   </button>
                 </div>
-                <p className="text-[14px] leading-relaxed text-text-muted">
+                <p className="max-w-[640px] text-body leading-[var(--lh-read)] text-text-muted">
                   {block.segments.map((seg) => {
                     const isActive = call.transcript[active]?.id === seg.id;
                     return (
