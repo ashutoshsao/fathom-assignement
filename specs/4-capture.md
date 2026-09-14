@@ -1,52 +1,58 @@
-# 4 — Capture
+# 4 — Capture (real, not simulated)
 
 ## Goal
 
-The half of Fathom a web-only clone throws away: the desktop app and the overlays that decide
-whether a call gets recorded at all. This is the mechanic that makes the product distinctive, and
-it is what the walkthrough video will actually show — a reviewer watching a meeting get captured
-understands the product in ten seconds in a way no amount of browsing a library achieves.
+Record an actual meeting and put it through the real pipeline, so that nothing in this product is
+stubbed end to end.
 
-Built as working simulations driven by a real clock. The brief explicitly permits stubbing the
-capture layer; the rule this repo holds to is that **the stub is visible, and everything
-downstream of it is real**.
+The brief permits faking the capture layer. We are not taking that allowance, because the
+alternative turned out to be reachable: a browser can capture a meeting tab's audio and the
+microphone together, which is both genuinely real and closer to where the product itself went —
+Fathom's own newer desktop app is bot-free local capture, not a bot that joins the call.
+
+## What we are deliberately NOT building, and why
+
+A **bot that joins the meeting as a participant** needs a headless browser with a virtual audio
+device, a Google account that survives Meet's bot detection, and a long-running server with
+persistent disk. None of that runs on Vercel, which is where the live link lives. It is days of
+fragile work for a capability the brief explicitly says not to bother with.
 
 ## Contract
 
-- A **`/desktop` surface** with its own window chrome and a "My Meetings" layout, visibly a
-  different application from the web app rather than the same page reskinned.
-- A **pre-call overlay** fired by a real scheduler over seeded calendar events: *"Impromptu Google
-  Meet Meeting starts in 1 min — record?"*, with Record / Don't record, and the choice changing
-  real state.
-- A **live recording overlay**: elapsed timer, stop, and a highlight button that marks the moment.
-- A **post-call transition** — recording ends, and the call appears in the library.
-- A **settings page** for video-conferencing integrations, with Google Meet built through and the
-  others in honest "Partially enabled" states, plus auto-record / auto-share preferences.
-- **Demonstrable on demand.** A real clock that only fires at the seeded time is useless on
-  camera, so the whole sequence can be triggered immediately.
-- Nothing regresses: full suite still green.
+- A **Record** surface that captures a shared tab's audio **and** the microphone, mixed, so both
+  sides of a call are recorded.
+- A **live recording state**: elapsed timer, stop, and a mark-highlight button.
+- On stop, the recording goes through the **same pipeline as the seed data** — Gemini for a
+  diarized timestamped transcript, then the summary/action-items pass.
+- The result is a **real call record**: player, synced transcript, summary, action items, and Ask
+  over it. Indistinguishable in capability from a seeded call.
+- Recorded calls appear **in the library** alongside the seeded ones, marked as locally recorded.
+- The **limitations are stated in the UI**, not buried: Chrome/Edge only, stored in this browser.
+- Nothing regresses: full suite green.
 
 ## Decisions
 
-- **Google Meet is the only integration built through.** Zoom and Teams appear with honest
-  states. Breadth in integrations is cosmetic; depth on one is the product.
-- **The simulated capture produces a real call record**, using one of the seeded calls as the
-  "newly recorded" result. The alternative — a fake row that opens nothing — would undercut the
-  one claim this repo makes about stubs.
-- **Say it in the UI, not just the README.** Where capture is simulated, the interface says so.
-  A reviewer should never have to wonder whether we are claiming to have built a recording bot.
-- **No Electron.** The deliverable is a live link; a desktop binary cannot be one. The desktop
-  surface is a route styled as an app window, which is honest as long as it is labelled.
+- **Storage is the reviewer's browser (IndexedDB).** There is no database and no blob store, by an
+  earlier decision that still holds. A recording is personal to whoever made it, which is also the
+  honest behaviour — it should not appear in a stranger's library.
+- **Timestamps come from the model here, unlike the seed data.** There is no Whisper pass for a
+  fresh recording. We learned on long audio that model timestamps drift badly (a 35-minute slice
+  returned turns at 57 minutes), so recordings are kept short by design and the UI says so. This
+  is the one place the timestamp spine is model-generated, and it is a deliberate, bounded
+  exception.
+- **Two requests per recording**, not one: audio → transcript, then transcript → notes. Reuses the
+  prompts already proven on the seed data rather than inventing a combined schema.
+- **Tab audio, not system audio.** The user picks the meeting tab in the browser's share dialog.
+  One extra click a native app would not need, and worth naming rather than hiding.
 
 ## Progress
 
-- [ ] Seeded calendar events with a real scheduler (upcoming meeting, countdown)
-- [ ] `/desktop` surface: window chrome, My Meetings list
-- [ ] Pre-call overlay: countdown, Record / Don't record, state change
-- [ ] Live recording overlay: elapsed timer, stop, mark highlight
-- [ ] Post-call: recording ends → call appears in the library
-- [ ] Settings: video-conferencing integrations + auto-record / auto-share
-- [ ] Demo trigger so the sequence can be shown in seconds on camera
-- [ ] Simulation labelled honestly in the UI
-- [ ] Tests: overlay fires, record choice changes state, stop produces a call
+- [ ] Client recorder: getDisplayMedia (tab audio) + getUserMedia (mic), mixed via Web Audio
+- [ ] Recording UI: arm, live timer, stop, mark highlight, honest browser-support notice
+- [ ] `/api/transcribe`: audio → Gemini → diarized timestamped transcript
+- [ ] Reuse the notes pass to produce summary + action items for a recording
+- [ ] IndexedDB store for recorded audio + call records
+- [ ] Recorded calls render through the existing CallView (player, transcript, summary, Ask)
+- [ ] Recorded calls listed in the library, marked as local
+- [ ] Tests: recorder state machine, storage round-trip, recorded call renders
 - [ ] Full suite green
