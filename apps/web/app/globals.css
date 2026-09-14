@@ -1,26 +1,93 @@
 @import "tailwindcss";
 
+/*
+ * Dark-only, deliberately. Every screenshot of the real product is dark, and a notetaker is a
+ * tool you leave open beside a call — a light theme would be the wrong default and a theme
+ * toggle is scope that buys the reviewer nothing.
+ *
+ * The palette is near-black rather than pure black: surfaces need to separate from each other
+ * without borders doing all the work, and #000 leaves nowhere to go darker.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* surfaces, darkest to lightest */
+  --bg: #0a0a0c;
+  --surface: #121215;
+  --surface-2: #1a1a1f;
+  --surface-3: #232329;
+
+  /* hairlines */
+  --line: #26262d;
+  --line-strong: #34343d;
+
+  /* text */
+  --text: #ededf0;
+  --text-muted: #9a9aa5;
+  --text-faint: #6b6b76;
+
+  /* the one accent — Fathom's blue, used for actions and the live/active state */
+  --accent: #2e9bf0;
+  --accent-hover: #4fadf5;
+  --accent-quiet: #12283a;
+
+  /* speaker palette: distinguishable at a glance, and legible on dark */
+  --sp-1: #6aa9ff;
+  --sp-2: #f0a13e;
+  --sp-3: #5ed3a0;
+  --sp-4: #e37fb8;
+  --sp-5: #b79cf5;
+  --sp-6: #63cdd8;
+  --sp-7: #f2836b;
+  --sp-8: #a9c44f;
+
+  --radius: 10px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-quiet: var(--accent-quiet);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --radius-card: var(--radius);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Transcripts are long. A quiet scrollbar keeps the reading surface calm. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-3) transparent;
+}
+
+::selection {
+  background: var(--accent-quiet);
+  color: var(--text);
+}
+
+/* Respect the OS setting rather than animating regardless. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
