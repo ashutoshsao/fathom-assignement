@@ -144,12 +144,32 @@ body {
   color: var(--text);
 }
 
-/* Respect the OS setting rather than animating regardless. */
+/*
+ * Respect the OS setting rather than animating regardless.
+ *
+ * The usual snippet sets only `animation-duration: 0.01ms`. That disables a finite animation, but
+ * an INFINITE one then repeats a hundred thousand times a second — a strobe, which is the precise
+ * opposite of what the setting asks for and is actively harmful to anyone photosensitive. Our
+ * loading dots and typing caret are both infinite, and both strobed. Capping the iteration count
+ * is the part that actually stops them.
+ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Stopped mid-keyframe these would settle dim or invisible, so pin them to a legible resting
+     state — the indicator still has to read as "working" without moving. */
+  .thinking-dot {
+    opacity: 0.9 !important;
+    transform: none !important;
+  }
+  .caret {
+    opacity: 1 !important;
   }
 }
