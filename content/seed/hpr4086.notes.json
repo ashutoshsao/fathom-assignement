@@ -1,0 +1,109 @@
+{
+ "title": "HPR Community News March 2024",
+ "blurb": "Ken Fallon and Dave Morris review the Hacker Public Radio shows released in March 2024, discuss community feedback, and share project updates.",
+ "summary": {
+  "purpose": "To review the month's HPR content, engage with community comments, and provide administrative updates.",
+  "keyTakeaways": [
+   {
+    "point": "Hendrick Cameron joined as a new host.",
+    "atSec": 540.8
+   },
+   {
+    "point": "The team emphasized safety warnings regarding high-voltage projects like fractal wood art.",
+    "atSec": 988.56
+   },
+   {
+    "point": "HPR maintains a policy of not listening to submitted audio to avoid editorial liability and DMCA issues.",
+    "atSec": 886.0
+   },
+   {
+    "point": "Host profiles have been restored to the static website.",
+    "atSec": 3461.04
+   },
+   {
+    "point": "OddCamp 2024 is scheduled for October 12-13 in Manchester.",
+    "atSec": 3488.32
+   }
+  ],
+  "topics": [
+   {
+    "heading": "HPR Overview",
+    "points": [
+     "Definition of HPR",
+     "Community news format",
+     "Submission process"
+    ],
+    "atSec": 156.96
+   },
+   {
+    "heading": "March Show Reviews",
+    "points": [
+     "Framework 13 review",
+     "AI and Nightshade",
+     "Microwave repair",
+     "DigiKam and Piper TTS"
+    ],
+    "atSec": 611.76
+   },
+   {
+    "heading": "Community Feedback",
+    "points": [
+     "Handling spam",
+     "Moderation policies",
+     "Listener comments"
+    ],
+    "atSec": 1156.16
+   },
+   {
+    "heading": "Administrative Updates",
+    "points": [
+     "Website host profiles",
+     "RSS feed author details",
+     "OddCamp 2024 announcement"
+    ],
+    "atSec": 3431.36
+   }
+  ],
+  "nextSteps": [
+   "Ken to contact Huka regarding show note linking.",
+   "Community to provide feedback on RSS author details.",
+   "Planning for OddCamp 2024 in Manchester."
+  ]
+ },
+ "actionItems": [
+  {
+   "id": "hpr4086-a0",
+   "text": "Message Huka about linking to specific parts of travel logs",
+   "assignee": "Ken Fallon",
+   "atSec": 2320.24
+  },
+  {
+   "id": "hpr4086-a1",
+   "text": "Solicit community feedback on adding author details to RSS feeds",
+   "assignee": "Ken Fallon",
+   "atSec": 3324.0
+  }
+ ],
+ "highlights": [
+  {
+   "id": "hpr4086-h0",
+   "label": "Discussion on the dangers of fractal wood art",
+   "atSec": 988.56
+  },
+  {
+   "id": "hpr4086-h1",
+   "label": "Explanation of HPR's policy on not listening to submitted audio",
+   "atSec": 886.0
+  },
+  {
+   "id": "hpr4086-h2",
+   "label": "The 'creepy guys' misunderstanding",
+   "atSec": 2654.88
+  },
+  {
+   "id": "hpr4086-h3",
+   "label": "Discussion on Irish weather",
+   "atSec": 56.76
+  }
+ ]
+}

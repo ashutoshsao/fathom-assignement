@@ -1,0 +1,110 @@
+{
+ "title": "13th Annual HPR New Year's Eve Show",
+ "blurb": "The HPR community gathers for a 26-hour marathon chat covering infrastructure updates, 3D printing projects, and the challenges of modern car maintenance.",
+ "summary": {
+  "purpose": "To celebrate the New Year and discuss the technical evolution and infrastructure of the Hacker Public Radio platform.",
+  "keyTakeaways": [
+   {
+    "point": "HPR is transitioning to a distributed Content Delivery Network model with mirrors in multiple countries to ensure availability during Internet Archive outages.",
+    "atSec": 1374.0
+   },
+   {
+    "point": "The HPR website has moved to a static site model to significantly reduce server load and operational costs.",
+    "atSec": 1481.0
+   },
+   {
+    "point": "Long-time contributor Dave is retiring from his role as 'janitor,' necessitating a transition in how show notes and transcoding are managed.",
+    "atSec": 1619.0
+   },
+   {
+    "point": "New show ground rules emphasize push-to-talk and avoiding dead air to simplify the post-production process for the marathon recording.",
+    "atSec": 987.0
+   }
+  ],
+  "topics": [
+   {
+    "heading": "HPR Infrastructure and CDN",
+    "points": [
+     "Implementation of a peer-to-peer rsync script to mirror audio files across multiple global locations.",
+     "Use of a round-robin load balancer to distribute traffic between the Internet Archive and private mirrors.",
+     "Transitioning to static HTML pages to eliminate expensive database queries during peak traffic."
+    ],
+    "atSec": 1282.0
+   },
+   {
+    "heading": "Show Production and Automation",
+    "points": [
+     "Challenges with transcoding scripts breaking due to library updates in Fedora 41.",
+     "Introduction of a new WYSIWYG editor for show notes to reduce manual formatting work for administrators.",
+     "Preserving metadata across different audio formats when uploading to the Internet Archive."
+    ],
+    "atSec": 1655.0
+   },
+   {
+    "heading": "Hardware and DIY Projects",
+    "points": [
+     "Joe's project to 3D print a 10-inch server rack for Raspberry Pis and networking gear.",
+     "Discussion on repairing Bluetooth neckband headphones and the limitations of true wireless earbuds.",
+     "Ken's 'hacker desk' setup using garden mesh, IKEA hooks, and velcro for cable management."
+    ],
+    "atSec": 3808.98
+   },
+   {
+    "heading": "Community and Social Media",
+    "points": [
+     "Higher engagement levels on Mastodon compared to Twitter for HPR show announcements.",
+     "The history of the New Year's show, which expanded to 26 hours to cover all global time zones.",
+     "Debate over return-to-office policies and their impact on productivity and employee retention."
+    ],
+    "atSec": 517.0
+   }
+  ],
+  "nextSteps": [
+   "Release the marathon recording mid-year during a submission lull.",
+   "Continue testing the community CDN and adding more mirrors in the Netherlands and at ISPs.",
+   "Finalize the transition of administrative tasks from Dave to the remaining team."
+  ]
+ },
+ "actionItems": [
+  {
+   "id": "hpr4314-a0",
+   "text": "Update the HPR origin server drive from 1TB to 4TB.",
+   "assignee": "Ken",
+   "atSec": 1396.0
+  },
+  {
+   "id": "hpr4314-a1",
+   "text": "Rewrite the transcoding scripts to fix library compatibility issues on Fedora 41.",
+   "assignee": "Ken",
+   "atSec": 1759.0
+  },
+  {
+   "id": "hpr4314-a2",
+   "text": "Find a volunteer to manage the Community News project following Dave's retirement.",
+   "assignee": "Honkey",
+   "atSec": 2758.9
+  }
+ ],
+ "highlights": [
+  {
+   "id": "hpr4314-h0",
+   "label": "Official New Year Countdown",
+   "atSec": 587.0
+  },
+  {
+   "id": "hpr4314-h1",
+   "label": "Explanation of the 26-hour show duration",
+   "atSec": 700.0
+  },
+  {
+   "id": "hpr4314-h2",
+   "label": "Ken's 'Hacker Desk' tour",
+   "atSec": 5336.58
+  },
+  {
+   "id": "hpr4314-h3",
+   "label": "Joe's 15-hour 3D print failure",
+   "atSec": 6157.58
+  }
+ ]
+}

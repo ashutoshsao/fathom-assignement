@@ -1,0 +1,151 @@
+{
+ "title": "HPR Community News July 2024",
+ "blurb": "HPR volunteers review shows released and comments posted in July 2024, discuss new hosts, website improvements, and future community engagement.",
+ "summary": {
+  "purpose": "The meeting served to review shows released and comments posted on Hacker Public Radio during July 2024 and discuss community-related topics.",
+  "keyTakeaways": [
+   {
+    "point": "Two new hosts, Trolla Costa and The Lucky Boy, joined HPR in July.",
+    "atSec": 114.64
+   },
+   {
+    "point": "A significant discussion on the future of HPR, community engagement, and the effectiveness of current communication channels was prompted by Nightwise's show.",
+    "atSec": 2198.6
+   },
+   {
+    "point": "A project is underway to repair 352 HPR shows that lost external files during a website migration, with 148 already completed.",
+    "atSec": 2780.2
+   },
+   {
+    "point": "Volunteers are needed to staff an HPR booth at the Spectrum 24 conference in Paris to promote the network and attract new hosts.",
+    "atSec": 2711.8
+   },
+   {
+    "point": "The legalities and ethics of archiving public works, particularly regarding copyright and permission, were debated.",
+    "atSec": 1606.92
+   }
+  ],
+  "topics": [
+   {
+    "heading": "Introduction of New Hosts",
+    "points": [
+     "Trolla Costa and The Lucky Boy joined HPR.",
+     "They contributed two very good shows."
+    ],
+    "atSec": 107.64
+   },
+   {
+    "heading": "July Show Reviews and Comments",
+    "points": [
+     "Urandom Pirate Episodes: A fun show about mending things with a neighbor guest.",
+     "Comments on previous shows: Discussion on wood finishing, teleprinters, and 'Studio C' setups.",
+     "'About' page update: Foundation for future HPR changes, aiming to consolidate repeated content.",
+     "GNU Sleep Tips: Overview of the 'sleep' command, noting GNU enhancements like minutes/hours and notification messages.",
+     "Badger 2040: A programmable e-ink display badge from Pimoroni, programmable in Python.",
+     "Krita Interview: An excellent interview with the author of Krita, highlighting its use for artistic work and comic strips.",
+     "Alexander's Introduction: A brilliant first show, confidently delivered despite initial nervousness.",
+     "New Year's Eve Show: An eclectic 3-hour show covering diverse topics from autism to Levi Jeans, with excellent show notes.",
+     "Passkeys: An enlightening show on passkeys and their security impact, prompting awareness of related issues.",
+     "Retro Game Console: Kevin's experience building a retro game console with Raspberry Pi for \u00a3151.",
+     "HPR Music Project: 'The Walking Tune' by Appleball, a traditional folk tune with Scottish/Irish similarities.",
+     "Samba and Tiny Computers: Al's show on using a Lenovo ThinkCentre M700 Tiny for Samba and other tasks, prompting interest in Proxmox.",
+     "Postgraduate Computing: Lee's challenging experience with an MSc in Computer Science at the Open University.",
+     "A Circle of Moss: An interview with Moss Bliss, discussing his performing experience and diverse facets.",
+     "Software Freedom Day: A call to action for organizing meetups, noting the decline post-COVID.",
+     "Removing Obstacles: BISA's show on using text-to-speech for HPR shows, addressing discomfort with public speaking.",
+     "Beyond Economic Recovery: Discussion on archiving, legal ownership, and the right to control access to public works.",
+     "Playing Civilization: Part 3 Part 5, the final episode in a strategy game series.",
+     "Bathroom Renovation: Al's brave project renovating his bathroom, including plumbing and shower installation.",
+     "Up-directed for Piper XQs: Archer 72 demonstrating 'up-directed' on Fedora, potentially integrating into HPR workflow.",
+     "Adding Storage to MacBook Pro: Siftle on 10's experience with SSDs, highlighting their failure rates and data loss."
+    ],
+    "atSec": 142.64
+   },
+   {
+    "heading": "Future of HPR and Community Engagement",
+    "points": [
+     "Discussion prompted by Nightwise's show on HPR's future.",
+     "Nightwise's critical feedback on outdated comment systems, mailing lists, and lack of listener-to-host conversion.",
+     "Concerns about hosts burning out due to lack of feedback and 'screaming into the void'.",
+     "Nightwise's decision to step down as a host due to burnout and feeling unheard.",
+     "Brian Neverett's feedback on the simplicity of the comment system via AntennaPod but difficulty with CAPTCHA."
+    ],
+    "atSec": 2198.6
+   },
+   {
+    "heading": "HPR Show Repair Project",
+    "points": [
+     "Dave Norris is repairing HPR shows with lost external files (pictures, videos, scripts) from a previous migration.",
+     "The process involves copying files from the Internet Archive and backup disks and re-linking them.",
+     "Out of 352 shows needing repair, 148 have been completed, with 214 remaining."
+    ],
+    "atSec": 2780.2
+   }
+  ],
+  "nextSteps": [
+   "HPR will hold its next Community News meeting in September.",
+   "Listeners are encouraged to listen to and comment on Nightwise's show about the future of HPR.",
+   "Dave Norris will give a talk about amateur radio on the HPR network at the Spectrum 24 conference.",
+   "The project to repair HPR shows with lost external files will continue."
+  ]
+ },
+ "actionItems": [
+  {
+   "id": "hpr4176-a0",
+   "text": "Consolidate 'about' page content as part of the website redesign to avoid repetition.",
+   "assignee": "Ken Fallon",
+   "atSec": 482.64
+  },
+  {
+   "id": "hpr4176-a1",
+   "text": "Do a show on Proxmox, ideally covering its licensing aspects and reasons for use.",
+   "assignee": "Dave Norris",
+   "atSec": 1241.56
+  },
+  {
+   "id": "hpr4176-a2",
+   "text": "Make a follow-up show on web mining to delve deeper into how the stuff was built.",
+   "assignee": "Dave Norris",
+   "atSec": 2392.36
+  },
+  {
+   "id": "hpr4176-a3",
+   "text": "Get in touch with Jim Devoy to help out with the podcast dog catcher project.",
+   "assignee": "Dave Norris",
+   "atSec": 2927.56
+  },
+  {
+   "id": "hpr4176-a4",
+   "text": "Document the show repair process in the AOB section.",
+   "assignee": "Dave Norris",
+   "atSec": 2878.12
+  }
+ ],
+ "highlights": [
+  {
+   "id": "hpr4176-h0",
+   "label": "Introduction of new HPR hosts Trolla Costa and The Lucky Boy",
+   "atSec": 114.64
+  },
+  {
+   "id": "hpr4176-h1",
+   "label": "Nightwise's comprehensive and critical feedback on HPR's community engagement and platform issues",
+   "atSec": 2469.88
+  },
+  {
+   "id": "hpr4176-h2",
+   "label": "Dave Norris's call for volunteers to staff an HPR booth at the Spectrum 24 conference in Paris",
+   "atSec": 2711.8
+  },
+  {
+   "id": "hpr4176-h3",
+   "label": "Dave Norris's ongoing project to repair 352 HPR shows with missing external files",
+   "atSec": 2780.2
+  },
+  {
+   "id": "hpr4176-h4",
+   "label": "Discussion on the legal and ethical complexities of archiving public works without explicit permission",
+   "atSec": 1606.92
+  }
+ ]
+}

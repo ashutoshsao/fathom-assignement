@@ -27,7 +27,7 @@ export default async function LibraryPage() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 py-6">
+    <div className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto px-6 py-6">
       {[...groups.entries()].map(([label, items]) => (
         <section key={label} className="mb-8">
           <h2 className="mb-3 text-[13px] font-semibold text-text-muted">{label}</h2>

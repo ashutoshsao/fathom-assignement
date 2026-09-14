@@ -9,7 +9,7 @@ const NAV = [
 
 export default function AppLayout({ children }: LayoutProps<"/">) {
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex h-dvh flex-col overflow-hidden">
       <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur">
         <div className="mx-auto flex w-full max-w-5xl items-center gap-4 px-6 py-3">
           <Link href="/" className="text-[15px] font-semibold tracking-tight text-text">
@@ -40,7 +40,7 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
           </nav>
         </div>
       </header>
-      <div className="flex flex-1 flex-col">{children}</div>
+      <div className="flex min-h-0 flex-1 flex-col">{children}</div>
     </div>
   );
 }

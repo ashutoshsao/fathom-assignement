@@ -1,0 +1,75 @@
+{
+ "title": "HPR Community News April 2024",
+ "blurb": "The HPR team reviews April 2024 shows, welcomes new host Dave Hingley, and discusses listener feedback.",
+ "summary": {
+  "purpose": "The hosts met to summarize and discuss the podcast episodes and listener comments released throughout April 2024.",
+  "keyTakeaways": [
+   {
+    "point": "Dave Hingley was officially welcomed as a new HPR podcast host.",
+    "atSec": 195.32
+   },
+   {
+    "point": "A seasonal slowdown in community show submissions was noted for this time of year.",
+    "atSec": 153.32
+   },
+   {
+    "point": "Ongoing infrastructure tasks include website static file management and media tracking.",
+    "atSec": 4020.36
+   }
+  ],
+  "topics": [
+   {
+    "heading": "Introduction and New Hosts",
+    "points": [
+     "Opening greetings and context for the April community review.",
+     "Welcoming Dave Hingley as the newest HPR host."
+    ],
+    "atSec": 183.32
+   },
+   {
+    "heading": "April Show Reviews and Feedback",
+    "points": [
+     "Reviewing various community shows released throughout April 2024.",
+     "Discussing listener comments on topics ranging from Linux to JQ and text-to-speech."
+    ],
+    "atSec": 274.32
+   },
+   {
+    "heading": "Website Infrastructure and Show Notes",
+    "points": [
+     "Addressing issues with markdown syntax highlighting in show notes.",
+     "Discussing static file tracking and potential use of git annex."
+    ],
+    "atSec": 3874.04
+   }
+  ],
+  "nextSteps": [
+   "Continue working on website infrastructure and static file synchronization."
+  ]
+ },
+ "actionItems": [
+  {
+   "id": "hpr4111-a0",
+   "text": "Look into markdown syntax highlighting restrictions for show notes.",
+   "assignee": "Dave Morriss",
+   "atSec": 3952.52
+  }
+ ],
+ "highlights": [
+  {
+   "id": "hpr4111-h0",
+   "label": "Welcoming Dave Hingley",
+   "atSec": 195.32
+  },
+  {
+   "id": "hpr4111-h1",
+   "label": "Discussing Linux anniversaries and car software",
+   "atSec": 1165.64
+  },
+  {
+   "id": "hpr4111-h2",
+   "label": "Exploring git annex for media tracking",
+   "atSec": 4200.6
+  }
+ ]
+}

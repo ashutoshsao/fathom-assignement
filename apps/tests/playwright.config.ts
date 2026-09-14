@@ -21,13 +21,15 @@ export default defineConfig({
     video: "retain-on-failure",
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
-  // Reuse a server if one is already up, so running these alongside `bun dev` is not a fight.
+  // Run against a production build, not `next dev`. The dev server injects an HMR websocket that
+  // fails under the test harness and shows up as a console error, and more importantly dev and
+  // prod differ in exactly the places worth testing (prerendering, bundling, static assets).
   webServer: process.env.BASE_URL
     ? undefined
     : {
-        command: "bun run --cwd ../web dev",
+        command: "bun run --cwd ../web build && bun run --cwd ../web start",
         url: "http://127.0.0.1:3000",
         reuseExistingServer: true,
-        timeout: 120_000,
+        timeout: 180_000,
       },
 });

@@ -26,7 +26,7 @@ export function CallView({ call }: { call: Call }) {
 
   return (
     <PlaybackProvider src={call.audioUrl}>
-      <div className="flex h-dvh flex-col">
+      <div className="flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 border-b border-line px-5 py-3">
           <Link
             href="/"
@@ -75,10 +75,14 @@ export function CallView({ call }: { call: Call }) {
               ))}
             </nav>
 
-            <div className="min-h-0 flex-1 overflow-y-auto">
-              {tab === "summary" && <SummaryPane call={call} />}
-              {tab === "actions" && <ActionItems call={call} />}
-            </div>
+            {/* Rendered only when selected. Leaving an empty flex-1 container mounted stole
+                half the height from the transcript and left a large blank gap above it. */}
+            {tab !== "transcript" && (
+              <div className="min-h-0 flex-1 overflow-y-auto">
+                {tab === "summary" && <SummaryPane call={call} />}
+                {tab === "actions" && <ActionItems call={call} />}
+              </div>
+            )}
             {/* Kept mounted so scroll position and follow-state survive tab switches. */}
             <div className={tab === "transcript" ? "flex min-h-0 flex-1" : "hidden"}>
               <Transcript call={call} />
