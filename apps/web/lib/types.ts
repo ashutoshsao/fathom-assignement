@@ -29,14 +29,25 @@ export interface TranscriptSegment {
   speaker: number | null;
 }
 
+/** A point anchored to the moment in the call it was drawn from. */
+export interface AnchoredPoint {
+  point: string;
+  atSec: number;
+}
+
 export interface SummaryTopic {
   heading: string;
   points: string[];
+  atSec: number;
 }
 
 export interface Summary {
   purpose: string;
-  keyTakeaways: string[];
+  /**
+   * Anchored, not plain strings: a takeaway you cannot jump to is one you have to re-listen to
+   * the whole call to verify.
+   */
+  keyTakeaways: AnchoredPoint[];
   topics: SummaryTopic[];
   nextSteps: string[];
 }
@@ -44,7 +55,7 @@ export interface Summary {
 export interface ActionItem {
   id: string;
   text: string;
-  /** Speaker.id this was assigned to, where the call makes that clear. */
+  /** Speaker.id this was assigned to, or null where the call does not make it clear. */
   assignee: number | null;
   /** Where in the call it came from — clicking it seeks here. */
   atSec: number;
@@ -59,8 +70,13 @@ export interface Highlight {
 export interface Call {
   id: string;
   title: string;
-  /** ISO string. Seeded to plausible meeting times, not the podcast publication dates. */
-  startedAt: string;
+  /**
+   * Recency, not a fixed date. Resolved against "now" at render time (see lib/dates.ts) so the
+   * seeded library always reads as a live account instead of decaying into stale dates.
+   */
+  daysAgo: number;
+  /** "15:30" — the wall-clock time the meeting started. */
+  timeOfDay: string;
   durationSec: number;
   platform: Platform;
   /** One-line AI summary shown on the library card. */

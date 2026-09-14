@@ -1,0 +1,4417 @@
+{
+ "episode": "hpr4176",
+ "durationSec": 3025.64,
+ "speakers": [
+  {
+   "id": 0,
+   "name": "Speaker 1",
+   "voice": "Male, deep, clear, professional, steady pace announcer."
+  },
+  {
+   "id": 1,
+   "name": "Ken Fallon",
+   "voice": "Male, Irish accent, mid-pitch, friendly, clear, moderate pace."
+  },
+  {
+   "id": 2,
+   "name": "Dave Norris",
+   "voice": "Male, English accent, slightly higher pitch, relaxed, casual, friendly."
+  },
+  {
+   "id": 3,
+   "name": "Speaker 4",
+   "voice": "Female, clear, professional, calm, steady pace announcer."
+  }
+ ],
+ "segments": [
+  {
+   "id": 0,
+   "startSec": 0.0,
+   "endSec": 14.44,
+   "text": "This is Hacker Public Radio episode 4176 from Monday the 5th of August 2024.",
+   "speaker": 0
+  },
+  {
+   "id": 1,
+   "startSec": 14.44,
+   "endSec": 20.8,
+   "text": "Today's show is entitled, HPR Community News for July 2024.",
+   "speaker": 0
+  },
+  {
+   "id": 2,
+   "startSec": 20.8,
+   "endSec": 24.64,
+   "text": "It is part of the series HPR Community News.",
+   "speaker": 0
+  },
+  {
+   "id": 3,
+   "startSec": 25.64,
+   "endSec": 31.64,
+   "text": "It is the 280th show of HPR volunteers and is about 49 minutes long.",
+   "speaker": 0
+  },
+  {
+   "id": 4,
+   "startSec": 31.64,
+   "endSec": 34.64,
+   "text": "It carries an explicit flag.",
+   "speaker": 0
+  },
+  {
+   "id": 5,
+   "startSec": 34.64,
+   "endSec": 42.64,
+   "text": "The summary is, HPR volunteers talk about shows released and comments posted in July 2024.",
+   "speaker": 0
+  },
+  {
+   "id": 6,
+   "startSec": 42.64,
+   "endSec": 47.64,
+   "text": "Hi everybody, my name is Ken Falam and you're listening to another episode of Hacker Public Radio.",
+   "speaker": 1
+  },
+  {
+   "id": 7,
+   "startSec": 47.64,
+   "endSec": 50.64,
+   "text": "This is Community News for July 2024.",
+   "speaker": 1
+  },
+  {
+   "id": 8,
+   "startSec": 50.64,
+   "endSec": 54.64,
+   "text": "And joining me as ever is, hi, Steve Boris.",
+   "speaker": 2
+  },
+  {
+   "id": 9,
+   "startSec": 54.64,
+   "endSec": 56.64,
+   "text": "How are you today, Dave?",
+   "speaker": 2
+  },
+  {
+   "id": 10,
+   "startSec": 56.64,
+   "endSec": 58.64,
+   "text": "I'm okay, thank you.",
+   "speaker": 1
+  },
+  {
+   "id": 11,
+   "startSec": 58.64,
+   "endSec": 60.64,
+   "text": "Yeah, yeah, pretty good.",
+   "speaker": 2
+  },
+  {
+   "id": 12,
+   "startSec": 60.64,
+   "endSec": 66.64,
+   "text": "Hopefully there's no noises off because my back door is open because it's warm and this kid's",
+   "speaker": 2
+  },
+  {
+   "id": 13,
+   "startSec": 66.64,
+   "endSec": 68.64,
+   "text": "playing outside whatever.",
+   "speaker": 2
+  },
+  {
+   "id": 14,
+   "startSec": 68.64,
+   "endSec": 73.64,
+   "text": "So yeah, you'll know, you'll know if you hear the dog bark and it's not me doing impressions.",
+   "speaker": 2
+  },
+  {
+   "id": 15,
+   "startSec": 73.64,
+   "endSec": 74.64,
+   "text": "It's a real dog.",
+   "speaker": 2
+  },
+  {
+   "id": 16,
+   "startSec": 74.64,
+   "endSec": 76.64,
+   "text": "Next door, fully artist.",
+   "speaker": 2
+  },
+  {
+   "id": 17,
+   "startSec": 77.64,
+   "endSec": 82.64,
+   "text": "For those of you who don't know, HPR's Community Podcast where we really",
+   "speaker": 2
+  },
+  {
+   "id": 18,
+   "startSec": 82.64,
+   "endSec": 88.64,
+   "text": "shows every week they Monday through Friday and I'm a topic that is of interest to hackers.",
+   "speaker": 2
+  },
+  {
+   "id": 19,
+   "startSec": 88.64,
+   "endSec": 97.64,
+   "text": "And shows are submitted by people like you good self and therefore at the start of every month,",
+   "speaker": 2
+  },
+  {
+   "id": 20,
+   "startSec": 97.64,
+   "endSec": 104.64,
+   "text": "we, the janitors put down our mobs and discuss the shows that have been on to ensure that everybody",
+   "speaker": 2
+  },
+  {
+   "id": 21,
+   "startSec": 104.64,
+   "endSec": 107.64,
+   "text": "gets some positive feedback.",
+   "speaker": 2
+  },
+  {
+   "id": 22,
+   "startSec": 107.64,
+   "endSec": 114.64,
+   "text": "And it goes over today to introduce the two new hosts for last month.",
+   "speaker": 2
+  },
+  {
+   "id": 23,
+   "startSec": 114.64,
+   "endSec": 120.64,
+   "text": "As indeed, we have two new hosts and they are Trolla Costa, which is a great name.",
+   "speaker": 2
+  },
+  {
+   "id": 24,
+   "startSec": 120.64,
+   "endSec": 123.64,
+   "text": "And the lucky boy, which is also a really wonderful name.",
+   "speaker": 2
+  },
+  {
+   "id": 25,
+   "startSec": 123.64,
+   "endSec": 125.64,
+   "text": "Very good name.",
+   "speaker": 2
+  },
+  {
+   "id": 26,
+   "startSec": 125.64,
+   "endSec": 126.64,
+   "text": "Great to see.",
+   "speaker": 2
+  },
+  {
+   "id": 27,
+   "startSec": 126.64,
+   "endSec": 131.64,
+   "text": "They have joined the network to very good shows and we will go through them now.",
+   "speaker": 2
+  },
+  {
+   "id": 28,
+   "startSec": 132.64,
+   "endSec": 140.64,
+   "text": "Or do we, where we go to do the annual the business first or now we'll go through the episodes and if people want to.",
+   "speaker": 2
+  },
+  {
+   "id": 29,
+   "startSec": 140.64,
+   "endSec": 141.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 30,
+   "startSec": 141.64,
+   "endSec": 142.64,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 31,
+   "startSec": 142.64,
+   "endSec": 151.64,
+   "text": "So the first show that was released on the third of the month was the Community News.",
+   "speaker": 1
+  },
+  {
+   "id": 32,
+   "startSec": 151.64,
+   "endSec": 156.64,
+   "text": "And apparently we can say anything controversial, which is excellent.",
+   "speaker": 1
+  },
+  {
+   "id": 33,
+   "startSec": 156.64,
+   "endSec": 160.64,
+   "text": "The first show was you random pirate episodes.",
+   "speaker": 1
+  },
+  {
+   "id": 34,
+   "startSec": 160.64,
+   "endSec": 165.64,
+   "text": "And I think this refers to operators doing some random stuff.",
+   "speaker": 1
+  },
+  {
+   "id": 35,
+   "startSec": 165.64,
+   "endSec": 167.64,
+   "text": "Well, what do you think of this one?",
+   "speaker": 1
+  },
+  {
+   "id": 36,
+   "startSec": 167.64,
+   "endSec": 169.64,
+   "text": "It's just fun.",
+   "speaker": 1
+  },
+  {
+   "id": 37,
+   "startSec": 169.64,
+   "endSec": 172.64,
+   "text": "Because I think there was a certain amount of confusion about it.",
+   "speaker": 1
+  },
+  {
+   "id": 38,
+   "startSec": 172.64,
+   "endSec": 176.64,
+   "text": "Was operator joining the Urandom people?",
+   "speaker": 1
+  },
+  {
+   "id": 39,
+   "startSec": 176.64,
+   "endSec": 181.64,
+   "text": "Because Urandom is a Linux thing, isn't it?",
+   "speaker": 1
+  },
+  {
+   "id": 40,
+   "startSec": 181.64,
+   "endSec": 184.64,
+   "text": "It's about to random number generator or something.",
+   "speaker": 1
+  },
+  {
+   "id": 41,
+   "startSec": 184.64,
+   "endSec": 185.64,
+   "text": "Anyway, yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 42,
+   "startSec": 185.64,
+   "endSec": 186.64,
+   "text": "It was fun.",
+   "speaker": 1
+  },
+  {
+   "id": 43,
+   "startSec": 186.64,
+   "endSec": 189.64,
+   "text": "He was mending stuff, which is a great audio thing.",
+   "speaker": 1
+  },
+  {
+   "id": 44,
+   "startSec": 189.64,
+   "endSec": 195.64,
+   "text": "And a neighbor calls over from over the fence and he's the special guest.",
+   "speaker": 1
+  },
+  {
+   "id": 45,
+   "startSec": 195.64,
+   "endSec": 196.64,
+   "text": "So yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 46,
+   "startSec": 196.64,
+   "endSec": 197.64,
+   "text": "Good.",
+   "speaker": 1
+  },
+  {
+   "id": 47,
+   "startSec": 197.64,
+   "endSec": 198.64,
+   "text": "Good fun.",
+   "speaker": 1
+  },
+  {
+   "id": 48,
+   "startSec": 198.64,
+   "endSec": 199.64,
+   "text": "Very funny show.",
+   "speaker": 1
+  },
+  {
+   "id": 49,
+   "startSec": 199.64,
+   "endSec": 200.64,
+   "text": "Yes.",
+   "speaker": 1
+  },
+  {
+   "id": 50,
+   "startSec": 200.64,
+   "endSec": 201.64,
+   "text": "So.",
+   "speaker": 1
+  },
+  {
+   "id": 51,
+   "startSec": 201.64,
+   "endSec": 205.64,
+   "text": "Studying, studying as she goes.",
+   "speaker": 1
+  },
+  {
+   "id": 52,
+   "startSec": 205.64,
+   "endSec": 206.64,
+   "text": "Oh.",
+   "speaker": 1
+  },
+  {
+   "id": 53,
+   "startSec": 206.64,
+   "endSec": 208.64,
+   "text": "The pawns, Dave.",
+   "speaker": 1
+  },
+  {
+   "id": 54,
+   "startSec": 208.64,
+   "endSec": 210.64,
+   "text": "The pawns.",
+   "speaker": 1
+  },
+  {
+   "id": 55,
+   "startSec": 210.64,
+   "endSec": 211.64,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 56,
+   "startSec": 211.64,
+   "endSec": 212.64,
+   "text": "Oh.",
+   "speaker": 1
+  },
+  {
+   "id": 57,
+   "startSec": 212.64,
+   "endSec": 216.64,
+   "text": "It's not yourself of the strikes doing a show for those who don't do.",
+   "speaker": 1
+  },
+  {
+   "id": 58,
+   "startSec": 216.64,
+   "endSec": 217.64,
+   "text": "Yes.",
+   "speaker": 2
+  },
+  {
+   "id": 59,
+   "startSec": 217.64,
+   "endSec": 219.64,
+   "text": "And we had some comments.",
+   "speaker": 1
+  },
+  {
+   "id": 60,
+   "startSec": 219.64,
+   "endSec": 220.64,
+   "text": "We did.",
+   "speaker": 2
+  },
+  {
+   "id": 61,
+   "startSec": 220.64,
+   "endSec": 222.64,
+   "text": "And shall I start this one?",
+   "speaker": 1
+  },
+  {
+   "id": 62,
+   "startSec": 222.64,
+   "endSec": 223.64,
+   "text": "Please.",
+   "speaker": 2
+  },
+  {
+   "id": 63,
+   "startSec": 223.64,
+   "endSec": 225.64,
+   "text": "We had a comment from Tray.",
+   "speaker": 1
+  },
+  {
+   "id": 64,
+   "startSec": 225.64,
+   "endSec": 228.64,
+   "text": "We mentioned some discussion about making it.",
+   "speaker": 1
+  },
+  {
+   "id": 65,
+   "startSec": 228.64,
+   "endSec": 233.64,
+   "text": "Doing woodwork and finding good finishings in this country.",
+   "speaker": 1
+  },
+  {
+   "id": 66,
+   "startSec": 233.64,
+   "endSec": 235.64,
+   "text": "And he said the wood, wood finishing.",
+   "speaker": 1
+  },
+  {
+   "id": 67,
+   "startSec": 235.64,
+   "endSec": 238.64,
+   "text": "Said what he watched the video on YouTube.",
+   "speaker": 1
+  },
+  {
+   "id": 68,
+   "startSec": 239.64,
+   "endSec": 240.64,
+   "text": "Amazing.",
+   "speaker": 1
+  },
+  {
+   "id": 69,
+   "startSec": 240.64,
+   "endSec": 241.64,
+   "text": "Very hard finish.",
+   "speaker": 1
+  },
+  {
+   "id": 70,
+   "startSec": 241.64,
+   "endSec": 242.64,
+   "text": "A bit pricey.",
+   "speaker": 1
+  },
+  {
+   "id": 71,
+   "startSec": 242.64,
+   "endSec": 244.64,
+   "text": "Maybe perfect for your table top.",
+   "speaker": 1
+  },
+  {
+   "id": 72,
+   "startSec": 244.64,
+   "endSec": 246.64,
+   "text": "Give the link.",
+   "speaker": 1
+  },
+  {
+   "id": 73,
+   "startSec": 246.64,
+   "endSec": 248.64,
+   "text": "And Henrik.",
+   "speaker": 1
+  },
+  {
+   "id": 74,
+   "startSec": 248.64,
+   "endSec": 250.64,
+   "text": "Henrin says teleprinter.",
+   "speaker": 1
+  },
+  {
+   "id": 75,
+   "startSec": 250.64,
+   "endSec": 255.64,
+   "text": "When you talked about the old computer and usage for amateur radio, I remembered.",
+   "speaker": 1
+  },
+  {
+   "id": 76,
+   "startSec": 255.64,
+   "endSec": 262.64,
+   "text": "I read a de-axing magazine about building and own teleprinter with the short",
+   "speaker": 1
+  },
+  {
+   "id": 77,
+   "startSec": 262.64,
+   "endSec": 267.64,
+   "text": "RAV radio or whatever wavelength they operated on.",
+   "speaker": 1
+  },
+  {
+   "id": 78,
+   "startSec": 267.64,
+   "endSec": 268.64,
+   "text": "The computer.",
+   "speaker": 1
+  },
+  {
+   "id": 79,
+   "startSec": 268.64,
+   "endSec": 271.64,
+   "text": "Getting the news from international bureaus directly to me.",
+   "speaker": 1
+  },
+  {
+   "id": 80,
+   "startSec": 271.64,
+   "endSec": 275.64,
+   "text": "I never tried myself, but I remember it as a cool project.",
+   "speaker": 1
+  },
+  {
+   "id": 81,
+   "startSec": 275.64,
+   "endSec": 276.64,
+   "text": "Thank you.",
+   "speaker": 1
+  },
+  {
+   "id": 82,
+   "startSec": 276.64,
+   "endSec": 280.64,
+   "text": "Mr. X and replied to the wood finishing point high tray.",
+   "speaker": 1
+  },
+  {
+   "id": 83,
+   "startSec": 280.64,
+   "endSec": 281.64,
+   "text": "Thank you so much for the great tip.",
+   "speaker": 1
+  },
+  {
+   "id": 84,
+   "startSec": 281.64,
+   "endSec": 285.64,
+   "text": "This is something I never knew existed and will definitely keep it in mind.",
+   "speaker": 1
+  },
+  {
+   "id": 85,
+   "startSec": 285.64,
+   "endSec": 287.64,
+   "text": "A product looks incredible.",
+   "speaker": 1
+  },
+  {
+   "id": 86,
+   "startSec": 287.64,
+   "endSec": 291.64,
+   "text": "Unfortunately, the same company said for my rather cheap and battered table.",
+   "speaker": 1
+  },
+  {
+   "id": 87,
+   "startSec": 291.64,
+   "endSec": 292.64,
+   "text": "It's interesting.",
+   "speaker": 1
+  },
+  {
+   "id": 88,
+   "startSec": 292.64,
+   "endSec": 295.64,
+   "text": "Man in the video talks about a reformulation of products.",
+   "speaker": 1
+  },
+  {
+   "id": 89,
+   "startSec": 295.64,
+   "endSec": 301.64,
+   "text": "And we recently noticed that our bars of soap now melt away leaving a mess everywhere.",
+   "speaker": 1
+  },
+  {
+   "id": 90,
+   "startSec": 301.64,
+   "endSec": 305.64,
+   "text": "And Mr. X also replies to teleprinter.",
+   "speaker": 1
+  },
+  {
+   "id": 91,
+   "startSec": 305.64,
+   "endSec": 306.64,
+   "text": "Hi, Henrik.",
+   "speaker": 1
+  },
+  {
+   "id": 92,
+   "startSec": 306.64,
+   "endSec": 308.64,
+   "text": "Thanks for the nice comments.",
+   "speaker": 1
+  },
+  {
+   "id": 93,
+   "startSec": 308.64,
+   "endSec": 309.64,
+   "text": "Yep.",
+   "speaker": 1
+  },
+  {
+   "id": 94,
+   "startSec": 309.64,
+   "endSec": 310.64,
+   "text": "The project does sound cool.",
+   "speaker": 1
+  },
+  {
+   "id": 95,
+   "startSec": 310.64,
+   "endSec": 311.64,
+   "text": "It also sounds a bit complex.",
+   "speaker": 1
+  },
+  {
+   "id": 96,
+   "startSec": 311.64,
+   "endSec": 316.64,
+   "text": "I've seen a few mechanical teleprinters been sold at the Arjun sale.",
+   "speaker": 1
+  },
+  {
+   "id": 97,
+   "startSec": 316.64,
+   "endSec": 319.64,
+   "text": "I think the price was 5 UK pounds.",
+   "speaker": 1
+  },
+  {
+   "id": 98,
+   "startSec": 319.64,
+   "endSec": 323.64,
+   "text": "From memory, I think they're still there at the end of the night.",
+   "speaker": 1
+  },
+  {
+   "id": 99,
+   "startSec": 323.64,
+   "endSec": 324.64,
+   "text": "Very large.",
+   "speaker": 1
+  },
+  {
+   "id": 100,
+   "startSec": 324.64,
+   "endSec": 327.64,
+   "text": "I don't anyone would be able to lift us into their car.",
+   "speaker": 1
+  },
+  {
+   "id": 101,
+   "startSec": 327.64,
+   "endSec": 329.64,
+   "text": "How things have changed.",
+   "speaker": 1
+  },
+  {
+   "id": 102,
+   "startSec": 329.64,
+   "endSec": 331.64,
+   "text": "That's how the fund is now.",
+   "speaker": 1
+  },
+  {
+   "id": 103,
+   "startSec": 331.64,
+   "endSec": 332.64,
+   "text": "Yeah, yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 104,
+   "startSec": 332.64,
+   "endSec": 336.64,
+   "text": "I've certainly known people with old teleprinters messing around with there.",
+   "speaker": 2
+  },
+  {
+   "id": 105,
+   "startSec": 336.64,
+   "endSec": 337.64,
+   "text": "Nightmarish things.",
+   "speaker": 2
+  },
+  {
+   "id": 106,
+   "startSec": 337.64,
+   "endSec": 340.64,
+   "text": "Let's show a really skilled engineer.",
+   "speaker": 2
+  },
+  {
+   "id": 107,
+   "startSec": 340.64,
+   "endSec": 344.64,
+   "text": "D&T is the next comment for Back to Studio C.",
+   "speaker": 1
+  },
+  {
+   "id": 108,
+   "startSec": 344.64,
+   "endSec": 346.64,
+   "text": "I've enjoyed these shows so much.",
+   "speaker": 1
+  },
+  {
+   "id": 109,
+   "startSec": 346.64,
+   "endSec": 348.64,
+   "text": "Today I listened to half of it in the car.",
+   "speaker": 1
+  },
+  {
+   "id": 110,
+   "startSec": 348.64,
+   "endSec": 349.64,
+   "text": "Studio C for Corolla.",
+   "speaker": 1
+  },
+  {
+   "id": 111,
+   "startSec": 349.64,
+   "endSec": 351.64,
+   "text": "Put them away to work.",
+   "speaker": 1
+  },
+  {
+   "id": 112,
+   "startSec": 352.64,
+   "endSec": 354.64,
+   "text": "The other half on the way back.",
+   "speaker": 1
+  },
+  {
+   "id": 113,
+   "startSec": 354.64,
+   "endSec": 356.64,
+   "text": "Finish it sitting on the porch while opening some mail.",
+   "speaker": 1
+  },
+  {
+   "id": 114,
+   "startSec": 356.64,
+   "endSec": 359.64,
+   "text": "Thank you for putting it together and keep it up.",
+   "speaker": 1
+  },
+  {
+   "id": 115,
+   "startSec": 359.64,
+   "endSec": 363.64,
+   "text": "And you're going to see opportunities to do your own.",
+   "speaker": 1
+  },
+  {
+   "id": 116,
+   "startSec": 363.64,
+   "endSec": 364.64,
+   "text": "Okay.",
+   "speaker": 1
+  },
+  {
+   "id": 117,
+   "startSec": 364.64,
+   "endSec": 366.64,
+   "text": "Go on then.",
+   "speaker": 1
+  },
+  {
+   "id": 118,
+   "startSec": 366.64,
+   "endSec": 367.64,
+   "text": "Hi.",
+   "speaker": 1
+  },
+  {
+   "id": 119,
+   "startSec": 367.64,
+   "endSec": 369.64,
+   "text": "No.",
+   "speaker": 1
+  },
+  {
+   "id": 120,
+   "startSec": 369.64,
+   "endSec": 371.64,
+   "text": "Studio C.",
+   "speaker": 1
+  },
+  {
+   "id": 121,
+   "startSec": 371.64,
+   "endSec": 372.64,
+   "text": "Thanks for that comment.",
+   "speaker": 1
+  },
+  {
+   "id": 122,
+   "startSec": 372.64,
+   "endSec": 373.64,
+   "text": "D&T.",
+   "speaker": 1
+  },
+  {
+   "id": 123,
+   "startSec": 373.64,
+   "endSec": 375.64,
+   "text": "You read your own comments.",
+   "speaker": 1
+  },
+  {
+   "id": 124,
+   "startSec": 375.64,
+   "endSec": 376.64,
+   "text": "Hi.",
+   "speaker": 1
+  },
+  {
+   "id": 125,
+   "startSec": 376.64,
+   "endSec": 377.64,
+   "text": "This is me.",
+   "speaker": 1
+  },
+  {
+   "id": 126,
+   "startSec": 377.64,
+   "endSec": 379.64,
+   "text": "We're applying to D&T.",
+   "speaker": 1
+  },
+  {
+   "id": 127,
+   "startSec": 379.64,
+   "endSec": 380.64,
+   "text": "Thanks for your comment.",
+   "speaker": 1
+  },
+  {
+   "id": 128,
+   "startSec": 380.64,
+   "endSec": 381.64,
+   "text": "D&T.",
+   "speaker": 1
+  },
+  {
+   "id": 129,
+   "startSec": 381.64,
+   "endSec": 383.64,
+   "text": "It's good to know that you also have a studio C.",
+   "speaker": 1
+  },
+  {
+   "id": 130,
+   "startSec": 383.64,
+   "endSec": 385.64,
+   "text": "There have been changes here.",
+   "speaker": 1
+  },
+  {
+   "id": 131,
+   "startSec": 385.64,
+   "endSec": 386.64,
+   "text": "Studio wise.",
+   "speaker": 1
+  },
+  {
+   "id": 132,
+   "startSec": 386.64,
+   "endSec": 389.64,
+   "text": "But I'll probably leave the details until our next meeting.",
+   "speaker": 1
+  },
+  {
+   "id": 133,
+   "startSec": 389.64,
+   "endSec": 391.64,
+   "text": "I'm glad to know you're enjoying our meetings.",
+   "speaker": 1
+  },
+  {
+   "id": 134,
+   "startSec": 391.64,
+   "endSec": 394.64,
+   "text": "We're thinking of getting together for another in September.",
+   "speaker": 1
+  },
+  {
+   "id": 135,
+   "startSec": 394.64,
+   "endSec": 396.64,
+   "text": "I do like these shows.",
+   "speaker": 1
+  },
+  {
+   "id": 136,
+   "startSec": 396.64,
+   "endSec": 397.64,
+   "text": "There.",
+   "speaker": 1
+  },
+  {
+   "id": 137,
+   "startSec": 397.64,
+   "endSec": 398.64,
+   "text": "No one's fun to do.",
+   "speaker": 1
+  },
+  {
+   "id": 138,
+   "startSec": 398.64,
+   "endSec": 399.64,
+   "text": "There's something so.",
+   "speaker": 1
+  },
+  {
+   "id": 139,
+   "startSec": 399.64,
+   "endSec": 402.64,
+   "text": "It's very nice about meeting and people in the talk.",
+   "speaker": 1
+  },
+  {
+   "id": 140,
+   "startSec": 402.64,
+   "endSec": 404.64,
+   "text": "It's every single time.",
+   "speaker": 2
+  },
+  {
+   "id": 141,
+   "startSec": 404.64,
+   "endSec": 406.64,
+   "text": "I just held those vision.",
+   "speaker": 1
+  },
+  {
+   "id": 142,
+   "startSec": 406.64,
+   "endSec": 411.64,
+   "text": "So we are all the people of the walk and pastor curve with the two 52 guys.",
+   "speaker": 1
+  },
+  {
+   "id": 143,
+   "startSec": 411.64,
+   "endSec": 412.64,
+   "text": "It's like two.",
+   "speaker": 1
+  },
+  {
+   "id": 144,
+   "startSec": 412.64,
+   "endSec": 414.64,
+   "text": "Prattling guys talking into microphone.",
+   "speaker": 1
+  },
+  {
+   "id": 145,
+   "startSec": 414.64,
+   "endSec": 415.64,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 146,
+   "startSec": 415.64,
+   "endSec": 416.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 147,
+   "startSec": 416.64,
+   "endSec": 418.64,
+   "text": "Who do these people think they are?",
+   "speaker": 1
+  },
+  {
+   "id": 148,
+   "startSec": 418.64,
+   "endSec": 420.64,
+   "text": "Exactly.",
+   "speaker": 1
+  },
+  {
+   "id": 149,
+   "startSec": 420.64,
+   "endSec": 422.64,
+   "text": "So the following day.",
+   "speaker": 1
+  },
+  {
+   "id": 150,
+   "startSec": 422.64,
+   "endSec": 425.64,
+   "text": "I read out the above page.",
+   "speaker": 1
+  },
+  {
+   "id": 151,
+   "startSec": 425.64,
+   "endSec": 428.64,
+   "text": "Which answers a lot of questions.",
+   "speaker": 1
+  },
+  {
+   "id": 152,
+   "startSec": 428.64,
+   "endSec": 435.64,
+   "text": "This is to lay the founder foundation for another show later on in the month.",
+   "speaker": 1
+  },
+  {
+   "id": 153,
+   "startSec": 436.64,
+   "endSec": 437.64,
+   "text": "And this.",
+   "speaker": 1
+  },
+  {
+   "id": 154,
+   "startSec": 437.64,
+   "endSec": 439.64,
+   "text": "They're doing changes on HPR.",
+   "speaker": 1
+  },
+  {
+   "id": 155,
+   "startSec": 439.64,
+   "endSec": 440.64,
+   "text": "It's good to know.",
+   "speaker": 1
+  },
+  {
+   "id": 156,
+   "startSec": 440.64,
+   "endSec": 446.64,
+   "text": "It's good that everybody knows what the now situation is before we move to the next.",
+   "speaker": 1
+  },
+  {
+   "id": 157,
+   "startSec": 446.64,
+   "endSec": 447.64,
+   "text": "Situation.",
+   "speaker": 1
+  },
+  {
+   "id": 158,
+   "startSec": 447.64,
+   "endSec": 449.64,
+   "text": "So that's what that was about.",
+   "speaker": 1
+  },
+  {
+   "id": 159,
+   "startSec": 449.64,
+   "endSec": 450.64,
+   "text": "Cool.",
+   "speaker": 1
+  },
+  {
+   "id": 160,
+   "startSec": 450.64,
+   "endSec": 452.64,
+   "text": "A bit boring as maybe.",
+   "speaker": 1
+  },
+  {
+   "id": 161,
+   "startSec": 452.64,
+   "endSec": 460.64,
+   "text": "It was actually interesting reading a day because when we migrated the website from AWS or from C.",
+   "speaker": 1
+  },
+  {
+   "id": 162,
+   "startSec": 460.64,
+   "endSec": 462.64,
+   "text": "I will take AWS.",
+   "speaker": 1
+  },
+  {
+   "id": 163,
+   "startSec": 462.64,
+   "endSec": 466.64,
+   "text": "In order to get they.",
+   "speaker": 1
+  },
+  {
+   "id": 164,
+   "startSec": 466.64,
+   "endSec": 471.64,
+   "text": "In order to make life easier on ourselves and we'll have thousands of files all over the place.",
+   "speaker": 1
+  },
+  {
+   "id": 165,
+   "startSec": 471.64,
+   "endSec": 474.64,
+   "text": "We put everything into one about file.",
+   "speaker": 1
+  },
+  {
+   "id": 166,
+   "startSec": 474.64,
+   "endSec": 476.64,
+   "text": "And as a result.",
+   "speaker": 1
+  },
+  {
+   "id": 167,
+   "startSec": 476.64,
+   "endSec": 480.64,
+   "text": "We link into that with anchors and as a result some of the stuff gets repeated.",
+   "speaker": 1
+  },
+  {
+   "id": 168,
+   "startSec": 480.64,
+   "endSec": 482.64,
+   "text": "So it's.",
+   "speaker": 1
+  },
+  {
+   "id": 169,
+   "startSec": 482.64,
+   "endSec": 488.64,
+   "text": "It's on my list to consolidate that as part of the website redesign so that we're not repeating ourselves.",
+   "speaker": 1
+  },
+  {
+   "id": 170,
+   "startSec": 488.64,
+   "endSec": 489.64,
+   "text": "15,000 times.",
+   "speaker": 1
+  },
+  {
+   "id": 171,
+   "startSec": 489.64,
+   "endSec": 490.64,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 172,
+   "startSec": 490.64,
+   "endSec": 491.64,
+   "text": "Yep.",
+   "speaker": 1
+  },
+  {
+   "id": 173,
+   "startSec": 491.64,
+   "endSec": 492.64,
+   "text": "Good.",
+   "speaker": 1
+  },
+  {
+   "id": 174,
+   "startSec": 492.64,
+   "endSec": 496.64,
+   "text": "I kind of get the wrong impression then as I mentioned on the show.",
+   "speaker": 1
+  },
+  {
+   "id": 175,
+   "startSec": 496.64,
+   "endSec": 498.64,
+   "text": "So.",
+   "speaker": 1
+  },
+  {
+   "id": 176,
+   "startSec": 498.64,
+   "endSec": 504.64,
+   "text": "The following day we had GNU sleep tips by Delta ray gives us an overview of the sleep",
+   "speaker": 1
+  },
+  {
+   "id": 177,
+   "startSec": 504.64,
+   "endSec": 506.64,
+   "text": "man and some of its uses.",
+   "speaker": 1
+  },
+  {
+   "id": 178,
+   "startSec": 506.64,
+   "endSec": 509.64,
+   "text": "This is of course a command line king.",
+   "speaker": 1
+  },
+  {
+   "id": 179,
+   "startSec": 509.64,
+   "endSec": 512.64,
+   "text": "Some of these are new some of these I did not knew.",
+   "speaker": 1
+  },
+  {
+   "id": 180,
+   "startSec": 512.64,
+   "endSec": 513.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 181,
+   "startSec": 513.64,
+   "endSec": 515.64,
+   "text": "I know I'm always surprised.",
+   "speaker": 1
+  },
+  {
+   "id": 182,
+   "startSec": 516.64,
+   "endSec": 521.64,
+   "text": "By these sorts of things because I learned a lot of these things in older unixers.",
+   "speaker": 1
+  },
+  {
+   "id": 183,
+   "startSec": 521.64,
+   "endSec": 523.64,
+   "text": "It's been sleep in unix forever.",
+   "speaker": 1
+  },
+  {
+   "id": 184,
+   "startSec": 523.64,
+   "endSec": 524.64,
+   "text": "I think.",
+   "speaker": 1
+  },
+  {
+   "id": 185,
+   "startSec": 524.64,
+   "endSec": 529.64,
+   "text": "But I don't know that the GNU enhancement so many cases.",
+   "speaker": 1
+  },
+  {
+   "id": 186,
+   "startSec": 529.64,
+   "endSec": 532.64,
+   "text": "I didn't know you could thought it was only seconds that it took.",
+   "speaker": 1
+  },
+  {
+   "id": 187,
+   "startSec": 532.64,
+   "endSec": 537.64,
+   "text": "But it might have bumped into the fact you can put minutes and hours and stuff in there.",
+   "speaker": 1
+  },
+  {
+   "id": 188,
+   "startSec": 537.64,
+   "endSec": 538.64,
+   "text": "But yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 189,
+   "startSec": 538.64,
+   "endSec": 540.64,
+   "text": "It's obviously an enhancement to make.",
+   "speaker": 1
+  },
+  {
+   "id": 190,
+   "startSec": 540.64,
+   "endSec": 542.64,
+   "text": "But it's a memory is a weird thing.",
+   "speaker": 1
+  },
+  {
+   "id": 191,
+   "startSec": 542.64,
+   "endSec": 545.64,
+   "text": "You remember the old stuff and not so much the new.",
+   "speaker": 1
+  },
+  {
+   "id": 192,
+   "startSec": 545.64,
+   "endSec": 550.64,
+   "text": "How you what I like about Delta ray shows is like, hey, it starts off at the sleep.",
+   "speaker": 1
+  },
+  {
+   "id": 193,
+   "startSec": 550.64,
+   "endSec": 553.64,
+   "text": "And then you got, okay, I see what he's doing there.",
+   "speaker": 1
+  },
+  {
+   "id": 194,
+   "startSec": 553.64,
+   "endSec": 558.64,
+   "text": "And then like to send notification message that he can send yourself a pop-up.",
+   "speaker": 1
+  },
+  {
+   "id": 195,
+   "startSec": 558.64,
+   "endSec": 559.64,
+   "text": "Genius.",
+   "speaker": 1
+  },
+  {
+   "id": 196,
+   "startSec": 559.64,
+   "endSec": 560.64,
+   "text": "Of course.",
+   "speaker": 1
+  },
+  {
+   "id": 197,
+   "startSec": 560.64,
+   "endSec": 562.64,
+   "text": "Why would you do that?",
+   "speaker": 1
+  },
+  {
+   "id": 198,
+   "startSec": 562.64,
+   "endSec": 563.64,
+   "text": "Oh, yes.",
+   "speaker": 1
+  },
+  {
+   "id": 199,
+   "startSec": 563.64,
+   "endSec": 564.64,
+   "text": "Oh, yes.",
+   "speaker": 1
+  },
+  {
+   "id": 200,
+   "startSec": 564.64,
+   "endSec": 565.64,
+   "text": "Oh, yes.",
+   "speaker": 1
+  },
+  {
+   "id": 201,
+   "startSec": 566.64,
+   "endSec": 571.64,
+   "text": "I've amazed nobody's responded to that with the comment.",
+   "speaker": 1
+  },
+  {
+   "id": 202,
+   "startSec": 571.64,
+   "endSec": 572.64,
+   "text": "But there you go.",
+   "speaker": 1
+  },
+  {
+   "id": 203,
+   "startSec": 572.64,
+   "endSec": 573.64,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 204,
+   "startSec": 573.64,
+   "endSec": 574.64,
+   "text": "No.",
+   "speaker": 1
+  },
+  {
+   "id": 205,
+   "startSec": 574.64,
+   "endSec": 577.64,
+   "text": "I'm sure people sort of squirrel them away.",
+   "speaker": 1
+  },
+  {
+   "id": 206,
+   "startSec": 577.64,
+   "endSec": 580.64,
+   "text": "And that's good.",
+   "speaker": 1
+  },
+  {
+   "id": 207,
+   "startSec": 580.64,
+   "endSec": 581.64,
+   "text": "But yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 208,
+   "startSec": 581.64,
+   "endSec": 584.64,
+   "text": "But it's one of those things that's like sort of all papers, isn't it?",
+   "speaker": 1
+  },
+  {
+   "id": 209,
+   "startSec": 584.64,
+   "endSec": 585.64,
+   "text": "It's a thing.",
+   "speaker": 1
+  },
+  {
+   "id": 210,
+   "startSec": 585.64,
+   "endSec": 586.64,
+   "text": "You say, well, that's nice.",
+   "speaker": 1
+  },
+  {
+   "id": 211,
+   "startSec": 586.64,
+   "endSec": 590.64,
+   "text": "But you don't compliment anybody on it or take a picture of it or something.",
+   "speaker": 1
+  },
+  {
+   "id": 212,
+   "startSec": 590.64,
+   "endSec": 591.64,
+   "text": "I don't know.",
+   "speaker": 1
+  },
+  {
+   "id": 213,
+   "startSec": 591.64,
+   "endSec": 592.64,
+   "text": "I'm sorry.",
+   "speaker": 1
+  },
+  {
+   "id": 214,
+   "startSec": 592.64,
+   "endSec": 593.64,
+   "text": "Go on.",
+   "speaker": 1
+  },
+  {
+   "id": 215,
+   "startSec": 593.64,
+   "endSec": 594.64,
+   "text": "Sorry.",
+   "speaker": 1
+  },
+  {
+   "id": 216,
+   "startSec": 594.64,
+   "endSec": 595.64,
+   "text": "I'm sorry.",
+   "speaker": 1
+  },
+  {
+   "id": 217,
+   "startSec": 595.64,
+   "endSec": 596.64,
+   "text": "I'm in trouble to do.",
+   "speaker": 1
+  },
+  {
+   "id": 218,
+   "startSec": 596.64,
+   "endSec": 599.64,
+   "text": "I'm just going to say, I meant to respond to this.",
+   "speaker": 1
+  },
+  {
+   "id": 219,
+   "startSec": 599.64,
+   "endSec": 601.64,
+   "text": "I keep saying this every month.",
+   "speaker": 1
+  },
+  {
+   "id": 220,
+   "startSec": 601.64,
+   "endSec": 602.64,
+   "text": "I didn't.",
+   "speaker": 1
+  },
+  {
+   "id": 221,
+   "startSec": 602.64,
+   "endSec": 603.64,
+   "text": "Yeah.",
+   "speaker": 2
+  },
+  {
+   "id": 222,
+   "startSec": 603.64,
+   "endSec": 604.64,
+   "text": "It's really good.",
+   "speaker": 1
+  },
+  {
+   "id": 223,
+   "startSec": 604.64,
+   "endSec": 605.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 224,
+   "startSec": 605.64,
+   "endSec": 606.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 225,
+   "startSec": 606.64,
+   "endSec": 608.64,
+   "text": "I should do that as well.",
+   "speaker": 1
+  },
+  {
+   "id": 226,
+   "startSec": 608.64,
+   "endSec": 612.64,
+   "text": "And then just rid of my thoughts on the day.",
+   "speaker": 1
+  },
+  {
+   "id": 227,
+   "startSec": 612.64,
+   "endSec": 613.64,
+   "text": "And.",
+   "speaker": 1
+  },
+  {
+   "id": 228,
+   "startSec": 613.64,
+   "endSec": 618.64,
+   "text": "But we must remember as well that they're during the summer period in the northern hemisphere.",
+   "speaker": 1
+  },
+  {
+   "id": 229,
+   "startSec": 618.64,
+   "endSec": 620.64,
+   "text": "There's a lot less commenting going on.",
+   "speaker": 1
+  },
+  {
+   "id": 230,
+   "startSec": 620.64,
+   "endSec": 623.64,
+   "text": "So this was less people.",
+   "speaker": 1
+  },
+  {
+   "id": 231,
+   "startSec": 624.64,
+   "endSec": 627.64,
+   "text": "People around just people and vacations and stuff.",
+   "speaker": 1
+  },
+  {
+   "id": 232,
+   "startSec": 627.64,
+   "endSec": 630.64,
+   "text": "So you can expect comments.",
+   "speaker": 1
+  },
+  {
+   "id": 233,
+   "startSec": 630.64,
+   "endSec": 633.64,
+   "text": "Next month for these shows.",
+   "speaker": 1
+  },
+  {
+   "id": 234,
+   "startSec": 633.64,
+   "endSec": 639.64,
+   "text": "Can we discuss his badger 2040 from the pie mori thing.",
+   "speaker": 1
+  },
+  {
+   "id": 235,
+   "startSec": 639.64,
+   "endSec": 641.64,
+   "text": "And I have.",
+   "speaker": 1
+  },
+  {
+   "id": 236,
+   "startSec": 641.64,
+   "endSec": 644.64,
+   "text": "Bookmark this 17 times in order to buy us.",
+   "speaker": 1
+  },
+  {
+   "id": 237,
+   "startSec": 644.64,
+   "endSec": 646.64,
+   "text": "But I keep forgetting to do so.",
+   "speaker": 1
+  },
+  {
+   "id": 238,
+   "startSec": 646.64,
+   "endSec": 647.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 239,
+   "startSec": 647.64,
+   "endSec": 648.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 240,
+   "startSec": 648.64,
+   "endSec": 649.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 241,
+   "startSec": 649.64,
+   "endSec": 650.64,
+   "text": "I do actually have one.",
+   "speaker": 1
+  },
+  {
+   "id": 242,
+   "startSec": 650.64,
+   "endSec": 652.64,
+   "text": "It's just a go in the first.",
+   "speaker": 1
+  },
+  {
+   "id": 243,
+   "startSec": 652.64,
+   "endSec": 655.64,
+   "text": "And I've not done anything with it.",
+   "speaker": 1
+  },
+  {
+   "id": 244,
+   "startSec": 655.64,
+   "endSec": 656.64,
+   "text": "Yes.",
+   "speaker": 1
+  },
+  {
+   "id": 245,
+   "startSec": 656.64,
+   "endSec": 658.64,
+   "text": "It's definitely on the to do list.",
+   "speaker": 1
+  },
+  {
+   "id": 246,
+   "startSec": 658.64,
+   "endSec": 662.64,
+   "text": "I expect it to be there for all competitive.",
+   "speaker": 1
+  },
+  {
+   "id": 247,
+   "startSec": 662.64,
+   "endSec": 663.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 248,
+   "startSec": 663.64,
+   "endSec": 664.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 249,
+   "startSec": 664.64,
+   "endSec": 665.64,
+   "text": "Yes.",
+   "speaker": 1
+  },
+  {
+   "id": 250,
+   "startSec": 665.64,
+   "endSec": 666.64,
+   "text": "I should buy another one.",
+   "speaker": 1
+  },
+  {
+   "id": 251,
+   "startSec": 666.64,
+   "endSec": 667.64,
+   "text": "And where the front and back.",
+   "speaker": 1
+  },
+  {
+   "id": 252,
+   "startSec": 667.64,
+   "endSec": 668.64,
+   "text": "Thank you.",
+   "speaker": 1
+  },
+  {
+   "id": 253,
+   "startSec": 668.64,
+   "endSec": 671.64,
+   "text": "Just in case people don't know.",
+   "speaker": 1
+  },
+  {
+   "id": 254,
+   "startSec": 671.64,
+   "endSec": 673.64,
+   "text": "It's a.",
+   "speaker": 1
+  },
+  {
+   "id": 255,
+   "startSec": 673.64,
+   "endSec": 674.64,
+   "text": "I don't know.",
+   "speaker": 1
+  },
+  {
+   "id": 256,
+   "startSec": 674.64,
+   "endSec": 676.64,
+   "text": "I didn't display.",
+   "speaker": 1
+  },
+  {
+   "id": 257,
+   "startSec": 676.64,
+   "endSec": 679.64,
+   "text": "It's in the form of the badge.",
+   "speaker": 1
+  },
+  {
+   "id": 258,
+   "startSec": 679.64,
+   "endSec": 680.64,
+   "text": "I don't know.",
+   "speaker": 1
+  },
+  {
+   "id": 259,
+   "startSec": 680.64,
+   "endSec": 681.64,
+   "text": "Kind of cool.",
+   "speaker": 1
+  },
+  {
+   "id": 260,
+   "startSec": 681.64,
+   "endSec": 682.64,
+   "text": "Yes.",
+   "speaker": 1
+  },
+  {
+   "id": 261,
+   "startSec": 682.64,
+   "endSec": 684.64,
+   "text": "So programmable in.",
+   "speaker": 1
+  },
+  {
+   "id": 262,
+   "startSec": 684.64,
+   "endSec": 685.64,
+   "text": "In Python.",
+   "speaker": 1
+  },
+  {
+   "id": 263,
+   "startSec": 685.64,
+   "endSec": 686.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 264,
+   "startSec": 686.64,
+   "endSec": 687.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 265,
+   "startSec": 687.64,
+   "endSec": 688.64,
+   "text": "Cool.",
+   "speaker": 1
+  },
+  {
+   "id": 266,
+   "startSec": 688.64,
+   "endSec": 689.64,
+   "text": "Yes.",
+   "speaker": 1
+  },
+  {
+   "id": 267,
+   "startSec": 689.64,
+   "endSec": 690.64,
+   "text": "The following day.",
+   "speaker": 1
+  },
+  {
+   "id": 268,
+   "startSec": 690.64,
+   "endSec": 693.64,
+   "text": "First show from Truman Coaster.",
+   "speaker": 1
+  },
+  {
+   "id": 269,
+   "startSec": 693.64,
+   "endSec": 694.64,
+   "text": "Excellent.",
+   "speaker": 1
+  },
+  {
+   "id": 270,
+   "startSec": 694.64,
+   "endSec": 695.64,
+   "text": "Handle.",
+   "speaker": 1
+  },
+  {
+   "id": 271,
+   "startSec": 695.64,
+   "endSec": 698.64,
+   "text": "With an excellent interview.",
+   "speaker": 1
+  },
+  {
+   "id": 272,
+   "startSec": 698.64,
+   "endSec": 702.64,
+   "text": "Krita talking to the author of.",
+   "speaker": 1
+  },
+  {
+   "id": 273,
+   "startSec": 702.64,
+   "endSec": 704.64,
+   "text": "Krita.",
+   "speaker": 1
+  },
+  {
+   "id": 274,
+   "startSec": 704.64,
+   "endSec": 705.64,
+   "text": "And.",
+   "speaker": 1
+  },
+  {
+   "id": 275,
+   "startSec": 705.64,
+   "endSec": 707.64,
+   "text": "Absolutely fantastic.",
+   "speaker": 1
+  },
+  {
+   "id": 276,
+   "startSec": 707.64,
+   "endSec": 708.64,
+   "text": "Absolutely fantastic.",
+   "speaker": 1
+  },
+  {
+   "id": 277,
+   "startSec": 708.64,
+   "endSec": 709.64,
+   "text": "Yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 278,
+   "startSec": 709.64,
+   "endSec": 710.64,
+   "text": "It's a very impressive piece of.",
+   "speaker": 1
+  },
+  {
+   "id": 279,
+   "startSec": 710.64,
+   "endSec": 711.64,
+   "text": "This whole trip.",
+   "speaker": 1
+  },
+  {
+   "id": 280,
+   "startSec": 711.64,
+   "endSec": 715.64,
+   "text": "I often haven't done anything of an artistic nature with it.",
+   "speaker": 1
+  },
+  {
+   "id": 281,
+   "startSec": 715.64,
+   "endSec": 721.64,
+   "text": "It's great for adding captions and generally filling around with images.",
+   "speaker": 1
+  },
+  {
+   "id": 282,
+   "startSec": 721.64,
+   "endSec": 722.64,
+   "text": "And that type of thing.",
+   "speaker": 1
+  },
+  {
+   "id": 283,
+   "startSec": 722.64,
+   "endSec": 723.64,
+   "text": "It's nice and approachable.",
+   "speaker": 1
+  },
+  {
+   "id": 284,
+   "startSec": 723.64,
+   "endSec": 724.64,
+   "text": "But yeah.",
+   "speaker": 1
+  },
+  {
+   "id": 285,
+   "startSec": 724.64,
+   "endSec": 725.64,
+   "text": "It's a good show.",
+   "speaker": 1
+  },
+  {
+   "id": 286,
+   "startSec": 725.64,
+   "endSec": 726.64,
+   "text": "Enjoy that.",
+   "speaker": 1
+  },
+  {
+   "id": 287,
+   "startSec": 726.64,
+   "endSec": 727.64,
+   "text": "Again.",
+   "speaker": 1
+  },
+  {
+   "id": 288,
+   "startSec": 727.64,
+   "endSec": 728.64,
+   "text": "My.",
+   "speaker": 1
+  },
+  {
+   "id": 289,
+   "startSec": 728.64,
+   "endSec": 729.64,
+   "text": "My.",
+   "speaker": 1
+  },
+  {
+   "id": 290,
+   "startSec": 729.64,
+   "endSec": 731.64,
+   "text": "I don't think it up.",
+   "speaker": 1
+  },
+  {
+   "id": 291,
+   "startSec": 731.64,
+   "endSec": 732.64,
+   "text": "So it can go past.",
+   "speaker": 1
+  },
+  {
+   "id": 292,
+   "startSec": 732.64,
+   "endSec": 733.64,
+   "text": "Love me referencing.",
+   "speaker": 1
+  },
+  {
+   "id": 293,
+   "startSec": 733.64,
+   "endSec": 735.64,
+   "text": "Pepper and carrots.",
+   "speaker": 1
+  },
+  {
+   "id": 294,
+   "startSec": 735.64,
+   "endSec": 736.64,
+   "text": "They.",
+   "speaker": 1
+  },
+  {
+   "id": 295,
+   "startSec": 736.64,
+   "endSec": 738.64,
+   "text": "He David Roy uses.",
+   "speaker": 1
+  },
+  {
+   "id": 296,
+   "startSec": 738.64,
+   "endSec": 741.64,
+   "text": "Created to do all his.",
+   "speaker": 1
+  },
+  {
+   "id": 297,
+   "startSec": 741.64,
+   "endSec": 742.64,
+   "text": "Comic strips.",
+   "speaker": 1
+  },
+  {
+   "id": 298,
+   "startSec": 742.64,
+   "endSec": 743.64,
+   "text": "So.",
+   "speaker": 1
+  },
+  {
+   "id": 299,
+   "startSec": 743.64,
+   "endSec": 744.64,
+   "text": "Excellent use software.",
+   "speaker": 1
+  },
+  {
+   "id": 300,
+   "startSec": 744.64,
+   "endSec": 745.64,
+   "text": "It was won.",
+   "speaker": 1
+  },
+  {
+   "id": 301,
+   "startSec": 745.64,
+   "endSec": 746.64,
+   "text": "Comment.",
+   "speaker": 1
+  },
+  {
+   "id": 302,
+   "startSec": 746.64,
+   "endSec": 747.64,
+   "text": "Left.",
+   "speaker": 1
+  },
+  {
+   "id": 303,
+   "startSec": 747.64,
+   "endSec": 748.64,
+   "text": "Do you want to do that?",
+   "speaker": 1
+  },
+  {
+   "id": 304,
+   "startSec": 748.64,
+   "endSec": 749.64,
+   "text": "Yes.",
+   "speaker": 1
+  },
+  {
+   "id": 305,
+   "startSec": 749.64,
+   "endSec": 750.64,
+   "text": "Kevin O'Brien says.",
+   "speaker": 1
+  },
+  {
+   "id": 306,
+   "startSec": 750.64,
+   "endSec": 751.64,
+   "text": "I love the show.",
+   "speaker": 1
+  },
+  {
+   "id": 307,
+   "startSec": 751.64,
+   "endSec": 753.64,
+   "text": "It's great hearing more about Krita.",
+   "speaker": 1
+  },
+  {
+   "id": 308,
+   "startSec": 753.64,
+   "endSec": 755.64,
+   "text": "It's one of the pancakes I'd like to use.",
+   "speaker": 1
+  },
+  {
+   "id": 309,
+   "startSec": 755.64,
+   "endSec": 757.64,
+   "text": "Benjamin wants to see what you can do with it.",
+   "speaker": 1
+  },
+  {
+   "id": 310,
+   "startSec": 757.64,
+   "endSec": 758.64,
+   "text": "Check out the web comic ever.",
+   "speaker": 1
+  },
+  {
+   "id": 311,
+   "startSec": 758.64,
+   "endSec": 760.64,
+   "text": "And current by David Reeve.",
+   "speaker": 1
+  },
+  {
+   "id": 312,
+   "startSec": 760.64,
+   "endSec": 761.64,
+   "text": "I should have shut up.",
+   "speaker": 1
+  },
+  {
+   "id": 313,
+   "startSec": 761.64,
+   "endSec": 762.64,
+   "text": "I'm not.",
+   "speaker": 1
+  },
+  {
+   "id": 314,
+   "startSec": 763.64,
+   "endSec": 764.64,
+   "text": "And not if was stunned.",
+   "speaker": 1
+  },
+  {
+   "id": 315,
+   "startSec": 764.64,
+   "endSec": 773.64,
+   "text": "They did achtzrophy wash Alexander's introduction Kevin is an",
+   "speaker": 1
+  },
+  {
+   "id": 316,
+   "startSec": 773.64,
+   "endSec": 778.64,
+   "text": "Alexander introduced himself to the HBO music and",
+   "speaker": 1
+  },
+  {
+   "id": 317,
+   "startSec": 778.64,
+   "endSec": 780.64,
+   "text": "this was a brilliant job it really did that.",
+   "speaker": 1
+  },
+  {
+   "id": 318,
+   "startSec": 780.64,
+   "endSec": 784.64,
+   "text": "Who says you have to be a great beard in order to be on HBO.",
+   "speaker": 1
+  },
+  {
+   "id": 319,
+   "startSec": 784.64,
+   "endSec": 787.64,
+   "text": "And I think it did amazingly well actually.",
+   "speaker": 1
+  },
+  {
+   "id": 320,
+   "startSec": 787.64,
+   "endSec": 794.12,
+   "text": "There was some mention of being nervous as as one has a right to be here because I didn't it didn't come across",
+   "speaker": 1
+  },
+  {
+   "id": 321,
+   "startSec": 794.12,
+   "endSec": 797.88,
+   "text": "I a sound a very confident you know, maybe you know",
+   "speaker": 1
+  },
+  {
+   "id": 322,
+   "startSec": 798.68,
+   "endSec": 802.52,
+   "text": "I was really hard to tell he was nervous. I think he did it did a brilliant job",
+   "speaker": 1
+  },
+  {
+   "id": 323,
+   "startSec": 803.32,
+   "endSec": 807.48,
+   "text": "British up another the accolades come following in from Henry Kerman",
+   "speaker": 1
+  },
+  {
+   "id": 324,
+   "startSec": 808.04,
+   "endSec": 812.52,
+   "text": "Thank you for their first show thanks Alexander for your first episode. I had to look up",
+   "speaker": 1
+  },
+  {
+   "id": 325,
+   "startSec": 813.4,
+   "endSec": 820.28,
+   "text": "up in the map. I've never been further north than the border area. That is the new castle region several times",
+   "speaker": 1
+  },
+  {
+   "id": 326,
+   "startSec": 820.28,
+   "endSec": 828.52,
+   "text": "and trips along the wall. That's habitual. But your place is far up in the north. Interesting",
+   "speaker": 1
+  },
+  {
+   "id": 327,
+   "startSec": 828.52,
+   "endSec": 835.56,
+   "text": "listening to your experience and interests. And a comment from Dave Lee, the love bug",
+   "speaker": 1
+  },
+  {
+   "id": 328,
+   "startSec": 836.52,
+   "endSec": 842.52,
+   "text": "Congratulations on your first show. Fantastic to hear you on it. And as your own correspondent,",
+   "speaker": 1
+  },
+  {
+   "id": 329,
+   "startSec": 842.52,
+   "endSec": 848.84,
+   "text": "I look forward to your next one. And Peter Paterson saw us spiders as excellent introduction.",
+   "speaker": 1
+  },
+  {
+   "id": 330,
+   "startSec": 848.84,
+   "endSec": 854.36,
+   "text": "Greetings Alexander. Excellent introduction indeed. I get the strong impression your gamer.",
+   "speaker": 1
+  },
+  {
+   "id": 331,
+   "startSec": 855.08,
+   "endSec": 862.6,
+   "text": "Arena has been sent this link from her own listening pleasure. So we need to get them on here to do",
+   "speaker": 2
+  },
+  {
+   "id": 332,
+   "startSec": 862.92,
+   "endSec": 870.28,
+   "text": "they to do the game review shows that one in join us are at least some of the men in the",
+   "speaker": 1
+  },
+  {
+   "id": 333,
+   "startSec": 870.28,
+   "endSec": 878.04,
+   "text": "ended the men. Yeah nice though. So the following day we had the New Year's E-show",
+   "speaker": 1
+  },
+  {
+   "id": 334,
+   "startSec": 879.56,
+   "endSec": 886.52,
+   "text": "episode 3. And this one a lot of stuff Autism, Battle of Poland,",
+   "speaker": 1
+  },
+  {
+   "id": 335,
+   "startSec": 887.0,
+   "endSec": 896.6,
+   "text": "Blood Pressure, various different medicines, T-Mobile, GLS, Tring, Free BST,",
+   "speaker": 1
+  },
+  {
+   "id": 336,
+   "startSec": 896.6,
+   "endSec": 905.32,
+   "text": "Thinkpads, Amiga's Android and Levi Jeans. So you get the idea of the type of conversations that",
+   "speaker": 1
+  },
+  {
+   "id": 337,
+   "startSec": 905.32,
+   "endSec": 910.92,
+   "text": "goes on on at 3-hour show. Yes, yes, yes. I'm still catching up on my friends. I don't know",
+   "speaker": 1
+  },
+  {
+   "id": 338,
+   "startSec": 910.92,
+   "endSec": 917.8,
+   "text": "whether this one yet. It's a lot of listening in these U.S. E-shows. And excellent show notes.",
+   "speaker": 1
+  },
+  {
+   "id": 339,
+   "startSec": 918.52,
+   "endSec": 925.64,
+   "text": "I'd come through the links of the show notes before I listen to the shows in order to have",
+   "speaker": 1
+  },
+  {
+   "id": 340,
+   "startSec": 925.64,
+   "endSec": 930.2,
+   "text": "an idea of what to go and follow on a link from Levi Jeans. And the next thing you're doing",
+   "speaker": 1
+  },
+  {
+   "id": 341,
+   "startSec": 931.4,
+   "endSec": 938.44,
+   "text": "some weird hardware from 60 years ago. And then you jump back and forth. It's just such an",
+   "speaker": 1
+  },
+  {
+   "id": 342,
+   "startSec": 938.44,
+   "endSec": 944.76,
+   "text": "eclectic mix of stuff. It's very interesting. Yeah, yeah. Oh yes, a lot of hard work's gone into",
+   "speaker": 1
+  },
+  {
+   "id": 343,
+   "startSec": 944.76,
+   "endSec": 952.92,
+   "text": "the lighting all this stuff. It's brilliant. So the following day, episode 4160 was past keys.",
+   "speaker": 1
+  },
+  {
+   "id": 344,
+   "startSec": 952.92,
+   "endSec": 959.16,
+   "text": "And this is a hookah looking at past keys and their impact on security. This one,",
+   "speaker": 1
+  },
+  {
+   "id": 345,
+   "startSec": 959.88,
+   "endSec": 969.56,
+   "text": "and I found very, very enlightening and very, very useful actually. On the topic that's,",
+   "speaker": 1
+  },
+  {
+   "id": 346,
+   "startSec": 969.56,
+   "endSec": 976.28,
+   "text": "I haven't actually spent a lot of time even considering or thinking about so. Yeah, same here.",
+   "speaker": 1
+  },
+  {
+   "id": 347,
+   "startSec": 976.28,
+   "endSec": 981.24,
+   "text": "I knew the term and I'd heard reference over, but I hadn't really looked it up at all. So it was",
+   "speaker": 1
+  },
+  {
+   "id": 348,
+   "startSec": 981.24,
+   "endSec": 988.76,
+   "text": "really useful to get an introduction like this in lots of links to follow excellent. And as a result",
+   "speaker": 1
+  },
+  {
+   "id": 349,
+   "startSec": 988.76,
+   "endSec": 996.04,
+   "text": "of this, I've seen some scary stuff gone past about past keys and have been more. Otherwise,",
+   "speaker": 1
+  },
+  {
+   "id": 350,
+   "startSec": 996.04,
+   "endSec": 1003.96,
+   "text": "I would have just let them go not worrying too much, but yeah, it's good good stuff. Yeah,",
+   "speaker": 1
+  },
+  {
+   "id": 351,
+   "startSec": 1003.96,
+   "endSec": 1010.84,
+   "text": "being alerted to these things is quite helpful thing isn't it? So building a retro game",
+   "speaker": 1
+  },
+  {
+   "id": 352,
+   "startSec": 1010.84,
+   "endSec": 1016.92,
+   "text": "console with Raspberry Pi, Kevin was talking about the experience in doing so. And",
+   "speaker": 1
+  },
+  {
+   "id": 353,
+   "startSec": 1017.88,
+   "endSec": 1026.84,
+   "text": "total price was 151 year pounds. And it's, yeah, it looks, but it's for all the world like a retro",
+   "speaker": 1
+  },
+  {
+   "id": 354,
+   "startSec": 1026.84,
+   "endSec": 1036.04,
+   "text": "gaming console actually. Yeah, it, it, uh, does sound quite good. It's a great, great subject.",
+   "speaker": 1
+  },
+  {
+   "id": 355,
+   "startSec": 1036.04,
+   "endSec": 1041.56,
+   "text": "And it's, uh, it's quite an interesting thing to build actually. It looks really, really good.",
+   "speaker": 1
+  },
+  {
+   "id": 356,
+   "startSec": 1042.52,
+   "endSec": 1049.08,
+   "text": "And it would have been better with the Raspberry Pi 5, he says. Yeah, and a 4. Okay, excellent show",
+   "speaker": 1
+  },
+  {
+   "id": 357,
+   "startSec": 1049.08,
+   "endSec": 1058.04,
+   "text": "and good review all in all. So moving on, the HPR, uh, music project, the walking tune from",
+   "speaker": 1
+  },
+  {
+   "id": 358,
+   "startSec": 1058.2,
+   "endSec": 1071.48,
+   "text": "Appleball. I have new way and go, bro. I have a lot from Appleball. Yeah, absolutely,",
+   "speaker": 1
+  },
+  {
+   "id": 359,
+   "startSec": 1071.48,
+   "endSec": 1078.68,
+   "text": "definitely, right, absolutely. So yes, my Swedish, my Swedish knowledge is about zero.",
+   "speaker": 1
+  },
+  {
+   "id": 360,
+   "startSec": 1079.48,
+   "endSec": 1086.92,
+   "text": "Falky says for those a little bit confounded by friends rumbling of the notes.",
+   "speaker": 1
+  },
+  {
+   "id": 361,
+   "startSec": 1086.92,
+   "endSec": 1093.0,
+   "text": "There is a place on the net where you can find the notes and it's a folk web.se music",
+   "speaker": 1
+  },
+  {
+   "id": 362,
+   "startSec": 1093.72,
+   "endSec": 1103.08,
+   "text": "forward slash eight is. It has a little bit more ornaments than inversion thus are used for playing,",
+   "speaker": 1
+  },
+  {
+   "id": 363,
+   "startSec": 1103.08,
+   "endSec": 1108.2,
+   "text": "which you will get to hang about as Fred said. There's no definitive version in traditional music.",
+   "speaker": 2
+  },
+  {
+   "id": 364,
+   "startSec": 1108.76,
+   "endSec": 1113.72,
+   "text": "I hope next time there will speak with me before posting something so information like this",
+   "speaker": 1
+  },
+  {
+   "id": 365,
+   "startSec": 1113.72,
+   "endSec": 1120.12,
+   "text": "could be put directly into the show. That's what we have the comments. But you could do Falky",
+   "speaker": 2
+  },
+  {
+   "id": 366,
+   "startSec": 1120.12,
+   "endSec": 1128.44,
+   "text": "do a collaborative show with Fred. Yeah, yeah, it's quite good. And join this. It's an",
+   "speaker": 2
+  },
+  {
+   "id": 367,
+   "startSec": 1128.44,
+   "endSec": 1136.6,
+   "text": "interesting tune. It's sort of a classical, classic sort of old fashion folk tune type of thing.",
+   "speaker": 2
+  },
+  {
+   "id": 368,
+   "startSec": 1136.6,
+   "endSec": 1142.52,
+   "text": "It's got a lot to say for it. It's similar to some Scottish music and Irish music. And so",
+   "speaker": 2
+  },
+  {
+   "id": 369,
+   "startSec": 1142.52,
+   "endSec": 1149.64,
+   "text": "for that. Yeah, it's similar in words. Yeah, cool. The next day, reintroduce my self while",
+   "speaker": 1
+  },
+  {
+   "id": 370,
+   "startSec": 1149.64,
+   "endSec": 1160.68,
+   "text": "discussing sambha and tiny computers. This is Al and yeah, got a things center M700",
+   "speaker": 2
+  },
+  {
+   "id": 371,
+   "startSec": 1160.68,
+   "endSec": 1173.08,
+   "text": "teeny from eBay and built a little bit of that didn't you guess? I would talk about things",
+   "speaker": 2
+  },
+  {
+   "id": 372,
+   "startSec": 1173.08,
+   "endSec": 1179.24,
+   "text": "center many, your orders suddenly come off. Okay. How do you thoughts on the show?",
+   "speaker": 1
+  },
+  {
+   "id": 373,
+   "startSec": 1180.12,
+   "endSec": 1188.44,
+   "text": "Yeah, it's interesting. The the sambha thing was interesting. I'm not tried it. I",
+   "speaker": 2
+  },
+  {
+   "id": 374,
+   "startSec": 1188.44,
+   "endSec": 1193.96,
+   "text": "saw never needed sambha. But yeah, the cheap computer point was was interesting too,",
+   "speaker": 2
+  },
+  {
+   "id": 375,
+   "startSec": 1193.96,
+   "endSec": 1199.56,
+   "text": "because there's a lot of things out there that you could grab and turn into",
+   "speaker": 2
+  },
+  {
+   "id": 376,
+   "startSec": 1200.52,
+   "endSec": 1206.84,
+   "text": "super stuff that you could turn something useful. And it's good to hear some some actual",
+   "speaker": 2
+  },
+  {
+   "id": 377,
+   "startSec": 1206.84,
+   "endSec": 1214.12,
+   "text": "experiences in that area. So yeah, very good. I'm reading this one with interest, actually,",
+   "speaker": 2
+  },
+  {
+   "id": 378,
+   "startSec": 1214.12,
+   "endSec": 1221.4,
+   "text": "because I'm thinking of doing something senior. But yeah, I'm just sure I'm having as I have",
+   "speaker": 2
+  },
+  {
+   "id": 379,
+   "startSec": 1221.4,
+   "endSec": 1226.52,
+   "text": "so many little raspberry parties now that together there are running doing several tasks. I",
+   "speaker": 2
+  },
+  {
+   "id": 380,
+   "startSec": 1226.52,
+   "endSec": 1232.04,
+   "text": "imagine my power consumption will be a lot less if I had a smaller and PC and just",
+   "speaker": 2
+  },
+  {
+   "id": 381,
+   "startSec": 1232.04,
+   "endSec": 1240.52,
+   "text": "consolidate everything else. Yeah, but proxmox on it as our has done and yeah, that sounds good.",
+   "speaker": 2
+  },
+  {
+   "id": 382,
+   "startSec": 1241.56,
+   "endSec": 1250.2,
+   "text": "If somebody somebody could do a show on proxmox ideally, the licensing aspect of it and",
+   "speaker": 2
+  },
+  {
+   "id": 383,
+   "startSec": 1251.16,
+   "endSec": 1256.36,
+   "text": "why you would want to use it, et cetera, et cetera, et cetera. But concerns me a little bit as",
+   "speaker": 2
+  },
+  {
+   "id": 384,
+   "startSec": 1256.36,
+   "endSec": 1264.28,
+   "text": "they is they open core nature of it. So yeah, I don't know that much about it. I just know",
+   "speaker": 2
+  },
+  {
+   "id": 385,
+   "startSec": 1264.28,
+   "endSec": 1271.0,
+   "text": "that it's there and people do use it for sort of lab project type things from a lot of",
+   "speaker": 2
+  },
+  {
+   "id": 386,
+   "startSec": 1271.0,
+   "endSec": 1279.0,
+   "text": "services. So yeah, how would be interested in that too? So the following day, we had Lee with postgraduate",
+   "speaker": 1
+  },
+  {
+   "id": 387,
+   "startSec": 1279.0,
+   "endSec": 1287.8,
+   "text": "computing in the open university. And wow, this is tough. Tuff-Col, Tuff-Col. Yeah, that was my question.",
+   "speaker": 2
+  },
+  {
+   "id": 388,
+   "startSec": 1288.6,
+   "endSec": 1295.48,
+   "text": "Absolutely, absolutely. Yeah, I don't know much about MSC in computer science. My son did",
+   "speaker": 2
+  },
+  {
+   "id": 389,
+   "startSec": 1295.48,
+   "endSec": 1302.68,
+   "text": "one, but he was specializing in AI stuff. Yeah, I thought it was really well explained and",
+   "speaker": 2
+  },
+  {
+   "id": 390,
+   "startSec": 1302.68,
+   "endSec": 1307.8,
+   "text": "module was taken towards the degree, sounded a bit challenging, actually. I wouldn't want to do it.",
+   "speaker": 2
+  },
+  {
+   "id": 391,
+   "startSec": 1309.32,
+   "endSec": 1316.28,
+   "text": "Yeah, but good excellent to hear it and have some idea of the open university and what it's",
+   "speaker": 2
+  },
+  {
+   "id": 392,
+   "startSec": 1316.28,
+   "endSec": 1323.4,
+   "text": "like to be a student. They know it's quite an insight. I don't know how many people know a lot about",
+   "speaker": 2
+  },
+  {
+   "id": 393,
+   "startSec": 1323.4,
+   "endSec": 1329.72,
+   "text": "the university these days. It's sort of not quite as visible as it used to be back in the day.",
+   "speaker": 2
+  },
+  {
+   "id": 394,
+   "startSec": 1329.72,
+   "endSec": 1339.56,
+   "text": "We'd see all the lectures on the telling. Yeah, very good. A circle of moss, where I interview",
+   "speaker": 1
+  },
+  {
+   "id": 395,
+   "startSec": 1339.56,
+   "endSec": 1347.48,
+   "text": "moss bliss the bird and the podcast. It's just good. It's a very good actually. Yeah, it's interesting",
+   "speaker": 2
+  },
+  {
+   "id": 396,
+   "startSec": 1347.48,
+   "endSec": 1355.0,
+   "text": "he moss's experience and all this sort of stuff and his performing experience as well. He's quite",
+   "speaker": 2
+  },
+  {
+   "id": 397,
+   "startSec": 1355.56,
+   "endSec": 1362.84,
+   "text": "many facets in the video. Very, very interesting. We recorded a twice because I just want",
+   "speaker": 2
+  },
+  {
+   "id": 398,
+   "startSec": 1362.84,
+   "endSec": 1372.2,
+   "text": "absolute a mess the first time. Anyway, praise as wonderful discussion. Great to hear from",
+   "speaker": 2
+  },
+  {
+   "id": 399,
+   "startSec": 1372.2,
+   "endSec": 1378.2,
+   "text": "some of the else in East Tennessee. So many people associate Tennessee with Nashville, a lot of",
+   "speaker": 2
+  },
+  {
+   "id": 400,
+   "startSec": 1378.2,
+   "endSec": 1383.32,
+   "text": "reason we have a completely different environment on the other side of the Cumberland Plotto. That's",
+   "speaker": 2
+  },
+  {
+   "id": 401,
+   "startSec": 1384.2,
+   "endSec": 1389.48,
+   "text": "environmentally socially politically and more already poking around bar camp to hear more of",
+   "speaker": 2
+  },
+  {
+   "id": 402,
+   "startSec": 1389.48,
+   "endSec": 1397.88,
+   "text": "moss music. Thank you, moss bliss. I can call it a welcome train. Cool. I see on my future",
+   "speaker": 1
+  },
+  {
+   "id": 403,
+   "startSec": 1397.96,
+   "endSec": 1407.8,
+   "text": "a a a a moss bliss and a straight studio sea. But we're sitting in some car park so we're",
+   "speaker": 2
+  },
+  {
+   "id": 404,
+   "startSec": 1407.8,
+   "endSec": 1414.28,
+   "text": "recording ourselves. I hope we haven't said a trend there. What could possibly go wrong?",
+   "speaker": 2
+  },
+  {
+   "id": 405,
+   "startSec": 1417.0,
+   "endSec": 1424.44,
+   "text": "So the next day we add everybody organized software freedom day by troller coaster and it is essentially",
+   "speaker": 1
+  },
+  {
+   "id": 406,
+   "startSec": 1424.44,
+   "endSec": 1432.92,
+   "text": "called action to do this. We've had a few people on in the past doing software freedom day work.",
+   "speaker": 1
+  },
+  {
+   "id": 407,
+   "startSec": 1432.92,
+   "endSec": 1441.24,
+   "text": "I think a lot of this, you know, meet ups and stuff. Dial out during COVID and it was already winding",
+   "speaker": 1
+  },
+  {
+   "id": 408,
+   "startSec": 1441.24,
+   "endSec": 1448.84,
+   "text": "down a little bit because the old guard was standing there and then COVID relay just ruined it",
+   "speaker": 1
+  },
+  {
+   "id": 409,
+   "startSec": 1448.84,
+   "endSec": 1456.2,
+   "text": "for a while. You need to get all of our bots and meet up again. They are quite important",
+   "speaker": 1
+  },
+  {
+   "id": 410,
+   "startSec": 1456.2,
+   "endSec": 1462.68,
+   "text": "things to do, I think. I rather miss the Edinburgh and it's user group that I used to go to",
+   "speaker": 1
+  },
+  {
+   "id": 411,
+   "startSec": 1463.24,
+   "endSec": 1472.12,
+   "text": "as did Mr. X actually and yeah, they they folded and no real son can come back again. I think",
+   "speaker": 1
+  },
+  {
+   "id": 412,
+   "startSec": 1472.12,
+   "endSec": 1479.56,
+   "text": "a lot of the venues that they like to choose closed as well, you know, so it's messed up everything.",
+   "speaker": 1
+  },
+  {
+   "id": 413,
+   "startSec": 1480.2,
+   "endSec": 1489.4,
+   "text": "Yep, yep. So BISA sent in removing another obstacle to recording a HPR show. Not everybody is",
+   "speaker": 2
+  },
+  {
+   "id": 414,
+   "startSec": 1489.4,
+   "endSec": 1495.32,
+   "text": "comfortable speaking with an audience directly and BISA dresses this problem. What do you think",
+   "speaker": 1
+  },
+  {
+   "id": 415,
+   "startSec": 1495.32,
+   "endSec": 1501.96,
+   "text": "of this? Well I have a certain amount of sympathy with it because when I first started",
+   "speaker": 2
+  },
+  {
+   "id": 416,
+   "startSec": 1502.92,
+   "endSec": 1509.32,
+   "text": "HPR, although I usually get called upon to speak in some context, I had to do teaching at",
+   "speaker": 2
+  },
+  {
+   "id": 417,
+   "startSec": 1509.32,
+   "endSec": 1516.04,
+   "text": "one point in my last job for a few years and I hate doing it. I quite enjoyed the content,",
+   "speaker": 2
+  },
+  {
+   "id": 418,
+   "startSec": 1516.04,
+   "endSec": 1520.76,
+   "text": "I hate standing up in front of people and talking. I do understand the public speech,",
+   "speaker": 2
+  },
+  {
+   "id": 419,
+   "startSec": 1520.76,
+   "endSec": 1530.2,
+   "text": "speaking, but I don't know, it's very hard to be a good critic of yourself. I was very critical",
+   "speaker": 2
+  },
+  {
+   "id": 420,
+   "startSec": 1530.28,
+   "endSec": 1539.56,
+   "text": "of myself having just carried on and done it. I just don't care anymore. This has got a great",
+   "speaker": 2
+  },
+  {
+   "id": 421,
+   "startSec": 1539.56,
+   "endSec": 1546.36,
+   "text": "delivery. I've always been delighted with the way he does his episodes. When he speaks to me,",
+   "speaker": 2
+  },
+  {
+   "id": 422,
+   "startSec": 1546.36,
+   "endSec": 1553.88,
+   "text": "he has a good voice, he has a nice accent. He's from the sort of London region, I would",
+   "speaker": 2
+  },
+  {
+   "id": 423,
+   "startSec": 1553.88,
+   "endSec": 1558.76,
+   "text": "under Kent, that sort of area, which is where I originated from, so it sounds sounds like a whole",
+   "speaker": 2
+  },
+  {
+   "id": 424,
+   "startSec": 1558.76,
+   "endSec": 1567.48,
+   "text": "sense of respect. If that's the way you feel that stands the way you feel. The text of speech",
+   "speaker": 2
+  },
+  {
+   "id": 425,
+   "startSec": 1567.48,
+   "endSec": 1576.2,
+   "text": "is a solution and this sounds pretty good actually. Good stuff, good stuff. I was surprised",
+   "speaker": 2
+  },
+  {
+   "id": 426,
+   "startSec": 1576.28,
+   "endSec": 1586.12,
+   "text": "it was because his shows have been radio voice, or if he was selling me soap dispenser,",
+   "speaker": 2
+  },
+  {
+   "id": 427,
+   "startSec": 1586.12,
+   "endSec": 1592.76,
+   "text": "I would be listening to me, that's sort of voice, so yeah. Voice with some authority, I always thought",
+   "speaker": 2
+  },
+  {
+   "id": 428,
+   "startSec": 1592.76,
+   "endSec": 1599.8,
+   "text": "and somebody to listen to, to attend to. Yeah, be sad about it. Here he's voice again,",
+   "speaker": 2
+  },
+  {
+   "id": 429,
+   "startSec": 1599.8,
+   "endSec": 1606.92,
+   "text": "but it's his choice obviously. But if this works out better, that's why who are we too",
+   "speaker": 2
+  },
+  {
+   "id": 430,
+   "startSec": 1606.92,
+   "endSec": 1614.68,
+   "text": "to argue, we'll take the job. Indeed, indeed. Beyond economic recovery, how to lower your anxiety",
+   "speaker": 1
+  },
+  {
+   "id": 431,
+   "startSec": 1614.68,
+   "endSec": 1624.84,
+   "text": "level as an archivedist, and this one had me very interested, especially from my HVOR point of view,",
+   "speaker": 2
+  },
+  {
+   "id": 432,
+   "startSec": 1624.92,
+   "endSec": 1631.72,
+   "text": "I am not a lawyer, this is not advice, but it is a practical advice. That was gone. Okay,",
+   "speaker": 1
+  },
+  {
+   "id": 433,
+   "startSec": 1631.72,
+   "endSec": 1640.6,
+   "text": "how's this one about? So the show was about, about the use of the term beyond economic recovery.",
+   "speaker": 2
+  },
+  {
+   "id": 434,
+   "startSec": 1641.72,
+   "endSec": 1651.0,
+   "text": "And we had Henrik again commenting where in the world and in trust to where in the world",
+   "speaker": 2
+  },
+  {
+   "id": 435,
+   "startSec": 1651.0,
+   "endSec": 1657.48,
+   "text": "and the interest to preserve, I believe it should be taken into consideration where in the world",
+   "speaker": 2
+  },
+  {
+   "id": 436,
+   "startSec": 1657.48,
+   "endSec": 1663.8,
+   "text": "the legal owner is located, where the archiver is located, and where the archive is located,",
+   "speaker": 2
+  },
+  {
+   "id": 437,
+   "startSec": 1663.8,
+   "endSec": 1669.48,
+   "text": "where the archive server is located. Secondly, without knowing, I would expect that several",
+   "speaker": 2
+  },
+  {
+   "id": 438,
+   "startSec": 1669.48,
+   "endSec": 1676.68,
+   "text": "legal owners would not mind that there are that many of their old products are preserved",
+   "speaker": 2
+  },
+  {
+   "id": 439,
+   "startSec": 1676.68,
+   "endSec": 1684.04,
+   "text": "if asked for permission. Do you have any experience of that? Good question, actually.",
+   "speaker": 2
+  },
+  {
+   "id": 440,
+   "startSec": 1684.04,
+   "endSec": 1690.04,
+   "text": "Trickster replies to Henrik. In my experience, it depends on the person and their involvement",
+   "speaker": 1
+  },
+  {
+   "id": 441,
+   "startSec": 1690.04,
+   "endSec": 1695.48,
+   "text": "in the project, whether or not they mind if their works are preserved. I've received all kinds of",
+   "speaker": 2
+  },
+  {
+   "id": 442,
+   "startSec": 1695.48,
+   "endSec": 1703.16,
+   "text": "responses from apathy to excitement, anger that their words works are preserved. I've had people",
+   "speaker": 2
+  },
+  {
+   "id": 443,
+   "startSec": 1703.16,
+   "endSec": 1708.36,
+   "text": "ask me to remove archive items and I've also had people bend over backwards to send me versions",
+   "speaker": 2
+  },
+  {
+   "id": 444,
+   "startSec": 1708.36,
+   "endSec": 1714.84,
+   "text": "and source code not yet online. Many depends on each situation. However, I personally don't care",
+   "speaker": 2
+  },
+  {
+   "id": 445,
+   "startSec": 1714.84,
+   "endSec": 1719.0,
+   "text": "if they want their works preserved or not. I don't ask permission if their work was originally",
+   "speaker": 2
+  },
+  {
+   "id": 446,
+   "startSec": 1719.0,
+   "endSec": 1724.68,
+   "text": "internationally made public because by making a public they have lost in quotes they're right",
+   "speaker": 2
+  },
+  {
+   "id": 447,
+   "startSec": 1724.68,
+   "endSec": 1730.04,
+   "text": "to control access. This varies from country to country and legal system to legal system.",
+   "speaker": 2
+  },
+  {
+   "id": 448,
+   "startSec": 1730.76,
+   "endSec": 1738.84,
+   "text": "Yep. It goes back to the whole copyright thing. The word itself means you have a right",
+   "speaker": 2
+  },
+  {
+   "id": 449,
+   "startSec": 1738.84,
+   "endSec": 1745.0,
+   "text": "for this copy to be met and then you have to ask, well, who's given that right and it's the author.",
+   "speaker": 2
+  },
+  {
+   "id": 450,
+   "startSec": 1745.0,
+   "endSec": 1751.0,
+   "text": "But actually it's not the author. The author has been given the copyright by the people or",
+   "speaker": 2
+  },
+  {
+   "id": 451,
+   "startSec": 1751.0,
+   "endSec": 1759.72,
+   "text": "the royal task depending on where you live or giving given that monopoly over this work that",
+   "speaker": 2
+  },
+  {
+   "id": 452,
+   "startSec": 1760.36,
+   "endSec": 1765.56,
+   "text": "you guess the right to copy your stuff. So it's not something that you have. It's something",
+   "speaker": 2
+  },
+  {
+   "id": 453,
+   "startSec": 1765.56,
+   "endSec": 1775.08,
+   "text": "that's been given to you by us and quick pro pro is that at some point we get that by giving you",
+   "speaker": 2
+  },
+  {
+   "id": 454,
+   "startSec": 1775.08,
+   "endSec": 1781.08,
+   "text": "a monopoly on the use of that for a period of time then we get that in public, which is my",
+   "speaker": 2
+  },
+  {
+   "id": 455,
+   "startSec": 1781.4,
+   "endSec": 1786.28,
+   "text": "so going all through a rant here about copyright your works if you actually do a show.",
+   "speaker": 2
+  },
+  {
+   "id": 456,
+   "startSec": 1788.28,
+   "endSec": 1797.08,
+   "text": "Anyway, my feeling is that yeah in order to have a copyright you should at least be able to",
+   "speaker": 2
+  },
+  {
+   "id": 457,
+   "startSec": 1797.08,
+   "endSec": 1805.0,
+   "text": "have access to the stuff. Back in the day you had to release copies of your physical copies of",
+   "speaker": 2
+  },
+  {
+   "id": 458,
+   "startSec": 1805.0,
+   "endSec": 1810.04,
+   "text": "the material work into three different libraries on the the trilogy libraries.",
+   "speaker": 2
+  },
+  {
+   "id": 459,
+   "startSec": 1812.6,
+   "endSec": 1817.64,
+   "text": "Yeah yeah yeah yeah. I know that's changed out there. It's all changed back in the day.",
+   "speaker": 2
+  },
+  {
+   "id": 460,
+   "startSec": 1817.64,
+   "endSec": 1827.48,
+   "text": "Yeah yeah yeah. It's not necessarily in a good way. No, no. So we had the HPura community",
+   "speaker": 1
+  },
+  {
+   "id": 461,
+   "startSec": 1827.56,
+   "endSec": 1836.36,
+   "text": "comes together for a new year's issue and Rob says one person talking, this is two hours of one",
+   "speaker": 2
+  },
+  {
+   "id": 462,
+   "startSec": 1836.36,
+   "endSec": 1845.0,
+   "text": "person talking. Yeah as maybe boss you know you're not just all floppy. Yeah, not this one. Yeah,",
+   "speaker": 2
+  },
+  {
+   "id": 463,
+   "startSec": 1845.0,
+   "endSec": 1850.68,
+   "text": "but it's some interesting subjects there. I'm looking forward to hearing a bit about the more",
+   "speaker": 2
+  },
+  {
+   "id": 464,
+   "startSec": 1851.56,
+   "endSec": 1858.28,
+   "text": "yeah. Yeah. Cool. So it takes into a week video big time. It's fascinating.",
+   "speaker": 1
+  },
+  {
+   "id": 465,
+   "startSec": 1859.8,
+   "endSec": 1868.12,
+   "text": "So playing civilization part three part five. This did my head in when I was posted all",
+   "speaker": 2
+  },
+  {
+   "id": 466,
+   "startSec": 1868.12,
+   "endSec": 1877.48,
+   "text": "the shows. I just post part three or part five. It's part of the strategy game. I think this",
+   "speaker": 2
+  },
+  {
+   "id": 467,
+   "startSec": 1877.8,
+   "endSec": 1884.36,
+   "text": "goes doing and we've commented on this before and it gives you lots of resources there about",
+   "speaker": 2
+  },
+  {
+   "id": 468,
+   "startSec": 1885.0,
+   "endSec": 1892.92,
+   "text": "civilization on fundum.com and difficulty level gameplay and stuff. So not so as always lots of links",
+   "speaker": 2
+  },
+  {
+   "id": 469,
+   "startSec": 1892.92,
+   "endSec": 1900.36,
+   "text": "in who gets shows for more information. Yeah yeah and that was the final one in that series.",
+   "speaker": 2
+  },
+  {
+   "id": 470,
+   "startSec": 1900.36,
+   "endSec": 1906.2,
+   "text": "That was why it was just a mess. He surprised me a little bit that he was the last one.",
+   "speaker": 2
+  },
+  {
+   "id": 471,
+   "startSec": 1907.16,
+   "endSec": 1912.92,
+   "text": "Yep. I'm moving on to other fun things. So Al has been renovating his bathroom.",
+   "speaker": 1
+  },
+  {
+   "id": 472,
+   "startSec": 1913.8,
+   "endSec": 1919.64,
+   "text": "So I wonder how much of this is going to be a shock to the US people among us because",
+   "speaker": 2
+  },
+  {
+   "id": 473,
+   "startSec": 1920.52,
+   "endSec": 1929.32,
+   "text": "when I came to the Netherlands, toilets and bathrooms are just so different. It's standardized now a",
+   "speaker": 2
+  },
+  {
+   "id": 474,
+   "startSec": 1929.32,
+   "endSec": 1937.8,
+   "text": "lot. But it always misses me when I go back to Ireland today. One standardizedness of the toilets",
+   "speaker": 2
+  },
+  {
+   "id": 475,
+   "startSec": 1937.8,
+   "endSec": 1947.56,
+   "text": "in Ireland. Oh yeah. Yeah yeah. It was fascinating. I thought he was very brave to take on such a",
+   "speaker": 2
+  },
+  {
+   "id": 476,
+   "startSec": 1947.56,
+   "endSec": 1956.12,
+   "text": "thing. I've paid other people to do this. Absolutely. I have done plumbing and you know that",
+   "speaker": 2
+  },
+  {
+   "id": 477,
+   "startSec": 1956.2,
+   "endSec": 1962.84,
+   "text": "bit were you growling about underneath the sink doing the fixing the the the U-Bendy pipe thing",
+   "speaker": 2
+  },
+  {
+   "id": 478,
+   "startSec": 1962.84,
+   "endSec": 1968.36,
+   "text": "and stuff and you can't reach it. You need special tools to do do things up and undo the",
+   "speaker": 2
+  },
+  {
+   "id": 479,
+   "startSec": 1968.36,
+   "endSec": 1972.2,
+   "text": "and I said never again I'm not doing that. Especially when you drop things on your head as you",
+   "speaker": 2
+  },
+  {
+   "id": 480,
+   "startSec": 1972.2,
+   "endSec": 1977.56,
+   "text": "lay in underneath it. It's probably just me being incredibly clumsy but nevertheless it's",
+   "speaker": 2
+  },
+  {
+   "id": 481,
+   "startSec": 1978.2,
+   "endSec": 1983.88,
+   "text": "seem like a fun thing to do. So yeah good good to him for taking on the challenge.",
+   "speaker": 2
+  },
+  {
+   "id": 482,
+   "startSec": 1984.76,
+   "endSec": 1990.36,
+   "text": "And yeah you got it done and a life for shower as well. That's something that always freaks up",
+   "speaker": 2
+  },
+  {
+   "id": 483,
+   "startSec": 1990.36,
+   "endSec": 1999.16,
+   "text": "the tourists when they come to Ireland. Yeah yeah yeah you know it's in Norfolk and Norfolk is",
+   "speaker": 2
+  },
+  {
+   "id": 484,
+   "startSec": 1999.16,
+   "endSec": 2005.64,
+   "text": "is notorious for having poor water pressure because it's a good flat area and says water",
+   "speaker": 2
+  },
+  {
+   "id": 485,
+   "startSec": 2005.64,
+   "endSec": 2011.16,
+   "text": "towers and stuff all over the place. You don't get in Scotland here you get a hell of a water pressure.",
+   "speaker": 2
+  },
+  {
+   "id": 486,
+   "startSec": 2011.16,
+   "endSec": 2019.4,
+   "text": "But yeah so yeah he's you need something a little pump it as well as in gravity feeds and",
+   "speaker": 2
+  },
+  {
+   "id": 487,
+   "startSec": 2019.4,
+   "endSec": 2028.04,
+   "text": "stuff and maybe not all that good. So the next day we had Archer 72 demonstrated using the",
+   "speaker": 1
+  },
+  {
+   "id": 488,
+   "startSec": 2028.04,
+   "endSec": 2034.52,
+   "text": "up-directed for the Piper XQs and I won't go through all the comments on this because it's essentially",
+   "speaker": 2
+  },
+  {
+   "id": 489,
+   "startSec": 2034.52,
+   "endSec": 2043.88,
+   "text": "a tune for with Archer 72 where I am by the Norr on Fedora and he points me to another repo",
+   "speaker": 2
+  },
+  {
+   "id": 490,
+   "startSec": 2043.88,
+   "endSec": 2051.64,
+   "text": "and then I get another and then he points me to the fact that I need to use the climb correctly",
+   "speaker": 2
+  },
+  {
+   "id": 491,
+   "startSec": 2051.64,
+   "endSec": 2057.48,
+   "text": "because I'm a more on the project. Well I got to work in today and I need to do something stuff with it.",
+   "speaker": 2
+  },
+  {
+   "id": 492,
+   "startSec": 2057.48,
+   "endSec": 2064.12,
+   "text": "So very good. Very good. Thank you. Yeah Archer finally we might be seeing",
+   "speaker": 1
+  },
+  {
+   "id": 493,
+   "startSec": 2064.6,
+   "endSec": 2073.4,
+   "text": "we might be seeing the this featuring now in the HBR workflow so that's that's good. Very cool.",
+   "speaker": 1
+  },
+  {
+   "id": 494,
+   "startSec": 2073.4,
+   "endSec": 2079.72,
+   "text": "Yeah yeah it's a yeah it does all have work on this area it is always impressive. I can",
+   "speaker": 2
+  },
+  {
+   "id": 495,
+   "startSec": 2079.72,
+   "endSec": 2086.52,
+   "text": "ask to these things. Good to have him. Yeah brilliant. The following day we have Siftle on 10 with",
+   "speaker": 1
+  },
+  {
+   "id": 496,
+   "startSec": 2087.48,
+   "endSec": 2094.52,
+   "text": "adding story drug to MacBook Pro died and then you replaced it. Oh custom Apple Harbor.",
+   "speaker": 2
+  },
+  {
+   "id": 497,
+   "startSec": 2095.32,
+   "endSec": 2105.08,
+   "text": "It's okay. Yes yes. Yeah yeah. I yes it's one of those things you know if you can do it that's",
+   "speaker": 2
+  },
+  {
+   "id": 498,
+   "startSec": 2105.08,
+   "endSec": 2112.04,
+   "text": "fantastic. It's not always possible and that's quite frustrating. You know with with the Apple",
+   "speaker": 2
+  },
+  {
+   "id": 499,
+   "startSec": 2112.04,
+   "endSec": 2120.52,
+   "text": "Android software. Sorry the SSDs I think worry me a little cause a lot of the spinning drives",
+   "speaker": 2
+  },
+  {
+   "id": 500,
+   "startSec": 2120.52,
+   "endSec": 2129.8,
+   "text": "also where you it's just the life cycle on some very very low. Yeah and there's like once the fail",
+   "speaker": 2
+  },
+  {
+   "id": 501,
+   "startSec": 2129.8,
+   "endSec": 2140.2,
+   "text": "a lot is good by Clara you know and on. Yep. Yeah I lost I was running a midi wiki wiki on one of my",
+   "speaker": 2
+  },
+  {
+   "id": 502,
+   "startSec": 2140.36,
+   "endSec": 2146.92,
+   "text": "Raspberry Pi's and I back up so I'm not doing what they should be doing or I wasn't anyway whatever",
+   "speaker": 2
+  },
+  {
+   "id": 503,
+   "startSec": 2146.92,
+   "endSec": 2153.32,
+   "text": "but when the reason it all died and disappeared was because of SSD when there's a cheaper way",
+   "speaker": 2
+  },
+  {
+   "id": 504,
+   "startSec": 2153.32,
+   "endSec": 2160.04,
+   "text": "SSD going back many years. So I guess I got what I deserved in some respects but to",
+   "speaker": 2
+  },
+  {
+   "id": 505,
+   "startSec": 2160.04,
+   "endSec": 2164.6,
+   "text": "there's a bit of a shot that suddenly went bam and that was it nothing nothing. No no chance of",
+   "speaker": 2
+  },
+  {
+   "id": 506,
+   "startSec": 2164.76,
+   "endSec": 2173.64,
+   "text": "covering anything. Yeah exactly. So the following day we had finally Andrew. Hello hang on hang on that",
+   "speaker": 1
+  },
+  {
+   "id": 507,
+   "startSec": 2173.64,
+   "endSec": 2180.04,
+   "text": "is that not the first of August the following day after 31st of June July? Tis in my book.",
+   "speaker": 2
+  },
+  {
+   "id": 508,
+   "startSec": 2182.04,
+   "endSec": 2186.68,
+   "text": "Yeah but I like to talk about it if that's okay cause I don't want to plug it off for a lot of",
+   "speaker": 1
+  },
+  {
+   "id": 509,
+   "startSec": 2186.76,
+   "endSec": 2196.44,
+   "text": "the model. I'll stop doing my impression of it. Okay yeah so it's there was a lot of",
+   "speaker": 2
+  },
+  {
+   "id": 510,
+   "startSec": 2198.6,
+   "endSec": 2208.52,
+   "text": "I love to talk about the future of HBR prompted by Nightwise's show and and so I put in the",
+   "speaker": 2
+  },
+  {
+   "id": 511,
+   "startSec": 2209.48,
+   "endSec": 2213.88,
+   "text": "response it just took me a long time to do the response so I'd appreciate it if everybody had",
+   "speaker": 2
+  },
+  {
+   "id": 512,
+   "startSec": 2213.96,
+   "endSec": 2221.88,
+   "text": "a listen to that show and could comment on it and then we could we can discuss it in the next episode.",
+   "speaker": 2
+  },
+  {
+   "id": 513,
+   "startSec": 2222.6,
+   "endSec": 2234.28,
+   "text": "And so it's a feature of HBR as applies to HBR itself. So if you're going to skip over some shows",
+   "speaker": 2
+  },
+  {
+   "id": 514,
+   "startSec": 2234.92,
+   "endSec": 2240.92,
+   "text": "have a listen to that one I would appreciate it your thoughts and feedback would be appreciated as well",
+   "speaker": 2
+  },
+  {
+   "id": 515,
+   "startSec": 2241.56,
+   "endSec": 2248.36,
+   "text": "and also if you could any of the topics if they're not clear any of the points that I make if it's",
+   "speaker": 2
+  },
+  {
+   "id": 516,
+   "startSec": 2248.36,
+   "endSec": 2258.68,
+   "text": "not clear can you I have stacks of paper on each of the points so I'm not I'm not just saying",
+   "speaker": 2
+  },
+  {
+   "id": 517,
+   "startSec": 2258.68,
+   "endSec": 2268.44,
+   "text": "this stuff out of out of my yeah I did a lot of work to try and make to support each of these",
+   "speaker": 2
+  },
+  {
+   "id": 518,
+   "startSec": 2268.52,
+   "endSec": 2277.16,
+   "text": "statements. Okay so what's next? We missed a comment last month I think because it came in just after",
+   "speaker": 1
+  },
+  {
+   "id": 519,
+   "startSec": 2277.16,
+   "endSec": 2290.12,
+   "text": "we while we were recording and that was from me to the Kevin's show about the",
+   "speaker": 2
+  },
+  {
+   "id": 520,
+   "startSec": 2290.84,
+   "endSec": 2297.08,
+   "text": "PIE 5 some initial thoughts and I said in the comment I mentioned in the community news",
+   "speaker": 2
+  },
+  {
+   "id": 521,
+   "startSec": 2297.08,
+   "endSec": 2306.04,
+   "text": "of that show that I recently watched a video comparing the Intel N100 and the Raspberry Pi 5 and",
+   "speaker": 2
+  },
+  {
+   "id": 522,
+   "startSec": 2306.04,
+   "endSec": 2312.92,
+   "text": "I referenced a video from Michael Clements on YouTube where he talks specifically about these",
+   "speaker": 2
+  },
+  {
+   "id": 523,
+   "startSec": 2313.0,
+   "endSec": 2319.88,
+   "text": "things he's quite interesting youtuber in the area where Raspberry Pi is et cetera to unloading",
+   "speaker": 2
+  },
+  {
+   "id": 524,
+   "startSec": 2319.88,
+   "endSec": 2325.64,
+   "text": "that now I think I've watched oh yeah I did it watch that and that had me thinking for the last",
+   "speaker": 1
+  },
+  {
+   "id": 525,
+   "startSec": 2325.64,
+   "endSec": 2332.92,
+   "text": "month of this yeah yeah yeah yeah yeah yeah yeah yeah there's a few other people who've made",
+   "speaker": 2
+  },
+  {
+   "id": 526,
+   "startSec": 2332.92,
+   "endSec": 2338.28,
+   "text": "those comparisons I think Jeff Gailing did a show on it as well but that that one was the last",
+   "speaker": 1
+  },
+  {
+   "id": 527,
+   "startSec": 2338.28,
+   "endSec": 2345.32,
+   "text": "with one I'd seen just just recently. Insane pretty good yep we have two other comments on previous",
+   "speaker": 1
+  },
+  {
+   "id": 528,
+   "startSec": 2345.32,
+   "endSec": 2353.32,
+   "text": "shows one was probably Celtic the Broadway mining the web and commenters from hubs federated",
+   "speaker": 2
+  },
+  {
+   "id": 529,
+   "startSec": 2353.32,
+   "endSec": 2360.76,
+   "text": "DB of domains would be really cool to share our domain list with each other sort of like",
+   "speaker": 2
+  },
+  {
+   "id": 530,
+   "startSec": 2360.76,
+   "endSec": 2368.28,
+   "text": "help he have sent shares blacklist and whitelist we would use federated and redundant DB to reduce",
+   "speaker": 2
+  },
+  {
+   "id": 531,
+   "startSec": 2369.48,
+   "endSec": 2375.0,
+   "text": "resource costs and improve performance would also be good to ping sub domains randomly from",
+   "speaker": 2
+  },
+  {
+   "id": 532,
+   "startSec": 2375.0,
+   "endSec": 2380.2,
+   "text": "different IPs to avoid being shadow banned and missing some important domains and you won't have",
+   "speaker": 2
+  },
+  {
+   "id": 533,
+   "startSec": 2380.2,
+   "endSec": 2385.56,
+   "text": "any source code they use for this kind of sub domain in your narration work.",
+   "speaker": 2
+  },
+  {
+   "id": 534,
+   "startSec": 2386.04,
+   "endSec": 2392.36,
+   "text": "Hmm you've got to see and cetera it replies follow up it says been sometimes",
+   "speaker": 1
+  },
+  {
+   "id": 535,
+   "startSec": 2392.36,
+   "endSec": 2399.4,
+   "text": "I posted this and I didn't notice these comments before so until it replies to Norris who",
+   "speaker": 2
+  },
+  {
+   "id": 536,
+   "startSec": 2399.4,
+   "endSec": 2407.56,
+   "text": "comments I'll make a C to make a follow up this month get a bit deeper into how stuff was built",
+   "speaker": 2
+  },
+  {
+   "id": 537,
+   "startSec": 2408.84,
+   "endSec": 2414.04,
+   "text": "Henry Cameron thanks for your support and hubs there are a number of alternatives available",
+   "speaker": 2
+  },
+  {
+   "id": 538,
+   "startSec": 2414.04,
+   "endSec": 2422.44,
+   "text": "for this most famously DNS in them in UM which will also get shipped with Kelly Kelly next",
+   "speaker": 2
+  },
+  {
+   "id": 539,
+   "startSec": 2422.44,
+   "endSec": 2430.92,
+   "text": "I beg us yep and two computers by Moss Blitz had a comment by D&T used corpus computers",
+   "speaker": 2
+  },
+  {
+   "id": 540,
+   "startSec": 2430.92,
+   "endSec": 2436.36,
+   "text": "thank you for this I've been thinking about doing this for a while after some research I bought",
+   "speaker": 2
+  },
+  {
+   "id": 541,
+   "startSec": 2436.44,
+   "endSec": 2444.2,
+   "text": "a Lenovo ThinkCenter M900SF small factor computer it was less than fifty dollars on eBay",
+   "speaker": 2
+  },
+  {
+   "id": 542,
+   "startSec": 2444.2,
+   "endSec": 2449.32,
+   "text": "and the only thing wrong with it was a front USB port stored work it's very upgradable I haven't",
+   "speaker": 2
+  },
+  {
+   "id": 543,
+   "startSec": 2449.32,
+   "endSec": 2461.4,
+   "text": "had desktop computer in 20 years thanks so the mailing list discussions so so far there's",
+   "speaker": 2
+  },
+  {
+   "id": 544,
+   "startSec": 2461.56,
+   "endSec": 2468.04,
+   "text": "feedback from likewise on the on the show and it says I wanted to reply",
+   "speaker": 2
+  },
+  {
+   "id": 545,
+   "startSec": 2469.88,
+   "endSec": 2475.4,
+   "text": "and it's posted by me but it's on behalf of likewise with his permission I wanted to reply",
+   "speaker": 2
+  },
+  {
+   "id": 546,
+   "startSec": 2475.4,
+   "endSec": 2480.76,
+   "text": "via the comments section to this latest show but I got an article when I posted their reply I guess",
+   "speaker": 2
+  },
+  {
+   "id": 547,
+   "startSec": 2480.76,
+   "endSec": 2485.8,
+   "text": "I just proved my theory that the comments says to us outdated the fact that I have to submit",
+   "speaker": 2
+  },
+  {
+   "id": 548,
+   "startSec": 2485.8,
+   "endSec": 2491.16,
+   "text": "this via the mailing list is ironic at best first respect thank you for your show",
+   "speaker": 2
+  },
+  {
+   "id": 549,
+   "startSec": 2491.16,
+   "endSec": 2496.04,
+   "text": "I'm honored that my small show has created so much comment in the feedback I'm a plea that we",
+   "speaker": 2
+  },
+  {
+   "id": 550,
+   "startSec": 2497.24,
+   "endSec": 2501.96,
+   "text": "do not have enough interaction I have created more responses as response shows that I need",
+   "speaker": 2
+  },
+  {
+   "id": 551,
+   "startSec": 2501.96,
+   "endSec": 2507.4,
+   "text": "host on the last year going blow by blow to your comments social media equals your competitors no",
+   "speaker": 2
+  },
+  {
+   "id": 552,
+   "startSec": 2507.4,
+   "endSec": 2513.0,
+   "text": "social media platforms are way to get new listeners and hosts to the alternatives we have the",
+   "speaker": 2
+  },
+  {
+   "id": 553,
+   "startSec": 2513.0,
+   "endSec": 2518.28,
+   "text": "comment feels to the post outdated the mailing list even more outdated recording they show a",
+   "speaker": 2
+  },
+  {
+   "id": 554,
+   "startSec": 2518.92,
+   "endSec": 2524.84,
+   "text": "of an effort from 9% of the listeners metrics channel not even promoted we don't even",
+   "speaker": 2
+  },
+  {
+   "id": 555,
+   "startSec": 2524.84,
+   "endSec": 2529.88,
+   "text": "promote the ways of being a community listeners to host conversion I would like to do a survey",
+   "speaker": 2
+  },
+  {
+   "id": 556,
+   "startSec": 2529.88,
+   "endSec": 2537.56,
+   "text": "of all our hosts see who recorded show before having listened to the show is even more than",
+   "speaker": 2
+  },
+  {
+   "id": 557,
+   "startSec": 2537.56,
+   "endSec": 2545.24,
+   "text": "0.01% having said that we don't need listeners who have hosts is just playing incorrect",
+   "speaker": 2
+  },
+  {
+   "id": 558,
+   "startSec": 2546.04,
+   "endSec": 2551.08,
+   "text": "value of the listener audience and popularity are important the goal of the community is to",
+   "speaker": 2
+  },
+  {
+   "id": 559,
+   "startSec": 2551.08,
+   "endSec": 2556.6,
+   "text": "guess tech ideas out there not to mumble about the void I don't want likes but I do want to make",
+   "speaker": 2
+  },
+  {
+   "id": 560,
+   "startSec": 2556.6,
+   "endSec": 2562.28,
+   "text": "a difference to somebody the rescue crew or our lifeline system it's a sign that we are not doing the",
+   "speaker": 2
+  },
+  {
+   "id": 561,
+   "startSec": 2562.28,
+   "endSec": 2568.12,
+   "text": "right thing to entice people to join community and record a show burned out hosts while the",
+   "speaker": 2
+  },
+  {
+   "id": 562,
+   "startSec": 2568.12,
+   "endSec": 2572.76,
+   "text": "ass of course hosts burn out there's no feedback on the community there's screaming into the void",
+   "speaker": 2
+  },
+  {
+   "id": 563,
+   "startSec": 2572.76,
+   "endSec": 2579.88,
+   "text": "if you want to talk about somebody who doesn't listen our animal up my dog guilty by association",
+   "speaker": 2
+  },
+  {
+   "id": 564,
+   "startSec": 2579.88,
+   "endSec": 2587.24,
+   "text": "as the bar to contribution gets lower and lower g to fewer hosts and shows the risk of show",
+   "speaker": 2
+  },
+  {
+   "id": 565,
+   "startSec": 2587.24,
+   "endSec": 2593.32,
+   "text": "with controversial topics rise in the sources as a whole means that you are affiliated with",
+   "speaker": 2
+  },
+  {
+   "id": 566,
+   "startSec": 2593.32,
+   "endSec": 2599.4,
+   "text": "whatever is put out there and there is a serious risk to somebody's image reputation since",
+   "speaker": 2
+  },
+  {
+   "id": 567,
+   "startSec": 2599.4,
+   "endSec": 2603.96,
+   "text": "inch and that never forgets. In conclusion the seriously sounds like you're locked up in a",
+   "speaker": 2
+  },
+  {
+   "id": 568,
+   "startSec": 2603.96,
+   "endSec": 2609.0,
+   "text": "monastery preaching to the choir and you don't even care if anyone's listening anymore what I sense",
+   "speaker": 2
+  },
+  {
+   "id": 569,
+   "startSec": 2609.0,
+   "endSec": 2613.56,
+   "text": "is from the episode is that you are in fact not a community and that we are a monastery",
+   "speaker": 2
+  },
+  {
+   "id": 570,
+   "startSec": 2613.56,
+   "endSec": 2619.08,
+   "text": "that is ruled by the vocal few who stick to the course even if the water is floating the decks",
+   "speaker": 2
+  },
+  {
+   "id": 571,
+   "startSec": 2619.08,
+   "endSec": 2624.12,
+   "text": "the only thing to me is that will essentially change the future of which we are is airing over",
+   "speaker": 2
+  },
+  {
+   "id": 572,
+   "startSec": 2624.12,
+   "endSec": 2628.68,
+   "text": "its last episode I have done my bit for the king in country I will shortly be submission",
+   "speaker": 2
+  },
+  {
+   "id": 573,
+   "startSec": 2628.68,
+   "endSec": 2633.96,
+   "text": "the last response show before signing off as a host this isn't because you disagree",
+   "speaker": 2
+  },
+  {
+   "id": 574,
+   "startSec": 2633.96,
+   "endSec": 2638.92,
+   "text": "by views it's because as not even for me I feel like I'm burned out and not",
+   "speaker": 2
+  },
+  {
+   "id": 575,
+   "startSec": 2639.64,
+   "endSec": 2645.24,
+   "text": "tilting will mills but I'm shutting into the void and can you do the other feedback please",
+   "speaker": 2
+  },
+  {
+   "id": 576,
+   "startSec": 2647.4,
+   "endSec": 2656.2,
+   "text": "so the other the other email get me a bit of a comment to an email is from Brian Neverett",
+   "speaker": 2
+  },
+  {
+   "id": 577,
+   "startSec": 2656.6,
+   "endSec": 2662.04,
+   "text": "Brian Nohaer I believe and he says comment simple",
+   "speaker": 2
+  },
+  {
+   "id": 578,
+   "startSec": 2664.12,
+   "endSec": 2669.4,
+   "text": "okay if you say they might tongue twisting the comment system is simple as to show",
+   "speaker": 2
+  },
+  {
+   "id": 579,
+   "startSec": 2669.4,
+   "endSec": 2676.36,
+   "text": "on an android phone using antenna pod but I want to comment the app has a link to the website",
+   "speaker": 2
+  },
+  {
+   "id": 580,
+   "startSec": 2676.36,
+   "endSec": 2681.16,
+   "text": "there you add your comment and then the hardest thing is trying to figure out what the pee me",
+   "speaker": 2
+  },
+  {
+   "id": 581,
+   "startSec": 2681.64,
+   "endSec": 2689.16,
+   "text": "and the form I don't post shows to get a million distance I post shows because I think",
+   "speaker": 2
+  },
+  {
+   "id": 582,
+   "startSec": 2689.16,
+   "endSec": 2696.36,
+   "text": "my interesting to others if it isn't say lovey okay I'm interested here all the people start",
+   "speaker": 2
+  },
+  {
+   "id": 583,
+   "startSec": 2696.36,
+   "endSec": 2704.44,
+   "text": "from that next month should we move on to the lobby indeed can you do that step to find it",
+   "speaker": 1
+  },
+  {
+   "id": 584,
+   "startSec": 2704.44,
+   "endSec": 2711.8,
+   "text": "so I'm gonna say okay I'll do this spectrum 24 conference so this is at the spectrum 24 conference",
+   "speaker": 2
+  },
+  {
+   "id": 585,
+   "startSec": 2711.8,
+   "endSec": 2721.24,
+   "text": "so I'm going to be given a talk about hammer radio on the HPR network and there's currently",
+   "speaker": 2
+  },
+  {
+   "id": 586,
+   "startSec": 2721.24,
+   "endSec": 2731.8,
+   "text": "call for boots open and if people want to attend that and can you get in touch please",
+   "speaker": 2
+  },
+  {
+   "id": 587,
+   "startSec": 2732.04,
+   "endSec": 2742.04,
+   "text": "as was said on the you random show that in person contact is the only way really to get new",
+   "speaker": 2
+  },
+  {
+   "id": 588,
+   "startSec": 2742.04,
+   "endSec": 2749.0,
+   "text": "holes despite what anybody else might think I tend to agree with that and going to the shows",
+   "speaker": 2
+  },
+  {
+   "id": 589,
+   "startSec": 2750.6,
+   "endSec": 2755.32,
+   "text": "is very important having a presence there is very important talking to people is very important",
+   "speaker": 2
+  },
+  {
+   "id": 590,
+   "startSec": 2756.28,
+   "endSec": 2762.36,
+   "text": "if you are in Paris at the end of September around that time it would be great if you could",
+   "speaker": 2
+  },
+  {
+   "id": 591,
+   "startSec": 2762.36,
+   "endSec": 2766.6,
+   "text": "come and help us with boot I'm not going to do it if it's just myself but if there's more than",
+   "speaker": 2
+  },
+  {
+   "id": 592,
+   "startSec": 2767.64,
+   "endSec": 2774.44,
+   "text": "if there's another person or indeed more people then having a boot there would be fantastic so please",
+   "speaker": 2
+  },
+  {
+   "id": 593,
+   "startSec": 2774.44,
+   "endSec": 2780.2,
+   "text": "get in touch add me in the top of public radio dot org that would be great thank you so the",
+   "speaker": 2
+  },
+  {
+   "id": 594,
+   "startSec": 2780.2,
+   "endSec": 2786.36,
+   "text": "bit that I was having difficulty finding is in the wrong tab was I'm talking about",
+   "speaker": 2
+  },
+  {
+   "id": 595,
+   "startSec": 2787.24,
+   "endSec": 2794.28,
+   "text": "repairing what I'm calling repairing shows where the external files have been lost so quite a number",
+   "speaker": 2
+  },
+  {
+   "id": 596,
+   "startSec": 2794.28,
+   "endSec": 2799.4,
+   "text": "of our HPR shows have got external files that's things like pictures and videos example scripts",
+   "speaker": 2
+  },
+  {
+   "id": 597,
+   "startSec": 2799.4,
+   "endSec": 2804.68,
+   "text": "in configuration files and so on and during the move to the current static site they weren't",
+   "speaker": 2
+  },
+  {
+   "id": 598,
+   "startSec": 2804.76,
+   "endSec": 2810.6,
+   "text": "copied over and the shows on the HPR server have been in complete since then the internet archive",
+   "speaker": 2
+  },
+  {
+   "id": 599,
+   "startSec": 2810.6,
+   "endSec": 2818.92,
+   "text": "version is a complete because they'd pretty much all been snapshotted before the move so I'm in",
+   "speaker": 2
+  },
+  {
+   "id": 600,
+   "startSec": 2818.92,
+   "endSec": 2827.72,
+   "text": "a process to repair these shows and I'm progressing it relies on the fact that there are copies",
+   "speaker": 2
+  },
+  {
+   "id": 601,
+   "startSec": 2827.8,
+   "endSec": 2834.36,
+   "text": "of the lost files on the internet archive and on a backup disk and these being copied across the",
+   "speaker": 2
+  },
+  {
+   "id": 602,
+   "startSec": 2834.36,
+   "endSec": 2842.84,
+   "text": "HPR server and linked into shows again so because we've changed the architecture the layout of the",
+   "speaker": 2
+  },
+  {
+   "id": 603,
+   "startSec": 2842.84,
+   "endSec": 2848.76,
+   "text": "director's a little bit so they do need re-linking when restoring the missing parts of shows",
+   "speaker": 2
+  },
+  {
+   "id": 604,
+   "startSec": 2848.84,
+   "endSec": 2857.96,
+   "text": "one at a time I say we are smee the processes I don't work you yeah it's only a one person thing",
+   "speaker": 2
+  },
+  {
+   "id": 605,
+   "startSec": 2857.96,
+   "endSec": 2865.48,
+   "text": "though because I haven't created it to be shareable as is my one it's still complicated to do shareable",
+   "speaker": 2
+  },
+  {
+   "id": 606,
+   "startSec": 2866.12,
+   "endSec": 2871.48,
+   "text": "anyway the process is to realize the automated I've got some scripts that do most of the",
+   "speaker": 2
+  },
+  {
+   "id": 607,
+   "startSec": 2872.28,
+   "endSec": 2877.4,
+   "text": "poking around to work at what needs to be where and I'm gradually adding more",
+   "speaker": 2
+  },
+  {
+   "id": 608,
+   "startSec": 2878.12,
+   "endSec": 2885.32,
+   "text": "automation to it as time allows and I'm going to document it in the AOB and so to start the",
+   "speaker": 2
+  },
+  {
+   "id": 609,
+   "startSec": 2885.32,
+   "endSec": 2895.96,
+   "text": "ball rolling dated our yesterday I'm doing any work on it today because there I compute there a 352",
+   "speaker": 2
+  },
+  {
+   "id": 610,
+   "startSec": 2895.96,
+   "endSec": 2905.64,
+   "text": "shows that need this actual managed to do 148 that leaves 214 to be done it's gain complicated",
+   "speaker": 2
+  },
+  {
+   "id": 611,
+   "startSec": 2905.64,
+   "endSec": 2914.84,
+   "text": "now though because the ones I've done they were all in a four formatted in a way that was easy to",
+   "speaker": 2
+  },
+  {
+   "id": 612,
+   "startSec": 2915.48,
+   "endSec": 2920.68,
+   "text": "spot what was what and put them in the right places now it's got a little bit more difficult",
+   "speaker": 2
+  },
+  {
+   "id": 613,
+   "startSec": 2920.68,
+   "endSec": 2927.56,
+   "text": "so I'm having to redraw for my script speed so I can a few days to get back into it anyway we're",
+   "speaker": 2
+  },
+  {
+   "id": 614,
+   "startSec": 2927.56,
+   "endSec": 2935.8,
+   "text": "making progress and I didn't bother into the AOB boss Jim Devoy volunteers to help out with the",
+   "speaker": 2
+  },
+  {
+   "id": 615,
+   "startSec": 2935.8,
+   "endSec": 2942.52,
+   "text": "podcast your dog catcher which is mentioned in my show which you'll hear which was released",
+   "speaker": 2
+  },
+  {
+   "id": 616,
+   "startSec": 2943.16,
+   "endSec": 2952.76,
+   "text": "on the first of the month and I have volunteered to help out with that so that's still open",
+   "speaker": 2
+  },
+  {
+   "id": 617,
+   "startSec": 2952.76,
+   "endSec": 2957.16,
+   "text": "haven't done a lot with that but it is on the list just wanted to thank Jim for helping out there",
+   "speaker": 2
+  },
+  {
+   "id": 618,
+   "startSec": 2958.12,
+   "endSec": 2963.96,
+   "text": "too okay and with that there's some editing to be done on the show I'm afraid if",
+   "speaker": 2
+  },
+  {
+   "id": 619,
+   "startSec": 2964.44,
+   "endSec": 2974.44,
+   "text": "yes yes hopefully there's enough time to do it yeah it's actually okay um I think that's all",
+   "speaker": 1
+  },
+  {
+   "id": 620,
+   "startSec": 2974.44,
+   "endSec": 2979.64,
+   "text": "thanks very much for taking the time and tune in tomorrow for another exciting episode of Hacker",
+   "speaker": 0
+  },
+  {
+   "id": 621,
+   "startSec": 2980.68,
+   "endSec": 2992.28,
+   "text": "public radio Radio Radio you have been listening to Hacker Public Radio as Hacker Public Radio",
+   "speaker": 0
+  },
+  {
+   "id": 622,
+   "startSec": 2993.24,
+   "endSec": 2998.76,
+   "text": "today's show was contributed by a HBR this night like yourself if you ever thought of",
+   "speaker": 3
+  },
+  {
+   "id": 623,
+   "startSec": 2998.76,
+   "endSec": 3005.32,
+   "text": "recording a podcast click on our contribute link to find out how easy it means posting",
+   "speaker": 3
+  },
+  {
+   "id": 624,
+   "startSec": 3005.32,
+   "endSec": 3013.16,
+   "text": "price we are has been kindly provided by an onsthost.com the internet archive and our synced.net",
+   "speaker": 3
+  },
+  {
+   "id": 625,
+   "startSec": 3013.56,
+   "endSec": 3020.76,
+   "text": "on the satellite stages today's show is released on our creative comments attribution 4.0",
+   "speaker": 3
+  },
+  {
+   "id": 626,
+   "startSec": 3020.76,
+   "endSec": 3025.64,
+   "text": "international license",
+   "speaker": 3
+  }
+ ]
+}
