@@ -36,3 +36,6 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Raw source audio (originals are re-downloadable; see content/seed/SOURCES.md)
+content/source-audio/*.mp3
