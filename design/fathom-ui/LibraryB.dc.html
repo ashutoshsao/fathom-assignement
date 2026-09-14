@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; font-family: Geist, ui-sans-serif, system-ui, sans-serif; background: #0b0a09; }
+    a { color: #e0a35e; } a:hover { color: #eab97f; }
+    .serif { font-family: 'Instrument Serif', 'Iowan Old Style', Georgia, serif; font-weight: 400; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div style="width: 1100px; height: 820px; background: #0b0a09; color: #eceae6; padding: 34px 52px; box-sizing: border-box; overflow: hidden;">
+  <div style="margin-bottom: 28px;">
+    <h2 class="serif" style="margin: 0; font-size: 30px; letter-spacing: -0.012em; color: #f4f2ee;">Your calls</h2>
+    <div class="mono" style="font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7f56; margin-top: 7px;">Five recordings &middot; six hours &middot; one team</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column;">
+    <sc-for list="{{calls}}" as="c" hint-placeholder-count="4">
+      <div style="display: flex; gap: 24px; padding: 19px 0; border-top: 1px solid #221f1c; align-items: baseline;">
+        <div style="width: 92px; flex-shrink: 0;">
+          <div class="mono" style="font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: {{c.dayColor}};">{{c.day}}</div>
+          <div class="mono" style="font-size: 10.5px; color: #5f5a53; margin-top: 4px;">{{c.time}}</div>
+        </div>
+
+        <div style="flex-grow: 1; min-width: 0;">
+          <div class="serif" style="font-size: 21px; line-height: 1.25; color: #f4f2ee;">{{c.title}}</div>
+          <p style="margin: 7px 0 0; font-size: 14px; line-height: 1.62; color: #a19a91; max-width: 620px;">{{c.blurb}}</p>
+          <div style="display: flex; align-items: center; gap: 8px; margin-top: 11px;">
+            <sc-for list="{{c.dots}}" as="d" hint-placeholder-count="3">
+              <div style="width: 6px; height: 6px; border-radius: 50%; background: {{d.c}};"></div>
+            </sc-for>
+            <span style="font-size: 12px; color: #6f6a63; margin-left: 3px;">{{c.who}}</span>
+          </div>
+        </div>
+
+        <div style="flex-shrink: 0; text-align: right; width: 96px;">
+          <div class="mono" style="font-size: 12px; color: #a19a91;">{{c.dur}}</div>
+          <div style="display: flex; align-items: flex-end; justify-content: flex-end; gap: 1.5px; height: 18px; margin-top: 8px;">
+            <sc-for list="{{c.wave}}" as="b" hint-placeholder-count="20">
+              <div style="width: 2px; height: {{b.h}}; background: #3a332b;"></div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"$preview":{"width":1100,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const wave = (seed) => Array.from({ length: 20 }, (_, i) => ({
+      h: (18 + Math.round(Math.abs(Math.sin((i + seed) * 1.6) * Math.cos(i * 0.8)) * 76)) + '%',
+    }));
+    const d = (c) => ({ c });
+    return {
+      calls: [
+        { day: 'Today', dayColor: '#e0a35e', time: '3:30 PM', dur: '1h 50m',
+          title: "13th Annual HPR New Year's Eve Show",
+          blurb: 'Nine people, most of a marathon, and a community rebuilding its own delivery network after the Archive went dark.',
+          who: 'Ken, Honkey, Joe +6', wave: wave(0),
+          dots: [d('#5ed3a0'), d('#f0a13e'), d('#6aa9ff'), d('#e37fb8')] },
+        { day: 'Yesterday', dayColor: '#6f6a63', time: '10:00 AM', dur: '50m',
+          title: 'HPR Community News, July 2024',
+          blurb: 'Volunteers work through July’s shows and comments, welcome new hosts, and argue gently about the website.',
+          who: 'Ken, Dave', wave: wave(7), dots: [d('#5ed3a0'), d('#e37fb8')] },
+        { day: 'Tuesday', dayColor: '#6f6a63', time: '4:00 PM', dur: '1h 12m',
+          title: 'HPR Community News, April 2024',
+          blurb: 'April’s shows reviewed, a new host welcomed, and a long detour into listener feedback.',
+          who: 'Ken, Dave', wave: wave(13), dots: [d('#5ed3a0'), d('#e37fb8')] },
+        { day: '1 Sept', dayColor: '#6f6a63', time: '9:30 AM', dur: '1h 1m',
+          title: 'HPR Community News, March 2024',
+          blurb: 'Ken Fallon and Dave Morris review March, discuss feedback, and share what they have been building.',
+          who: 'Ken, Dave', wave: wave(21), dots: [d('#5ed3a0'), d('#e37fb8')] },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

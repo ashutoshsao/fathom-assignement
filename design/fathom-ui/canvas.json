@@ -1,0 +1,17 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",       "x": 0,    "y": 0,    "w": 1440, "h": 900, "title": "A · Call detail — refined Fathom" },
+    { "file": "DirectionB.dc.html", "x": 1560, "y": 0,    "w": 1440, "h": 900, "title": "B · Call detail — editorial" },
+    { "file": "LibraryA.dc.html",   "x": 170,  "y": 1080, "w": 1100, "h": 820, "title": "A · Library" },
+    { "file": "LibraryB.dc.html",   "x": 1730, "y": 1080, "w": 1100, "h": 820, "title": "B · Library" }
+  ],
+  "annotations": [
+    { "id": "dir-a", "x": 0, "y": -150, "w": 460,
+      "text": "DIRECTION A — Refined\n\nSame palette, same blue. Fixes what is actually weak: a real type ramp (23/15/14/10.5 instead of everything at 13px), a compact player so Ask owns the rail, and cards whose art carries the speaker palette.\n\nTradeoff: safe. Reads as a competent product, not a memorable one." },
+    { "id": "dir-b", "x": 1560, "y": -150, "w": 460,
+      "text": "DIRECTION B — Editorial\n\nInstrument Serif headlines, warmer near-black, amber accent. Transcript becomes the reading column; the summary steps back. The library reads as an index, not a card grid.\n\nTradeoff: further from real Fathom, and the serif is a commitment. Stronger character, more risk." },
+    { "id": "shared", "x": 780, "y": 1980, "w": 520,
+      "text": "Both use the real seeded content and the existing 8-colour speaker palette. Neither changes information architecture — only hierarchy, density and type." }
+  ],
+  "launch": { "view": "canvas" }
+}

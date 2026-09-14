@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; font-family: Geist, ui-sans-serif, system-ui, sans-serif; background: #0a0a0c; }
+    a { color: #2e9bf0; } a:hover { color: #4fadf5; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; height: 900px; display: flex; flex-direction: column; background: #0a0a0c; color: #ededf0; overflow: hidden;">
+
+  <!-- top bar -->
+  <div style="display: flex; align-items: center; gap: 16px; padding: 0 20px; height: 48px; border-bottom: 1px solid #26262d; flex-shrink: 0;">
+    <span style="font-size: 14px; font-weight: 600; letter-spacing: -0.01em; color: #ededf0;">FATHOM</span>
+    <div style="display: flex; gap: 2px;">
+      <span style="font-size: 13px; color: #ededf0; padding: 4px 10px; border-radius: 6px; background: #1a1a1f;">My Calls</span>
+      <span style="font-size: 13px; color: #6b6b76; padding: 4px 10px;">Team Calls</span>
+      <span style="font-size: 13px; color: #6b6b76; padding: 4px 10px;">Playlists</span>
+    </div>
+    <div style="margin-left: auto; width: 260px; height: 30px; border: 1px solid #26262d; border-radius: 7px; background: #121215; display: flex; align-items: center; padding: 0 10px; gap: 7px;">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#6b6b76" stroke-width="1.6"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+      <span style="font-size: 12.5px; color: #6b6b76;">Search across calls</span>
+    </div>
+  </div>
+
+  <!-- call header: real hierarchy -->
+  <div style="padding: 18px 28px 0; flex-shrink: 0;">
+    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 10px;">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#6b6b76" stroke-width="1.6"><path d="M10 3L5 8l5 5"/></svg>
+      <span style="font-size: 12.5px; color: #6b6b76;">My Calls</span>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+      <div style="flex-grow: 1; min-width: 0;">
+        <h1 style="margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -0.022em; line-height: 1.2; color: #ededf0;">13th Annual HPR New Year&#39;s Eve Show</h1>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 7px;">
+          <span style="font-size: 12.5px; color: #9a9aa5;">Today, 3:30 PM</span>
+          <span style="width: 3px; height: 3px; border-radius: 50%; background: #34343d;"></span>
+          <span style="font-size: 12.5px; color: #9a9aa5;">1h 50m</span>
+          <span style="width: 3px; height: 3px; border-radius: 50%; background: #34343d;"></span>
+          <span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; color: #9a9aa5;">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#9a9aa5" stroke-width="1.5"><rect x="1.5" y="3.5" width="9" height="9" rx="2"/><path d="M10.5 7l4-2.5v7L10.5 9"/></svg>
+            Google Meet
+          </span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
+        <div style="display: flex;">
+          <sc-for list="{{faces}}" as="f" hint-placeholder-count="6">
+            <div style="width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9.5px; font-weight: 500; margin-left: -5px; border: 2px solid #0a0a0c; background: {{f.bg}}; color: {{f.fg}};">{{f.i}}</div>
+          </sc-for>
+          <div style="width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9.5px; margin-left: -5px; border: 2px solid #0a0a0c; background: #1a1a1f; color: #9a9aa5;">+3</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="height: 30px; padding: 0 12px; border: 1px solid #34343d; border-radius: 7px; display: flex; align-items: center; font-size: 12.5px; color: #ededf0;">Share</div>
+          <div style="height: 30px; width: 30px; border: 1px solid #26262d; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: #9a9aa5;">&#8943;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tabs -->
+    <div style="display: flex; gap: 22px; margin-top: 16px; border-bottom: 1px solid #26262d;">
+      <div style="padding-bottom: 9px; border-bottom: 2px solid #2e9bf0; margin-bottom: -1px; font-size: 13px; font-weight: 500; color: #2e9bf0;">Summary</div>
+      <div style="padding-bottom: 9px; font-size: 13px; color: #9a9aa5; display: flex; align-items: center; gap: 6px;">Action Items <span style="background: #232329; color: #9a9aa5; border-radius: 4px; padding: 1px 5px; font-size: 10.5px;">3</span></div>
+      <div style="padding-bottom: 9px; font-size: 13px; color: #9a9aa5;">Transcript</div>
+    </div>
+  </div>
+
+  <!-- body -->
+  <div style="display: flex; flex-grow: 1; min-height: 0;">
+
+    <!-- summary column -->
+    <div style="flex-grow: 1; min-width: 0; padding: 22px 28px; overflow: hidden;">
+      <div style="max-width: 640px; display: flex; flex-direction: column; gap: 26px;">
+
+        <div>
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #6b6b76; margin-bottom: 9px;">Meeting purpose</div>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #ededf0;">To celebrate the New Year and discuss the technical evolution and infrastructure of the Hacker Public Radio platform.</p>
+        </div>
+
+        <div>
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #6b6b76; margin-bottom: 11px;">Key takeaways</div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <sc-for list="{{takeaways}}" as="t" hint-placeholder-count="3">
+              <div style="display: flex; gap: 11px;">
+                <div style="width: 5px; height: 5px; border-radius: 50%; background: #2e9bf0; margin-top: 8px; flex-shrink: 0;"></div>
+                <p style="margin: 0; font-size: 14px; line-height: 1.62; color: #c9c9d1;">{{t.text}} <span class="mono" style="display: inline-block; background: #1a1a1f; border: 1px solid #26262d; border-radius: 5px; padding: 1px 6px; font-size: 11px; color: #9a9aa5; vertical-align: 1px;">{{t.at}}</span></p>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div>
+          <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 11px;">
+            <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #6b6b76;">HPR infrastructure and CDN</div>
+            <span class="mono" style="background: #1a1a1f; border: 1px solid #26262d; border-radius: 5px; padding: 1px 6px; font-size: 11px; color: #9a9aa5;">21:22</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <sc-for list="{{topic}}" as="p" hint-placeholder-count="3">
+              <div style="display: flex; gap: 11px;">
+                <div style="width: 4px; height: 4px; border-radius: 50%; background: #34343d; margin-top: 8px; flex-shrink: 0;"></div>
+                <p style="margin: 0; font-size: 14px; line-height: 1.62; color: #9a9aa5;">{{p.text}}</p>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- right rail: compact player, Ask dominant -->
+    <div style="width: 400px; flex-shrink: 0; border-left: 1px solid #26262d; display: flex; flex-direction: column; background: #0d0d10;">
+
+      <div style="padding: 12px 16px; border-bottom: 1px solid #26262d; flex-shrink: 0;">
+        <div style="display: flex; align-items: flex-end; gap: 1.5px; height: 34px; margin-bottom: 10px;">
+          <sc-for list="{{wave}}" as="b" hint-placeholder-count="60">
+            <div style="flex-grow: 1; border-radius: 1px; height: {{b.h}}; background: {{b.c}};"></div>
+          </sc-for>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 28px; height: 28px; border-radius: 50%; background: #2e9bf0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="#0a0a0c"><path d="M2.5 1.4v9.2a.7.7 0 0 0 1.07.6l7.3-4.6a.7.7 0 0 0 0-1.2L3.57.8A.7.7 0 0 0 2.5 1.4Z"/></svg>
+          </div>
+          <span class="mono" style="font-size: 11.5px; color: #ededf0;">25:04</span>
+          <span class="mono" style="font-size: 11.5px; color: #6b6b76;">/ 1:49:56</span>
+          <div style="margin-left: auto; display: flex; gap: 3px;">
+            <span class="mono" style="font-size: 10.5px; color: #ededf0; background: #232329; border-radius: 4px; padding: 2px 6px;">1x</span>
+            <span class="mono" style="font-size: 10.5px; color: #6b6b76; padding: 2px 6px;">1.5x</span>
+            <span class="mono" style="font-size: 10.5px; color: #6b6b76; padding: 2px 6px;">2x</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 14px 16px 10px; flex-shrink: 0; display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #6b6b76;">Ask Fathom</span>
+        <span style="font-size: 10.5px; color: #9a9aa5; background: #1a1a1f; border-radius: 4px; padding: 2px 7px;">This call</span>
+      </div>
+
+      <div style="flex-grow: 1; min-height: 0; padding: 0 16px; display: flex; flex-direction: column; gap: 14px; overflow: hidden;">
+        <div style="align-self: flex-end; max-width: 84%; background: #232329; border-radius: 11px 11px 3px 11px; padding: 9px 12px;">
+          <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #ededf0;">What happened with the Internet Archive?</p>
+        </div>
+        <div>
+          <p style="margin: 0 0 11px; font-size: 13.5px; line-height: 1.68; color: #c9c9d1;">The Internet Archive went down for three to four weeks. HPR had been serving all its media through it, so episodes became unavailable.</p>
+          <p style="margin: 0 0 12px; font-size: 13.5px; line-height: 1.68; color: #c9c9d1;">In response they built a community CDN &mdash; audio is pushed to an origin server and mirrors rsync every 30 minutes.</p>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <sc-for list="{{cites}}" as="c" hint-placeholder-count="2">
+              <div style="display: flex; align-items: flex-start; gap: 8px; border: 1px solid rgba(46,155,240,0.28); background: rgba(18,40,58,0.55); border-radius: 8px; padding: 8px 10px;">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="#2e9bf0" style="flex-shrink: 0; margin-top: 1px;"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM6.5 4.8l5 3.2-5 3.2V4.8Z"/></svg>
+                <div style="min-width: 0;">
+                  <div style="font-size: 12px; line-height: 1.4; color: #2e9bf0;">{{c.label}}</div>
+                  <div class="mono" style="font-size: 10.5px; color: #6b6b76; margin-top: 2px;">{{c.at}}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 12px 16px 14px; flex-shrink: 0;">
+        <div style="border: 1px solid #26262d; background: #121215; border-radius: 9px; padding: 9px 11px; display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 13px; color: #6b6b76; flex-grow: 1;">Ask anything&hellip;</span>
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: #2e9bf0; display: flex; align-items: center; justify-content: center;">
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="#0a0a0c" stroke-width="2"><path d="M8 13V3M3.5 7.5L8 3l4.5 4.5"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const faces = [
+      { i: 'KE', bg: 'rgba(94,211,160,0.18)', fg: '#5ed3a0' },
+      { i: 'HO', bg: 'rgba(240,161,62,0.18)', fg: '#f0a13e' },
+      { i: 'JO', bg: 'rgba(106,169,255,0.18)', fg: '#6aa9ff' },
+      { i: 'AR', bg: 'rgba(227,127,184,0.18)', fg: '#e37fb8' },
+      { i: 'PO', bg: 'rgba(183,156,245,0.18)', fg: '#b79cf5' },
+      { i: 'SS', bg: 'rgba(99,205,216,0.18)', fg: '#63cdd8' },
+    ];
+    const wave = Array.from({ length: 60 }, (_, i) => {
+      const h = 14 + Math.round(Math.abs(Math.sin(i * 1.9) * Math.cos(i * 0.7)) * 82);
+      return { h: h + '%', c: i < 14 ? '#2e9bf0' : '#232329' };
+    });
+    return {
+      faces, wave,
+      takeaways: [
+        { text: 'HPR is moving to a distributed CDN with mirrors in several countries, so the site survives an Internet Archive outage.', at: '22:54' },
+        { text: 'The website is now a static site, cutting server load and running costs.', at: '24:41' },
+        { text: 'Dave is retiring as janitor, so show notes and transcoding need a new owner.', at: '26:59' },
+      ],
+      topic: [
+        { text: 'A peer-to-peer rsync script mirrors audio across several global locations.' },
+        { text: 'Round-robin load balancing spreads traffic between the Archive and private mirrors.' },
+        { text: 'Static HTML removes expensive database queries at peak traffic.' },
+      ],
+      cites: [
+        { label: 'Internet Archive downtime prompts the CDN', at: '25:00' },
+        { label: 'Ken explains the mirror origin server', at: '21:22' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

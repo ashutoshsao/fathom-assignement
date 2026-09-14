@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; font-family: Geist, ui-sans-serif, system-ui, sans-serif; background: #0a0a0c; }
+    a { color: #2e9bf0; } a:hover { color: #4fadf5; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+</helmet>
+
+<div style="width: 1100px; height: 820px; background: #0a0a0c; color: #ededf0; padding: 26px 32px; box-sizing: border-box; overflow: hidden;">
+  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px;">
+    <h2 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.018em;">My Calls</h2>
+    <span style="font-size: 12.5px; color: #6b6b76;">5 recordings &middot; 6h 2m</span>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 22px;">
+    <sc-for list="{{groups}}" as="g" hint-placeholder-count="2">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b76;">{{g.label}}</span>
+          <div style="flex-grow: 1; height: 1px; background: #1a1a1f;"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <sc-for list="{{g.calls}}" as="c" hint-placeholder-count="2">
+            <div style="display: flex; gap: 15px; align-items: stretch; border: 1px solid #26262d; border-radius: 10px; background: #121215; padding: 13px 15px;">
+              <!-- card art carries the speaker palette, so calls differ at a glance -->
+              <div style="width: 104px; flex-shrink: 0; border-radius: 7px; background: #17171b; position: relative; overflow: hidden; display: flex; align-items: flex-end; gap: 1.5px; padding: 9px 8px;">
+                <sc-for list="{{c.wave}}" as="b" hint-placeholder-count="22">
+                  <div style="flex-grow: 1; border-radius: 1px; height: {{b.h}}; background: {{b.c}};"></div>
+                </sc-for>
+                <span class="mono" style="position: absolute; right: 5px; bottom: 4px; font-size: 9.5px; color: #c9c9d1; background: rgba(10,10,12,0.72); border-radius: 3px; padding: 1px 4px;">{{c.dur}}</span>
+              </div>
+
+              <div style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px;">
+                <div style="display: flex; align-items: baseline; gap: 9px;">
+                  <span style="font-size: 15px; font-weight: 500; letter-spacing: -0.011em; color: #ededf0;">{{c.title}}</span>
+                  <span class="mono" style="font-size: 10.5px; color: #6b6b76;">{{c.time}}</span>
+                </div>
+                <p style="margin: 0; font-size: 13px; line-height: 1.55; color: #9a9aa5;">{{c.blurb}}</p>
+                <div style="display: flex; align-items: center; gap: 9px; margin-top: 2px;">
+                  <div style="display: flex;">
+                    <sc-for list="{{c.faces}}" as="f" hint-placeholder-count="3">
+                      <div style="width: 19px; height: 19px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 500; margin-left: -4px; border: 1.5px solid #121215; background: {{f.bg}}; color: {{f.fg}};">{{f.i}}</div>
+                    </sc-for>
+                  </div>
+                  <span style="font-size: 11.5px; color: #6b6b76;">{{c.who}}</span>
+                  <span style="width: 3px; height: 3px; border-radius: 50%; background: #34343d;"></span>
+                  <span style="font-size: 11.5px; color: #6b6b76;">{{c.platform}}</span>
+                  <sc-if value="{{c.actions}}" hint-placeholder-val="{{true}}">
+                    <span style="margin-left: auto; font-size: 11px; color: #9a9aa5; background: #1a1a1f; border-radius: 5px; padding: 2px 8px;">{{c.actions}} actions</span>
+                  </sc-if>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"$preview":{"width":1100,"height":820}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const wave = (seed) => Array.from({ length: 22 }, (_, i) => ({
+      h: (16 + Math.round(Math.abs(Math.sin((i + seed) * 1.7) * Math.cos(i * 0.9)) * 78)) + '%',
+      c: 'rgba(46,155,240,0.42)',
+    }));
+    const f = (i, bg, fg) => ({ i, bg, fg });
+    return {
+      groups: [
+        { label: 'Today', calls: [
+          { title: "13th Annual HPR New Year's Eve Show", time: '3:30 PM', dur: '1h 50m',
+            blurb: 'The community gathers for a marathon chat covering infrastructure, 3D printing and the state of the archive.',
+            who: 'Ken, Honkey +7', platform: 'Google Meet', actions: 3, wave: wave(0),
+            faces: [f('KE','rgba(94,211,160,0.18)','#5ed3a0'), f('HO','rgba(240,161,62,0.18)','#f0a13e'), f('JO','rgba(106,169,255,0.18)','#6aa9ff')] },
+        ]},
+        { label: 'Yesterday', calls: [
+          { title: 'HPR Community News July 2024', time: '10:00 AM', dur: '50m',
+            blurb: 'Volunteers review July shows and comments, welcome new hosts and discuss site improvements.',
+            who: 'Ken, Dave', platform: 'Google Meet', actions: 5, wave: wave(7),
+            faces: [f('KE','rgba(94,211,160,0.18)','#5ed3a0'), f('DM','rgba(227,127,184,0.18)','#e37fb8')] },
+        ]},
+        { label: 'Tuesday', calls: [
+          { title: 'HPR Community News April 2024', time: '4:00 PM', dur: '1h 12m',
+            blurb: 'The team reviews April shows, welcomes new host Dave Hingley and works through listener feedback.',
+            who: 'Ken, Dave', platform: 'Zoom', actions: 1, wave: wave(13),
+            faces: [f('KE','rgba(94,211,160,0.18)','#5ed3a0'), f('DM','rgba(227,127,184,0.18)','#e37fb8')] },
+          { title: 'HPR Community News March 2024', time: '9:30 AM', dur: '1h 1m',
+            blurb: 'Ken Fallon and Dave Morris review March shows, discuss feedback and share project updates.',
+            who: 'Ken, Dave', platform: 'Google Meet', actions: 2, wave: wave(21),
+            faces: [f('KE','rgba(94,211,160,0.18)','#5ed3a0'), f('DM','rgba(227,127,184,0.18)','#e37fb8')] },
+        ]},
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
