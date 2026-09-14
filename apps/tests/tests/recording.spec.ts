@@ -23,6 +23,12 @@ test("a recording that is not in this browser explains itself instead of errorin
 });
 
 test("a recording still processing is playable, and says so", async ({ page }) => {
+  // Auto-resume would otherwise finish the job the moment we open the page, so hold the
+  // transcription open to observe the processing state itself.
+  await page.route("**/api/transcribe", () => {
+    /* never fulfilled: the request stays in flight */
+  });
+
   await page.goto("/");
   await page.evaluate(async () => {
     const call = {

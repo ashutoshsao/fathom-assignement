@@ -9,6 +9,7 @@ import { ActionItems } from "./ActionItems";
 import { AskPanel } from "./AskPanel";
 import { PlaybackProvider } from "./playback";
 import { Player } from "./Player";
+import { ShareMenu } from "./ShareMenu";
 import { SpeakerChip } from "./SpeakerChip";
 import { SummaryPane } from "./SummaryPane";
 import { Transcript } from "./Transcript";
@@ -41,14 +42,19 @@ export function CallView({ call, startAt }: { call: Call; startAt?: number }) {
             <span className="text-[13px] text-text-faint">
               {dayLabel(date)} · {clockTime(date)} · {formatDuration(call.durationSec)}
             </span>
-            <div className="ml-auto flex -space-x-1.5">
-              {call.speakers.slice(0, 8).map((s) => (
-                <SpeakerChip key={s.id} speaker={s} size={24} />
-              ))}
-              {call.speakers.length > 8 && (
-                <span className="flex h-6 items-center pl-3 text-[12px] text-text-faint">
-                  +{call.speakers.length - 8}
-                </span>
+            <div className="ml-auto flex items-center gap-3">
+              <div className="flex -space-x-1.5">
+                {call.speakers.slice(0, 8).map((s) => (
+                  <SpeakerChip key={s.id} speaker={s} size={24} />
+                ))}
+                {call.speakers.length > 8 && (
+                  <span className="flex h-6 items-center pl-3 text-[12px] text-text-faint">
+                    +{call.speakers.length - 8}
+                  </span>
+                )}
+              </div>
+              {!call.id.startsWith("rec-") && (
+                <ShareMenu callId={call.id} durationSec={call.durationSec} />
               )}
             </div>
           </div>

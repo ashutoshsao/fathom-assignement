@@ -44,11 +44,18 @@ const Ctx = createContext<PlaybackStore | null>(null);
 export function PlaybackProvider({
   src,
   startAt,
+  clip,
   children,
 }: {
   src: string;
   /** Seconds to open at — used by deep links, so a cross-call citation lands on the moment. */
   startAt?: number;
+  /**
+   * Constrain playback to a window. Sharing a clip has to actually behave like a clip: it starts
+   * where it should and stops at the end, rather than quietly running on into the rest of an
+   * hour-long call the recipient was never sent.
+   */
+  clip?: { startSec: number; endSec: number };
   children: ReactNode;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -72,6 +79,9 @@ export function PlaybackProvider({
     seek: (sec) => {
       const el = audioRef.current;
       if (!el) return;
+      const lo = clip?.startSec ?? 0;
+      const hi = clip?.endSec ?? Infinity;
+      sec = Math.min(Math.max(sec, lo), hi);
       el.currentTime = Math.max(0, sec);
       // Update immediately rather than waiting for the next timeupdate, so a click on a
       // transcript line moves the highlight without a visible lag.
@@ -104,21 +114,28 @@ export function PlaybackProvider({
   // A deep link can only seek once the browser knows how long the audio is, so wait for metadata.
   useEffect(() => {
     const el = audioRef.current;
-    if (!el || !startAt) return;
+    const target = startAt ?? clip?.startSec;
+    if (!el || !target) return;
+    const startAtResolved = target;
     const apply = () => {
-      el.currentTime = startAt;
-      state.current.time = startAt;
+      el.currentTime = startAtResolved;
+      state.current.time = startAtResolved;
       emit();
     };
     if (el.readyState >= 1) apply();
     else el.addEventListener("loadedmetadata", apply, { once: true });
     return () => el.removeEventListener("loadedmetadata", apply);
-  }, [startAt, emit]);
+  }, [startAt, clip?.startSec, emit]);
 
   useEffect(() => {
     const el = audioRef.current;
     if (!el) return;
     const onTime = () => {
+      // A clip that plays past its end is not a clip.
+      if (clip && el.currentTime >= clip.endSec) {
+        el.pause();
+        el.currentTime = clip.endSec;
+      }
       state.current.time = el.currentTime;
       emit();
     };
@@ -144,7 +161,7 @@ export function PlaybackProvider({
       el.removeEventListener("pause", onPlayPause);
       el.removeEventListener("ended", onPlayPause);
     };
-  }, [emit]);
+  }, [emit, clip]);
 
   // Space to play/pause, arrows to scrub — the shortcuts anyone who has used a player expects.
   useEffect(() => {
