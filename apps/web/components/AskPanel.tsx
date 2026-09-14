@@ -115,16 +115,28 @@ export function AskPanel({
 
       <div ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
         {turns.length === 0 && (
-          <div className="flex h-full flex-col justify-end gap-1.5">
-            {suggestions.map((s) => (
-              <button
-                key={s}
-                onClick={() => ask(s)}
-                className="self-end rounded-full border border-line bg-surface-2 px-3 py-1.5 text-right text-[12px] text-text-muted transition-colors hover:border-accent hover:text-accent"
-              >
-                {s}
-              </button>
-            ))}
+          /*
+           * The empty state used to pin the suggestions to the bottom, leaving a tall column of
+           * dark nothing that read as unfinished rather than as restraint. It now sits at the top
+           * and says what Ask actually does — the citation behaviour is the part worth knowing
+           * before you type.
+           */
+          <div className="flex flex-col gap-3.5">
+            <p className="text-[13px] leading-relaxed text-text-muted">
+              Ask anything about this call. Answers quote the moment they came from, and clicking a
+              source plays it.
+            </p>
+            <div className="flex flex-col items-start gap-1.5">
+              {suggestions.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => ask(s)}
+                  className="rounded-full border border-line bg-surface-2 px-3 py-1.5 text-left text-[12px] text-text-muted transition-colors hover:border-accent hover:text-accent"
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
