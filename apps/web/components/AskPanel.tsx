@@ -17,6 +17,8 @@ interface Turn {
   answer: string;
   citations: Citation[];
   error?: string;
+  /** A spent demo quota is a limit, not a fault, and is styled as such. */
+  errorKind?: "quota" | "failure";
   streaming: boolean;
 }
 
@@ -81,7 +83,12 @@ export function AskPanel({
           } else if (evt.type === "done") {
             update((t) => ({ ...t, citations: evt.citations ?? [], streaming: false }));
           } else if (evt.type === "error") {
-            update((t) => ({ ...t, error: evt.message, streaming: false }));
+            update((t) => ({
+              ...t,
+              error: evt.message,
+              errorKind: evt.kind === "quota" ? "quota" : "failure",
+              streaming: false,
+            }));
           }
         }
       }
@@ -130,7 +137,15 @@ export function AskPanel({
             </p>
 
             {turn.error ? (
-              <p className="text-[13px] leading-relaxed text-[#f2836b]">{turn.error}</p>
+              <p
+                className={`rounded-md border px-3 py-2 text-[12px] leading-relaxed ${
+                  turn.errorKind === "quota"
+                    ? "border-line bg-surface-2 text-text-muted"
+                    : "border-[#f2836b]/40 text-[#f2836b]"
+                }`}
+              >
+                {turn.error}
+              </p>
             ) : (
               <>
                 <p className="whitespace-pre-wrap text-[13px] leading-relaxed text-text-muted">

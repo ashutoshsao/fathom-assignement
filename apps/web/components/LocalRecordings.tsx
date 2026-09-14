@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { onProcessingChange } from "@/lib/processing";
 import { deleteRecording, listRecordings } from "@/lib/recordings-store";
 import { formatDuration } from "@/lib/time";
 import type { Call } from "@/lib/types";
@@ -18,7 +19,9 @@ export function LocalRecordings() {
   const [calls, setCalls] = useState<Omit<Call, "audioUrl">[]>([]);
 
   useEffect(() => {
-    listRecordings().then(setCalls);
+    const load = () => void listRecordings().then(setCalls);
+    load();
+    return onProcessingChange(load);
   }, []);
 
   if (calls.length === 0) return null;
@@ -42,7 +45,7 @@ export function LocalRecordings() {
                 {call.title}
               </h3>
               <p className="mt-1 line-clamp-2 text-[13px] leading-relaxed text-text-muted">
-                {call.blurb}
+                {call.status === "failed" ? "Transcription failed — the audio still plays" : call.blurb}
               </p>
               <div className="mt-2.5 flex items-center gap-3">
                 <div className="flex -space-x-1.5">
@@ -50,7 +53,10 @@ export function LocalRecordings() {
                     <SpeakerChip key={s.id} speaker={s} size={20} />
                   ))}
                 </div>
-                <span className="text-[12px] text-text-faint">
+                <span className="flex items-center gap-1.5 text-[12px] text-text-faint">
+                  {call.status === "processing" && (
+                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+                  )}
                   {formatDuration(call.durationSec)} · recorded just now
                 </span>
               </div>

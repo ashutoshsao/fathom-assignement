@@ -66,6 +66,33 @@ fragile work for a capability the brief explicitly says not to bother with.
       rendering through the call UI.
 - [x] **Full suite green**: 35 unit, 17 integration.
 
+## Follow-up (added after review)
+
+Two flaws found once the thing was usable:
+
+- **Stop blocked the user on a round-trip.** After stopping, they waited 30-60s watching
+  "Transcribing…" for a recording they already had on disk. The recording should appear
+  immediately and fill in as the model finishes — which is also how the real product behaves, its
+  summary arriving after you have left the call.
+- **Quota exhaustion read as a bug.** The free tier allows 20 requests per day per model; when
+  the pool runs dry the UI said "all models unavailable", which a reviewer would reasonably read
+  as broken software rather than a demo limit. This matters more than usual because the deployed
+  link is unattended.
+
+- [x] **Optimistic save.** Stop writes the recording and its locally-computed waveform to
+      IndexedDB immediately and navigates straight to it, marked processing.
+- [x] **Background transcription survives navigation.** The job lives at module scope, not in the
+      recorder component — a client-side navigation unmounts that component, and a fetch it owned
+      would be abandoned mid-flight. Completion is announced to subscribers rather than polled.
+- [x] **Playback works while the transcript is being written.** The audio is already on disk, so
+      the processing view is a working player, not a spinner on an empty page.
+- [x] **Processing and failed states** shown in the library and on the call page. A failed
+      transcription keeps the recording and says the audio is safe, rather than discarding it.
+- [x] **Quota exhaustion explains itself.** A typed `QuotaExhaustedError` carries a message naming
+      the free tier and the midnight-Pacific reset, styled as a limit rather than an error.
+- [x] **Tests** for both: a processing recording is playable and says so; a spent quota shows the
+      explanation. 19 integration tests passing.
+
 ## Verified end to end
 
 A 40-second clip posted to `/api/transcribe` came back with a correct transcript, a title

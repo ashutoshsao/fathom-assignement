@@ -2,10 +2,12 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { buildRecordedCall, peaksFrom } from "@/lib/build-recording";
+import { peaksFrom } from "@/lib/build-recording";
+import { startProcessing } from "@/lib/processing";
 import { isSupported, MeetingRecorder } from "@/lib/recorder";
 import { saveRecording } from "@/lib/recordings-store";
 import { formatTime } from "@/lib/time";
+import type { Call } from "@/lib/types";
 
 type Phase = "idle" | "arming" | "recording" | "processing" | "error";
 
@@ -56,29 +58,49 @@ export function Recorder() {
     const r = recorder.current;
     if (!r) return;
     setPhase("processing");
-    setNote("Finishing the recording…");
+    setNote("Saving your recording…");
     try {
       const result = await r.stop();
-
-      setNote("Transcribing and identifying speakers…");
-      const form = new FormData();
-      form.append("audio", result.blob, "recording.webm");
-      const res = await fetch("/api/transcribe", { method: "POST", body: form });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "Transcription failed");
-
-      setNote("Writing the notes…");
       const id = `rec-${Date.now().toString(36)}`;
-      const call = buildRecordedCall({
+
+      // Waveform is computed locally from audio we already hold, so the recording is genuinely
+      // playable the moment it is saved — before the model has seen it.
+      const waveform = await peaksFrom(result.blob);
+
+      const placeholder: Omit<Call, "audioUrl"> = {
         id,
-        transcript: data.transcript,
-        notes: data.notes,
+        title: "New recording",
+        daysAgo: 0,
+        timeOfDay: new Date().toTimeString().slice(0, 5),
         durationSec: result.durationSec,
-        waveform: await peaksFrom(result.blob),
+        platform: "google-meet",
+        blurb: "Transcribing…",
+        speakers: [],
+        waveform,
+        summary: { purpose: "", keyTakeaways: [], topics: [], nextSteps: [] },
+        actionItems: [],
+        transcript: [],
+        highlights: result.marks.map((atSec, i) => ({
+          id: `${id}-h${i}`,
+          atSec,
+          label: "Marked during the call",
+        })),
+        source: {
+          name: "Recorded in your browser",
+          url: "",
+          license: "Your recording — stored locally, never uploaded except to transcribe",
+          licenseUrl: "",
+        },
+        status: "processing",
+      };
+
+      await saveRecording(placeholder, result.blob);
+      // Deliberately not awaited: the user should not wait for the model to see their recording.
+      startProcessing(id, result.blob, {
+        durationSec: result.durationSec,
         marks: result.marks,
       });
-
-      await saveRecording(call, result.blob);
+      setPhase("idle");
       router.push(`/recordings/${id}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");

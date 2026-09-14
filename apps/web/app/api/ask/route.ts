@@ -63,7 +63,12 @@ export async function POST(request: Request) {
         }
         send({ type: "done", citations });
       } catch (err) {
-        send({ type: "error", message: err instanceof Error ? err.message : "request failed" });
+        const quota = err instanceof Error && err.name === "QuotaExhaustedError";
+        send({
+          type: "error",
+          message: err instanceof Error ? err.message : "request failed",
+          kind: quota ? "quota" : "failure",
+        });
       } finally {
         controller.close();
       }

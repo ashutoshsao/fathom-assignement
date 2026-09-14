@@ -67,6 +67,12 @@ export interface Highlight {
   label: string;
 }
 
+/**
+ * Recordings appear before their transcript exists, so a call carries a lifecycle.
+ * Seeded calls have no status — they are ready by definition.
+ */
+export type CallStatus = "processing" | "ready" | "failed";
+
 export interface Call {
   id: string;
   title: string;
@@ -91,6 +97,9 @@ export interface Call {
   highlights: Highlight[];
   /** Attribution, since the audio is CC BY-SA and the licence requires it travel with the work. */
   source: { name: string; url: string; license: string; licenseUrl: string };
+  status?: CallStatus;
+  /** Why processing failed, shown to the user rather than swallowed. */
+  error?: string;
 }
 
 /** What the library list needs — everything except the heavy transcript. */

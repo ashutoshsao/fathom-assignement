@@ -22,6 +22,78 @@ test("a recording that is not in this browser explains itself instead of errorin
   await expect(page.getByRole("link", { name: "Back to My Calls" })).toBeVisible();
 });
 
+test("a recording still processing is playable, and says so", async ({ page }) => {
+  await page.goto("/");
+  await page.evaluate(async () => {
+    const call = {
+      id: "rec-processing",
+      title: "New recording",
+      daysAgo: 0,
+      timeOfDay: "10:00",
+      durationSec: 30,
+      platform: "google-meet",
+      blurb: "Transcribing\u2026",
+      speakers: [],
+      waveform: [0.3, 0.7, 0.5],
+      summary: { purpose: "", keyTakeaways: [], topics: [], nextSteps: [] },
+      actionItems: [],
+      transcript: [],
+      highlights: [],
+      source: { name: "Recorded in your browser", url: "", license: "local", licenseUrl: "" },
+      status: "processing",
+    };
+    await new Promise<void>((resolve, reject) => {
+      const req = indexedDB.open("fathom-recordings", 1);
+      req.onupgradeneeded = () => {
+        if (!req.result.objectStoreNames.contains("calls")) {
+          req.result.createObjectStore("calls", { keyPath: "id" });
+        }
+      };
+      req.onsuccess = () => {
+        const tx = req.result.transaction("calls", "readwrite");
+        tx.objectStore("calls").put({
+          id: call.id,
+          call,
+          audio: new Blob([new Uint8Array([0, 1, 2])], { type: "audio/webm" }),
+          createdAt: Date.now(),
+        });
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      };
+      req.onerror = () => reject(req.error);
+    });
+  });
+
+  await page.goto("/recordings/rec-processing");
+  // The point of the optimistic save: it is playable before the model has seen it.
+  await expect(page.getByRole("button", { name: "Play" })).toBeVisible();
+  await expect(page.getByText(/Transcribing and writing the notes/)).toBeVisible();
+  await expect(page.getByText(/you can leave this page/)).toBeVisible();
+});
+
+test("a spent demo quota explains itself rather than looking broken", async ({ page }) => {
+  await page.route("**/api/ask", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "application/x-ndjson",
+      body:
+        JSON.stringify({
+          type: "error",
+          kind: "quota",
+          message:
+            "The demo's daily AI quota is used up — this runs on Gemini's free tier, which allows a fixed number of requests per day. It resets at midnight Pacific. Everything else on this page still works.",
+        }) + "\n",
+    }),
+  );
+
+  await page.goto("/calls/hpr4314");
+  await page.getByPlaceholder("Ask anything...").fill("anything");
+  await page.keyboard.press("Enter");
+
+  await expect(page.getByText(/daily AI quota is used up/)).toBeVisible();
+  await expect(page.getByText(/resets at midnight Pacific/)).toBeVisible();
+});
+
 test("a stored recording renders through the same call UI as a seeded call", async ({ page }) => {
   await page.goto("/");
 

@@ -25,6 +25,25 @@ const MODEL_POOL = [
 
 // Exhausted models are remembered until the daily reset, so we stop paying the latency of a
 // request we know will 429.
+/**
+ * What a user sees when the free tier is spent.
+ *
+ * Gemini's free tier allows 20 generate requests per day PER MODEL. We rotate across a pool, so
+ * this is rare — but the deployed link is unattended, and "all models unavailable" reads as
+ * broken software rather than a demo limit. Saying which is the difference between a reviewer
+ * thinking the feature is broken and understanding it is rate-limited.
+ */
+export const QUOTA_MESSAGE =
+  "The demo's daily AI quota is used up — this runs on Gemini's free tier, which allows a fixed " +
+  "number of requests per day. It resets at midnight Pacific. Everything else on this page still works.";
+
+export class QuotaExhaustedError extends Error {
+  constructor() {
+    super(QUOTA_MESSAGE);
+    this.name = "QuotaExhaustedError";
+  }
+}
+
 const exhausted = new Map<string, number>();
 const DAY_MS = 24 * 60 * 60 * 1000;
 let cursor = 0;
@@ -93,7 +112,8 @@ export async function generateJson<T>(opts: {
     }
     return JSON.parse(text) as T;
   }
-  throw new Error(`all models unavailable (${lastError})`);
+  if (models.length === 0 || lastError.includes("429")) throw new QuotaExhaustedError();
+  throw new Error(`The AI service is unavailable right now (${lastError})`);
 }
 
 /** Files API upload — needed for audio over the inline-request size limit. */
@@ -204,7 +224,8 @@ export async function* streamJson(opts: StreamOptions): AsyncGenerator<string> {
     }
     return;
   }
-  throw new Error(`all models unavailable (${lastError})`);
+  if (models.length === 0 || lastError.includes("429")) throw new QuotaExhaustedError();
+  throw new Error(`The AI service is unavailable right now (${lastError})`);
 }
 
 /**

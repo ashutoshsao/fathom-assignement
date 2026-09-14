@@ -162,7 +162,9 @@ ${lines}`,
 
     return Response.json({ transcript, notes });
   } catch (err) {
+    const quota = err instanceof Error && err.name === "QuotaExhaustedError";
     const message = err instanceof Error ? err.message : "transcription failed";
-    return Response.json({ error: message }, { status: 500 });
+    return Response.json({ error: message, kind: quota ? "quota" : "failure" },
+                         { status: quota ? 429 : 500 });
   }
 }
