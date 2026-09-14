@@ -140,7 +140,9 @@ export function PlaybackProvider({
       emit();
     };
     const onMeta = () => {
-      state.current.duration = el.duration || 0;
+      // Safari and some MP3s report Infinity or NaN before the stream is seekable.
+      const d = el.duration;
+      state.current.duration = Number.isFinite(d) && d > 0 ? d : 0;
       emit();
     };
     const onPlayPause = () => {
@@ -150,9 +152,18 @@ export function PlaybackProvider({
     el.addEventListener("timeupdate", onTime);
     el.addEventListener("loadedmetadata", onMeta);
     el.addEventListener("durationchange", onMeta);
+    el.addEventListener("canplay", onMeta);
     el.addEventListener("play", onPlayPause);
     el.addEventListener("pause", onPlayPause);
     el.addEventListener("ended", onPlayPause);
+
+    // The element begins loading during render, so loadedmetadata can fire BEFORE this effect
+    // attaches. Missing it left duration at 0 forever — the total read "0:00" and, because the
+    // scrubber derives progress from time/duration, the played fill never advanced either.
+    // Read whatever the element already knows instead of waiting for an event that has been.
+    onMeta();
+    onPlayPause();
+    if (el.currentTime > 0) onTime();
     return () => {
       el.removeEventListener("timeupdate", onTime);
       el.removeEventListener("loadedmetadata", onMeta);

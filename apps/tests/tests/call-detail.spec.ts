@@ -66,3 +66,45 @@ test("the 110-minute transcript renders every segment", async ({ page }) => {
   // 2,326 segments in the seed data; assert the page is not silently truncating.
   expect(await lines.count()).toBeGreaterThan(2000);
 });
+
+test("the player knows the call's length, and the scrubber tracks position", async ({ page }) => {
+  await page.goto("/calls/hpr4314");
+  await page.waitForFunction(() => {
+    const a = document.querySelector("audio");
+    return !!a && a.readyState >= 1;
+  });
+
+  // The audio element starts loading during render, so loadedmetadata can fire before the
+  // playback effect attaches. Missing it left the total at 0:00 and froze the played fill,
+  // because progress is derived from time/duration.
+  const total = await page.evaluate(
+    () => document.querySelector("audio")!.duration,
+  );
+  expect(total).toBeGreaterThan(6000);
+  await expect(page.getByText("1:49:56")).toBeVisible();
+
+  // Seeking a fifth of the way in should paint roughly a fifth of the scrubber.
+  await page.evaluate(() => {
+    document.querySelector("audio")!.currentTime = 1385;
+  });
+  // Wait for the position to propagate rather than reading the frame before it.
+  await page.waitForFunction(() => {
+    const bars = document.querySelector('[role="slider"]')!.firstElementChild!.children;
+    let n = 0;
+    for (const b of bars) {
+      if (getComputedStyle(b).backgroundColor === "rgb(46, 155, 240)") n++;
+    }
+    return n > 5;
+  }, undefined, { timeout: 10_000 });
+
+  const played = await page.evaluate(() => {
+    const bars = document.querySelector('[role="slider"]')!.firstElementChild!.children;
+    let n = 0;
+    for (const b of bars) {
+      if (getComputedStyle(b).backgroundColor === "rgb(46, 155, 240)") n++;
+    }
+    return n / bars.length;
+  });
+  expect(played).toBeGreaterThan(0.15);
+  expect(played).toBeLessThan(0.3);
+});
