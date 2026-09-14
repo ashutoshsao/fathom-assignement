@@ -158,10 +158,19 @@ export function AskPanel({
               </p>
             ) : (
               <>
-                <p className="whitespace-pre-wrap text-[13px] leading-relaxed text-text-muted">
-                  {turn.answer}
-                  {turn.streaming && <Caret />}
-                </p>
+                {/*
+                  * Before the first token there is nothing to put a caret after, so a lone
+                  * blinking block sat alone on the panel for the 10-30s the model spends reading
+                  * a 110-minute transcript. That reads as a broken element, not as progress.
+                  */}
+                {turn.streaming && !turn.answer ? (
+                  <Thinking />
+                ) : (
+                  <p className="whitespace-pre-wrap text-[13px] leading-relaxed text-text-muted">
+                    {turn.answer}
+                    {turn.streaming && <Caret />}
+                  </p>
+                )}
                 {turn.citations.length > 0 && (
                   <div className="rise mt-3 space-y-1.5">
                     {turn.citations.map((c, j) => (
@@ -210,7 +219,30 @@ export function AskPanel({
 }
 
 function Caret() {
-  return <span className="ml-0.5 inline-block h-3.5 w-1.5 animate-pulse bg-accent align-middle" />;
+  return (
+    <span
+      className="caret ml-0.5 inline-block h-[14px] w-[2px] translate-y-[2px] bg-accent"
+      aria-hidden
+    />
+  );
+}
+
+/** Shown while the model is reading, before any text exists to attach a caret to. */
+function Thinking() {
+  return (
+    <div className="flex items-center gap-2 text-[13px] text-text-faint" role="status">
+      <span className="flex gap-1" aria-hidden>
+        {[0, 1, 2].map((i) => (
+          <span
+            key={i}
+            className="thinking-dot h-1 w-1 rounded-full bg-accent"
+            style={{ animationDelay: `${i * 140}ms` }}
+          />
+        ))}
+      </span>
+      Reading the transcript…
+    </div>
+  );
 }
 
 function CitationChip({ citation, canSeek }: { citation: Citation; canSeek: boolean }) {

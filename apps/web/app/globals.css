@@ -111,6 +111,21 @@ body {
   color: var(--text-faint);
 }
 
+/* A typing caret blinks at roughly a second — Tailwind's pulse is a 2s opacity fade, which on a
+   small block reads as a broken element rather than a cursor. */
+@keyframes caret {
+  0%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+.caret { animation: caret 1.05s steps(1, end) infinite; }
+
+/* The three dots shown while the model is still reading, before any text arrives. */
+@keyframes thinkingDot {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-2px); }
+}
+.thinking-dot { animation: thinkingDot 1.25s var(--ease) infinite; }
+
 /* Entering content settles rather than snapping — tab panes, answers, citations. */
 @keyframes rise {
   from { opacity: 0; transform: translateY(4px); }
