@@ -36,6 +36,22 @@ test("infinite animations stop instead of strobing", async ({ page }) => {
   expect(style.opacity).toBeGreaterThan(0.5);
 });
 
+test("the wait still shows progress when motion is switched off", async ({ page }) => {
+  await page.route("**/api/ask", () => {
+    /* held open */
+  });
+
+  await page.goto("/calls/hpr4314");
+  await page.getByPlaceholder("Ask anything...").fill("anything");
+  await page.keyboard.press("Enter");
+
+  // With the dots held still, an elapsed counter is what keeps a 30s wait from reading as a
+  // hang. It is content changing rather than movement, so it is allowed under the setting.
+  const status = page.getByRole("status");
+  await expect(status).toContainText("Reading the transcript");
+  await expect(status).toContainText(/[1-9]s/, { timeout: 4000 });
+});
+
 test("no element is left animating indefinitely under reduced motion", async ({ page }) => {
   await page.goto("/calls/hpr4314");
   const offenders = await page.evaluate(() =>

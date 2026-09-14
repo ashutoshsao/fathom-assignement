@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { formatTime } from "@/lib/time";
 import { usePlaybackOptional } from "./playback";
@@ -227,10 +227,26 @@ function Caret() {
   );
 }
 
-/** Shown while the model is reading, before any text exists to attach a caret to. */
+/**
+ * Shown while the model is reading, before any text exists to attach a caret to.
+ *
+ * The dots animate for people who want motion. For anyone with reduced motion enabled they hold
+ * still — correct, but a silent 30-second wait then reads as a hang. So the liveness comes from
+ * an elapsed counter instead: that is content changing rather than movement, so it works under
+ * the setting, and it is more useful than dots anyway because it tells you whether to keep
+ * waiting. The label also says what is taking the time.
+ */
 function Thinking() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const started = Date.now();
+    const id = setInterval(() => setSeconds(Math.floor((Date.now() - started) / 1000)), 1000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
-    <div className="flex items-center gap-2 text-[13px] text-text-faint" role="status">
+    <div className="flex items-center gap-2 text-[13px] text-text-faint" role="status" aria-live="polite">
       <span className="flex gap-1" aria-hidden>
         {[0, 1, 2].map((i) => (
           <span
@@ -240,7 +256,12 @@ function Thinking() {
           />
         ))}
       </span>
-      Reading the transcript…
+      <span>
+        {seconds < 12 ? "Reading the transcript" : "Working through a long call"}
+        {seconds > 0 && (
+          <span className="ml-1.5 font-mono text-[11.5px] text-line-strong">{seconds}s</span>
+        )}
+      </span>
     </div>
   );
 }
