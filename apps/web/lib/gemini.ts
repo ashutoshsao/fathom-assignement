@@ -48,6 +48,90 @@ export function apiKey(): string {
   return key;
 }
 
+/** One-shot structured request (no streaming), with the same model rotation. */
+export async function generateJson<T>(opts: {
+  parts: unknown[];
+  schema: unknown;
+  thinking?: number;
+  temperature?: number;
+}): Promise<T> {
+  const key = apiKey();
+  const body = JSON.stringify({
+    contents: [{ parts: opts.parts }],
+    generationConfig: {
+      responseMimeType: "application/json",
+      responseSchema: opts.schema,
+      temperature: opts.temperature ?? 0,
+      thinkingConfig: { thinkingBudget: opts.thinking ?? 2048 },
+    },
+  });
+
+  let lastError = "no models available";
+  const models = liveModels();
+  for (let i = 0; i < models.length; i++) {
+    const model = models[(cursor + i) % models.length]!;
+    const res = await fetch(`${API}/v1beta/models/${model}:generateContent?key=${key}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body,
+    });
+    if (res.status === 429 || res.status === 404) {
+      exhausted.set(model, Date.now());
+      lastError = `${model}: ${res.status}`;
+      continue;
+    }
+    if (!res.ok) {
+      lastError = `${model}: ${res.status}`;
+      continue;
+    }
+    cursor = (cursor + i + 1) % Math.max(1, models.length);
+    const data = await res.json();
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (typeof text !== "string") {
+      lastError = `${model}: empty response`;
+      continue;
+    }
+    return JSON.parse(text) as T;
+  }
+  throw new Error(`all models unavailable (${lastError})`);
+}
+
+/** Files API upload — needed for audio over the inline-request size limit. */
+export async function uploadAudio(bytes: ArrayBuffer, mimeType: string): Promise<string> {
+  const key = apiKey();
+  const start = await fetch(`${API}/upload/v1beta/files?key=${key}`, {
+    method: "POST",
+    headers: {
+      "X-Goog-Upload-Protocol": "resumable",
+      "X-Goog-Upload-Command": "start",
+      "X-Goog-Upload-Header-Content-Length": String(bytes.byteLength),
+      "X-Goog-Upload-Header-Content-Type": mimeType,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ file: { display_name: `recording-${Date.now()}` } }),
+  });
+  const uploadUrl = start.headers.get("X-Goog-Upload-URL");
+  if (!uploadUrl) throw new Error("could not start upload");
+
+  const done = await fetch(uploadUrl, {
+    method: "POST",
+    headers: {
+      "Content-Length": String(bytes.byteLength),
+      "X-Goog-Upload-Offset": "0",
+      "X-Goog-Upload-Command": "upload, finalize",
+    },
+    body: bytes,
+  });
+  let info = (await done.json()).file;
+
+  while (info?.state === "PROCESSING") {
+    await new Promise((r) => setTimeout(r, 1500));
+    info = await (await fetch(`${API}/v1beta/${info.name}?key=${key}`)).json();
+  }
+  if (info?.state !== "ACTIVE") throw new Error(`upload failed: ${info?.state}`);
+  return info.uri as string;
+}
+
 export interface StreamOptions {
   prompt: string;
   schema: unknown;

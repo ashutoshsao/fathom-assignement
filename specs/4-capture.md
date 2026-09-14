@@ -47,12 +47,37 @@ fragile work for a capability the brief explicitly says not to bother with.
 
 ## Progress
 
-- [ ] Client recorder: getDisplayMedia (tab audio) + getUserMedia (mic), mixed via Web Audio
-- [ ] Recording UI: arm, live timer, stop, mark highlight, honest browser-support notice
-- [ ] `/api/transcribe`: audio → Gemini → diarized timestamped transcript
-- [ ] Reuse the notes pass to produce summary + action items for a recording
-- [ ] IndexedDB store for recorded audio + call records
-- [ ] Recorded calls render through the existing CallView (player, transcript, summary, Ask)
-- [ ] Recorded calls listed in the library, marked as local
-- [ ] Tests: recorder state machine, storage round-trip, recorded call renders
-- [ ] Full suite green
+- [x] **Client recorder**: `getDisplayMedia` for tab audio + `getUserMedia` for the mic, mixed
+      through Web Audio into one track. Both are needed — tab audio alone records everyone except
+      you, the mic alone records only you. Video is requested and discarded, because Chrome will
+      not offer tab-audio sharing for an audio-only request.
+- [x] **Recording UI**: arm, live timer, stop, mark-highlight, and the limits stated up front
+      rather than discovered. The browser's own "Stop sharing" bar also ends the recording.
+- [x] **`/api/transcribe`**: audio → Files API → Gemini → diarized timestamped transcript.
+- [x] **Notes pass reused** to produce summary, takeaways and action items for a recording.
+- [x] **IndexedDB store** for the audio blob and the call record; reads degrade to empty rather
+      than throwing, because private windows and blocked storage are normal.
+- [x] **Recorded calls render through the existing CallView** — the same player, transcript,
+      summary and Ask as a seeded call. Only the audio source differs (a blob URL).
+- [x] **Listed in the library**, marked "only visible to you", with delete.
+- [x] **Tests**: 8 unit tests on the assembly (index→timestamp resolution, unknown assignee
+      becomes unassigned rather than the wrong person, out-of-range index does not crash), plus
+      integration tests for the entry point, the missing-recording state, and a stored recording
+      rendering through the call UI.
+- [x] **Full suite green**: 35 unit, 17 integration.
+
+## Verified end to end
+
+A 40-second clip posted to `/api/transcribe` came back with a correct transcript, a title
+("HPR Website Static Site & CDN"), a blurb and three grounded takeaways. The transcription was
+*better* than the Whisper output shipped with the seed data — it resolved "anonymoushost.com who
+Josh Knapp" where Whisper had mangled it.
+
+## Known weakness, stated rather than hidden
+
+**Speaker separation is weaker on short clips.** The same 40 seconds that the full-call casting
+pass split into two alternating voices came back as one speaker. Diarization benefits from
+hearing a whole conversation, which a fresh recording cannot offer. For a two-minute test call
+between two people this is usually fine, and the failure mode is benign — fewer speakers, not
+wrong words — but it is a real difference from the seeded calls and should be said out loud in
+the walkthrough.
