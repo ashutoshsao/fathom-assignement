@@ -43,11 +43,21 @@ const Ctx = createContext<PlaybackStore | null>(null);
 
 export function PlaybackProvider({
   src,
+  durationHint,
   startAt,
   clip,
   children,
 }: {
   src: string;
+  /**
+   * A length we already know, used when the audio file cannot report its own.
+   *
+   * MediaRecorder writes WebM as a live stream with no duration in the header, so a browser
+   * recording reports `Infinity` — which left the total at 0:00 and, since the scrubber derives
+   * progress from time/duration, froze the played fill on every recorded call. We timed the
+   * recording ourselves, so we do not need the file to tell us.
+   */
+  durationHint?: number;
   /** Seconds to open at — used by deep links, so a cross-call citation lands on the moment. */
   startAt?: number;
   /**
@@ -72,7 +82,7 @@ export function PlaybackProvider({
       return () => listeners.current.delete(fn);
     },
     getTime: () => state.current.time,
-    getDuration: () => state.current.duration,
+    getDuration: () => state.current.duration || durationHint || 0,
     getPlaying: () => state.current.playing,
     getRate: () => state.current.rate,
     audio: () => audioRef.current,
@@ -109,7 +119,7 @@ export function PlaybackProvider({
       state.current.time = el.currentTime;
       emit();
     },
-  }), [emit]);
+  }), [emit, clip, durationHint]);
 
   // A deep link can only seek once the browser knows how long the audio is, so wait for metadata.
   useEffect(() => {

@@ -27,7 +27,7 @@ export function ShareView({ call, clip }: { call: Call; clip?: { startSec: numbe
     : call.transcript;
 
   return (
-    <PlaybackProvider src={call.audioUrl} clip={clip}>
+    <PlaybackProvider src={call.audioUrl} durationHint={call.durationSec} clip={clip}>
       <div className="flex h-dvh flex-col overflow-hidden">
         <header className="shrink-0 border-b border-line px-5 py-3.5">
           <div className="mx-auto flex w-full max-w-4xl flex-wrap items-baseline gap-x-3 gap-y-1">

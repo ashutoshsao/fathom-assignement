@@ -310,3 +310,53 @@ test("ending the capture from the browser's own bar still saves the recording", 
   });
   expect(transcribeCalls).toBe(1);
 });
+
+test("a recorded call shows its length and a moving scrubber", async ({ page }) => {
+  // MediaRecorder writes WebM as a live stream with no duration in the header, so the element
+  // reports Infinity. That showed as "0:00" and froze the played fill, because progress is
+  // time/duration. The length we timed during recording is used instead.
+  await page.goto("/");
+  await page.evaluate(async () => {
+    const call = {
+      id: "rec-duration",
+      title: "Timed recording",
+      daysAgo: 0,
+      timeOfDay: "12:00",
+      durationSec: 240,
+      platform: "google-meet",
+      blurb: "Has a known length.",
+      speakers: [{ id: 0, name: "You", initials: "YO", colorIndex: 0 }],
+      waveform: Array.from({ length: 60 }, (_, i) => 0.3 + (i % 5) * 0.1),
+      summary: { purpose: "", keyTakeaways: [], topics: [], nextSteps: [] },
+      actionItems: [],
+      transcript: [{ id: 0, startSec: 0, endSec: 4, text: "Hello.", speaker: 0 }],
+      highlights: [],
+      source: { name: "Recorded in your browser", url: "", license: "local", licenseUrl: "" },
+      status: "ready",
+    };
+    await new Promise<void>((resolve, reject) => {
+      const req = indexedDB.open("fathom-recordings", 1);
+      req.onupgradeneeded = () => {
+        if (!req.result.objectStoreNames.contains("calls")) {
+          req.result.createObjectStore("calls", { keyPath: "id" });
+        }
+      };
+      req.onsuccess = () => {
+        const tx = req.result.transaction("calls", "readwrite");
+        tx.objectStore("calls").put({
+          id: call.id,
+          call,
+          audio: new Blob([new Uint8Array(2048)], { type: "audio/webm" }),
+          createdAt: Date.now(),
+        });
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      };
+      req.onerror = () => reject(req.error);
+    });
+  });
+
+  await page.goto("/recordings/rec-duration");
+  // 240s must show as the total even though the blob cannot report it.
+  await expect(page.getByText("4:00")).toBeVisible();
+});

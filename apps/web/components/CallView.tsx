@@ -39,7 +39,7 @@ export function CallView({ call, startAt }: { call: Call; startAt?: number }) {
   ];
 
   return (
-    <PlaybackProvider src={call.audioUrl} startAt={startAt}>
+    <PlaybackProvider src={call.audioUrl} durationHint={call.durationSec} startAt={startAt}>
       <div className="flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 px-7 pb-3.5 pt-4">
           <Link

@@ -17,7 +17,7 @@ export function ProcessingCall({ call }: { call: Call }) {
   const failed = call.status === "failed";
 
   return (
-    <PlaybackProvider src={call.audioUrl}>
+    <PlaybackProvider src={call.audioUrl} durationHint={call.durationSec}>
       <div className="flex min-h-0 flex-1 flex-col">
         <header className="shrink-0 border-b border-line px-5 py-3">
           <Link
