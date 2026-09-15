@@ -360,3 +360,75 @@ test("a recorded call shows its length and a moving scrubber", async ({ page }) 
   // 240s must show as the total even though the blob cannot report it.
   await expect(page.getByText("4:00")).toBeVisible();
 });
+
+test("Ask works on a recording the server has never seen", async ({ page }) => {
+  // The bug: recordings live only in the viewer's IndexedDB, so /api/ask looked up the id
+  // server-side, found nothing and returned 404 "no calls available" for every recorded call.
+  // The transcript has to travel with the question, because nowhere else has it.
+  let sentCall: Record<string, unknown> | null = null;
+  await page.route("**/api/ask", async (route) => {
+    sentCall = (route.request().postDataJSON() as Record<string, unknown>).call as Record<
+      string,
+      unknown
+    > | null;
+    await route.fulfill({
+      status: 200,
+      contentType: "application/x-ndjson",
+      body:
+        JSON.stringify({ type: "delta", text: "You said hello." }) +
+        "\n" +
+        JSON.stringify({ type: "done", citations: [] }) +
+        "\n",
+    });
+  });
+
+  await page.goto("/");
+  await page.evaluate(async () => {
+    const call = {
+      id: "rec-asktest",
+      title: "Local recording",
+      daysAgo: 0,
+      timeOfDay: "12:00",
+      durationSec: 30,
+      platform: "google-meet",
+      blurb: "Only in this browser.",
+      speakers: [{ id: 0, name: "You", initials: "YO", colorIndex: 0 }],
+      waveform: [0.4, 0.6],
+      summary: { purpose: "", keyTakeaways: [], topics: [], nextSteps: [] },
+      actionItems: [],
+      transcript: [{ id: 0, startSec: 0, endSec: 3, text: "Hello there.", speaker: 0 }],
+      highlights: [],
+      source: { name: "Recorded in your browser", url: "", license: "local", licenseUrl: "" },
+      status: "ready",
+    };
+    await new Promise<void>((resolve, reject) => {
+      const req = indexedDB.open("fathom-recordings", 1);
+      req.onupgradeneeded = () => {
+        if (!req.result.objectStoreNames.contains("calls")) {
+          req.result.createObjectStore("calls", { keyPath: "id" });
+        }
+      };
+      req.onsuccess = () => {
+        const tx = req.result.transaction("calls", "readwrite");
+        tx.objectStore("calls").put({
+          id: call.id,
+          call,
+          audio: new Blob([new Uint8Array(1024)], { type: "audio/webm" }),
+          createdAt: Date.now(),
+        });
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => reject(tx.error);
+      };
+      req.onerror = () => reject(req.error);
+    });
+  });
+
+  await page.goto("/recordings/rec-asktest");
+  await page.getByPlaceholder("Ask anything...").fill("what did I say?");
+  await page.keyboard.press("Enter");
+
+  await expect(page.getByText("You said hello.")).toBeVisible();
+  // The transcript must have been sent, or the server would have had nothing to answer from.
+  expect(sentCall).not.toBeNull();
+  expect((sentCall as unknown as { transcript: unknown[] }).transcript).toHaveLength(1);
+});

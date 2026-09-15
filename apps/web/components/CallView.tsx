@@ -120,7 +120,13 @@ export function CallView({ call, startAt }: { call: Call; startAt?: number }) {
 
           <aside className="flex shrink-0 flex-col bg-[#0d0d10] lg:w-[400px]">
             <Player peaks={call.waveform} />
-            <AskPanel callId={call.id} suggestions={SUGGESTED_SINGLE} scopeLabel="This call" />
+            <AskPanel
+              callId={call.id}
+              // Recordings are not on the server, so the transcript travels with the question.
+              localCall={call.id.startsWith("rec-") ? call : undefined}
+              suggestions={SUGGESTED_SINGLE}
+              scopeLabel="This call"
+            />
             <div className="shrink-0 border-t border-line px-5 py-3">
               <p className="text-[11px] leading-relaxed text-text-faint">
                 Audio: {call.source.name} —{" "}

@@ -14,7 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Fathom",
-  description: "AI meeting notetaker — recordings, transcripts, summaries and answers you can trace back to the moment they came from.",
+  description:
+    "AI meeting notetaker — recordings, transcripts, summaries and answers you can trace back to the moment they came from.",
+  applicationName: "Fathom",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

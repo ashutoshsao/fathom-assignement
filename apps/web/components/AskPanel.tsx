@@ -34,11 +34,17 @@ interface Turn {
  */
 export function AskPanel({
   callId,
+  localCall,
   suggestions,
   scopeLabel,
   canSeek = true,
 }: {
   callId?: string;
+  /**
+   * The whole call, for recordings that live only in this browser. The server has no copy, so it
+   * travels with the question.
+   */
+  localCall?: unknown;
   suggestions: string[];
   scopeLabel: string;
   canSeek?: boolean;
@@ -62,7 +68,7 @@ export function AskPanel({
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: q, callId }),
+        body: JSON.stringify({ question: q, callId, call: localCall }),
       });
       if (!res.ok || !res.body) throw new Error(`request failed (${res.status})`);
 
@@ -80,7 +86,12 @@ export function AskPanel({
           const evt = JSON.parse(line);
           if (evt.type === "delta") {
             update((t) => ({ ...t, answer: t.answer + evt.text }));
-            scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
+            // Only follow if the reader is already at the bottom. Scrolling on every token
+            // dragged the sentences they were still reading up off the top of the panel.
+            const el = scrollRef.current;
+            if (el && el.scrollHeight - el.scrollTop - el.clientHeight < 80) {
+              el.scrollTo({ top: el.scrollHeight });
+            }
           } else if (evt.type === "done") {
             update((t) => ({ ...t, citations: evt.citations ?? [], streaming: false }));
           } else if (evt.type === "error") {
