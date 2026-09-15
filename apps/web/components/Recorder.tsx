@@ -26,6 +26,7 @@ export function Recorder() {
   const [error, setError] = useState("");
   const [note, setNote] = useState("");
   const recorder = useRef<MeetingRecorder | null>(null);
+  const stopping = useRef(false);
   const supported = useRef(true);
 
   useEffect(() => {
@@ -38,11 +39,23 @@ export function Recorder() {
     return () => clearInterval(id);
   }, [phase]);
 
+  // Until Stop runs, the audio exists only in memory. A closed tab or a stray reload loses it
+  // outright, so make the browser ask first.
+  useEffect(() => {
+    if (phase !== "recording") return;
+    const warn = (e: BeforeUnloadEvent) => e.preventDefault();
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [phase]);
+
   async function start() {
     setError("");
     setPhase("arming");
     try {
       const r = new MeetingRecorder();
+      // Ending the capture from Chrome's own "Stop sharing" bar must save the recording exactly
+      // as pressing Stop does.
+      r.onExternalStop = () => void stop();
       await r.start(true);
       recorder.current = r;
       setMarks(0);
@@ -56,7 +69,9 @@ export function Recorder() {
 
   async function stop() {
     const r = recorder.current;
-    if (!r) return;
+    if (!r || stopping.current) return;
+    stopping.current = true;
+    recorder.current = null;
     setPhase("processing");
     setNote("Saving your recording…");
     try {
@@ -105,12 +120,14 @@ export function Recorder() {
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
       setPhase("error");
+    } finally {
+      stopping.current = false;
     }
   }
 
   if (phase === "recording") {
     return (
-      <div className="fixed bottom-5 right-5 z-40 flex items-center gap-3 rounded-full border border-[#f2836b]/40 bg-surface-2 py-2 pl-4 pr-2 shadow-2xl">
+      <div className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3 rounded-full border border-[#f2836b]/40 bg-surface-2 py-2 pl-4 pr-2 shadow-2xl">
         <span className="flex items-center gap-2 text-[13px] text-text">
           <span className="h-2 w-2 animate-pulse rounded-full bg-[#f2836b]" />
           <span className="font-mono tabular-nums">{formatTime(elapsed)}</span>
@@ -137,7 +154,7 @@ export function Recorder() {
 
   if (phase === "processing") {
     return (
-      <div className="fixed bottom-5 right-5 z-40 flex items-center gap-3 rounded-full border border-line-strong bg-surface-2 px-4 py-2.5 shadow-2xl">
+      <div className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3 rounded-full border border-line-strong bg-surface-2 px-4 py-2.5 shadow-2xl">
         <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
         <span className="text-[13px] text-text">{note}</span>
       </div>

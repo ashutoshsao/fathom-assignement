@@ -245,3 +245,68 @@ test("a stored recording renders through the same call UI as a seeded call", asy
   await expect(page.getByText("Recorded in this browser")).toBeVisible();
   await expect(page.getByText("only visible to you")).toBeVisible();
 });
+
+test("ending the capture from the browser's own bar still saves the recording", async ({ page }) => {
+  // The failure this covers: Chrome's "Stop sharing" bar ended the capture, the recorder class
+  // stopped its MediaRecorder and told nobody, and the audio was discarded without ever reaching
+  // /api/transcribe. Ending from the browser's control must take the same path as pressing Stop.
+  let transcribeCalls = 0;
+  await page.route("**/api/transcribe", async (route) => {
+    transcribeCalls++;
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        transcript: {
+          speakers: [{ id: 0, name: "You" }],
+          segments: [{ startSec: 0, endSec: 2, speaker: 0, text: "Testing one two." }],
+        },
+        notes: {
+          title: "Tab capture test",
+          blurb: "Ended from the browser bar.",
+          purpose: "Prove the external stop path saves.",
+          keyTakeaways: [],
+          topics: [],
+          actionItems: [],
+          nextSteps: [],
+        },
+      }),
+    });
+  });
+
+  await page.goto("/");
+
+  // Drive the recorder directly: getDisplayMedia cannot be granted headlessly, so stand in a
+  // stream whose video track we can end the way the browser's bar does.
+  await page.evaluate(() => {
+    const ctx = new AudioContext();
+    const dest = ctx.createMediaStreamDestination();
+    const osc = ctx.createOscillator();
+    osc.connect(dest);
+    osc.start();
+
+    const canvas = document.createElement("canvas");
+    canvas.width = canvas.height = 2;
+    const videoTrack = (canvas as HTMLCanvasElement).captureStream(1).getVideoTracks()[0]!;
+    const fake = new MediaStream([...dest.stream.getAudioTracks(), videoTrack]);
+
+    (navigator.mediaDevices as unknown as Record<string, unknown>).getDisplayMedia = async () =>
+      fake;
+    (window as unknown as Record<string, unknown>).__endSharing = () => videoTrack.stop();
+    // A stopped track does not fire "ended" on its own; the browser bar does.
+    videoTrack.addEventListener("ended", () => {});
+    (window as unknown as Record<string, unknown>).__fireEnded = () =>
+      videoTrack.dispatchEvent(new Event("ended"));
+  });
+
+  await page.getByRole("button", { name: "Record a meeting" }).click();
+  await expect(page.getByRole("button", { name: "Stop" })).toBeVisible({ timeout: 10_000 });
+
+  // Now end it the way Chrome's bar does, rather than pressing Stop.
+  await page.evaluate(() => (window as unknown as Record<string, () => void>).__fireEnded!());
+
+  await expect(page.getByRole("heading", { name: "Tab capture test" })).toBeVisible({
+    timeout: 20_000,
+  });
+  expect(transcribeCalls).toBe(1);
+});

@@ -37,6 +37,17 @@ function pickMimeType(): string {
 }
 
 export class MeetingRecorder {
+  /**
+   * Called when the BROWSER ends the capture rather than the app — the "Stop sharing" bar Chrome
+   * puts over the page, or the shared tab being closed.
+   *
+   * Without this the class stopped its own MediaRecorder and told nobody, so the save-and-
+   * transcribe path never ran and the recording was silently discarded. Ending a capture from
+   * the browser's own control is the obvious thing for a user to do, so it has to be the same
+   * code path as pressing Stop in the app.
+   */
+  onExternalStop: (() => void) | null = null;
+
   private recorder: MediaRecorder | null = null;
   private chunks: Blob[] = [];
   private streams: MediaStream[] = [];
@@ -92,9 +103,10 @@ export class MeetingRecorder {
     this.recorder = recorder;
     this.startedAt = Date.now();
 
-    // The browser's own "Stop sharing" bar is a real way to end a recording, so honour it.
+    // The browser's own "Stop sharing" bar is a real way to end a recording, so honour it — by
+    // handing control back to the app, not by quietly stopping and dropping the audio.
     display.getVideoTracks()[0]?.addEventListener("ended", () => {
-      if (this.recorder?.state === "recording") void this.stop();
+      if (this.recorder?.state === "recording") this.onExternalStop?.();
     });
   }
 
